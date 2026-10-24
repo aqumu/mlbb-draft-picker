@@ -42,6 +42,10 @@ The sample catalog is a shape/behavior fixture, not a claim that it is a complet
 
 `mlbb_draft_finder.ingest` accepts a normalized JSON export with `heroes`, `matches`, and optional `matchup_stats`. `LiquipediaAdapter` and `MLBBDexAdapter` provide cached JSON client boundaries for approved endpoints or exports. The Liquipedia adapter does not scrape generated HTML. MLBBDex's documented public API currently covers hero/item/patch/ranking data; it does not document a pro-match draft endpoint, so its adapter requires an explicitly supplied draft export path. Configure an identifying User-Agent, respect the source's rate limits, cache responses, and keep attribution in `source_refs`.
 
+### Manual catalog workflow
+
+When a source does not offer usable API access, add human-reviewed records to [`data/manual/heroes.csv`](data/manual/heroes.csv) and [`data/manual/drafts.csv`](data/manual/drafts.csv). The draft file has one row per ban or pick, so it can preserve the original order when the page shows it. Run `import-csv` locally to validate the rows before committing them. Render automatically rebuilds the service from the committed catalog; no source request happens at runtime. See [`data/manual/README.md`](data/manual/README.md) for the exact workflow.
+
 Liquipedia's API terms require attribution and prohibit automated access to generated HTML. The MediaWiki API limit is one request per two seconds with a project-specific User-Agent; the separate LiquipediaDB API requires approved access and is limited to 60 requests per hour. These constraints are why ingestion is an offline, cached job rather than a request-time dependency.
 
 ## Free deployment
@@ -55,4 +59,4 @@ Build:  pip install .
 Start:  python scripts/start_server.py
 ```
 
-Render's free filesystem is ephemeral, so the service reloads the checked-in sample catalog after a restart. A production catalog should move to a persistent database and a scheduled ingestion job. The service listens on Render's `PORT` environment variable and exposes `/v1/health` for the health check.
+Render's free filesystem is ephemeral, so the service reloads the checked-in manual catalog when it has rows, otherwise the demonstration catalog, after a restart. A production catalog should move to a persistent database and a scheduled ingestion job. The service listens on Render's `PORT` environment variable and exposes `/v1/health` for the health check.

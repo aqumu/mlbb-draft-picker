@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import gzip
+import csv
 import time
 from pathlib import Path
 from typing import Any
@@ -16,6 +17,93 @@ from urllib.request import Request, urlopen
 
 from .models import DraftAction, Hero, MatchDraft, MatchupStat
 from .repository import Catalog
+
+
+HERO_CSV_COLUMNS = ("slug", "name", "roles", "aliases")
+DRAFT_CSV_COLUMNS = (
+    "match_id", "source", "source_url", "tournament", "date", "patch", "team_a", "team_b", "game_number",
+    "order_available", "action_order", "phase", "team", "hero",
+)
+
+
+def _csv_rows(path: str | Path, required: tuple[str, ...]) -> list[dict[str, str]]:
+    with open(path, "r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        missing = [column for column in required if column not in (reader.fieldnames or [])]
+        if missing:
+            raise ValueError(f"{path}: missing columns: {', '.join(missing)}")
+        return [{key: (value or "").strip() for key, value in row.items()} for row in reader]
+
+
+def _split_cell(value: str) -> tuple[str, ...]:
+    return tuple(item.strip() for item in value.split("|") if item.strip())
+
+
+def read_heroes_csv(path: str | Path) -> list[Hero]:
+    rows = _csv_rows(path, HERO_CSV_COLUMNS)
+    heroes: list[Hero] = []
+    seen: set[str] = set()
+    for number, row in enumerate(rows, 2):
+        if not row["slug"] or not row["name"]:
+            raise ValueError(f"{path}:{number}: slug and name are required")
+        if row["slug"] in seen:
+            raise ValueError(f"{path}:{number}: duplicate hero slug {row['slug']}")
+        seen.add(row["slug"])
+        heroes.append(Hero(row["slug"], row["name"], _split_cell(row["roles"]), _split_cell(row["aliases"])))
+    return heroes
+
+
+def read_drafts_csv(path: str | Path, known_heroes: set[str]) -> list[MatchDraft]:
+    rows = _csv_rows(path, DRAFT_CSV_COLUMNS)
+    grouped: dict[str, list[dict[str, str]]] = {}
+    for number, row in enumerate(rows, 2):
+        if not row["match_id"] or not row["source"] or not row["source_url"] or not row["tournament"]:
+            raise ValueError(f"{path}:{number}: match_id, source, source_url, and tournament are required")
+        if row["phase"] not in {"pick", "ban"} or row["team"] not in {"team_a", "team_b"}:
+            raise ValueError(f"{path}:{number}: phase must be pick/ban and team must be team_a/team_b")
+        if row["hero"] not in known_heroes:
+            raise ValueError(f"{path}:{number}: unknown hero slug {row['hero']}")
+        if row["action_order"]:
+            try:
+                if int(row["action_order"]) < 1:
+                    raise ValueError
+            except ValueError as exc:
+                raise ValueError(f"{path}:{number}: action_order must be a positive integer") from exc
+        grouped.setdefault(row["match_id"], []).append(row)
+
+    matches: list[MatchDraft] = []
+    for match_id, match_rows in grouped.items():
+        first = match_rows[0]
+        metadata_fields = ("source", "source_url", "tournament", "date", "patch", "team_a", "team_b", "game_number", "order_available")
+        for row in match_rows[1:]:
+            for field in metadata_fields:
+                if row[field] != first[field]:
+                    raise ValueError(f"{path}: match {match_id} has inconsistent {field}")
+        actions = [DraftAction(row["phase"], row["team"], row["hero"], int(row["action_order"]) if row["action_order"] else None) for row in match_rows]
+        picks_a = [a.hero for a in actions if a.phase == "pick" and a.team == "team_a"]
+        picks_b = [a.hero for a in actions if a.phase == "pick" and a.team == "team_b"]
+        if len(picks_a) != 5 or len(picks_b) != 5:
+            raise ValueError(f"{path}: match {match_id} must contain exactly five picks for each team")
+        if len(set(picks_a + picks_b)) != len(picks_a + picks_b):
+            raise ValueError(f"{path}: match {match_id} contains a hero picked twice")
+        order_available = first["order_available"].lower() in {"1", "true", "yes"}
+        if not first["order_available"]:
+            order_available = all(action.order is not None for action in actions)
+        matches.append(MatchDraft(
+            id=match_id, source=first["source"], source_url=first["source_url"], tournament=first["tournament"],
+            date=first["date"] or None, patch=first["patch"] or None, team_a=first["team_a"] or "Team A", team_b=first["team_b"] or "Team B",
+            game_number=int(first["game_number"]) if first["game_number"] else None, actions=actions, order_available=order_available,
+            source_refs=[{"source": first["source"], "url": first["source_url"]}],
+        ))
+    return matches
+
+
+def import_csv_files(catalog: Catalog, heroes_path: str | Path, drafts_path: str | Path) -> dict[str, int]:
+    heroes = read_heroes_csv(heroes_path)
+    catalog.add_heroes(heroes)
+    matches = read_drafts_csv(drafts_path, {hero.slug for hero in heroes})
+    added = sum(catalog.add_match(match) for match in matches)
+    return {"heroes": len(heroes), "matches_added": added, "matches_seen": len(matches), "matchup_stats": 0}
 
 
 def _match(value: dict[str, Any], default_source: str) -> MatchDraft:
