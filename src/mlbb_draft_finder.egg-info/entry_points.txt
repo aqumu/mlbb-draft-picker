@@ -1,0 +1,2 @@
+[console_scripts]
+mlbb-draft-finder = mlbb_draft_finder.cli:main

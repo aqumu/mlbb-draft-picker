@@ -1,0 +1,78 @@
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from typing import Any
+
+
+@dataclass(frozen=True)
+class Hero:
+    slug: str
+    name: str
+    roles: tuple[str, ...] = ()
+    aliases: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class DraftAction:
+    phase: str  # pick or ban
+    team: str  # team_a or team_b
+    hero: str
+    order: int | None = None
+
+
+@dataclass
+class MatchDraft:
+    id: str
+    source: str
+    source_url: str | None
+    tournament: str
+    date: str | None
+    patch: str | None
+    team_a: str
+    team_b: str
+    game_number: int | None
+    actions: list[DraftAction]
+    order_available: bool = True
+    source_refs: list[dict[str, str]] = field(default_factory=list)
+
+    def picks(self, team: str) -> list[str]:
+        return [a.hero for a in sorted(self.actions, key=lambda a: (a.order is None, a.order or 0))
+                if a.phase == "pick" and a.team == team]
+
+    def bans(self) -> list[str]:
+        return [a.hero for a in sorted(self.actions, key=lambda a: (a.order is None, a.order or 0)) if a.phase == "ban"]
+
+
+@dataclass(frozen=True)
+class PlayerPool:
+    player: str
+    roles: tuple[str, ...] = ()
+    can_play: frozenset[str] = frozenset()
+    cannot_play: frozenset[str] = frozenset()
+
+
+@dataclass(frozen=True)
+class DraftState:
+    our_picks: tuple[str, ...] = ()
+    enemy_picks: tuple[str, ...] = ()
+    bans: tuple[str, ...] = ()
+    player_pools: tuple[PlayerPool, ...] = ()
+    locked_players: dict[str, str] = field(default_factory=dict)  # hero -> player
+    available_heroes: frozenset[str] | None = None
+
+
+@dataclass(frozen=True)
+class MatchupStat:
+    hero: str
+    opponent: str
+    wins: int
+    games: int
+    source: str | None = None
+
+
+def normalize_slug(value: str) -> str:
+    return "-".join(value.strip().lower().replace("'", "").split())
+
+
+def as_tuple(values: Any) -> tuple[str, ...]:
+    return tuple(str(v) for v in (values or ()))

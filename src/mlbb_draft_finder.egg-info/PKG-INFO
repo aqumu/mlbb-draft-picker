@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: mlbb-draft-finder
+Version: 0.1.0
+Summary: A transparent finder for real Mobile Legends: Bang Bang professional drafts
+Requires-Python: >=3.11

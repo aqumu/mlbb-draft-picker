@@ -1,0 +1,62 @@
+{
+  "heroes": [
+    {"slug": "fredrinn", "name": "Fredrinn", "roles": ["tank", "fighter"]},
+    {"slug": "joy", "name": "Joy", "roles": ["assassin"]},
+    {"slug": "pharsa", "name": "Pharsa", "roles": ["mage"]},
+    {"slug": "brody", "name": "Brody", "roles": ["marksman"]},
+    {"slug": "floryn", "name": "Floryn", "roles": ["support"]},
+    {"slug": "atlas", "name": "Atlas", "roles": ["tank"]},
+    {"slug": "valentina", "name": "Valentina", "roles": ["mage"]},
+    {"slug": "beatrix", "name": "Beatrix", "roles": ["marksman"]},
+    {"slug": "diggie", "name": "Diggie", "roles": ["support"]},
+    {"slug": "lapu-lapu", "name": "Lapu-Lapu", "roles": ["fighter"]},
+    {"slug": "minotaur", "name": "Minotaur", "roles": ["tank", "support"]},
+    {"slug": "kadita", "name": "Kadita", "roles": ["mage"]}
+  ],
+  "matches": [
+    {
+      "id": "mpl-id-s10-g1", "source": "liquipedia", "source_url": "https://liquipedia.net/mobilelegends/MPL_ID/Season_10",
+      "tournament": "MPL Indonesia Season 10", "date": "2022-10-23", "patch": "1.7.20",
+      "team_a": "ONIC Esports", "team_b": "RRQ Hoshi", "game_number": 1,
+      "actions": [
+        {"phase": "ban", "team": "team_a", "hero": "valentina", "order": 1},
+        {"phase": "ban", "team": "team_b", "hero": "beatrix", "order": 2},
+        {"phase": "pick", "team": "team_a", "hero": "fredrinn", "order": 3},
+        {"phase": "pick", "team": "team_b", "hero": "atlas", "order": 4},
+        {"phase": "pick", "team": "team_a", "hero": "joy", "order": 5},
+        {"phase": "pick", "team": "team_b", "hero": "kadita", "order": 6},
+        {"phase": "pick", "team": "team_a", "hero": "pharsa", "order": 7},
+        {"phase": "pick", "team": "team_a", "hero": "brody", "order": 8},
+        {"phase": "pick", "team": "team_a", "hero": "floryn", "order": 9},
+        {"phase": "pick", "team": "team_b", "hero": "beatrix", "order": 10},
+        {"phase": "pick", "team": "team_b", "hero": "diggie", "order": 11}
+      ]
+    },
+    {
+      "id": "mpl-ph-s8-g2", "source": "mlbbdex", "source_url": "https://www.mlbbdex.com/match/mpl-ph-s8-g2",
+      "tournament": "MPL Philippines Season 8", "date": "2021-11-06", "patch": "1.6.20",
+      "team_a": "Blacklist International", "team_b": "ONIC PH", "game_number": 2,
+      "actions": [
+        {"phase": "ban", "team": "team_a", "hero": "joy", "order": 1},
+        {"phase": "ban", "team": "team_b", "hero": "pharsa", "order": 2},
+        {"phase": "pick", "team": "team_a", "hero": "atlas", "order": 3},
+        {"phase": "pick", "team": "team_a", "hero": "valentina", "order": 4},
+        {"phase": "pick", "team": "team_a", "hero": "beatrix", "order": 5},
+        {"phase": "pick", "team": "team_a", "hero": "minotaur", "order": 6},
+        {"phase": "pick", "team": "team_a", "hero": "lapu-lapu", "order": 7},
+        {"phase": "pick", "team": "team_b", "hero": "fredrinn", "order": 8},
+        {"phase": "pick", "team": "team_b", "hero": "kadita", "order": 9},
+        {"phase": "pick", "team": "team_b", "hero": "brody", "order": 10},
+        {"phase": "pick", "team": "team_b", "hero": "diggie", "order": 11},
+        {"phase": "pick", "team": "team_b", "hero": "floryn", "order": 12}
+      ]
+    }
+  ],
+  "matchup_stats": [
+    {"hero": "fredrinn", "opponent": "atlas", "wins": 12, "games": 20, "source": "sample"},
+    {"hero": "joy", "opponent": "atlas", "wins": 13, "games": 20, "source": "sample"},
+    {"hero": "pharsa", "opponent": "atlas", "wins": 10, "games": 20, "source": "sample"},
+    {"hero": "brody", "opponent": "atlas", "wins": 11, "games": 20, "source": "sample"},
+    {"hero": "floryn", "opponent": "atlas", "wins": 9, "games": 20, "source": "sample"}
+  ]
+}
