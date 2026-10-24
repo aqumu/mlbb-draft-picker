@@ -48,6 +48,8 @@ Liquipedia's API terms require attribution and prohibit automated access to gene
 
 `render.yaml` is ready for a Render free web service. Connect this repository in Render and choose **Blueprint**, or create a Python web service with:
 
+[Deploy this repository to Render](https://render.com/deploy?repo=https://github.com/aqumu/mlbb-draft-picker)
+
 ```text
 Build:  pip install .
 Start:  python scripts/start_server.py
