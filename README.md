@@ -67,3 +67,5 @@ Start:  python scripts/start_server.py
 ```
 
 Render's free filesystem is ephemeral, so the service reloads the checked-in manual catalog when it has rows, otherwise the demonstration catalog, after a restart. A production catalog should move to a persistent database and a scheduled ingestion job. The service listens on Render's `PORT` environment variable and exposes `/v1/health` for the health check.
+
+The minimal test frontend is deployed separately at [mlbb-draft-finder-web.onrender.com](https://mlbb-draft-finder-web.onrender.com). It calls the API at `https://mlbb-draft-finder-api.onrender.com` and uses MLBBDex hero icon URLs. Its source lives in [`web`](web).
