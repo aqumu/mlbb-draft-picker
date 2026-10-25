@@ -1,0 +1,4053 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-25T14:07:04.956Z",
+  "source": "mlbbdex",
+  "source_url": "https://mlbbdex.com/api/v1/heroes",
+  "source_note": "Public MLBBDex hero API; credit and CC-BY-SA attribution travel with the response.",
+  "data": {
+    "data": [
+      {
+        "slug": "aamon",
+        "name": "Aamon",
+        "title": "Duke of Shards",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Magic Damage"
+        ],
+        "release": "26 October 2021",
+        "ratings": {
+          "offense": 7,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 6
+        },
+        "skins": 6,
+        "skills": [
+          "Invisible Armor",
+          "Soul Shards",
+          "Slayer Shards",
+          "Endless Shards"
+        ]
+      },
+      {
+        "slug": "akai",
+        "name": "Akai",
+        "title": "Panda Warrior",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Guard",
+          "Crowd Control"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 3,
+          "durability": 9,
+          "abilityEffects": 9,
+          "difficulty": 3
+        },
+        "skins": 10,
+        "skills": [
+          "Tai Chi",
+          "Headbutt",
+          "Body Slam",
+          "Heavy Spin"
+        ]
+      },
+      {
+        "slug": "aldous",
+        "name": "Aldous",
+        "title": "Soul Contractor",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Burst",
+          "Support"
+        ],
+        "release": "24 July 2018",
+        "ratings": {
+          "offense": 3,
+          "durability": 7,
+          "abilityEffects": 5,
+          "difficulty": 7
+        },
+        "skins": 10,
+        "skills": [
+          "Contract: Transform",
+          "Contract: Soul Steal",
+          "Contract: Explosion",
+          "Contract: Chase Fate"
+        ]
+      },
+      {
+        "slug": "alice",
+        "name": "Alice",
+        "title": "Queen of Blood",
+        "roles": [
+          "Tank",
+          "Mage"
+        ],
+        "lanes": [
+          "Exp",
+          "Jungle"
+        ],
+        "specialties": [
+          "Charge",
+          "Regen"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 5,
+          "durability": 5,
+          "abilityEffects": 7,
+          "difficulty": 4
+        },
+        "skins": 7,
+        "skills": [
+          "Crimson Blood Banquet",
+          "Crimson Gleam",
+          "Doom Waltz",
+          "Throne of Ruin"
+        ]
+      },
+      {
+        "slug": "alpha",
+        "name": "Alpha",
+        "title": "Blade of Enmity",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Charge",
+          "Damage"
+        ],
+        "release": "January 2017",
+        "ratings": {
+          "offense": 4,
+          "durability": 6,
+          "abilityEffects": 7,
+          "difficulty": 1
+        },
+        "skins": 9,
+        "skills": [
+          "Beta, Advance!",
+          "Rotary Impact",
+          "Force Swing",
+          "Spear of Alpha"
+        ]
+      },
+      {
+        "slug": "alucard",
+        "name": "Alucard",
+        "title": "Demon Hunter",
+        "roles": [
+          "Fighter",
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 5,
+          "durability": 5,
+          "abilityEffects": 1,
+          "difficulty": 4
+        },
+        "skins": 11,
+        "skills": [
+          "Pursuit",
+          "Groundsplitter",
+          "Whirling Smash",
+          "Fission Wave"
+        ]
+      },
+      {
+        "slug": "angela",
+        "name": "Angela",
+        "title": "Bunnylove",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Guard",
+          "Support"
+        ],
+        "release": "6 February 2018",
+        "ratings": {
+          "offense": 2,
+          "durability": 3,
+          "abilityEffects": 5,
+          "difficulty": 6
+        },
+        "skins": 11,
+        "skills": [
+          "Smart Heart",
+          "Love Waves",
+          "Puppet-on-a-String",
+          "Heartguard"
+        ]
+      },
+      {
+        "slug": "argus",
+        "name": "Argus",
+        "title": "Dark Angel",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Charge",
+          "Burst"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 6,
+          "durability": 8,
+          "abilityEffects": 6,
+          "difficulty": 7
+        },
+        "skins": 7,
+        "skills": []
+      },
+      {
+        "slug": "arlott",
+        "name": "Arlott",
+        "title": "Lone Lancer",
+        "roles": [
+          "Fighter",
+          "Assassin"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Charge",
+          "Burst"
+        ],
+        "release": "14 February 2023",
+        "ratings": {
+          "offense": 6,
+          "durability": 6,
+          "abilityEffects": 5,
+          "difficulty": 7
+        },
+        "skins": 4,
+        "skills": [
+          "Demon Gaze",
+          "Dauntless Strike",
+          "Vengeance",
+          "Final Slash"
+        ]
+      },
+      {
+        "slug": "atlas",
+        "name": "Atlas",
+        "title": "Ocean Gladiator",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Initiator"
+        ],
+        "release": "20 March 2020",
+        "ratings": {
+          "offense": 1,
+          "durability": 8,
+          "abilityEffects": 9,
+          "difficulty": 5
+        },
+        "skins": 7,
+        "skills": [
+          "Frigid Breath",
+          "Annihilate",
+          "Perfect Match",
+          "Fatal Links"
+        ]
+      },
+      {
+        "slug": "aulus",
+        "name": "Aulus",
+        "title": "Warrior of Ferocity",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Damage",
+          "Charge"
+        ],
+        "release": "31 August 2021",
+        "ratings": {
+          "offense": 6,
+          "durability": 6,
+          "abilityEffects": 1,
+          "difficulty": 2
+        },
+        "skins": 5,
+        "skills": [
+          "Fighting Spirit",
+          "Aulus, Charge!",
+          "The Power of Axe",
+          "Cleaving Axe"
+        ]
+      },
+      {
+        "slug": "aurora",
+        "name": "Aurora",
+        "title": "Maiden of the Glacier",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Poke"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 7,
+          "durability": 4,
+          "abilityEffects": 10,
+          "difficulty": 1
+        },
+        "skins": 7,
+        "skills": [
+          "Pride of Ice",
+          "Hailstone Blast",
+          "Frosty Breeze",
+          "Frigid Glacier"
+        ]
+      },
+      {
+        "slug": "badang",
+        "name": "Badang",
+        "title": "Tribal Warrior",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Roam",
+          "Exp"
+        ],
+        "specialties": [
+          "Charge",
+          "Burst"
+        ],
+        "release": "15 January 2019",
+        "ratings": {
+          "offense": 7,
+          "durability": 4,
+          "abilityEffects": 5,
+          "difficulty": 3
+        },
+        "skins": 9,
+        "skills": [
+          "Chivalry Fist",
+          "Fist Wind",
+          "Fist Break",
+          "Fist Crack"
+        ]
+      },
+      {
+        "slug": "balmond",
+        "name": "Balmond",
+        "title": "Bloody Beast",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Damage",
+          "Regen"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 3,
+          "durability": 8,
+          "abilityEffects": 2,
+          "difficulty": 2
+        },
+        "skins": 10,
+        "skills": [
+          "Bloodthirst",
+          "Soul Lock",
+          "Cyclone Sweep",
+          "Lethal Counter"
+        ]
+      },
+      {
+        "slug": "bane",
+        "name": "Bane",
+        "title": "Frozen King",
+        "roles": [
+          "Fighter",
+          "Mage"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Push",
+          "Burst"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 6,
+          "durability": 5,
+          "abilityEffects": 4,
+          "difficulty": 4
+        },
+        "skins": 7,
+        "skills": [
+          "Shark Bite",
+          "Crab Claw Cannon",
+          "Ale",
+          "Deadly Catch"
+        ]
+      },
+      {
+        "slug": "barats",
+        "name": "Barats",
+        "title": "Dino Rider",
+        "roles": [
+          "Tank",
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Jungle"
+        ],
+        "specialties": [
+          "Damage",
+          "Crowd Control"
+        ],
+        "release": "18 September 2020",
+        "ratings": {
+          "offense": 3,
+          "durability": 10,
+          "abilityEffects": 9,
+          "difficulty": 4
+        },
+        "skins": 6,
+        "skills": [
+          "Big Guy",
+          "So-Called Teamwork",
+          "Missile \"Expert\"",
+          "Detona's Welcome"
+        ]
+      },
+      {
+        "slug": "baxia",
+        "name": "Baxia",
+        "title": "Mystic Tortoise",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Jungle",
+          "Roam"
+        ],
+        "specialties": [
+          "Support",
+          "Damage"
+        ],
+        "release": "8 October 2019",
+        "ratings": {
+          "offense": 3,
+          "durability": 10,
+          "abilityEffects": 6,
+          "difficulty": 3
+        },
+        "skins": 6,
+        "skills": [
+          "Baxia Mark",
+          "Baxia-Shield Unity",
+          "Shield of Spirit",
+          "Tortoise's Puissance"
+        ]
+      },
+      {
+        "slug": "beatrix",
+        "name": "Beatrix",
+        "title": "Dawnbreak Soldier",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "19 March 2021",
+        "ratings": {
+          "offense": 8,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 7
+        },
+        "skins": 8,
+        "skills": [
+          "Mechanical Genius",
+          "Masterful Gunner",
+          "Tactical Reposition",
+          "Renner's Apathy",
+          "Need Backup",
+          "Mechanical Genius",
+          "Masterful Gunner",
+          "Tactical Reposition",
+          "Bennett's Rage",
+          "Need Backup",
+          "Mechanical Genius",
+          "Masterful Gunner",
+          "Tactical Reposition",
+          "Wesker's Elation",
+          "Need Backup",
+          "Mechanical Genius",
+          "Masterful Gunner",
+          "Tactical Reposition",
+          "Nibiru's Passion",
+          "Need Backup"
+        ]
+      },
+      {
+        "slug": "belerick",
+        "name": "Belerick",
+        "title": "Guard of Nature",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Regen"
+        ],
+        "release": "17 August 2018",
+        "ratings": {
+          "offense": 4,
+          "durability": 9,
+          "abilityEffects": 10,
+          "difficulty": 1
+        },
+        "skins": 7,
+        "skills": [
+          "Deadly Thorns",
+          "Ancient Seed",
+          "Nature's Strike",
+          "Wrath of Dryad"
+        ]
+      },
+      {
+        "slug": "benedetta",
+        "name": "Benedetta",
+        "title": "Shadow Ranger",
+        "roles": [
+          "Assassin",
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "7 November 2020",
+        "ratings": {
+          "offense": 5,
+          "durability": 6,
+          "abilityEffects": 2,
+          "difficulty": 8
+        },
+        "skins": 8,
+        "skills": [
+          "Elapsed Daytime",
+          "Phantom Slash",
+          "An Eye for An Eye",
+          "Alecto: Final Blow"
+        ]
+      },
+      {
+        "slug": "brody",
+        "name": "Brody",
+        "title": "The Lone Star",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Burst",
+          "Finisher"
+        ],
+        "release": "16 October 2020",
+        "ratings": {
+          "offense": 7,
+          "durability": 4,
+          "abilityEffects": 5,
+          "difficulty": 5
+        },
+        "skins": 8,
+        "skills": [
+          "Abyss Corrosion",
+          "Abyss Impact",
+          "Corrosive Strike",
+          "Torn-Apart Memory"
+        ]
+      },
+      {
+        "slug": "bruno",
+        "name": "Bruno",
+        "title": "The Protector",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Burst"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 6,
+          "durability": 2,
+          "abilityEffects": 2,
+          "difficulty": 4
+        },
+        "skins": 10,
+        "skills": [
+          "Mecha Legs",
+          "Volley Shot",
+          "Flying Tackle",
+          "Worldie"
+        ]
+      },
+      {
+        "slug": "carmilla",
+        "name": "Carmilla",
+        "title": "Shadow of Twilight",
+        "roles": [
+          "Support",
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Damage"
+        ],
+        "release": "17 January 2020",
+        "ratings": {
+          "offense": 2,
+          "durability": 9,
+          "abilityEffects": 8,
+          "difficulty": 1
+        },
+        "skins": 5,
+        "skills": [
+          "Vampire Pact",
+          "Crimson Flower",
+          "Bloodbath",
+          "Curse of Blood"
+        ]
+      },
+      {
+        "slug": "cecilion",
+        "name": "Cecilion",
+        "title": "Embrace of Night",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Burst"
+        ],
+        "release": "12 February 2020",
+        "ratings": {
+          "offense": 10,
+          "durability": 4,
+          "abilityEffects": 5,
+          "difficulty": 4
+        },
+        "skins": 7,
+        "skills": [
+          "Overflowing",
+          "Bat Impact",
+          "Sanguine Claws",
+          "Bats Feast",
+          "Moonlit Waltz"
+        ]
+      },
+      {
+        "slug": "chang-e",
+        "name": "Chang'e",
+        "title": "Moon Palace Immortal",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Burst"
+        ],
+        "release": "30 May 2018",
+        "ratings": {
+          "offense": 8,
+          "durability": 4,
+          "abilityEffects": 2,
+          "difficulty": 4
+        },
+        "skins": 12,
+        "skills": [
+          "Trouble Maker",
+          "Starmoon Shockwave",
+          "Crescent Moon",
+          "Meteor Shower"
+        ]
+      },
+      {
+        "slug": "chip",
+        "name": "Chip",
+        "title": "Phase Technician",
+        "roles": [
+          "Support",
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Support",
+          "Crowd Control"
+        ],
+        "release": "16 March 2024",
+        "ratings": {
+          "offense": 2,
+          "durability": 8,
+          "abilityEffects": 6,
+          "difficulty": 5
+        },
+        "skins": 3,
+        "skills": [
+          "Snack Time!",
+          "Crash Course",
+          "Overtime",
+          "Shortcut",
+          "Why Walk?"
+        ]
+      },
+      {
+        "slug": "chou",
+        "name": "Chou",
+        "title": "Kung Fu Boy",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Roam"
+        ],
+        "specialties": [
+          "Chase",
+          "Control"
+        ],
+        "release": "December 2016",
+        "ratings": {
+          "offense": 3,
+          "durability": 5,
+          "abilityEffects": 8,
+          "difficulty": 7
+        },
+        "skins": 13,
+        "skills": [
+          "Only Fast",
+          "Jeet Kune Do",
+          "Shunpo",
+          "The Way of Dragon"
+        ]
+      },
+      {
+        "slug": "cici",
+        "name": "Cici",
+        "title": "Buoyant Performer",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Damage",
+          "Regen"
+        ],
+        "release": "27 December 2023",
+        "ratings": {
+          "offense": 6,
+          "durability": 5,
+          "abilityEffects": 3,
+          "difficulty": 2
+        },
+        "skins": 4,
+        "skills": [
+          "Performer's Delight",
+          "Yo-Yo Blitz",
+          "Buoyant Bounce",
+          "Curtain Call"
+        ]
+      },
+      {
+        "slug": "claude",
+        "name": "Claude",
+        "title": "Master Thief",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Burst",
+          "Chase"
+        ],
+        "release": "7 August 2018",
+        "ratings": {
+          "offense": 6,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 6
+        },
+        "skins": 12,
+        "skills": [
+          "Battle Side-by-side",
+          "Art of Thievery",
+          "Battle Mirror Image",
+          "Blazing Duet"
+        ]
+      },
+      {
+        "slug": "clint",
+        "name": "Clint",
+        "title": "West Justice",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Burst"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 7,
+          "durability": 3,
+          "abilityEffects": 4,
+          "difficulty": 6
+        },
+        "skins": 12,
+        "skills": [
+          "Double Shot",
+          "Quick Draw",
+          "Trapping Recoil",
+          "Grenade Bombardment"
+        ]
+      },
+      {
+        "slug": "cyclops",
+        "name": "Cyclops",
+        "title": "Starsoul Magician",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Control"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 10,
+          "durability": 3,
+          "abilityEffects": 7,
+          "difficulty": 4
+        },
+        "skins": 10,
+        "skills": [
+          "Starlit Hourglass",
+          "Stardust Shock",
+          "Planets Attack",
+          "Star Power Lockdown"
+        ]
+      },
+      {
+        "slug": "diggie",
+        "name": "Diggie",
+        "title": "Timekeeper",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Guard",
+          "Poke"
+        ],
+        "release": "19 November 2017",
+        "ratings": {
+          "offense": 4,
+          "durability": 4,
+          "abilityEffects": 2,
+          "difficulty": 3
+        },
+        "skins": 6,
+        "skills": [
+          "Young Again",
+          "Auto Alarm Bomb",
+          "Reverse Time",
+          "Time Journey"
+        ]
+      },
+      {
+        "slug": "dori",
+        "name": "Dori",
+        "title": "Shepherd of Smiles",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Control"
+        ],
+        "release": "TBA",
+        "ratings": {
+          "offense": 1,
+          "durability": 1,
+          "abilityEffects": 1,
+          "difficulty": 1
+        },
+        "skins": 0,
+        "skills": [
+          "Merry Mark",
+          "Timid Courage",
+          "Banner Twirl",
+          "Starlit Parade"
+        ]
+      },
+      {
+        "slug": "dyrroth",
+        "name": "Dyrroth",
+        "title": "Prince of the Abyss",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Jungle"
+        ],
+        "specialties": [
+          "Charge",
+          "Burst"
+        ],
+        "release": "25 June 2019",
+        "ratings": {
+          "offense": 5,
+          "durability": 5,
+          "abilityEffects": 2,
+          "difficulty": 5
+        },
+        "skins": 7,
+        "skills": [
+          "Wrath of the Abyss",
+          "Burst Strike",
+          "Spectre Step",
+          "Abysm Strike"
+        ]
+      },
+      {
+        "slug": "edith",
+        "name": "Edith",
+        "title": "Ancient Guard",
+        "roles": [
+          "Tank",
+          "Marksman"
+        ],
+        "lanes": [
+          "Exp",
+          "Roam"
+        ],
+        "specialties": [
+          "Control",
+          "Burst"
+        ],
+        "release": "24 December 2021",
+        "ratings": {
+          "offense": 3,
+          "durability": 7,
+          "abilityEffects": 10,
+          "difficulty": 4
+        },
+        "skins": 6,
+        "skills": [
+          "Overload",
+          "Earth Shatter",
+          "Onward",
+          "Primal Wrath",
+          "Overload",
+          "Divine Retribution",
+          "Lightning Bolt",
+          "Primal Wrath"
+        ]
+      },
+      {
+        "slug": "esmeralda",
+        "name": "Esmeralda",
+        "title": "Astrologer",
+        "roles": [
+          "Tank",
+          "Mage"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Regen",
+          "Mixed Damage"
+        ],
+        "release": "3 April 2019",
+        "ratings": {
+          "offense": 3,
+          "durability": 9,
+          "abilityEffects": 6,
+          "difficulty": 7
+        },
+        "skins": 9,
+        "skills": [
+          "Starmoon Casket",
+          "Frostmoon Shield",
+          "Stardust Dance",
+          "Falling Starmoon"
+        ]
+      },
+      {
+        "slug": "estes",
+        "name": "Estes",
+        "title": "Moon Elf King",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Regen",
+          "Guard"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 1,
+          "durability": 7,
+          "abilityEffects": 2,
+          "difficulty": 3
+        },
+        "skins": 9,
+        "skills": [
+          "Scripture of the Moon Elf",
+          "Moonlight Immersion",
+          "Domain of Moon Goddess",
+          "Blessing of Moon Goddess"
+        ]
+      },
+      {
+        "slug": "eudora",
+        "name": "Eudora",
+        "title": "Lightning Weaver",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Control",
+          "Burst"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 8,
+          "durability": 1,
+          "abilityEffects": 8,
+          "difficulty": 2
+        },
+        "skins": 9,
+        "skills": [
+          "Superconductor",
+          "Forked Lightning",
+          "Ball Lightning",
+          "Thunder's Wrath"
+        ]
+      },
+      {
+        "slug": "fanny",
+        "name": "Fanny",
+        "title": "Blade Dancer",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Finisher"
+        ],
+        "release": "30 September 2016",
+        "ratings": {
+          "offense": 7,
+          "durability": 6,
+          "abilityEffects": 0,
+          "difficulty": 10
+        },
+        "skins": 13,
+        "skills": [
+          "Air Superiority",
+          "Tornado Strike",
+          "Steel Cable",
+          "Cut Throat"
+        ]
+      },
+      {
+        "slug": "faramis",
+        "name": "Faramis",
+        "title": "Soul Binder",
+        "roles": [
+          "Support",
+          "Mage"
+        ],
+        "lanes": [
+          "Mid",
+          "Roam"
+        ],
+        "specialties": [
+          "Guard",
+          "Charge"
+        ],
+        "release": "18 May 2019",
+        "ratings": {
+          "offense": 6,
+          "durability": 4,
+          "abilityEffects": 1,
+          "difficulty": 4
+        },
+        "skins": 6,
+        "skills": [
+          "Vicious Retrieval",
+          "Shadow Stampede",
+          "Ghost Bursters",
+          "Nether Realm"
+        ]
+      },
+      {
+        "slug": "floryn",
+        "name": "Floryn",
+        "title": "The Budding Hope",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Poke",
+          "Guard"
+        ],
+        "release": "22 September 2021",
+        "ratings": {
+          "offense": 1,
+          "durability": 6,
+          "abilityEffects": 7,
+          "difficulty": 3
+        },
+        "skins": 7,
+        "skills": [
+          "Dew",
+          "Sow",
+          "Sprout",
+          "Bloom"
+        ]
+      },
+      {
+        "slug": "franco",
+        "name": "Franco",
+        "title": "Frozen Warrior",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Initiator",
+          "Control"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 1,
+          "durability": 8,
+          "abilityEffects": 10,
+          "difficulty": 2
+        },
+        "skins": 11,
+        "skills": [
+          "Wasteland Force",
+          "Iron Hook",
+          "Fury Shock",
+          "Bloody Hunt"
+        ]
+      },
+      {
+        "slug": "fredrinn",
+        "name": "Fredrinn",
+        "title": "Rogue Appraiser",
+        "roles": [
+          "Fighter",
+          "Tank"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Damage",
+          "Chase"
+        ],
+        "release": "12 August 2022",
+        "ratings": {
+          "offense": 5,
+          "durability": 8,
+          "abilityEffects": 6,
+          "difficulty": 6
+        },
+        "skins": 6,
+        "skills": [
+          "Crystalline Armor",
+          "Piercing Strike",
+          "Brave Assault",
+          "Energy Eruption",
+          "Appraiser's Wrath"
+        ]
+      },
+      {
+        "slug": "freya",
+        "name": "Freya",
+        "title": "Valkyrie",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "November 2016",
+        "ratings": {
+          "offense": 5,
+          "durability": 6,
+          "abilityEffects": 5,
+          "difficulty": 5
+        },
+        "skins": 10,
+        "skills": [
+          "Power of Einherjar",
+          "Leap of Faith",
+          "Valkyrie Slash",
+          "Valkyrie Descent"
+        ]
+      },
+      {
+        "slug": "gatotkaca",
+        "name": "Gatotkaca",
+        "title": "Mighty Legend",
+        "roles": [
+          "Tank",
+          "Fighter"
+        ],
+        "lanes": [
+          "Roam",
+          "Exp"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Burst"
+        ],
+        "release": "July 2017",
+        "ratings": {
+          "offense": 3,
+          "durability": 9,
+          "abilityEffects": 9,
+          "difficulty": 4
+        },
+        "skins": 7,
+        "skills": [
+          "Steel Bones",
+          "Blast Iron Fist",
+          "Unbreakable",
+          "Avatar of the Guardian"
+        ]
+      },
+      {
+        "slug": "gloo",
+        "name": "Gloo",
+        "title": "Swamp Spirits",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam",
+          "Exp"
+        ],
+        "specialties": [
+          "Regen",
+          "Control"
+        ],
+        "release": "16 April 2021",
+        "ratings": {
+          "offense": 3,
+          "durability": 10,
+          "abilityEffects": 10,
+          "difficulty": 7
+        },
+        "skins": 4,
+        "skills": [
+          "Stick, Stick",
+          "Slam, Slam",
+          "Spread, Spread",
+          "Grab, Grab"
+        ]
+      },
+      {
+        "slug": "gord",
+        "name": "Gord",
+        "title": "Professor of the Mystics",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Burst"
+        ],
+        "release": "November 2016",
+        "ratings": {
+          "offense": 7,
+          "durability": 1,
+          "abilityEffects": 8,
+          "difficulty": 3
+        },
+        "skins": 8,
+        "skills": [
+          "Mystic Favor",
+          "Mystic Projectile",
+          "Mystic Injunction",
+          "Mystic Gush"
+        ]
+      },
+      {
+        "slug": "granger",
+        "name": "Granger",
+        "title": "Death Chanter",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Burst",
+          "Finisher"
+        ],
+        "release": "23 April 2019",
+        "ratings": {
+          "offense": 7,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 4
+        },
+        "skins": 11,
+        "skills": [
+          "Capriccio",
+          "Rhapsody",
+          "Rondo",
+          "Death Sonata"
+        ]
+      },
+      {
+        "slug": "grock",
+        "name": "Grock",
+        "title": "Fortress Titan",
+        "roles": [
+          "Tank",
+          "Fighter"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Initiator"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 4,
+          "durability": 9,
+          "abilityEffects": 8,
+          "difficulty": 6
+        },
+        "skins": 8,
+        "skills": [
+          "Bastion of Stone",
+          "Mighty Swing",
+          "Earthen Rampart",
+          "Tectonic Charge"
+        ]
+      },
+      {
+        "slug": "guinevere",
+        "name": "Guinevere",
+        "title": "Ms. Violet",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Burst",
+          "Magic Damage"
+        ],
+        "release": "21 February 2019",
+        "ratings": {
+          "offense": 6,
+          "durability": 4,
+          "abilityEffects": 8,
+          "difficulty": 4
+        },
+        "skins": 11,
+        "skills": [
+          "Super Magic",
+          "Energy Wave",
+          "Spatial Migration",
+          "Violet Requiem"
+        ]
+      },
+      {
+        "slug": "gusion",
+        "name": "Gusion",
+        "title": "Holy Blade",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle",
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Magic Damage"
+        ],
+        "release": "2018",
+        "ratings": {
+          "offense": 9,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 8
+        },
+        "skins": 12,
+        "skills": [
+          "Dagger Specialist",
+          "Sword Spike",
+          "Shadowblade Slaughter",
+          "Incandescence"
+        ]
+      },
+      {
+        "slug": "hanabi",
+        "name": "Hanabi",
+        "title": "Scarlet Flower",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "17 April 2018",
+        "ratings": {
+          "offense": 7,
+          "durability": 2,
+          "abilityEffects": 8,
+          "difficulty": 1
+        },
+        "skins": 13,
+        "skills": [
+          "Ninjutsu: Petal Barrage",
+          "Ninjutsu: Equinox",
+          "Ninjutsu: Soul Scroll",
+          "Forbidden Jutsu: Higanbana"
+        ]
+      },
+      {
+        "slug": "hanzo",
+        "name": "Hanzo",
+        "title": "Akuma Ninja",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Burst",
+          "Poke"
+        ],
+        "release": "4 December 2018",
+        "ratings": {
+          "offense": 8,
+          "durability": 7,
+          "abilityEffects": 2,
+          "difficulty": 5
+        },
+        "skins": 6,
+        "skills": [
+          "Ame No Habakiri",
+          "Ninjutsu: Demon Feast",
+          "Ninjutsu: Dark Mist",
+          "Kinjutsu: Pinnacle Ninja",
+          "Ame no Habakiri",
+          "Forbidden Ninjutsu: Soul Snatch",
+          "Forbidden Ninjutsu: Black Mist",
+          "Ninjutsu Flee: Return"
+        ]
+      },
+      {
+        "slug": "harith",
+        "name": "Harith",
+        "title": "Time Traveler",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "6 November 2018",
+        "ratings": {
+          "offense": 5,
+          "durability": 4,
+          "abilityEffects": 1,
+          "difficulty": 6
+        },
+        "skins": 9,
+        "skills": [
+          "Key Insight",
+          "Synchro Fission",
+          "Chrono Dash",
+          "Zaman Force"
+        ]
+      },
+      {
+        "slug": "harley",
+        "name": "Harley",
+        "title": "Mage Genius",
+        "roles": [
+          "Assassin",
+          "Mage"
+        ],
+        "lanes": [
+          "Jungle",
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Poke"
+        ],
+        "release": "29 July 2017",
+        "ratings": {
+          "offense": 9,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 4
+        },
+        "skins": 10,
+        "skills": [
+          "Magic Master",
+          "Poker Trick",
+          "Space Escape",
+          "Deadly Magic"
+        ]
+      },
+      {
+        "slug": "hayabusa",
+        "name": "Hayabusa",
+        "title": "Crimson Shadow",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "4 November 2016",
+        "ratings": {
+          "offense": 5,
+          "durability": 4,
+          "abilityEffects": 1,
+          "difficulty": 6
+        },
+        "skins": 12,
+        "skills": [
+          "Ninjutsu: Trace of Shadow",
+          "Ninjutsu: Phantom Shuriken",
+          "Ninjutsu: Quad Shadow",
+          "Ougi: Shadow Kill"
+        ]
+      },
+      {
+        "slug": "helcurt",
+        "name": "Helcurt",
+        "title": "Shadowbringer",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle",
+          "Roam"
+        ],
+        "specialties": [
+          "Push",
+          "Burst"
+        ],
+        "release": "24 November 2017",
+        "ratings": {
+          "offense": 5,
+          "durability": 3,
+          "abilityEffects": 5,
+          "difficulty": 4
+        },
+        "skins": 8,
+        "skills": [
+          "Shadow of Styx",
+          "Hidden Terror",
+          "Deadly Stinger",
+          "Dark Night Falls"
+        ]
+      },
+      {
+        "slug": "hilda",
+        "name": "Hilda",
+        "title": "Power of Megalith",
+        "roles": [
+          "Fighter",
+          "Tank"
+        ],
+        "lanes": [
+          "Roam",
+          "Exp"
+        ],
+        "specialties": [
+          "Damage",
+          "Regen"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 4,
+          "durability": 9,
+          "abilityEffects": 4,
+          "difficulty": 4
+        },
+        "skins": 6,
+        "skills": [
+          "Blessing of Wilderness",
+          "Combat Ritual",
+          "Art of Hunting",
+          "Power of Wildness"
+        ]
+      },
+      {
+        "slug": "hirara",
+        "name": "Hirara",
+        "title": "Fallen Scarlet",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Finisher"
+        ],
+        "release": "17 June 2026",
+        "ratings": {
+          "offense": 8,
+          "durability": 4,
+          "abilityEffects": 4,
+          "difficulty": 7
+        },
+        "skins": 2,
+        "skills": [
+          "Twin Fans: Ukifune",
+          "Meisen-e",
+          "Kaerazu",
+          "Twin Fans: Ukifune",
+          "Falling Maple",
+          "Infernal Torrent"
+        ]
+      },
+      {
+        "slug": "hylos",
+        "name": "Hylos",
+        "title": "Grand Warden",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Guard",
+          "Initiator"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 2,
+          "durability": 10,
+          "abilityEffects": 8,
+          "difficulty": 5
+        },
+        "skins": 7,
+        "skills": [
+          "Thickened Blood",
+          "Law and Order",
+          "Ring of Punishment",
+          "Glorious Pathway"
+        ]
+      },
+      {
+        "slug": "irithel",
+        "name": "Irithel",
+        "title": "Jungle Heart",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Burst"
+        ],
+        "release": "15 August 2017",
+        "ratings": {
+          "offense": 8,
+          "durability": 1,
+          "abilityEffects": 1,
+          "difficulty": 3
+        },
+        "skins": 8,
+        "skills": [
+          "Jungle Heart",
+          "Strafe",
+          "Force of the Queen",
+          "Heavy Crossbow"
+        ]
+      },
+      {
+        "slug": "ixia",
+        "name": "Ixia",
+        "title": "Arclight Outlaw",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "8 July 2023",
+        "ratings": {
+          "offense": 7,
+          "durability": 3,
+          "abilityEffects": 5,
+          "difficulty": 4
+        },
+        "skins": 4,
+        "skills": [
+          "Siphon Starlium",
+          "Dual Beam",
+          "Star Helix",
+          "Full Barrage"
+        ]
+      },
+      {
+        "slug": "jawhead",
+        "name": "Jawhead",
+        "title": "Steel Sweetheart",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Roam",
+          "Exp"
+        ],
+        "specialties": [
+          "Charge",
+          "Burst"
+        ],
+        "release": "January 2018",
+        "ratings": {
+          "offense": 3,
+          "durability": 6,
+          "abilityEffects": 6,
+          "difficulty": 6
+        },
+        "skins": 10,
+        "skills": [
+          "Mecha Suppression",
+          "Smart Missiles",
+          "Ejector",
+          "Unstoppable Force"
+        ]
+      },
+      {
+        "slug": "johnson",
+        "name": "Johnson",
+        "title": "Wild Engine",
+        "roles": [
+          "Tank",
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Support",
+          "Crowd Control"
+        ],
+        "release": "14 March 2017",
+        "ratings": {
+          "offense": 3,
+          "durability": 8,
+          "abilityEffects": 9,
+          "difficulty": 6
+        },
+        "skins": 9,
+        "skills": [
+          "Electro Airbag",
+          "Impact Wrench",
+          "Electromagnetic Waves",
+          "Full Throttle"
+        ]
+      },
+      {
+        "slug": "joy",
+        "name": "Joy",
+        "title": "Flash of Miracle",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "18 November 2022",
+        "ratings": {
+          "offense": 7,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 9
+        },
+        "skins": 5,
+        "skills": [
+          "Humph, Joy's Angry!",
+          "Look, Leonin Crystal!",
+          "Meow, Rhythm of Joy!",
+          "Ha, Electrifying Beats!"
+        ]
+      },
+      {
+        "slug": "julian",
+        "name": "Julian",
+        "title": "Scarlet Raven",
+        "roles": [
+          "Assassin",
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Chase",
+          "Magic Damage"
+        ],
+        "release": "24 May 2022",
+        "ratings": {
+          "offense": 6,
+          "durability": 6,
+          "abilityEffects": 7,
+          "difficulty": 5
+        },
+        "skins": 5,
+        "skills": [
+          "Smith's Legacy",
+          "Scythe",
+          "Sword",
+          "Chain",
+          "Smith's Legacy",
+          "Enhanced Scythe",
+          "Enhanced Sword",
+          "Enhanced Chain"
+        ]
+      },
+      {
+        "slug": "kadita",
+        "name": "Kadita",
+        "title": "Ocean Goddess",
+        "roles": [
+          "Mage",
+          "Assassin"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Charge"
+        ],
+        "release": "18 December 2018",
+        "ratings": {
+          "offense": 8,
+          "durability": 4,
+          "abilityEffects": 8,
+          "difficulty": 6
+        },
+        "skins": 6,
+        "skills": [
+          "Thalassophobia",
+          "Ocean Ode",
+          "Breath of the Ocean",
+          "Rough Waves"
+        ]
+      },
+      {
+        "slug": "kagura",
+        "name": "Kagura",
+        "title": "Onmyouji Master",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Finisher"
+        ],
+        "release": "December 2016",
+        "ratings": {
+          "offense": 9,
+          "durability": 4,
+          "abilityEffects": 5,
+          "difficulty": 9
+        },
+        "skins": 11,
+        "skills": [
+          "Yin Yang Gathering",
+          "Seimei Umbrella Open",
+          "Rasho Umbrella Flee",
+          "Yin Yang Overturn",
+          "Yin Yang Gathering",
+          "Seimei Umbrella Open",
+          "Rasho Umbrella Flee",
+          "Yin Yang Overturn"
+        ]
+      },
+      {
+        "slug": "kaja",
+        "name": "Kaja",
+        "title": "Nazar King",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Initiator",
+          "Charge"
+        ],
+        "release": "25 April 2018",
+        "ratings": {
+          "offense": 2,
+          "durability": 8,
+          "abilityEffects": 7,
+          "difficulty": 6
+        },
+        "skins": 7,
+        "skills": [
+          "Wings of Lightning",
+          "Ring of Order",
+          "Soaring Wings",
+          "Divine Binding"
+        ]
+      },
+      {
+        "slug": "kalea",
+        "name": "Kalea",
+        "title": "Surging Wave",
+        "roles": [
+          "Support",
+          "Fighter"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Control",
+          "Regen"
+        ],
+        "release": "19 March 2025",
+        "ratings": {
+          "offense": 3,
+          "durability": 6,
+          "abilityEffects": 9,
+          "difficulty": 4
+        },
+        "skins": 3,
+        "skills": [
+          "Surge of Life",
+          "Wavebreaker",
+          "Tidal Strike",
+          "Tsunami Slam"
+        ]
+      },
+      {
+        "slug": "karina",
+        "name": "Karina",
+        "title": "Shadow Blade",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Finisher",
+          "Magic Damage"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 7,
+          "durability": 5,
+          "abilityEffects": 1,
+          "difficulty": 5
+        },
+        "skins": 10,
+        "skills": [
+          "Shadow Combo",
+          "Dance of Blades",
+          "Dance of Death",
+          "Shadow Assault"
+        ]
+      },
+      {
+        "slug": "karrie",
+        "name": "Karrie",
+        "title": "Lost Star",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 8,
+          "durability": 3,
+          "abilityEffects": 1,
+          "difficulty": 4
+        },
+        "skins": 11,
+        "skills": [
+          "Lightwheel Mark",
+          "Spinning Lightwheel",
+          "Phantom Step",
+          "Speedy Lightwheel"
+        ]
+      },
+      {
+        "slug": "khaleed",
+        "name": "Khaleed",
+        "title": "Desert Scimitar",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Roam",
+          "Exp"
+        ],
+        "specialties": [
+          "Damage",
+          "Regen"
+        ],
+        "release": "7 August 2020",
+        "ratings": {
+          "offense": 5,
+          "durability": 8,
+          "abilityEffects": 5,
+          "difficulty": 5
+        },
+        "skins": 5,
+        "skills": [
+          "Sand Walk",
+          "Desert Tornado",
+          "Quicksand Guard",
+          "Raging Sandstorm"
+        ]
+      },
+      {
+        "slug": "khufra",
+        "name": "Khufra",
+        "title": "Desert Tyrant",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Initiator",
+          "Crowd Control"
+        ],
+        "release": "12 March 2019",
+        "ratings": {
+          "offense": 2,
+          "durability": 9,
+          "abilityEffects": 10,
+          "difficulty": 5
+        },
+        "skins": 8,
+        "skills": [
+          "Spell Curse",
+          "Tyrant's Revenge",
+          "Bouncing Ball",
+          "Tyrant's Rage"
+        ]
+      },
+      {
+        "slug": "kimmy",
+        "name": "Kimmy",
+        "title": "Hoverjet Outrider",
+        "roles": [
+          "Marksman",
+          "Mage"
+        ],
+        "lanes": [
+          "Mid",
+          "Gold"
+        ],
+        "specialties": [
+          "Damage",
+          "Magic Damage"
+        ],
+        "release": "23 October 2018",
+        "ratings": {
+          "offense": 8,
+          "durability": 3,
+          "abilityEffects": 5,
+          "difficulty": 6
+        },
+        "skins": 9,
+        "skills": [
+          "Aerial Dominance",
+          "Anti-Grav Thruster",
+          "Starlium Beam",
+          "Traction Pulse"
+        ]
+      },
+      {
+        "slug": "lancelot",
+        "name": "Lancelot",
+        "title": "Blade of Roses",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 5,
+          "durability": 4,
+          "abilityEffects": 1,
+          "difficulty": 5
+        },
+        "skins": 13,
+        "skills": [
+          "Soul Cutter",
+          "Puncture",
+          "Thorned Rose",
+          "Phantom Execution"
+        ]
+      },
+      {
+        "slug": "lapu-lapu",
+        "name": "Lapu-Lapu",
+        "title": "Courageous Blade",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 4,
+          "durability": 8,
+          "abilityEffects": 4,
+          "difficulty": 5
+        },
+        "skins": 7,
+        "skills": [
+          "Homeland Defender",
+          "Justice Blades",
+          "Jungle Warrior",
+          "Bravest Fighter",
+          "Homeland Defender",
+          "Land Shaker",
+          "Storm Sword",
+          "Raging Slash"
+        ]
+      },
+      {
+        "slug": "layla",
+        "name": "Layla",
+        "title": "Energy Gunner",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "23 September 2016",
+        "ratings": {
+          "offense": 8,
+          "durability": 1,
+          "abilityEffects": 1,
+          "difficulty": 2
+        },
+        "skins": 13,
+        "skills": [
+          "Malefic Gun",
+          "Malefic Bomb",
+          "Void Projectile",
+          "Destruction Rush"
+        ]
+      },
+      {
+        "slug": "leomord",
+        "name": "Leomord",
+        "title": "Sworn Sword",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "3 October 2018",
+        "ratings": {
+          "offense": 5,
+          "durability": 7,
+          "abilityEffects": 3,
+          "difficulty": 3
+        },
+        "skins": 10,
+        "skills": [
+          "The Oath Keeper",
+          "Momentum",
+          "Decimation Assault",
+          "Phantom Steed",
+          "The Oath Keeper",
+          "Phantom Stomp",
+          "Phantom Charge",
+          "Phantom Steed"
+        ]
+      },
+      {
+        "slug": "lesley",
+        "name": "Lesley",
+        "title": "Deadly Sniper",
+        "roles": [
+          "Marksman",
+          "Assassin"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Burst"
+        ],
+        "release": "January 2018",
+        "ratings": {
+          "offense": 7,
+          "durability": 1,
+          "abilityEffects": 2,
+          "difficulty": 5
+        },
+        "skins": 13,
+        "skills": [
+          "Lethal Shot",
+          "Master of Camouflage",
+          "Tactical Grenade",
+          "Ultimate Snipe"
+        ]
+      },
+      {
+        "slug": "ling",
+        "name": "Ling",
+        "title": "Cyan Finch",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "24 November 2019",
+        "ratings": {
+          "offense": 6,
+          "durability": 4,
+          "abilityEffects": 3,
+          "difficulty": 7
+        },
+        "skins": 9,
+        "skills": [
+          "Cloud Walker",
+          "Finch Poise",
+          "Defiant Sword",
+          "Tempest of Blades"
+        ]
+      },
+      {
+        "slug": "lolita",
+        "name": "Lolita",
+        "title": "Steel Elf",
+        "roles": [
+          "Support",
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Guard",
+          "Crowd Control"
+        ],
+        "release": "28 October 2016",
+        "ratings": {
+          "offense": 1,
+          "durability": 10,
+          "abilityEffects": 9,
+          "difficulty": 5
+        },
+        "skins": 9,
+        "skills": [
+          "Noumenon Energy Core",
+          "Power Charge",
+          "Guardian's Reflection",
+          "Noumenon Blast"
+        ]
+      },
+      {
+        "slug": "lukas",
+        "name": "Lukas",
+        "title": "Beast of Light",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Jungle"
+        ],
+        "specialties": [
+          "Regen",
+          "Damage"
+        ],
+        "release": "21 December 2024",
+        "ratings": {
+          "offense": 5,
+          "durability": 8,
+          "abilityEffects": 6,
+          "difficulty": 3
+        },
+        "skins": 3,
+        "skills": [
+          "Hero's Resolve",
+          "Flash Combo",
+          "Flash Step",
+          "Unleash the Beast",
+          "Hero's Resolve",
+          "Flash Combo",
+          "Flash Step",
+          "Shockwave Blast"
+        ]
+      },
+      {
+        "slug": "lunox",
+        "name": "Lunox",
+        "title": "Twilight Goddess",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Damage"
+        ],
+        "release": "4 September 2018",
+        "ratings": {
+          "offense": 9,
+          "durability": 4,
+          "abilityEffects": 3,
+          "difficulty": 9
+        },
+        "skins": 11,
+        "skills": [
+          "Dreamland Twist",
+          "Starlight Pulse",
+          "Chaos Assault",
+          "Order & Chaos",
+          "Order & Chaos",
+          "Dreamland Twist",
+          "Starlight Pulse",
+          "Chaos Assault",
+          "Cosmic Fission",
+          "Power of Order: Brilliance",
+          "Dreamland Twist",
+          "Starlight Pulse",
+          "Chaos Assault",
+          "Cosmic Fission",
+          "Power of Chaos: Darkening"
+        ]
+      },
+      {
+        "slug": "luo-yi",
+        "name": "Luo Yi",
+        "title": "Yin-yang Geomancer",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Support",
+          "Crowd Control"
+        ],
+        "release": "16 May 2020",
+        "ratings": {
+          "offense": 10,
+          "durability": 2,
+          "abilityEffects": 4,
+          "difficulty": 8
+        },
+        "skins": 9,
+        "skills": [
+          "Duality",
+          "Dispersion",
+          "Rotation",
+          "Diversion"
+        ]
+      },
+      {
+        "slug": "lylia",
+        "name": "Lylia",
+        "title": "Little Witch",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Push",
+          "Damage"
+        ],
+        "release": "23 July 2019",
+        "ratings": {
+          "offense": 10,
+          "durability": 5,
+          "abilityEffects": 2,
+          "difficulty": 6
+        },
+        "skins": 8,
+        "skills": [
+          "Angry Gloom",
+          "Magic Shockwave",
+          "Shadow Energy",
+          "Black Shoes"
+        ]
+      },
+      {
+        "slug": "marcel",
+        "name": "Marcel",
+        "title": "Soul Photographer",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Support"
+        ],
+        "release": "11 March 2026",
+        "ratings": {
+          "offense": 3,
+          "durability": 7,
+          "abilityEffects": 10,
+          "difficulty": 3
+        },
+        "skins": 2,
+        "skills": [
+          "Platinum Snap",
+          "Framed Moment",
+          "Tracking Shot",
+          "Golden Hour"
+        ]
+      },
+      {
+        "slug": "martis",
+        "name": "Martis",
+        "title": "Ashura King",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Finisher",
+          "Charge"
+        ],
+        "release": "2018",
+        "ratings": {
+          "offense": 3,
+          "durability": 6,
+          "abilityEffects": 5,
+          "difficulty": 6
+        },
+        "skins": 9,
+        "skills": [
+          "Asura's Wrath",
+          "Asura Aura",
+          "Mortal Coil",
+          "Decimation"
+        ]
+      },
+      {
+        "slug": "masha",
+        "name": "Masha",
+        "title": "Wild-oats Fist",
+        "roles": [
+          "Fighter",
+          "Tank"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Push",
+          "Damage"
+        ],
+        "release": "17 September 2019",
+        "ratings": {
+          "offense": 7,
+          "durability": 5,
+          "abilityEffects": 3,
+          "difficulty": 6
+        },
+        "skins": 7,
+        "skills": [
+          "Ancient Strength",
+          "Wild Power",
+          "Howl Shock",
+          "Thunderclap",
+          "Life Recovery"
+        ]
+      },
+      {
+        "slug": "mathilda",
+        "name": "Mathilda",
+        "title": "Swift Plume",
+        "roles": [
+          "Support",
+          "Assassin"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Initiator",
+          "Guard"
+        ],
+        "release": "12 December 2020",
+        "ratings": {
+          "offense": 2,
+          "durability": 8,
+          "abilityEffects": 4,
+          "difficulty": 7
+        },
+        "skins": 6,
+        "skills": [
+          "Ancestral Guidance",
+          "Soul Bloom",
+          "Guiding Wind",
+          "Circling Eagle"
+        ]
+      },
+      {
+        "slug": "melissa",
+        "name": "Melissa",
+        "title": "Cursed Needle",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "22 February 2022",
+        "ratings": {
+          "offense": 9,
+          "durability": 2,
+          "abilityEffects": 4,
+          "difficulty": 5
+        },
+        "skins": 6,
+        "skills": [
+          "Doll Buster",
+          "Falling!",
+          "Eyes on You!",
+          "Go Away!"
+        ]
+      },
+      {
+        "slug": "minotaur",
+        "name": "Minotaur",
+        "title": "Son of Minos",
+        "roles": [
+          "Tank",
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control"
+        ],
+        "release": "14 October 2016",
+        "ratings": {
+          "offense": 1,
+          "durability": 10,
+          "abilityEffects": 8,
+          "difficulty": 4
+        },
+        "skins": 7,
+        "skills": [
+          "Rage Incarnate",
+          "Despair Stomp",
+          "Motivation Roar",
+          "Minoan Fury"
+        ]
+      },
+      {
+        "slug": "minsitthar",
+        "name": "Minsitthar",
+        "title": "Courageous Warrior",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Roam"
+        ],
+        "specialties": [
+          "Initiator",
+          "Crowd Control"
+        ],
+        "release": "20 November 2018",
+        "ratings": {
+          "offense": 4,
+          "durability": 6,
+          "abilityEffects": 8,
+          "difficulty": 3
+        },
+        "skins": 6,
+        "skills": [
+          "Mark of the King",
+          "Spear of Glory",
+          "Shield Assault",
+          "King's Calling"
+        ]
+      },
+      {
+        "slug": "miya",
+        "name": "Miya",
+        "title": "Moonlight Archer",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 7,
+          "durability": 1,
+          "abilityEffects": 4,
+          "difficulty": 1
+        },
+        "skins": 14,
+        "skills": [
+          "Moon Blessing",
+          "Moon Arrow",
+          "Arrow of Eclipse",
+          "Hidden Moonlight"
+        ]
+      },
+      {
+        "slug": "moskov",
+        "name": "Moskov",
+        "title": "Spear of Quiescence",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Chase"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 6,
+          "durability": 2,
+          "abilityEffects": 6,
+          "difficulty": 4
+        },
+        "skins": 11,
+        "skills": [
+          "Spear of Quiescence",
+          "Abyss Walker",
+          "Spear of Misery",
+          "Spear of Destruction"
+        ]
+      },
+      {
+        "slug": "nana",
+        "name": "Nana",
+        "title": "Sweet Leonin",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Burst"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 6,
+          "durability": 5,
+          "abilityEffects": 10,
+          "difficulty": null
+        },
+        "skins": 11,
+        "skills": [
+          "Molina's Gift",
+          "Magic Boomerang",
+          "Molina Smooch",
+          "Molina Blitz"
+        ]
+      },
+      {
+        "slug": "natalia",
+        "name": "Natalia",
+        "title": "Bright Claw",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle",
+          "Roam"
+        ],
+        "specialties": [
+          "Chase",
+          "Finisher"
+        ],
+        "release": "December 2016",
+        "ratings": {
+          "offense": 6,
+          "durability": 1,
+          "abilityEffects": 6,
+          "difficulty": 9
+        },
+        "skins": 9,
+        "skills": [
+          "Assassin Instinct",
+          "Claw Dash",
+          "Smoke Bomb",
+          "The Hunt"
+        ]
+      },
+      {
+        "slug": "natan",
+        "name": "Natan",
+        "title": "Spacetime Walker",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Burst",
+          "Magic Damage"
+        ],
+        "release": "23 July 2021",
+        "ratings": {
+          "offense": 6,
+          "durability": 2,
+          "abilityEffects": 2,
+          "difficulty": 2
+        },
+        "skins": 8,
+        "skills": [
+          "Theory of Everything",
+          "Superposition",
+          "Interference!",
+          "Entropy?"
+        ]
+      },
+      {
+        "slug": "nolan",
+        "name": "Nolan",
+        "title": "Cosmic Wayfinder",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "30 September 2023",
+        "ratings": {
+          "offense": 6,
+          "durability": 3,
+          "abilityEffects": 2,
+          "difficulty": 6
+        },
+        "skins": 4,
+        "skills": [
+          "Dimensional Rift",
+          "Expansion",
+          "Gauge",
+          "Fracture"
+        ]
+      },
+      {
+        "slug": "novaria",
+        "name": "Novaria",
+        "title": "Star Rebel",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Poke"
+        ],
+        "release": "16 May 2023",
+        "ratings": {
+          "offense": 9,
+          "durability": 3,
+          "abilityEffects": 3,
+          "difficulty": 7
+        },
+        "skins": 4,
+        "skills": [
+          "Star Trail",
+          "Astral Meteor",
+          "Astral Recall",
+          "Astral Echo"
+        ]
+      },
+      {
+        "slug": "obsidia",
+        "name": "Obsidia",
+        "title": "Sovereign of Dark's End",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Damage"
+        ],
+        "release": "17 September 2025",
+        "ratings": {
+          "offense": 7,
+          "durability": 2,
+          "abilityEffects": 1,
+          "difficulty": 4
+        },
+        "skins": 3,
+        "skills": [
+          "Return to Bone",
+          "Abyssal Bone Needle",
+          "Phantom Shadowmeld",
+          "Hunt of Bone"
+        ]
+      },
+      {
+        "slug": "odette",
+        "name": "Odette",
+        "title": "Swan Princess",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Poke"
+        ],
+        "release": "29 September 2017",
+        "ratings": {
+          "offense": 10,
+          "durability": 4,
+          "abilityEffects": 5,
+          "difficulty": 3
+        },
+        "skins": 10,
+        "skills": [
+          "Lakeshore Ambience",
+          "Avian Authority",
+          "Blue Nova",
+          "Swan Song"
+        ]
+      },
+      {
+        "slug": "paquito",
+        "name": "Paquito",
+        "title": "The Heavenly Fist",
+        "roles": [
+          "Fighter",
+          "Assassin"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "15 January 2021",
+        "ratings": {
+          "offense": 5,
+          "durability": 6,
+          "abilityEffects": 4,
+          "difficulty": 9
+        },
+        "skins": 9,
+        "skills": [
+          "Champ Stance",
+          "Heavy Left Punch",
+          "Jab",
+          "Knockout Strike"
+        ]
+      },
+      {
+        "slug": "pharsa",
+        "name": "Pharsa",
+        "title": "Wings of Vengeance",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Poke"
+        ],
+        "release": "27 December 2017",
+        "ratings": {
+          "offense": 9,
+          "durability": 2,
+          "abilityEffects": 5,
+          "difficulty": 5
+        },
+        "skins": 11,
+        "skills": [
+          "Spiritual Unity",
+          "Curse of Crow",
+          "Energy Impact",
+          "Feathered Air Strike",
+          "Wings by Wings"
+        ]
+      },
+      {
+        "slug": "phoveus",
+        "name": "Phoveus",
+        "title": "Chains of Sin",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Regen",
+          "Damage"
+        ],
+        "release": "11 May 2021",
+        "ratings": {
+          "offense": 8,
+          "durability": 7,
+          "abilityEffects": 5,
+          "difficulty": 4
+        },
+        "skins": 3,
+        "skills": [
+          "Demonic Force",
+          "Demonic Impact",
+          "Dark Wave",
+          "Infernal Pursuit"
+        ]
+      },
+      {
+        "slug": "popol-and-kupa",
+        "name": "Popol and Kupa",
+        "title": "Icefield Companions",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Jungle",
+          "Gold"
+        ],
+        "specialties": [
+          "Push",
+          "Burst"
+        ],
+        "release": "21 April 2020",
+        "ratings": {
+          "offense": 7,
+          "durability": 3,
+          "abilityEffects": 7,
+          "difficulty": 6
+        },
+        "skins": 8,
+        "skills": [
+          "We Are Friends",
+          "Bite 'em, Kupa!",
+          "Kupa, Help!",
+          "We Are Angry!",
+          "We Are Angry!",
+          "We Are Friends",
+          "Bite 'em, Kupa!",
+          "Kupa, Help!",
+          "Popol's Surprise",
+          "We Are Angry!"
+        ]
+      },
+      {
+        "slug": "rafaela",
+        "name": "Rafaela",
+        "title": "Wings of Holiness",
+        "roles": [
+          "Support"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Regen",
+          "Guard"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 2,
+          "durability": 6,
+          "abilityEffects": 7,
+          "difficulty": 4
+        },
+        "skins": 9,
+        "skills": [
+          "Divine Resurrection",
+          "Light of Retribution",
+          "Holy Healing",
+          "Holy Baptism"
+        ]
+      },
+      {
+        "slug": "roger",
+        "name": "Roger",
+        "title": "Dire Wolf Hunter",
+        "roles": [
+          "Fighter",
+          "Marksman"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Finisher",
+          "Burst"
+        ],
+        "release": "25 June 2017",
+        "ratings": {
+          "offense": 4,
+          "durability": 6,
+          "abilityEffects": 1,
+          "difficulty": 6
+        },
+        "skins": 10,
+        "skills": [
+          "Full Moon Curse",
+          "Open Fire",
+          "Hunter's Steps",
+          "Wolf Transformation",
+          "Full Moon Curse",
+          "Lycan Pounce",
+          "Bloodthirsty Howl",
+          "Restore Human Form"
+        ]
+      },
+      {
+        "slug": "ruby",
+        "name": "Ruby",
+        "title": "Little Red Hood",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Crowd Control",
+          "Regen"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 2,
+          "durability": 9,
+          "abilityEffects": 9,
+          "difficulty": 4
+        },
+        "skins": 11,
+        "skills": [
+          "Let's Dance!",
+          "Be Good!",
+          "Don't Run, Wolf King!",
+          "I'm Offended!"
+        ]
+      },
+      {
+        "slug": "saber",
+        "name": "Saber",
+        "title": "Wandering Sword",
+        "roles": [
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle",
+          "Roam"
+        ],
+        "specialties": [
+          "Charge",
+          "Finisher"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 6,
+          "durability": 2,
+          "abilityEffects": 6,
+          "difficulty": 3
+        },
+        "skins": 9,
+        "skills": [
+          "Enemy's Bane",
+          "Orbiting Swords",
+          "Charge",
+          "Triple Sweep"
+        ]
+      },
+      {
+        "slug": "selena",
+        "name": "Selena",
+        "title": "Abyssal Witch",
+        "roles": [
+          "Assassin",
+          "Mage"
+        ],
+        "lanes": [
+          "Mid",
+          "Roam"
+        ],
+        "specialties": [
+          "Initiator",
+          "Finisher"
+        ],
+        "release": "10 July 2018",
+        "ratings": {
+          "offense": 7,
+          "durability": 4,
+          "abilityEffects": 10,
+          "difficulty": 8
+        },
+        "skins": 11,
+        "skills": [
+          "Symbiosis",
+          "Abyssal Trap",
+          "Abyssal Arrow",
+          "Primal Darkness",
+          "Symbiosis",
+          "Soul Eater",
+          "Garotte",
+          "Blessing of the Moon Goddess"
+        ]
+      },
+      {
+        "slug": "silvanna",
+        "name": "Silvanna",
+        "title": "Imperial Knightess",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Initiator",
+          "Magic Damage"
+        ],
+        "release": "17 December 2019",
+        "ratings": {
+          "offense": 4,
+          "durability": 5,
+          "abilityEffects": 7,
+          "difficulty": 3
+        },
+        "skins": 10,
+        "skills": [
+          "Knightess' Resolve",
+          "Cometic Lance",
+          "Spiral Strangling",
+          "Imperial Justice"
+        ]
+      },
+      {
+        "slug": "sora",
+        "name": "Sora",
+        "title": "Shifting Cloud",
+        "roles": [
+          "Fighter",
+          "Assassin"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Charge",
+          "Burst"
+        ],
+        "release": "18 December 2025",
+        "ratings": {
+          "offense": 6,
+          "durability": 6,
+          "abilityEffects": 5,
+          "difficulty": 5
+        },
+        "skins": 2,
+        "skills": [
+          "Mystic Surge",
+          "Sundering Strike",
+          "Windstride",
+          "Shifting Skies",
+          "Mystic Surge",
+          "Sundering Strike - Thunderflash",
+          "Windstride - Thunder Rush",
+          "Heaven's Wrath",
+          "Mystic Surge",
+          "Sundering Strike - Overwhelm",
+          "Windstride - Skyfall",
+          "Stormbind"
+        ]
+      },
+      {
+        "slug": "sun",
+        "name": "Sun",
+        "title": "Monkey King",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp",
+          "Jungle"
+        ],
+        "specialties": [
+          "Push",
+          "Damage"
+        ],
+        "release": "December 2016",
+        "ratings": {
+          "offense": 5,
+          "durability": 5,
+          "abilityEffects": 1,
+          "difficulty": 5
+        },
+        "skins": 9,
+        "skills": [
+          "Simian God",
+          "Endless Variety",
+          "Swift Exchange",
+          "Clone Techniques",
+          "Clone Techniques"
+        ]
+      },
+      {
+        "slug": "suyou",
+        "name": "Suyou",
+        "title": "Mask of the Immortal",
+        "roles": [
+          "Assassin",
+          "Fighter"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Chase",
+          "Burst"
+        ],
+        "release": "21 September 2024",
+        "ratings": {
+          "offense": 6,
+          "durability": 6,
+          "abilityEffects": 5,
+          "difficulty": 5
+        },
+        "skins": 3,
+        "skills": [
+          "Transient Immortal",
+          "Blade Surge",
+          "Soul Sever",
+          "Evil Queller"
+        ]
+      },
+      {
+        "slug": "terizla",
+        "name": "Terizla",
+        "title": "Executioner",
+        "roles": [
+          "Fighter",
+          "Tank"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Burst",
+          "Crowd Control"
+        ],
+        "release": "4 June 2019",
+        "ratings": {
+          "offense": 5,
+          "durability": 9,
+          "abilityEffects": 7,
+          "difficulty": 3
+        },
+        "skins": 7,
+        "skills": [
+          "Body of Smith",
+          "Revenge Strike",
+          "Execution Strike",
+          "Penalty Zone"
+        ]
+      },
+      {
+        "slug": "thamuz",
+        "name": "Thamuz",
+        "title": "Lord Lava",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "18 September 2018",
+        "ratings": {
+          "offense": 4,
+          "durability": 7,
+          "abilityEffects": 2,
+          "difficulty": 6
+        },
+        "skins": 7,
+        "skills": [
+          "Grand Lord Lava",
+          "Molten Scythes",
+          "Chasm Trample",
+          "Cauterant Inferno"
+        ]
+      },
+      {
+        "slug": "tigreal",
+        "name": "Tigreal",
+        "title": "Warrior of Dawn",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Roam"
+        ],
+        "specialties": [
+          "Crowd Control"
+        ],
+        "release": "2016",
+        "ratings": {
+          "offense": 1,
+          "durability": 8,
+          "abilityEffects": 10,
+          "difficulty": 1
+        },
+        "skins": 9,
+        "skills": [
+          "Fearless",
+          "Attack Wave",
+          "Sacred Hammer",
+          "Implosion"
+        ]
+      },
+      {
+        "slug": "uranus",
+        "name": "Uranus",
+        "title": "Aesthereal Defender",
+        "roles": [
+          "Tank"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Regen"
+        ],
+        "release": "2018",
+        "ratings": {
+          "offense": 2,
+          "durability": 10,
+          "abilityEffects": 2,
+          "difficulty": 3
+        },
+        "skins": 7,
+        "skills": [
+          "Radiance",
+          "Ionic Edge",
+          "Transcendent Ward",
+          "Consecration"
+        ]
+      },
+      {
+        "slug": "vale",
+        "name": "Vale",
+        "title": "Windtalker",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Crowd Control"
+        ],
+        "release": "29 January 2019",
+        "ratings": {
+          "offense": 10,
+          "durability": 2,
+          "abilityEffects": 6,
+          "difficulty": 2
+        },
+        "skins": 10,
+        "skills": [
+          "Windtalk",
+          "Wind Blade",
+          "Windblow",
+          "Windstorm"
+        ]
+      },
+      {
+        "slug": "valentina",
+        "name": "Valentina",
+        "title": "Prophetess of the Night",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Finisher"
+        ],
+        "release": "25 November 2021",
+        "ratings": {
+          "offense": 4,
+          "durability": 5,
+          "abilityEffects": 4,
+          "difficulty": 8
+        },
+        "skins": 7,
+        "skills": [
+          "Primal Force",
+          "Shadow Strike",
+          "Arcane Shade",
+          "I Am You"
+        ]
+      },
+      {
+        "slug": "valir",
+        "name": "Valir",
+        "title": "Son of Flames",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Damage",
+          "Guard"
+        ],
+        "release": "2018",
+        "ratings": {
+          "offense": 7,
+          "durability": 2,
+          "abilityEffects": 7,
+          "difficulty": 2
+        },
+        "skins": 11,
+        "skills": [
+          "Ashing",
+          "Burst Fireball",
+          "Searing Torrent",
+          "Vengeance Flame"
+        ]
+      },
+      {
+        "slug": "vexana",
+        "name": "Vexana",
+        "title": "Shimmer of Hope",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Poke",
+          "Control"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 9,
+          "durability": 2,
+          "abilityEffects": 5,
+          "difficulty": 1
+        },
+        "skins": 9,
+        "skills": [
+          "Nether Touch",
+          "Deathly Grasp",
+          "Cursed Blast",
+          "Eternal Guard"
+        ]
+      },
+      {
+        "slug": "wanwan",
+        "name": "Wanwan",
+        "title": "Agile Tiger",
+        "roles": [
+          "Marksman"
+        ],
+        "lanes": [
+          "Gold"
+        ],
+        "specialties": [
+          "Finisher",
+          "Burst"
+        ],
+        "release": "26 November 2019",
+        "ratings": {
+          "offense": 6,
+          "durability": 2,
+          "abilityEffects": 3,
+          "difficulty": 8
+        },
+        "skins": 9,
+        "skills": [
+          "Tiger Pace",
+          "Swallow's Path",
+          "Needles in Flowers",
+          "Crossbow of Tang"
+        ]
+      },
+      {
+        "slug": "x-borg",
+        "name": "X.Borg",
+        "title": "Firaga Armor",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Regen",
+          "Burst"
+        ],
+        "release": "9 August 2019",
+        "ratings": {
+          "offense": 3,
+          "durability": 8,
+          "abilityEffects": 1,
+          "difficulty": 6
+        },
+        "skins": 8,
+        "skills": [
+          "Firaga Armor",
+          "Fire Missiles",
+          "Fire Stake",
+          "Last Insanity"
+        ]
+      },
+      {
+        "slug": "xavier",
+        "name": "Xavier",
+        "title": "Defier of Light",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Damage",
+          "Guard"
+        ],
+        "release": "[[Patch Notes/1.6.66|22 March 2022]]",
+        "ratings": {
+          "offense": 10,
+          "durability": 3,
+          "abilityEffects": 8,
+          "difficulty": 5
+        },
+        "skins": 5,
+        "skills": [
+          "Transcendence",
+          "Infinite Extension",
+          "Mystic Field",
+          "Dawning Light"
+        ]
+      },
+      {
+        "slug": "yi-sun-shin",
+        "name": "Yi Sun-shin",
+        "title": "Paenlong Legend",
+        "roles": [
+          "Assassin",
+          "Marksman"
+        ],
+        "lanes": [
+          "Jungle"
+        ],
+        "specialties": [
+          "Finisher",
+          "Chase"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 9,
+          "durability": 4,
+          "abilityEffects": 2,
+          "difficulty": 7
+        },
+        "skins": 9,
+        "skills": [
+          "Heavenly Vow",
+          "Traceless",
+          "Blood Floods",
+          "Mountain Shocker"
+        ]
+      },
+      {
+        "slug": "yin",
+        "name": "Yin",
+        "title": "Martial Genius",
+        "roles": [
+          "Fighter",
+          "Assassin"
+        ],
+        "lanes": [
+          "Jungle",
+          "Exp"
+        ],
+        "specialties": [
+          "Burst",
+          "Control"
+        ],
+        "release": "18 January 2022",
+        "ratings": {
+          "offense": 6,
+          "durability": 5,
+          "abilityEffects": 8,
+          "difficulty": 4
+        },
+        "skins": 6,
+        "skills": [
+          "Leave It to Me",
+          "Charged Punch",
+          "Instant Blast",
+          "My Turn",
+          "Leave It to Me",
+          "Frenzy Strike",
+          "Instant Blast",
+          "My Turn"
+        ]
+      },
+      {
+        "slug": "yu-zhong",
+        "name": "Yu Zhong",
+        "title": "Black Dragon",
+        "roles": [
+          "Fighter"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Regen",
+          "Damage"
+        ],
+        "release": "16 June 2020",
+        "ratings": {
+          "offense": 4,
+          "durability": 7,
+          "abilityEffects": 7,
+          "difficulty": 7
+        },
+        "skins": 7,
+        "skills": [
+          "Cursing Touch",
+          "Dragon Tail",
+          "Soul Grip",
+          "Black Dragon Form",
+          "Black Dragon Form"
+        ]
+      },
+      {
+        "slug": "yve",
+        "name": "Yve",
+        "title": "Astrowarden",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Burst",
+          "Poke"
+        ],
+        "release": "12 February 2021",
+        "ratings": {
+          "offense": 8,
+          "durability": 4,
+          "abilityEffects": 4,
+          "difficulty": 5
+        },
+        "skins": 4,
+        "skills": [
+          "Galactic Power",
+          "Void Blast",
+          "Void Crystal",
+          "Real World Manipulation"
+        ]
+      },
+      {
+        "slug": "zetian",
+        "name": "Zetian",
+        "title": "Celestial Empress",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Damage",
+          "Crowd Control"
+        ],
+        "release": "18 June 2025",
+        "ratings": {
+          "offense": 8,
+          "durability": 3,
+          "abilityEffects": 5,
+          "difficulty": 2
+        },
+        "skins": 2,
+        "skills": [
+          "Celestial Armament",
+          "Phoenix Strike",
+          "Phoenix Descent",
+          "Fury of the Phoenix"
+        ]
+      },
+      {
+        "slug": "zhask",
+        "name": "Zhask",
+        "title": "The King of Swarms",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "2017",
+        "ratings": {
+          "offense": 10,
+          "durability": 1,
+          "abilityEffects": 4,
+          "difficulty": 7
+        },
+        "skins": 6,
+        "skills": [
+          "Decimation",
+          "Nightmaric Spawn",
+          "Mind Eater",
+          "Dominator's Descent",
+          "Dominator's Descent"
+        ]
+      },
+      {
+        "slug": "zhuxin",
+        "name": "Zhuxin",
+        "title": "Beacon of Spirits",
+        "roles": [
+          "Mage"
+        ],
+        "lanes": [
+          "Mid"
+        ],
+        "specialties": [
+          "Damage",
+          "Crowd Control"
+        ],
+        "release": "29 June 2024",
+        "ratings": {
+          "offense": 8,
+          "durability": 4,
+          "abilityEffects": 8,
+          "difficulty": 4
+        },
+        "skins": 4,
+        "skills": [
+          "Crimson Butterflies",
+          "Fluttering Grace",
+          "Lantern Flare",
+          "Crimson Beacon"
+        ]
+      },
+      {
+        "slug": "zilong",
+        "name": "Zilong",
+        "title": "Spear of Dragon",
+        "roles": [
+          "Fighter",
+          "Assassin"
+        ],
+        "lanes": [
+          "Exp"
+        ],
+        "specialties": [
+          "Chase",
+          "Damage"
+        ],
+        "release": "9 September 2016",
+        "ratings": {
+          "offense": 5,
+          "durability": 2,
+          "abilityEffects": 6,
+          "difficulty": 1
+        },
+        "skins": 13,
+        "skills": [
+          "Dragon Flurry",
+          "Spear Flip",
+          "Spear Strike",
+          "Supreme Warrior"
+        ]
+      }
+    ],
+    "total": 134,
+    "source": {
+      "name": "Mobile Legends Wiki",
+      "url": "https://mobilelegends.fandom.com",
+      "license": "CC BY-SA"
+    }
+  }
+}

@@ -1,0 +1,2133 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-25T13:58:58.998Z",
+  "source": "mlbbdex",
+  "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+  "source_note": "Public tournament page; MLBBDex attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "msc-2026-1-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 1,
+      "duration": "16:44",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Hirara",
+            "Eudora",
+            "Paquito",
+            "Chip"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Zhuxin",
+            "Guinevere",
+            "Lukas"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Gord",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Valentina",
+            "Harley",
+            "Atlas",
+            "Mathilda",
+            "Chou"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-1-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 2,
+      "duration": "16:24",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Harley",
+            "Valentina",
+            "Clint",
+            "Belerick"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Eudora",
+            "Dyrroth",
+            "Ruby"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Hirara",
+            "Selena",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Paquito",
+            "Barats",
+            "Atlas",
+            "Melissa",
+            "Zhuxin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-1-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 3,
+      "duration": "12:51",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Hirara",
+            "Selena",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Atlas",
+            "Fanny",
+            "Guinevere",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Ruby",
+            "Nolan",
+            "Eudora",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Barats",
+            "Paquito",
+            "Melissa",
+            "Phoveus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-1-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 4,
+      "duration": "15:30",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Granger",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Hirara",
+            "Guinevere",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Benedetta",
+            "Baxia",
+            "Eudora",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Barats",
+            "Atlas",
+            "Paquito",
+            "Chou",
+            "Harith"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-1-5",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 5,
+      "duration": "11:18",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Selena",
+            "Paquito",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Hirara",
+            "Clint",
+            "Gloo"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Guinevere",
+            "Zhuxin",
+            "Brody",
+            "Badang"
+          ],
+          "bans": [
+            "Atlas",
+            "Barats",
+            "Belerick",
+            "Lapu-Lapu",
+            "Uranus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-1-6",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 6,
+      "duration": "10:11",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Valentina",
+            "Melissa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Guinevere",
+            "Fanny",
+            "Arlott",
+            "Badang"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Dyrroth",
+            "Paquito",
+            "Rafaela",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Freya",
+            "Barats",
+            "Atlas",
+            "Eudora",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-1-7",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-08-01",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 4–3 Yangon Galacticos",
+      "game_number": 7,
+      "duration": "16:21",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Hirara",
+            "Valentina",
+            "Melissa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Guinevere",
+            "Fanny",
+            "Arlott",
+            "Dyrroth"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Selena",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Freya",
+            "Barats",
+            "Atlas",
+            "Esmeralda",
+            "Uranus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-2-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 3–0 ONIC",
+      "game_number": 1,
+      "duration": "19:24",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Eudora",
+            "Paquito",
+            "Atlas"
+          ],
+          "bans": [
+            "Uranus",
+            "Freya",
+            "Fanny",
+            "Harith",
+            "Clint"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Belerick",
+            "Hirara",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Selena",
+            "Marcel",
+            "Barats",
+            "Esmeralda",
+            "Valentina"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-2-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 3–0 ONIC",
+      "game_number": 2,
+      "duration": "11:51",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Harley",
+            "Eudora",
+            "Claude",
+            "Atlas"
+          ],
+          "bans": [
+            "Uranus",
+            "Freya",
+            "Fanny",
+            "Harith",
+            "Belerick"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Valentina",
+            "Moskov",
+            "Gloo"
+          ],
+          "bans": [
+            "Selena",
+            "Paquito",
+            "Marcel",
+            "Melissa",
+            "Zhuxin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-2-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 3–0 ONIC",
+      "game_number": 3,
+      "duration": "13:57",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Yi Sun-shin",
+            "Valentina",
+            "Clint",
+            "Atlas"
+          ],
+          "bans": [
+            "Freya",
+            "Uranus",
+            "Fanny",
+            "Lapu-Lapu",
+            "Alice"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Hylos",
+            "Hirara",
+            "Gord",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Paquito",
+            "Marcel",
+            "Harley",
+            "Esmeralda",
+            "Eudora"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-3-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Falcons PH 2–3 Yangon Galacticos",
+      "game_number": 1,
+      "duration": "13:38",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Nolan",
+            "Selena",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Marcel",
+            "Carmilla",
+            "Gloo"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Hirara",
+            "Zhuxin",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Fanny",
+            "Belerick",
+            "Phoveus",
+            "Gatotkaca",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-3-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Falcons PH 2–3 Yangon Galacticos",
+      "game_number": 2,
+      "duration": "15:08",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Selena",
+            "Moskov",
+            "Belerick"
+          ],
+          "bans": [
+            "Barats",
+            "Valentina",
+            "Marcel",
+            "Gloo",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Ruby",
+            "Hirara",
+            "Eudora",
+            "Claude",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Atlas",
+            "Freya",
+            "Clint",
+            "Zhuxin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-3-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Falcons PH 2–3 Yangon Galacticos",
+      "game_number": 3,
+      "duration": "13:33",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Pharsa",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Barats",
+            "Eudora",
+            "Marcel",
+            "Guinevere",
+            "Nolan"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Harley",
+            "Valentina",
+            "Moskov",
+            "Carmilla"
+          ],
+          "bans": [
+            "Fanny",
+            "Belerick",
+            "Freya",
+            "Selena",
+            "Zhuxin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-3-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Falcons PH 2–3 Yangon Galacticos",
+      "game_number": 4,
+      "duration": "14:11",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Harley",
+            "Zhuxin",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Hirara",
+            "Marcel",
+            "Nolan",
+            "Guinevere"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Eudora",
+            "Clint",
+            "Atlas"
+          ],
+          "bans": [
+            "Fanny",
+            "Valentina",
+            "Belerick",
+            "Akai",
+            "Joy"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-3-5",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-31",
+      "stage": "Knockout stage",
+      "series": "Team Falcons PH 2–3 Yangon Galacticos",
+      "game_number": 5,
+      "duration": "18:44",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Harley",
+            "Zetian",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Freya",
+            "Hirara",
+            "Marcel",
+            "Mathilda",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Zhuxin",
+            "Moskov",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Belerick",
+            "Atlas",
+            "Yve",
+            "Selena"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-4-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 2–3 ONIC",
+      "game_number": 1,
+      "duration": "14:12",
+      "winner": "Aurora Gaming",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Hirara",
+            "Luo Yi",
+            "Paquito",
+            "Chou"
+          ],
+          "bans": [
+            "Marcel",
+            "Atlas",
+            "Eudora",
+            "Uranus",
+            "Lapu-Lapu"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Harley",
+            "Valentina",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Selena",
+            "Freya",
+            "Fanny",
+            "Rafaela",
+            "Zhuxin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-4-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 2–3 ONIC",
+      "game_number": 2,
+      "duration": "11:31",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Lukas",
+            "Rafaela",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Freya",
+            "Valentina",
+            "Barats",
+            "Chou",
+            "Melissa"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Zhuxin",
+            "Granger",
+            "Atlas"
+          ],
+          "bans": [
+            "Selena",
+            "Marcel",
+            "Fanny",
+            "Paquito",
+            "Harley"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-4-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 2–3 ONIC",
+      "game_number": 3,
+      "duration": "12:59",
+      "winner": "Aurora Gaming",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Paquito",
+            "Eudora",
+            "Freya",
+            "Minotaur"
+          ],
+          "bans": [
+            "Marcel",
+            "Atlas",
+            "Zhuxin",
+            "Karrie",
+            "Lylia"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Nolan",
+            "Pharsa",
+            "Esmeralda",
+            "Belerick"
+          ],
+          "bans": [
+            "Selena",
+            "Fanny",
+            "Hirara",
+            "Guinevere",
+            "Yi Sun-shin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-4-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 2–3 ONIC",
+      "game_number": 4,
+      "duration": "22:07",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Hylos",
+            "Paquito",
+            "Eudora",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Freya",
+            "Marcel",
+            "Atlas",
+            "Chou",
+            "Granger"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Zhuxin",
+            "Brody",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Selena",
+            "Barats",
+            "Fanny",
+            "Esmeralda",
+            "Hilda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-4-5",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 2–3 ONIC",
+      "game_number": 5,
+      "duration": "18:03",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Eudora",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Marcel",
+            "Atlas",
+            "Zhuxin",
+            "Brody",
+            "Minotaur"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Fanny",
+            "Valentina",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Selena",
+            "Freya",
+            "Paquito",
+            "Luo Yi",
+            "Melissa"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-5-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Team Vamos 0–3 Team Spirit",
+      "game_number": 1,
+      "duration": "15:19",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Benedetta",
+            "Guinevere",
+            "Zhuxin",
+            "Brody",
+            "Atlas"
+          ],
+          "bans": [
+            "Paquito",
+            "Barats",
+            "Marcel",
+            "Harith",
+            "Moskov"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Vexana",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Valentina",
+            "Arlott",
+            "Melissa"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-5-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Team Vamos 0–3 Team Spirit",
+      "game_number": 2,
+      "duration": "13:53",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Vamos",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Nolan",
+            "Zhuxin",
+            "Brody",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Belerick",
+            "Fanny",
+            "Lylia",
+            "Gord"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Eudora",
+            "Paquito",
+            "Mathilda"
+          ],
+          "bans": [
+            "Valentina",
+            "Atlas",
+            "Esmeralda",
+            "Melissa",
+            "Clint"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-5-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-30",
+      "stage": "Knockout stage",
+      "series": "Team Vamos 0–3 Team Spirit",
+      "game_number": 3,
+      "duration": "22:14",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Fanny",
+            "Lylia",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Paquito",
+            "Barats",
+            "Belerick",
+            "Eudora",
+            "Vexana"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Ruby",
+            "Harley",
+            "Selena",
+            "Melissa",
+            "Atlas"
+          ],
+          "bans": [
+            "Freya",
+            "Valentina",
+            "Hirara",
+            "Chou",
+            "Gloo"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-6-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Bigetron by Vitality 1–3 Team Falcons PH",
+      "game_number": 1,
+      "duration": "14:53",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Paquito",
+            "Valentina",
+            "Melissa",
+            "Minotaur"
+          ],
+          "bans": [
+            "Esmeralda",
+            "Fanny",
+            "Atlas",
+            "Harley",
+            "Nolan"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Selena",
+            "Clint",
+            "Belerick"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Hirara",
+            "Rafaela",
+            "Zhuxin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-6-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Bigetron by Vitality 1–3 Team Falcons PH",
+      "game_number": 2,
+      "duration": "16:50",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Nolan",
+            "Lylia",
+            "Paquito",
+            "Gloo"
+          ],
+          "bans": [
+            "Esmeralda",
+            "Fanny",
+            "Atlas",
+            "Belerick",
+            "Chou"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Selena",
+            "Clint",
+            "Khaleed"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Valentina",
+            "Claude",
+            "Harith"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-6-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Bigetron by Vitality 1–3 Team Falcons PH",
+      "game_number": 3,
+      "duration": "13:19",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Paquito",
+            "Eudora",
+            "Claude",
+            "Khufra"
+          ],
+          "bans": [
+            "Esmeralda",
+            "Selena",
+            "Atlas",
+            "Yve",
+            "Lylia"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Pharsa",
+            "Karrie",
+            "Belerick"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Melissa",
+            "Harley",
+            "Hirara"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-6-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Bigetron by Vitality 1–3 Team Falcons PH",
+      "game_number": 4,
+      "duration": "13:52",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Hirara",
+            "Eudora",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Esmeralda",
+            "Selena",
+            "Atlas",
+            "Lapu-Lapu",
+            "Karrie"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Fanny",
+            "Pharsa",
+            "Hanabi",
+            "Belerick"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Melissa",
+            "Badang",
+            "Brody"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-7-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Yangon Galacticos 3–0 PRO Esports",
+      "game_number": 1,
+      "duration": "11:07",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Guinevere",
+            "Zhuxin",
+            "Claude",
+            "Carmilla"
+          ],
+          "bans": [
+            "Ling",
+            "Fanny",
+            "Phoveus",
+            "Esmeralda",
+            "Sora"
+          ]
+        },
+        {
+          "team": "PRO Esports",
+          "side": "red side",
+          "picks": [
+            "Yu Zhong",
+            "Baxia",
+            "Gord",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Marcel",
+            "Atlas",
+            "Hirara",
+            "Gloo",
+            "Mathilda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-7-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Yangon Galacticos 3–0 PRO Esports",
+      "game_number": 2,
+      "duration": "13:56",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Suyou",
+            "Eudora",
+            "Claude",
+            "Gloo"
+          ],
+          "bans": [
+            "Ling",
+            "Marcel",
+            "Freya",
+            "Harith",
+            "Sora"
+          ]
+        },
+        {
+          "team": "PRO Esports",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Hirara",
+            "Selena",
+            "Moskov",
+            "Belerick"
+          ],
+          "bans": [
+            "Phoveus",
+            "Uranus",
+            "Atlas",
+            "Fanny",
+            "Harley"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-7-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-29",
+      "stage": "Knockout stage",
+      "series": "Yangon Galacticos 3–0 PRO Esports",
+      "game_number": 3,
+      "duration": "15:32",
+      "winner": "Yangon Galacticos",
+      "teams": [
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Ruby",
+            "Fanny",
+            "Eudora",
+            "Melissa",
+            "Belerick"
+          ],
+          "bans": [
+            "Ling",
+            "Marcel",
+            "Freya",
+            "Chou",
+            "Selena"
+          ]
+        },
+        {
+          "team": "PRO Esports",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Valentina",
+            "Harith",
+            "Badang"
+          ],
+          "bans": [
+            "Atlas",
+            "Zhuxin",
+            "Phoveus",
+            "Esmeralda",
+            "Brody"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-8-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-26",
+      "stage": "Group stage",
+      "series": "Team Falcons PH 2–0 Team Falcons",
+      "game_number": 1,
+      "duration": "17:19",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Selena",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Atlas",
+            "Clint",
+            "Valentina"
+          ]
+        },
+        {
+          "team": "Team Falcons",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Hirara",
+            "Zhuxin",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Ling",
+            "Belerick",
+            "Harith",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-8-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-26",
+      "stage": "Group stage",
+      "series": "Team Falcons PH 2–0 Team Falcons",
+      "game_number": 2,
+      "duration": "15:23",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Valentina",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Atlas",
+            "Melissa",
+            "Clint"
+          ]
+        },
+        {
+          "team": "Team Falcons",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Akai",
+            "Zhuxin",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Ling",
+            "Selena",
+            "Belerick",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-9-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-26",
+      "stage": "Group stage",
+      "series": "ONIC 2–0 Selangor Red Giants",
+      "game_number": 1,
+      "duration": "23:42",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Aurora",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Selena",
+            "Fanny",
+            "Atlas",
+            "Moskov",
+            "Brody"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Hilda",
+            "Paquito",
+            "Zhuxin",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Marcel",
+            "Hirara",
+            "Freya",
+            "Eudora",
+            "Valentina"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-9-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-26",
+      "stage": "Group stage",
+      "series": "ONIC 2–0 Selangor Red Giants",
+      "game_number": 2,
+      "duration": "11:09",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Lylia",
+            "Harith",
+            "Belerick"
+          ],
+          "bans": [
+            "Marcel",
+            "Selena",
+            "Freya",
+            "Chou",
+            "Badang"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Hirara",
+            "Eudora",
+            "Karrie",
+            "Khufra"
+          ],
+          "bans": [
+            "Atlas",
+            "Zhuxin",
+            "Fanny",
+            "Rafaela",
+            "Luo Yi"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-10-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-26",
+      "stage": "Group stage",
+      "series": "PRO Esports 2–0 Entity7",
+      "game_number": 1,
+      "duration": "23:37",
+      "winner": "PRO Esports",
+      "teams": [
+        {
+          "team": "PRO Esports",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Ling",
+            "Valentina",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Phoveus",
+            "Atlas",
+            "Uranus",
+            "Freya",
+            "Brody"
+          ]
+        },
+        {
+          "team": "Entity7",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Eudora",
+            "Karrie",
+            "Belerick"
+          ],
+          "bans": [
+            "Marcel",
+            "Fanny",
+            "Zhuxin",
+            "Barats",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-10-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "date": "2026-07-26",
+      "stage": "Group stage",
+      "series": "PRO Esports 2–0 Entity7",
+      "game_number": 2,
+      "duration": "19:12",
+      "winner": "PRO Esports",
+      "teams": [
+        {
+          "team": "PRO Esports",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Marcel",
+            "Freya",
+            "Hirara",
+            "Phoveus",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Entity7",
+          "side": "blue side",
+          "picks": [
+            "Paquito",
+            "Guinevere",
+            "Gord",
+            "Moskov",
+            "Atlas"
+          ],
+          "bans": [
+            "Fanny",
+            "Valentina",
+            "Ling",
+            "Chou",
+            "Belerick"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    }
+  ]
+}

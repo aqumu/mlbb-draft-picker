@@ -1,0 +1,1053 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-25T14:05:35.560Z",
+  "source": "mlbbanalytics",
+  "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+  "source_note": "Public playoff breakdown; page attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "msc-2026-analytics-1-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "GRAND FINALS",
+      "date": "Aug 01, 2026",
+      "series_index": 1,
+      "game_number": 1,
+      "duration": "17:52",
+      "kills": "20 - 12",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-1-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "GRAND FINALS",
+      "date": "Aug 01, 2026",
+      "series_index": 1,
+      "game_number": 2,
+      "duration": "17:11",
+      "kills": "5 - 17",
+      "winner": "Niightmare Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-1-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "GRAND FINALS",
+      "date": "Aug 01, 2026",
+      "series_index": 1,
+      "game_number": 3,
+      "duration": "19:43",
+      "kills": "22 - 6",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-1-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "GRAND FINALS",
+      "date": "Aug 01, 2026",
+      "series_index": 1,
+      "game_number": 4,
+      "duration": "13:51",
+      "kills": "21 - 6",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Pharsa",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-1-5",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "GRAND FINALS",
+      "date": "Aug 01, 2026",
+      "series_index": 1,
+      "game_number": 5,
+      "duration": "16:31",
+      "kills": "7 - 19",
+      "winner": "Niightmare Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Pharsa",
+            "Brody",
+            "Carmilla"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Ruby",
+            "Fredrinn",
+            "Xavier",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-1-6",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "GRAND FINALS",
+      "date": "Aug 01, 2026",
+      "series_index": 1,
+      "game_number": 6,
+      "duration": "16:31",
+      "kills": "21 - 11",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Ruby",
+            "Alpha",
+            "Novaria",
+            "Wanwan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Khaleed",
+            "Barats",
+            "Valentina",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-2-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET FINAL",
+      "date": "Jul 31, 2026",
+      "series_index": 2,
+      "game_number": 1,
+      "duration": "19:14",
+      "kills": "20 - 10",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-2-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET FINAL",
+      "date": "Jul 31, 2026",
+      "series_index": 2,
+      "game_number": 2,
+      "duration": "14:46",
+      "kills": "9 - 21",
+      "winner": "Brute Force",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-2-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET FINAL",
+      "date": "Jul 31, 2026",
+      "series_index": 2,
+      "game_number": 3,
+      "duration": "17:08",
+      "kills": "17 - 8",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-2-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET FINAL",
+      "date": "Jul 31, 2026",
+      "series_index": 2,
+      "game_number": 4,
+      "duration": "15:29",
+      "kills": "16 - 7",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Pharsa",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-3-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 3,
+      "game_number": 1,
+      "duration": "16:45",
+      "kills": "15 - 11",
+      "winner": "Niightmare Esports",
+      "teams": [
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-3-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 3,
+      "game_number": 2,
+      "duration": "12:27",
+      "kills": "6 - 19",
+      "winner": "Brute Force",
+      "teams": [
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-3-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 3,
+      "game_number": 3,
+      "duration": "13:09",
+      "kills": "22 - 7",
+      "winner": "Niightmare Esports",
+      "teams": [
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-3-4",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 3,
+      "game_number": 4,
+      "duration": "18:11",
+      "kills": "9 - 16",
+      "winner": "Brute Force",
+      "teams": [
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Pharsa",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-3-5",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 3,
+      "game_number": 5,
+      "duration": "16:07",
+      "kills": "14 - 8",
+      "winner": "Niightmare Esports",
+      "teams": [
+        {
+          "team": "Niightmare Esports",
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Pharsa",
+            "Brody",
+            "Carmilla"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Brute Force",
+          "picks": [
+            "Ruby",
+            "Fredrinn",
+            "Xavier",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-4-1",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 4,
+      "game_number": 1,
+      "duration": "17:50",
+      "kills": "16 - 5",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "IHC Esports",
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-4-2",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 4,
+      "game_number": 2,
+      "duration": "18:06",
+      "kills": "17 - 7",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "IHC Esports",
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    },
+    {
+      "id": "msc-2026-analytics-4-3",
+      "tournament": "MLBB Mid Season Cup 2026",
+      "stage": "UPPER BRACKET SEMIFINALS",
+      "date": "Jul 30, 2026",
+      "series_index": 4,
+      "game_number": 3,
+      "duration": "17:33",
+      "kills": "20 - 9",
+      "winner": "Legion Esports",
+      "teams": [
+        {
+          "team": "Legion Esports",
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "IHC Esports",
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2026"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MSC/2026"
+        }
+      ]
+    }
+  ]
+}

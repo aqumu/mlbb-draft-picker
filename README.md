@@ -46,6 +46,10 @@ The sample catalog is a shape/behavior fixture, not a claim that it is a complet
 
 When a source does not offer usable API access, add human-reviewed records to [`data/manual/heroes.csv`](data/manual/heroes.csv) and [`data/manual/drafts.csv`](data/manual/drafts.csv). The draft file has one row per ban or pick, so it can preserve the original order when the page shows it. Run `import-csv` locally to validate the rows before committing them. Render automatically rebuilds the service from the committed catalog; no source request happens at runtime. See [`data/manual/README.md`](data/manual/README.md) for the exact workflow.
 
+### Browser-captured source data
+
+The Playwriter capture scripts in `scripts/extract_mlb*.js` save public MLBBDex and MLBB Analytics snapshots under [`data/raw`](data/raw). These snapshots retain the page URLs and attribution, but they are kept separate from the runtime catalog until a human resolves source disagreements and reviews the records. See [`data/raw/README.md`](data/raw/README.md).
+
 Liquipedia's API terms require attribution and prohibit automated access to generated HTML. The MediaWiki API limit is one request per two seconds with a project-specific User-Agent; the separate LiquipediaDB API requires approved access and is limited to 60 requests per hour. These constraints are why ingestion is an offline, cached job rather than a request-time dependency.
 
 ## Free deployment
