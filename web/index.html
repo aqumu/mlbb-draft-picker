@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MLBB Pro Draft Finder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>MLBB Pro Draft Finder</h1>
+          <p>Find historical five-hero drafts that still fit the current board.</p>
+        </div>
+        <span id="api-status" class="status">Connecting…</span>
+      </header>
+
+      <section class="panel draft-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Current draft</h2>
+            <p>Choose a bucket, then click heroes. Picks and bans are hard filters.</p>
+          </div>
+          <label class="mode-label">Add to
+            <select id="entry-mode">
+              <option value="our_picks">Our picks</option>
+              <option value="enemy_picks">Enemy picks</option>
+              <option value="bans">Bans</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="bucket-grid">
+          <div class="bucket"><h3>Our picks <span id="our-count">0</span></h3><div id="our_picks" class="chips empty">None</div></div>
+          <div class="bucket"><h3>Enemy picks <span id="enemy-count">0</span></h3><div id="enemy_picks" class="chips empty">None</div></div>
+          <div class="bucket"><h3>Bans <span id="ban-count">0</span></h3><div id="bans" class="chips empty">None</div></div>
+        </div>
+
+        <div class="hero-toolbar">
+          <input id="hero-search" type="search" placeholder="Filter heroes…" autocomplete="off" />
+          <button id="clear-board" class="button subtle">Clear board</button>
+        </div>
+        <div id="hero-grid" class="hero-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="panel pools-panel">
+        <div class="panel-heading">
+          <div><h2>Player pools <span class="optional">optional</span></h2><p>Use canonical hero slugs separated by commas. Leave rows blank to ignore pools.</p></div>
+        </div>
+        <div id="pool-rows" class="pool-rows"></div>
+      </section>
+
+      <section class="actions-row">
+        <button id="find-button" class="button primary">Find historical drafts</button>
+        <span id="error" class="error" role="alert"></span>
+      </section>
+
+      <section class="panel results-panel">
+        <div class="panel-heading"><div><h2>Results</h2><p id="result-summary">No search yet.</p></div></div>
+        <div id="results" class="results"><div class="empty-state">Add picks, enemy picks, or bans, then search.</div></div>
+      </section>
+    </main>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

@@ -6,3 +6,9 @@ services:
     buildCommand: pip install .
     startCommand: python scripts/start_server.py
     healthCheckPath: /v1/health
+
+  - type: web
+    name: mlbb-draft-finder-web
+    runtime: static
+    buildCommand: echo "Static frontend"
+    staticPublishPath: ./web
