@@ -4,7 +4,7 @@ import argparse
 import json
 
 from .api import serve
-from .ingest import import_csv_files, import_json_file
+from .ingest import import_csv_files, import_json_file, import_mlbbdex_snapshot
 from .repository import Catalog
 
 
@@ -18,6 +18,9 @@ def main() -> None:
     csv_imp = sub.add_parser("import-csv", help="import manually curated hero and draft CSV files")
     csv_imp.add_argument("--heroes", required=True)
     csv_imp.add_argument("--drafts", required=True)
+    mlbbdex_imp = sub.add_parser("import-mlbbdex", help="import a reviewed MLBBDex browser snapshot")
+    mlbbdex_imp.add_argument("--snapshot", required=True)
+    mlbbdex_imp.add_argument("--heroes", required=True)
     run = sub.add_parser("serve", help="serve the JSON API")
     run.add_argument("--host", default="0.0.0.0")
     run.add_argument("--port", type=int, default=8080)
@@ -28,6 +31,8 @@ def main() -> None:
             print(json.dumps(import_json_file(catalog, args.path, args.source), indent=2))
         elif args.command == "import-csv":
             print(json.dumps(import_csv_files(catalog, args.heroes, args.drafts), indent=2))
+        elif args.command == "import-mlbbdex":
+            print(json.dumps(import_mlbbdex_snapshot(catalog, args.snapshot, args.heroes), indent=2))
         else:
             serve(catalog, args.host, args.port)
     finally:

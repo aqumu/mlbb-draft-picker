@@ -4,6 +4,7 @@ import json
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
+from urllib.parse import parse_qs, urlsplit
 
 from .matcher import find_candidates
 from .models import DraftState, PlayerPool
@@ -49,13 +50,20 @@ def create_handler(catalog: Catalog):
             self.end_headers()
 
         def do_GET(self) -> None:
-            if self.path == "/v1/health":
+            parsed = urlsplit(self.path)
+            if parsed.path == "/v1/health":
                 self._send(200, {"status": "ok", "matches": len(catalog.matches()), "heroes": len(catalog.heroes())})
-            elif self.path == "/v1/heroes":
+            elif parsed.path == "/v1/heroes":
                 self._send(200, [{"slug": h.slug, "name": h.name, "roles": list(h.roles), "aliases": list(h.aliases)} for h in catalog.heroes().values()])
-            elif self.path == "/v1/matches":
+            elif parsed.path == "/v1/matches":
                 self._send(200, [{"id": m.id, "tournament": m.tournament, "source": m.source, "source_url": m.source_url,
                                   "date": m.date, "patch": m.patch, "team_a": m.team_a, "team_b": m.team_b, "game_number": m.game_number} for m in catalog.matches()])
+            elif parsed.path == "/v1/relationships":
+                hero = parse_qs(parsed.query).get("hero", [""])[0].strip().lower()
+                if not hero or hero not in catalog.heroes():
+                    self._send(400, {"error": "invalid_request", "message": "hero query parameter is required"})
+                else:
+                    self._send(200, {"hero": hero, **catalog.relationships(hero)})
             else:
                 self._send(404, {"error": "not_found"})
 

@@ -113,7 +113,9 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
             score, details = _score(catalog, remaining, tuple(state.enemy_picks))
             output.append(Candidate(match.id, side, composition, tuple(state.our_picks), remaining, opponent, match_bans,
                                     {"source": match.source, "source_url": match.source_url, "tournament": match.tournament,
-                                     "date": match.date, "patch": match.patch, "team_a": match.team_a, "team_b": match.team_b,
-                                     "game_number": match.game_number, "order_available": match.order_available, "source_refs": match.source_refs}, score, details))
+                                     "date": match.date, "patch": match.patch, "stage": match.stage, "series": match.series,
+                                     "duration": match.duration, "winner": match.winner, "team_a": match.team_a, "team_b": match.team_b,
+                                     "team_a_side": match.team_a_side, "team_b_side": match.team_b_side, "game_number": match.game_number,
+                                     "order_available": match.order_available, "bans_known": match.bans_known, "source_refs": match.source_refs}, score, details))
     output.sort(key=lambda c: (c.score is not None, c.score or 0.0), reverse=True)
     return output[:limit]

@@ -8,6 +8,7 @@ The frontend is intentionally outside this repository. The stable integration po
 GET  /v1/health
 GET  /v1/heroes
 GET  /v1/matches
+GET  /v1/relationships?hero=fredrinn
 POST /v1/candidates
 ```
 
@@ -33,6 +34,8 @@ Example request:
 $env:PYTHONPATH = "src"
 python -m unittest discover -s tests -v
 python -m mlbb_draft_finder.cli --db data/catalog.sqlite3 import-json data/sample_catalog.json --source sample
+python -m mlbb_draft_finder.cli --db data/catalog.sqlite3 import-mlbbdex `
+  --snapshot data/raw/mlbbdex_msc_2026_latest.json --heroes data/raw/mlbbdex_heroes.json
 python -m mlbb_draft_finder.cli --db data/catalog.sqlite3 serve --port 8080
 ```
 

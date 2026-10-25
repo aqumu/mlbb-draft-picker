@@ -34,6 +34,13 @@ class MatchDraft:
     actions: list[DraftAction]
     order_available: bool = True
     source_refs: list[dict[str, str]] = field(default_factory=list)
+    stage: str | None = None
+    series: str | None = None
+    duration: str | None = None
+    winner: str | None = None
+    team_a_side: str | None = None
+    team_b_side: str | None = None
+    bans_known: bool = True
 
     def picks(self, team: str) -> list[str]:
         return [a.hero for a in sorted(self.actions, key=lambda a: (a.order is None, a.order or 0))
@@ -65,6 +72,15 @@ class DraftState:
 class MatchupStat:
     hero: str
     opponent: str
+    wins: int
+    games: int
+    source: str | None = None
+
+
+@dataclass(frozen=True)
+class SynergyStat:
+    hero: str
+    partner: str
     wins: int
     games: int
     source: str | None = None

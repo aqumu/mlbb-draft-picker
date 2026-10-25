@@ -5,7 +5,7 @@ import sqlite3
 from pathlib import Path
 from typing import Iterable
 
-from .models import DraftAction, Hero, MatchDraft, MatchupStat
+from .models import DraftAction, Hero, MatchDraft, MatchupStat, SynergyStat
 
 
 SCHEMA = """
@@ -17,7 +17,8 @@ CREATE TABLE IF NOT EXISTS matches (
   id TEXT PRIMARY KEY, canonical_key TEXT NOT NULL UNIQUE, source TEXT NOT NULL,
   source_url TEXT, tournament TEXT NOT NULL, match_date TEXT, patch TEXT,
   team_a TEXT NOT NULL, team_b TEXT NOT NULL, game_number INTEGER,
-  order_available INTEGER NOT NULL DEFAULT 1, source_refs_json TEXT NOT NULL
+  stage TEXT, series TEXT, duration TEXT, winner TEXT, team_a_side TEXT, team_b_side TEXT,
+  order_available INTEGER NOT NULL DEFAULT 1, bans_known INTEGER NOT NULL DEFAULT 1, source_refs_json TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS actions (
   match_id TEXT NOT NULL REFERENCES matches(id) ON DELETE CASCADE,
@@ -29,6 +30,11 @@ CREATE TABLE IF NOT EXISTS matchup_stats (
   hero TEXT NOT NULL REFERENCES heroes(slug), opponent TEXT NOT NULL REFERENCES heroes(slug),
   wins INTEGER NOT NULL CHECK (wins >= 0), games INTEGER NOT NULL CHECK (games >= wins), source TEXT,
   PRIMARY KEY (hero, opponent, source)
+);
+CREATE TABLE IF NOT EXISTS synergy_stats (
+  hero TEXT NOT NULL REFERENCES heroes(slug), partner TEXT NOT NULL REFERENCES heroes(slug),
+  wins INTEGER NOT NULL CHECK (wins >= 0), games INTEGER NOT NULL CHECK (games >= wins), source TEXT,
+  PRIMARY KEY (hero, partner, source)
 );
 CREATE INDEX IF NOT EXISTS idx_actions_match_phase ON actions(match_id, phase);
 CREATE INDEX IF NOT EXISTS idx_matches_tournament ON matches(tournament);
@@ -44,6 +50,19 @@ class Catalog:
         self.db = sqlite3.connect(self.path, check_same_thread=False)
         self.db.row_factory = sqlite3.Row
         self.db.executescript(SCHEMA)
+        self._migrate_schema()
+
+    def _migrate_schema(self) -> None:
+        """Add fields introduced after the initial local catalog schema."""
+        columns = {row["name"] for row in self.db.execute("PRAGMA table_info(matches)")}
+        additions = {
+            "stage": "TEXT", "series": "TEXT", "duration": "TEXT", "winner": "TEXT",
+            "team_a_side": "TEXT", "team_b_side": "TEXT", "bans_known": "INTEGER NOT NULL DEFAULT 1",
+        }
+        for name, definition in additions.items():
+            if name not in columns:
+                self.db.execute(f"ALTER TABLE matches ADD COLUMN {name} {definition}")
+        self.db.commit()
 
     def close(self) -> None:
         self.db.close()
@@ -60,9 +79,12 @@ class Catalog:
         canonical = self.canonical_key(match)
         try:
             self.db.execute(
-                "INSERT INTO matches VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+                "INSERT INTO matches (id,canonical_key,source,source_url,tournament,match_date,patch,team_a,team_b,game_number,"
+                "stage,series,duration,winner,team_a_side,team_b_side,order_available,bans_known,source_refs_json) "
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (match.id, canonical, match.source, match.source_url, match.tournament, match.date, match.patch,
-                 match.team_a, match.team_b, match.game_number, int(match.order_available), json.dumps(match.source_refs)),
+                 match.team_a, match.team_b, match.game_number, match.stage, match.series, match.duration, match.winner,
+                 match.team_a_side, match.team_b_side, int(match.order_available), int(match.bans_known), json.dumps(match.source_refs)),
             )
         except sqlite3.IntegrityError:
             # Keep provenance when the same game arrives from both Liquipedia
@@ -84,14 +106,22 @@ class Catalog:
     @staticmethod
     def canonical_key(match: MatchDraft) -> str:
         date = match.date or ""
-        return "|".join((match.tournament.strip().lower(), date, match.team_a.strip().lower(),
-                         match.team_b.strip().lower(), str(match.game_number or "")))
+        teams = sorted((match.team_a.strip().lower(), match.team_b.strip().lower()))
+        return "|".join((match.tournament.strip().lower(), date, match.series or "", *teams, str(match.game_number or "")))
 
     def add_matchup_stats(self, stats: Iterable[MatchupStat]) -> None:
         self.db.executemany(
             "INSERT INTO matchup_stats(hero,opponent,wins,games,source) VALUES (?,?,?,?,?) "
             "ON CONFLICT(hero,opponent,source) DO UPDATE SET wins=excluded.wins,games=excluded.games",
             [(s.hero, s.opponent, s.wins, s.games, s.source or "") for s in stats],
+        )
+        self.db.commit()
+
+    def add_synergy_stats(self, stats: Iterable[SynergyStat]) -> None:
+        self.db.executemany(
+            "INSERT INTO synergy_stats(hero,partner,wins,games,source) VALUES (?,?,?,?,?) "
+            "ON CONFLICT(hero,partner,source) DO UPDATE SET wins=excluded.wins,games=excluded.games",
+            [(s.hero, s.partner, s.wins, s.games, s.source or "") for s in stats],
         )
         self.db.commit()
 
@@ -107,12 +137,27 @@ class Catalog:
             result.append(MatchDraft(r["id"], r["source"], r["source_url"], r["tournament"], r["match_date"], r["patch"],
                                      r["team_a"], r["team_b"], r["game_number"],
                                      [DraftAction(a["phase"], a["team"], a["hero"], a["action_order"]) for a in actions],
-                                     bool(r["order_available"]), json.loads(r["source_refs_json"])))
+                                     bool(r["order_available"]), json.loads(r["source_refs_json"]),
+                                     r["stage"], r["series"], r["duration"], r["winner"], r["team_a_side"], r["team_b_side"], bool(r["bans_known"])))
         return result
 
     def matchup(self, hero: str, opponent: str) -> tuple[int, int]:
         row = self.db.execute("SELECT COALESCE(SUM(wins),0) wins, COALESCE(SUM(games),0) games FROM matchup_stats WHERE hero=? AND opponent=?", (hero, opponent)).fetchone()
         return int(row["wins"]), int(row["games"])
+
+    def relationships(self, hero: str, limit: int = 100) -> dict[str, list[dict]]:
+        counters = self.db.execute(
+            "SELECT opponent, wins, games, source FROM matchup_stats WHERE hero=? ORDER BY games DESC, wins * 1.0 / games DESC LIMIT ?",
+            (hero, limit),
+        ).fetchall()
+        synergy = self.db.execute(
+            "SELECT partner, wins, games, source FROM synergy_stats WHERE hero=? ORDER BY games DESC, wins * 1.0 / games DESC LIMIT ?",
+            (hero, limit),
+        ).fetchall()
+        return {
+            "counter": [{"hero": row["opponent"], "wins": row["wins"], "games": row["games"], "win_rate": round(row["wins"] / row["games"], 4), "source": row["source"]} for row in counters],
+            "synergy": [{"hero": row["partner"], "wins": row["wins"], "games": row["games"], "win_rate": round(row["wins"] / row["games"], 4), "source": row["source"]} for row in synergy],
+        }
 
     def search(self, tournament: str | None = None, source: str | None = None) -> list[MatchDraft]:
         return [m for m in self.matches() if (not tournament or m.tournament == tournament) and (not source or m.source == source)]

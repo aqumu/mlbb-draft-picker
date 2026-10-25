@@ -15,7 +15,7 @@ from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from .models import DraftAction, Hero, MatchDraft, MatchupStat
+from .models import DraftAction, Hero, MatchDraft, MatchupStat, SynergyStat, normalize_slug
 from .repository import Catalog
 
 
@@ -114,7 +114,10 @@ def _match(value: dict[str, Any], default_source: str) -> MatchDraft:
                       game_number=value.get("game_number"), actions=actions,
                       order_available=bool(value.get("order_available", all(a.order is not None for a in actions))),
                       source_refs=list(value.get("source_refs") or ([{"source": str(value.get("source", default_source)), "url": value.get("source_url")}]
-                                                                     if value.get("source_url") else [])))
+                                                                     if value.get("source_url") else [])),
+                      stage=value.get("stage"), series=value.get("series"), duration=value.get("duration"), winner=value.get("winner"),
+                      team_a_side=value.get("team_a_side"), team_b_side=value.get("team_b_side"),
+                      bans_known=bool(value.get("bans_known", True)))
 
 
 def import_payload(catalog: Catalog, payload: dict[str, Any], source: str = "import") -> dict[str, int]:
@@ -130,6 +133,86 @@ def import_payload(catalog: Catalog, payload: dict[str, Any], source: str = "imp
 def import_json_file(catalog: Catalog, path: str | Path, source: str = "import") -> dict[str, int]:
     with open(path, "r", encoding="utf-8") as handle:
         return import_payload(catalog, json.load(handle), source)
+
+
+def _mlbbdex_hero_payload(path: str | Path) -> list[Hero]:
+    with open(path, "r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    rows = payload.get("data", {}).get("data", payload.get("data", []))
+    return [Hero(str(row["slug"]), str(row["name"]), tuple(str(role).lower() for role in row.get("roles", [])),
+                 tuple(str(alias) for alias in row.get("aliases", []))) for row in rows]
+
+
+def _slug_for_hero(name: str, heroes_by_name: dict[str, Hero]) -> str:
+    hero = heroes_by_name.get(name.strip().lower())
+    return hero.slug if hero else normalize_slug(name)
+
+
+def normalize_mlbbdex_snapshot(path: str | Path, heroes_path: str | Path) -> tuple[list[Hero], list[MatchDraft]]:
+    """Convert a browser-captured MLBBDex snapshot into our source-neutral model."""
+    heroes = _mlbbdex_hero_payload(heroes_path)
+    heroes_by_name = {h.name.lower(): h for h in heroes}
+    with open(path, "r", encoding="utf-8") as handle:
+        payload = json.load(handle)
+    matches: list[MatchDraft] = []
+    for value in payload.get("matches", []):
+        teams = value.get("teams", [])
+        if len(teams) != 2:
+            raise ValueError(f"MLBBDex match {value.get('id')} does not have two teams")
+        actions: list[DraftAction] = []
+        for team_key, team in zip(("team_a", "team_b"), teams):
+            for hero in team.get("picks", []):
+                actions.append(DraftAction("pick", team_key, _slug_for_hero(hero, heroes_by_name), None))
+            for hero in team.get("bans", []):
+                actions.append(DraftAction("ban", team_key, _slug_for_hero(hero, heroes_by_name), None))
+        matches.append(MatchDraft(
+            id=str(value["id"]), source="mlbbdex", source_url=value.get("source_url", payload.get("source_url")),
+            tournament=str(value["tournament"]), date=value.get("date"), patch=value.get("patch"),
+            team_a=str(teams[0]["team"]), team_b=str(teams[1]["team"]), game_number=value.get("game_number"), actions=actions,
+            order_available=False, source_refs=list(value.get("source_refs", [])), stage=value.get("stage"), series=value.get("series"),
+            duration=value.get("duration"), winner=value.get("winner"), team_a_side=teams[0].get("side"), team_b_side=teams[1].get("side"),
+            bans_known=all(len(team.get("bans", [])) == 5 for team in teams),
+        ))
+    return heroes, matches
+
+
+def _derived_relationships(matches: list[MatchDraft], source: str) -> tuple[list[MatchupStat], list[SynergyStat]]:
+    counters: dict[tuple[str, str], list[int]] = {}
+    synergy: dict[tuple[str, str], list[int]] = {}
+    for match in matches:
+        winner = match.winner
+        for team, opponent in (("team_a", "team_b"), ("team_b", "team_a")):
+            own = match.picks(team)
+            enemy = match.picks(opponent)
+            team_won = int(winner == (match.team_a if team == "team_a" else match.team_b)) if winner else 0
+            for hero in own:
+                for opposing_hero in enemy:
+                    bucket = counters.setdefault((hero, opposing_hero), [0, 0])
+                    bucket[0] += team_won
+                    bucket[1] += 1
+                for partner in own:
+                    if partner == hero:
+                        continue
+                    bucket = synergy.setdefault((hero, partner), [0, 0])
+                    bucket[0] += team_won
+                    bucket[1] += 1
+    return ([MatchupStat(hero, opponent, values[0], values[1], source) for (hero, opponent), values in counters.items()],
+            [SynergyStat(hero, partner, values[0], values[1], source) for (hero, partner), values in synergy.items()])
+
+
+def import_mlbbdex_snapshot(catalog: Catalog, snapshot_path: str | Path, heroes_path: str | Path) -> dict[str, int]:
+    heroes, matches = normalize_mlbbdex_snapshot(snapshot_path, heroes_path)
+    catalog.add_heroes(heroes)
+    added_matches: list[MatchDraft] = []
+    for match in matches:
+        if catalog.add_match(match):
+            added_matches.append(match)
+    source = "derived:mlbbdex:msc-2026"
+    counters, synergy = _derived_relationships(added_matches, source)
+    catalog.add_matchup_stats(counters)
+    catalog.add_synergy_stats(synergy)
+    return {"heroes": len(heroes), "matches_added": len(added_matches), "matches_seen": len(matches),
+            "matchup_stats": len(counters), "synergy_stats": len(synergy)}
 
 
 class JsonApiClient:

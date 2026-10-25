@@ -42,5 +42,9 @@ class CsvIngestTests(unittest.TestCase):
             for order in range(6, 11):
                 rows.append(f"m1,manual,https://example.test/m1,Cup,2025-01-01,1,A,B,1,true,{order},pick,team_b,missing")
             (root / "drafts.csv").write_text("\n".join(rows) + "\n", encoding="utf-8")
-            with self.assertRaisesRegex(ValueError, "unknown hero slug missing"):
-                import_csv_files(Catalog(), root / "heroes.csv", root / "drafts.csv")
+            catalog = Catalog()
+            try:
+                with self.assertRaisesRegex(ValueError, "unknown hero slug missing"):
+                    import_csv_files(catalog, root / "heroes.csv", root / "drafts.csv")
+            finally:
+                catalog.close()

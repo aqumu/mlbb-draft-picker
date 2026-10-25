@@ -1,8 +1,9 @@
 # Browser-captured source snapshots
 
-These files are research snapshots captured from the public pages with the
-Playwriter browser workflow. They are not loaded by the running API until they
-are reviewed and converted into the curated catalog.
+These files are snapshots captured from the public pages with the Playwriter
+browser workflow. The MLBBDex snapshot has now been normalized and is the
+initial seed for the running API. The MLBB Analytics snapshot remains
+quarantined until its event discrepancy is resolved.
 
 ## MLBBDex
 
