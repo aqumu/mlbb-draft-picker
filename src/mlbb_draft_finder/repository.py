@@ -92,7 +92,9 @@ class Catalog:
             row = self.db.execute("SELECT id, source_refs_json FROM matches WHERE canonical_key=?", (canonical,)).fetchone()
             if row:
                 refs = json.loads(row["source_refs_json"])
-                refs.extend(list(match.source_refs) or [{"source": match.source, "url": match.source_url}])
+                for ref in (list(match.source_refs) or [{"source": match.source, "url": match.source_url}]):
+                    if ref not in refs:
+                        refs.append(ref)
                 self.db.execute("UPDATE matches SET source_refs_json=? WHERE id=?", (json.dumps(refs), row["id"]))
                 self.db.commit()
             return False
