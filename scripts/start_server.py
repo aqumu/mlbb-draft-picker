@@ -13,13 +13,17 @@ db_path = Path("data/catalog.sqlite3")
 db_path.parent.mkdir(parents=True, exist_ok=True)
 catalog = Catalog(db_path)
 if not catalog.matches():
-    raw_mlbbdex = ROOT / "data/raw/mlbbdex_msc_2026_latest.json"
     raw_heroes = ROOT / "data/raw/mlbbdex_heroes.json"
     manual_drafts = ROOT / "data/manual/drafts.csv"
     if len(manual_drafts.read_text(encoding="utf-8").splitlines()) > 1:
         import_csv_files(catalog, ROOT / "data/manual/heroes.csv", manual_drafts)
-    elif raw_mlbbdex.exists() and raw_heroes.exists():
-        import_mlbbdex_snapshot(catalog, raw_mlbbdex, raw_heroes)
+    elif raw_heroes.exists():
+        raw_snapshots = sorted((ROOT / "data/raw").glob("mlbbdex_*_latest.json"))
+        if raw_snapshots:
+            for raw_snapshot in raw_snapshots:
+                import_mlbbdex_snapshot(catalog, raw_snapshot, raw_heroes)
+        else:
+            import_json_file(catalog, ROOT / "data/sample_catalog.json", "sample")
     else:
         import_json_file(catalog, ROOT / "data/sample_catalog.json", "sample")
 serve(catalog, host="0.0.0.0", port=int(__import__("os").environ.get("PORT", "8080")))

@@ -207,7 +207,15 @@ def import_mlbbdex_snapshot(catalog: Catalog, snapshot_path: str | Path, heroes_
     for match in matches:
         if catalog.add_match(match):
             added_matches.append(match)
-    source = "derived:mlbbdex:msc-2026"
+    # Keep relationship aggregates separated by tournament snapshot.  The
+    # original importer was MSC-specific, which would silently label every
+    # later batch as MSC and overwrite the wrong aggregate bucket.
+    snapshot_name = Path(snapshot_path).stem
+    if snapshot_name.startswith("mlbbdex_"):
+        snapshot_name = snapshot_name[len("mlbbdex_"):]
+    if snapshot_name.endswith("_latest"):
+        snapshot_name = snapshot_name[:-len("_latest")]
+    source = "derived:mlbbdex:" + snapshot_name.replace("_", "-")
     counters, synergy = _derived_relationships(added_matches, source)
     catalog.add_matchup_stats(counters)
     catalog.add_synergy_stats(synergy)

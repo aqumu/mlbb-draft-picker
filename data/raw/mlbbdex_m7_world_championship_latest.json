@@ -1,0 +1,2529 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:18:20.136Z",
+  "source": "mlbbdex",
+  "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+  "source_note": "Public tournament page; MLBBDex attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "m7-world-championship-1-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-25",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 4–0 Alter Ego",
+      "game_number": 1,
+      "duration": "15:04",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Fredrinn",
+            "Zhuxin",
+            "Harith",
+            "Hylos"
+          ],
+          "bans": [
+            "Fanny",
+            "Hilda",
+            "Freya",
+            "Luo Yi",
+            "Yve"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Pharsa",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Baxia",
+            "Khaleed",
+            "Grock",
+            "Chou",
+            "Chip"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-1-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-25",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 4–0 Alter Ego",
+      "game_number": 2,
+      "duration": "16:05",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Claude",
+            "Grock"
+          ],
+          "bans": [
+            "Hilda",
+            "Fanny",
+            "Freya",
+            "Guinevere",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Suyou",
+            "Zhuxin",
+            "Granger",
+            "Chou"
+          ],
+          "bans": [
+            "Baxia",
+            "Fredrinn",
+            "Khaleed",
+            "Uranus",
+            "Harith"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-1-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-25",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 4–0 Alter Ego",
+      "game_number": 3,
+      "duration": "10:55",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Zhuxin",
+            "Granger",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Freya",
+            "Fanny",
+            "Uranus",
+            "Yu Zhong"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Yve",
+            "Cici",
+            "Grock"
+          ],
+          "bans": [
+            "Harith",
+            "Valentina",
+            "Claude",
+            "Sora",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-1-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-25",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 4–0 Alter Ego",
+      "game_number": 4,
+      "duration": "11:23",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Zetian",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Hilda",
+            "Fanny",
+            "Freya",
+            "Esmeralda",
+            "Claude"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Granger",
+            "Kalea"
+          ],
+          "bans": [
+            "Baxia",
+            "Fredrinn",
+            "Grock",
+            "Uranus",
+            "Pharsa"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-2-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 1–3 Alter Ego",
+      "game_number": 1,
+      "duration": "18:44",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Baxia",
+            "Kimmy",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Grock",
+            "Zhuxin",
+            "Fanny",
+            "Chou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Cici",
+            "Leomord",
+            "Yve",
+            "Freya",
+            "Gloo"
+          ],
+          "bans": [
+            "Sora",
+            "Esmeralda",
+            "Pharsa",
+            "Selena",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-2-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 1–3 Alter Ego",
+      "game_number": 2,
+      "duration": "12:19",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Baxia",
+            "Zetian",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Yve",
+            "Cici",
+            "Chou"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Valentina",
+            "Leomord",
+            "Kimmy",
+            "Freya",
+            "Guinevere"
+          ],
+          "bans": [
+            "Kalea",
+            "Pharsa",
+            "Zhuxin",
+            "Esmeralda",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-2-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 1–3 Alter Ego",
+      "game_number": 3,
+      "duration": "14:39",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Suyou",
+            "Zhuxin",
+            "Freya",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Kalea",
+            "Kimmy",
+            "Lunox"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Yve",
+            "Esmeralda",
+            "Chou"
+          ],
+          "bans": [
+            "Pharsa",
+            "Sora",
+            "Baxia",
+            "Alice",
+            "Cici"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-2-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 1–3 Alter Ego",
+      "game_number": 4,
+      "duration": "22:08",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Joy",
+            "Lylia",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Grock",
+            "Zhuxin",
+            "Freya",
+            "Guinevere",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Ruby",
+            "Fanny",
+            "Pharsa",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Sora",
+            "Esmeralda",
+            "Kalea",
+            "Phoveus",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-3-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Team Liquid PH 2–3 Alter Ego",
+      "game_number": 1,
+      "duration": "15:32",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Khaleed",
+            "Baxia",
+            "Pharsa",
+            "Claude",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Zhuxin",
+            "Lunox",
+            "Luo Yi"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Joy",
+            "Kagura",
+            "Freya",
+            "Kalea"
+          ],
+          "bans": [
+            "Arlott",
+            "Esmeralda",
+            "Yve",
+            "Gatotkaca",
+            "Phoveus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-3-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Team Liquid PH 2–3 Alter Ego",
+      "game_number": 2,
+      "duration": "12:41",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Fredrinn",
+            "Luo Yi",
+            "Claude",
+            "Chip"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Yve",
+            "Kalea",
+            "Pharsa"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Yi Sun-shin",
+            "Lylia",
+            "Freya",
+            "Chou"
+          ],
+          "bans": [
+            "Arlott",
+            "Sora",
+            "Zhuxin",
+            "Hilda",
+            "Khaleed"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-3-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Team Liquid PH 2–3 Alter Ego",
+      "game_number": 3,
+      "duration": "15:49",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Yve",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Kalea",
+            "Chou",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Guinevere",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Arlott",
+            "Fredrinn",
+            "Baxia",
+            "Uranus",
+            "Harith"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-3-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Team Liquid PH 2–3 Alter Ego",
+      "game_number": 4,
+      "duration": "12:19",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Akai",
+            "Luo Yi",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Grock",
+            "Fanny",
+            "Zhuxin",
+            "Uranus",
+            "Gatotkaca"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Arlott",
+            "Fredrinn",
+            "Baxia",
+            "Yi Sun-shin",
+            "Yu Zhong"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-3-5",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-24",
+      "stage": "Knockout stage",
+      "series": "Team Liquid PH 2–3 Alter Ego",
+      "game_number": 5,
+      "duration": "20:02",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Yve",
+            "Esmeralda",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Freya",
+            "Joy",
+            "Kalea"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Uranus",
+            "Zhuxin",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Arlott",
+            "Fredrinn",
+            "Baxia",
+            "Harith",
+            "Karrie"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-4-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 3–1 Team Spirit",
+      "game_number": 1,
+      "duration": "24:46",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Guinevere",
+            "Yve",
+            "Esmeralda",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Grock",
+            "Kalea",
+            "Baxia",
+            "Yi Sun-shin",
+            "Valentina"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Hayabusa",
+            "Zhuxin",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Leomord",
+            "Uranus",
+            "Chou",
+            "Hylos"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-4-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 3–1 Team Spirit",
+      "game_number": 2,
+      "duration": "17:34",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Yve",
+            "Cici",
+            "Grock"
+          ],
+          "bans": [
+            "Esmeralda",
+            "Valentina",
+            "Kalea",
+            "Alice",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Kimmy",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Leomord",
+            "Uranus",
+            "Yu Zhong"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-4-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 3–1 Team Spirit",
+      "game_number": 3,
+      "duration": "11:52",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Suyou",
+            "Yve",
+            "Freya",
+            "Chip"
+          ],
+          "bans": [
+            "Alice",
+            "Sora",
+            "Gloo",
+            "Baxia",
+            "Yi Sun-shin"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Joy",
+            "Zhuxin",
+            "Cici",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Uranus",
+            "Leomord",
+            "Guinevere",
+            "Kalea"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-4-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 3–1 Team Spirit",
+      "game_number": 4,
+      "duration": "12:14",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Fredrinn",
+            "Pharsa",
+            "Claude",
+            "Hilda"
+          ],
+          "bans": [
+            "Sora",
+            "Alice",
+            "Zhuxin",
+            "Kalea",
+            "Valentina"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zetian",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Yve",
+            "Chip",
+            "Grock"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-5-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 1–3 Team Liquid PH",
+      "game_number": 1,
+      "duration": "10:54",
+      "winner": "Aurora Gaming",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Pharsa",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Hylos",
+            "Baxia",
+            "Luo Yi",
+            "Hilda"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Yi Sun-shin",
+            "Kimmy",
+            "Sora",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Yve",
+            "Freya",
+            "Cici"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-5-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 1–3 Team Liquid PH",
+      "game_number": 2,
+      "duration": "23:01",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Lukas",
+            "Leomord",
+            "Pharsa",
+            "Esmeralda",
+            "Badang"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Hylos",
+            "Baxia",
+            "Fredrinn",
+            "Alice"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Valentina",
+            "Yi Sun-shin",
+            "Yve",
+            "Sora",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Kalea",
+            "Chou",
+            "Claude"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-5-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 1–3 Team Liquid PH",
+      "game_number": 3,
+      "duration": "14:08",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Hayabusa",
+            "Zetian",
+            "Cici",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Hilda",
+            "Hylos",
+            "Yu Zhong",
+            "Gatotkaca"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Fredrinn",
+            "Pharsa",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Leomord",
+            "Harley",
+            "Yi Sun-shin"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-5-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-23",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming 1–3 Team Liquid PH",
+      "game_number": 4,
+      "duration": "18:24",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Harley",
+            "Yve",
+            "Cici",
+            "Kaja"
+          ],
+          "bans": [
+            "Fredrinn",
+            "Hilda",
+            "Baxia",
+            "Uranus",
+            "Akai"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Hayabusa",
+            "Zhuxin",
+            "Claude",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Grock",
+            "Leomord",
+            "Kalea",
+            "Freya"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-6-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 3–2 Selangor Red Giants",
+      "game_number": 1,
+      "duration": "16:41",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Lunox",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Sora",
+            "Cici",
+            "Gatotkaca",
+            "Gloo"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Pharsa",
+            "Freya",
+            "Chou"
+          ],
+          "bans": [
+            "Yve",
+            "Grock",
+            "Fredrinn",
+            "Kimmy",
+            "Luo Yi"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-6-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 3–2 Selangor Red Giants",
+      "game_number": 2,
+      "duration": "16:36",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Fanny",
+            "Yve",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Sora",
+            "Hilda",
+            "Cici",
+            "Chou",
+            "Gatotkaca"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Zhuxin",
+            "Freya",
+            "Hylos"
+          ],
+          "bans": [
+            "Fredrinn",
+            "Grock",
+            "Baxia",
+            "Guinevere",
+            "Arlott"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-6-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 3–2 Selangor Red Giants",
+      "game_number": 3,
+      "duration": "17:45",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Yve",
+            "Granger",
+            "Chou"
+          ],
+          "bans": [
+            "Sora",
+            "Freya",
+            "Cici",
+            "Uranus",
+            "Luo Yi"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Yi Sun-shin",
+            "Zetian",
+            "Harith",
+            "Hilda"
+          ],
+          "bans": [
+            "Grock",
+            "Claude",
+            "Zhuxin",
+            "Esmeralda",
+            "Lunox"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-6-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 3–2 Selangor Red Giants",
+      "game_number": 4,
+      "duration": "22:05",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Fredrinn",
+            "Kimmy",
+            "Granger",
+            "Hylos"
+          ],
+          "bans": [
+            "Sora",
+            "Freya",
+            "Hilda",
+            "Luo Yi",
+            "Lapu-Lapu"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Gloo",
+            "Yi Sun-shin",
+            "Pharsa",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Grock",
+            "Claude",
+            "Zhuxin",
+            "Chip",
+            "Khaleed"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-6-5",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Aurora Gaming PH 3–2 Selangor Red Giants",
+      "game_number": 5,
+      "duration": "23:35",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Akai",
+            "Kimmy",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Sora",
+            "Hilda",
+            "Zhuxin",
+            "Esmeralda",
+            "Alice"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Cici",
+            "Leomord",
+            "Zetian",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Baxia",
+            "Fredrinn",
+            "Grock",
+            "Guinevere",
+            "Arlott"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-7-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "ONIC 1–3 Team Liquid PH",
+      "game_number": 1,
+      "duration": "15:53",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Yi Sun-shin",
+            "Valentina",
+            "Cici",
+            "Hilda"
+          ],
+          "bans": [
+            "Yu Zhong",
+            "Claude",
+            "Zhuxin",
+            "Uranus",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Lancelot",
+            "Pharsa",
+            "Esmeralda",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Kalea",
+            "Yve",
+            "Grock",
+            "Lunox"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-7-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "ONIC 1–3 Team Liquid PH",
+      "game_number": 2,
+      "duration": "18:39",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Pharsa",
+            "Freya",
+            "Chou"
+          ],
+          "bans": [
+            "Yu Zhong",
+            "Claude",
+            "Zhuxin",
+            "Hylos",
+            "Gatotkaca"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Luo Yi",
+            "Sora",
+            "Hilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Kalea",
+            "Yve",
+            "Valentina",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-7-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "ONIC 1–3 Team Liquid PH",
+      "game_number": 3,
+      "duration": "11:14",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Lunox",
+            "Ruby",
+            "Kalea"
+          ],
+          "bans": [
+            "Sora",
+            "Yve",
+            "Hilda",
+            "Gatotkaca",
+            "Lapu-Lapu"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Lancelot",
+            "Pharsa",
+            "Esmeralda",
+            "Hylos"
+          ],
+          "bans": [
+            "Claude",
+            "Zhuxin",
+            "Yu Zhong",
+            "Uranus",
+            "Cici"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-7-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "ONIC 1–3 Team Liquid PH",
+      "game_number": 4,
+      "duration": "17:22",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Yi Sun-shin",
+            "Luo Yi",
+            "Lunox",
+            "Grock"
+          ],
+          "bans": [
+            "Sora",
+            "Yu Zhong",
+            "Yve",
+            "Lapu-Lapu",
+            "Hilda"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Terizla",
+            "Fredrinn",
+            "Pharsa",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Kalea",
+            "Zhuxin",
+            "Cici",
+            "Freya"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-8-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 3–0 Yangon Galacticos",
+      "game_number": 1,
+      "duration": "17:30",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Leomord",
+            "Yve",
+            "Valentina",
+            "Kalea"
+          ],
+          "bans": [
+            "Helcurt",
+            "Baxia",
+            "Zhuxin",
+            "Fanny",
+            "Yu Zhong"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Harley",
+            "Pharsa",
+            "Sora",
+            "Hilda"
+          ],
+          "bans": [
+            "Chou",
+            "Yi Sun-shin",
+            "Claude",
+            "Karrie",
+            "Cici"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-8-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 3–0 Yangon Galacticos",
+      "game_number": 2,
+      "duration": "12:29",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Joy",
+            "Zhuxin",
+            "Freya",
+            "Khaleed"
+          ],
+          "bans": [
+            "Helcurt",
+            "Baxia",
+            "Chou",
+            "Uranus",
+            "Pharsa"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Leomord",
+            "Kimmy",
+            "Cici",
+            "Hilda"
+          ],
+          "bans": [
+            "Yve",
+            "Kalea",
+            "Yi Sun-shin",
+            "Nolan",
+            "Lapu-Lapu"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-8-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-22",
+      "stage": "Knockout stage",
+      "series": "Team Spirit 3–0 Yangon Galacticos",
+      "game_number": 3,
+      "duration": "38:05",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Leomord",
+            "Valentina",
+            "Sora",
+            "Grock"
+          ],
+          "bans": [
+            "Helcurt",
+            "Baxia",
+            "Yve",
+            "Guinevere",
+            "Uranus"
+          ]
+        },
+        {
+          "team": "Yangon Galacticos",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Yi Sun-shin",
+            "Pharsa",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Kalea",
+            "Freya",
+            "Zhuxin",
+            "Claude",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-9-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 1–3 Aurora Gaming PH",
+      "game_number": 1,
+      "duration": "18:25",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Kimmy",
+            "Minsitthar",
+            "Guinevere"
+          ],
+          "bans": [
+            "Baxia",
+            "Valentina",
+            "Yve",
+            "Alice",
+            "Uranus"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Lapu-Lapu",
+            "Yi Sun-shin",
+            "Pharsa",
+            "Freya",
+            "Chou"
+          ],
+          "bans": [
+            "Grock",
+            "Claude",
+            "Zhuxin",
+            "Kalea",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-9-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 1–3 Aurora Gaming PH",
+      "game_number": 2,
+      "duration": "13:50",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Leomord",
+            "Yve",
+            "Granger",
+            "Hilda"
+          ],
+          "bans": [
+            "Baxia",
+            "Esmeralda",
+            "Claude",
+            "Uranus",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Yi Sun-shin",
+            "Kimmy",
+            "Harith",
+            "Chou"
+          ],
+          "bans": [
+            "Grock",
+            "Freya",
+            "Zhuxin",
+            "Kalea",
+            "Khaleed"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-9-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 1–3 Aurora Gaming PH",
+      "game_number": 3,
+      "duration": "17:09",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Yi Sun-shin",
+            "Yve",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Baxia",
+            "Grock",
+            "Kalea",
+            "Valentina",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Fredrinn",
+            "Zhuxin",
+            "Harith",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Leomord",
+            "Guinevere",
+            "Hilda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-9-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Alter Ego 1–3 Aurora Gaming PH",
+      "game_number": 4,
+      "duration": "17:52",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Lapu-Lapu",
+            "Fanny",
+            "Zhuxin",
+            "Granger",
+            "Chou"
+          ],
+          "bans": [
+            "Baxia",
+            "Fredrinn",
+            "Kalea",
+            "Gatotkaca",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Leomord",
+            "Pharsa",
+            "Claude",
+            "Hylos"
+          ],
+          "bans": [
+            "Grock",
+            "Hilda",
+            "Freya",
+            "Harith",
+            "Arlott"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-10-1",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 3–2 Aurora Gaming",
+      "game_number": 1,
+      "duration": "18:22",
+      "winner": "Aurora Gaming",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Yi Sun-shin",
+            "Valentina",
+            "X.Borg",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Yve",
+            "Freya",
+            "Guinevere",
+            "Leomord"
+          ]
+        },
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Harley",
+            "Zetian",
+            "Sora",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Grock",
+            "Zhuxin",
+            "Kimmy",
+            "Granger",
+            "Luo Yi"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-10-2",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 3–2 Aurora Gaming",
+      "game_number": 2,
+      "duration": "24:20",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Yi Sun-shin",
+            "Lunox",
+            "Cici",
+            "Chou"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Kalea",
+            "Fanny",
+            "Harley",
+            "Leomord"
+          ]
+        },
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Lancelot",
+            "Pharsa",
+            "Sora",
+            "Hilda"
+          ],
+          "bans": [
+            "Yve",
+            "Kimmy",
+            "Grock",
+            "Uranus",
+            "Badang"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-10-3",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 3–2 Aurora Gaming",
+      "game_number": 3,
+      "duration": "10:40",
+      "winner": "Aurora Gaming",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Yi Sun-shin",
+            "Pharsa",
+            "X.Borg",
+            "Kalea"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Fanny",
+            "Sora",
+            "Harley",
+            "Guinevere"
+          ]
+        },
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Leomord",
+            "Lunox",
+            "Freya",
+            "Grock"
+          ],
+          "bans": [
+            "Yve",
+            "Kimmy",
+            "Cici",
+            "Phoveus",
+            "Granger"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-10-4",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 3–2 Aurora Gaming",
+      "game_number": 4,
+      "duration": "16:39",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Leomord",
+            "Pharsa",
+            "Sora",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Yve",
+            "Cici",
+            "Guinevere",
+            "Harley"
+          ]
+        },
+        {
+          "team": "Aurora Gaming",
+          "side": "red side",
+          "picks": [
+            "Terizla",
+            "Joy",
+            "Kimmy",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Grock",
+            "Zhuxin",
+            "Uranus",
+            "Phoveus",
+            "Granger"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    },
+    {
+      "id": "m7-world-championship-10-5",
+      "tournament": "M7 World Championship",
+      "date": "2026-01-21",
+      "stage": "Knockout stage",
+      "series": "Selangor Red Giants 3–2 Aurora Gaming",
+      "game_number": 5,
+      "duration": "16:26",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Leomord",
+            "Pharsa",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Sora",
+            "Fanny",
+            "Lunox",
+            "Freya"
+          ]
+        },
+        {
+          "team": "Aurora Gaming",
+          "side": "blue side",
+          "picks": [
+            "Yu Zhong",
+            "Guinevere",
+            "Novaria",
+            "Harith",
+            "Grock"
+          ],
+          "bans": [
+            "Yve",
+            "Cici",
+            "Uranus",
+            "Esmeralda",
+            "Lapu-Lapu"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/m7-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/m7-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M7_World_Championship"
+        }
+      ],
+      "patch": "2.1.40a"
+    }
+  ]
+}

@@ -1,0 +1,1449 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:18:19.487Z",
+  "source": "mlbbdex",
+  "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+  "source_note": "Public tournament page; MLBBDex attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "mpl-my-season-18-1-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "RRQ Tora 0–2 Bigetron MY by VIT",
+      "game_number": 1,
+      "duration": "18:33",
+      "winner": "Bigetron MY by VIT",
+      "teams": [
+        {
+          "team": "RRQ Tora",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Eudora",
+            "Obsidia",
+            "Gloo"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Freya",
+            "Claude",
+            "Moskov"
+          ]
+        },
+        {
+          "team": "Bigetron MY by VIT",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Selena",
+            "Melissa",
+            "Marcel"
+          ],
+          "bans": [
+            "Carmilla",
+            "Aulus",
+            "Zhuxin",
+            "Rafaela",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-1-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "RRQ Tora 0–2 Bigetron MY by VIT",
+      "game_number": 2,
+      "duration": "23:05",
+      "winner": "Bigetron MY by VIT",
+      "teams": [
+        {
+          "team": "RRQ Tora",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Zhuxin",
+            "Freya",
+            "Minotaur"
+          ],
+          "bans": [
+            "Marcel",
+            "Atlas",
+            "Esmeralda",
+            "Phoveus",
+            "Eudora"
+          ]
+        },
+        {
+          "team": "Bigetron MY by VIT",
+          "side": "red side",
+          "picks": [
+            "Lukas",
+            "Harley",
+            "Zetian",
+            "Obsidia",
+            "Hylos"
+          ],
+          "bans": [
+            "Masha",
+            "Aulus",
+            "Carmilla",
+            "Gloo",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-2-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "AC Esports 2–1 Team Vamos",
+      "game_number": 1,
+      "duration": "22:38",
+      "winner": "AC Esports",
+      "teams": [
+        {
+          "team": "AC Esports",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Zhuxin",
+            "Harith",
+            "Atlas"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Marcel",
+            "Sora",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Lukas",
+            "Nolan",
+            "Valentina",
+            "Aulus",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Kalea",
+            "Esmeralda",
+            "Carmilla",
+            "Alice",
+            "Cici"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-2-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "AC Esports 2–1 Team Vamos",
+      "game_number": 2,
+      "duration": "19:26",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "AC Esports",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Suyou",
+            "Cecilion",
+            "Carmilla",
+            "Bruno"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Marcel",
+            "Paquito",
+            "Cici"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Valentina",
+            "Obsidia",
+            "Atlas"
+          ],
+          "bans": [
+            "Kalea",
+            "Esmeralda",
+            "Zhuxin",
+            "Alice",
+            "Arlott"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-2-3",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "AC Esports 2–1 Team Vamos",
+      "game_number": 3,
+      "duration": "18:41",
+      "winner": "AC Esports",
+      "teams": [
+        {
+          "team": "AC Esports",
+          "side": "blue side",
+          "picks": [
+            "Cici",
+            "Nolan",
+            "Valentina",
+            "Brody",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Marcel",
+            "Atlas",
+            "Arlott",
+            "Uranus"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Yi Sun-shin",
+            "Cecilion",
+            "Paquito",
+            "Carmilla"
+          ],
+          "bans": [
+            "Masha",
+            "Zhuxin",
+            "Freya",
+            "Obsidia",
+            "Harith"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-3-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Invictus Gaming 0–2 Selangor Red Giants",
+      "game_number": 1,
+      "duration": "14:27",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Invictus Gaming",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Nolan",
+            "Zhuxin",
+            "Moskov",
+            "Hilda"
+          ],
+          "bans": [
+            "Carmilla",
+            "Freya",
+            "Atlas",
+            "Dyrroth",
+            "Luo Yi"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Selena",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Alice",
+            "Masha",
+            "Aulus",
+            "Kalea",
+            "Gloo"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-3-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Invictus Gaming 0–2 Selangor Red Giants",
+      "game_number": 2,
+      "duration": "15:23",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Invictus Gaming",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Zhuxin",
+            "Moskov",
+            "Belerick"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Atlas",
+            "Dyrroth",
+            "Luo Yi"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Nolan",
+            "Selena",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Alice",
+            "Carmilla",
+            "Fanny",
+            "Kalea",
+            "Gloo"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-4-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "AC Esports 2–1 Team Rey",
+      "game_number": 1,
+      "duration": "21:20",
+      "winner": "AC Esports",
+      "teams": [
+        {
+          "team": "AC Esports",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Suyou",
+            "Kimmy",
+            "Paquito",
+            "Kalea"
+          ],
+          "bans": [
+            "Fanny",
+            "Atlas",
+            "Zhuxin",
+            "Marcel",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "Team Rey",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Nolan",
+            "Zetian",
+            "Chou",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Masha",
+            "Hirara",
+            "Carmilla",
+            "Eudora",
+            "Dyrroth"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-4-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "AC Esports 2–1 Team Rey",
+      "game_number": 2,
+      "duration": "12:12",
+      "winner": "Team Rey",
+      "teams": [
+        {
+          "team": "AC Esports",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Zhuxin",
+            "Wanwan",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Atlas",
+            "Marcel",
+            "Gatotkaca"
+          ]
+        },
+        {
+          "team": "Team Rey",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Hirara",
+            "Selena",
+            "Obsidia",
+            "Hylos"
+          ],
+          "bans": [
+            "Cici",
+            "Carmilla",
+            "Nolan",
+            "Uranus",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-4-3",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "AC Esports 2–1 Team Rey",
+      "game_number": 3,
+      "duration": "24:43",
+      "winner": "AC Esports",
+      "teams": [
+        {
+          "team": "AC Esports",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Suyou",
+            "Kimmy",
+            "Freya",
+            "Belerick"
+          ],
+          "bans": [
+            "Fanny",
+            "Atlas",
+            "Zhuxin",
+            "Marcel",
+            "Gloo"
+          ]
+        },
+        {
+          "team": "Team Rey",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Nolan",
+            "Zetian",
+            "Cici",
+            "Minotaur"
+          ],
+          "bans": [
+            "Masha",
+            "Carmilla",
+            "Kalea",
+            "Dyrroth",
+            "X.Borg"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-5-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Bigetron MY by VIT 1–2 Team Flash",
+      "game_number": 1,
+      "duration": "18:20",
+      "winner": "Bigetron MY by VIT",
+      "teams": [
+        {
+          "team": "Bigetron MY by VIT",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Harley",
+            "Cecilion",
+            "X.Borg",
+            "Carmilla"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Esmeralda",
+            "Hirara",
+            "Valentina",
+            "Selena"
+          ]
+        },
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Aulus",
+            "Nolan",
+            "Kimmy",
+            "Cici",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Marcel",
+            "Uranus",
+            "Paquito"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-5-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Bigetron MY by VIT 1–2 Team Flash",
+      "game_number": 2,
+      "duration": "22:05",
+      "winner": "Team Flash",
+      "teams": [
+        {
+          "team": "Bigetron MY by VIT",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Nolan",
+            "Valentina",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Esmeralda",
+            "Selena",
+            "Obsidia",
+            "Fanny"
+          ]
+        },
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Paquito",
+            "Cecilion",
+            "Moskov",
+            "Carmilla"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Marcel",
+            "Cici",
+            "Hylos"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-5-3",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Bigetron MY by VIT 1–2 Team Flash",
+      "game_number": 3,
+      "duration": "16:46",
+      "winner": "Team Flash",
+      "teams": [
+        {
+          "team": "Bigetron MY by VIT",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Cecilion",
+            "Paquito",
+            "Carmilla"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Selena",
+            "Kalea",
+            "Marcel",
+            "Obsidia"
+          ]
+        },
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Dyrroth",
+            "Aulus",
+            "Valentina",
+            "Freya",
+            "Mathilda"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Esmeralda",
+            "Phoveus",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-6-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Team Vamos 2–0 Selangor Red Giants",
+      "game_number": 1,
+      "duration": "13:17",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Selena",
+            "Paquito",
+            "Marcel"
+          ],
+          "bans": [
+            "Obsidia",
+            "Esmeralda",
+            "Carmilla",
+            "Barats",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "red side",
+          "picks": [
+            "Dyrroth",
+            "Hirara",
+            "Eudora",
+            "Cici",
+            "Atlas"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Aulus",
+            "Alice",
+            "Arlott"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-6-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Team Vamos 2–0 Selangor Red Giants",
+      "game_number": 2,
+      "duration": "12:57",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "Team Vamos",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Yi Sun-shin",
+            "Cecilion",
+            "Aulus",
+            "Carmilla"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Obsidia",
+            "Valentina",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Hirara",
+            "Pharsa",
+            "Cici",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Selena",
+            "Nolan",
+            "Paquito",
+            "Lukas"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-7-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Team Flash 0–2 Invictus Gaming",
+      "game_number": 1,
+      "duration": "25:02",
+      "winner": "Invictus Gaming",
+      "teams": [
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Dyrroth",
+            "Fanny",
+            "Valentina",
+            "Obsidia",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Freya",
+            "Aulus",
+            "Phoveus",
+            "Hilda"
+          ]
+        },
+        {
+          "team": "Invictus Gaming",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Zhuxin",
+            "Moskov",
+            "Hylos"
+          ],
+          "bans": [
+            "Cici",
+            "Carmilla",
+            "Nolan",
+            "Paquito",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-7-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Team Flash 0–2 Invictus Gaming",
+      "game_number": 2,
+      "duration": "12:05",
+      "winner": "Invictus Gaming",
+      "teams": [
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Ruby",
+            "Hirara",
+            "Zetian",
+            "Obsidia",
+            "Kalea"
+          ],
+          "bans": [
+            "Moskov",
+            "Freya",
+            "Alice",
+            "Phoveus",
+            "Hylos"
+          ]
+        },
+        {
+          "team": "Invictus Gaming",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Aulus",
+            "Zhuxin",
+            "Moskov",
+            "Belerick"
+          ],
+          "bans": [
+            "Carmilla",
+            "Nolan",
+            "Cici",
+            "Dyrroth",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-8-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Team Rey 2–0 RRQ Tora",
+      "game_number": 1,
+      "duration": "14:10",
+      "winner": "Team Rey",
+      "teams": [
+        {
+          "team": "Team Rey",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Nolan",
+            "Kimmy",
+            "Cici",
+            "Gloo"
+          ],
+          "bans": [
+            "Carmilla",
+            "Hirara",
+            "Masha",
+            "Sora",
+            "Belerick"
+          ]
+        },
+        {
+          "team": "RRQ Tora",
+          "side": "blue side",
+          "picks": [
+            "Hylos",
+            "Aulus",
+            "Valentina",
+            "Freya",
+            "Rafaela"
+          ],
+          "bans": [
+            "Atlas",
+            "Fanny",
+            "Zhuxin",
+            "Esmeralda",
+            "Lukas"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-8-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Team Rey 2–0 RRQ Tora",
+      "game_number": 2,
+      "duration": "23:13",
+      "winner": "Team Rey",
+      "teams": [
+        {
+          "team": "Team Rey",
+          "side": "red side",
+          "picks": [
+            "Hylos",
+            "Nolan",
+            "Kimmy",
+            "Cici",
+            "Gloo"
+          ],
+          "bans": [
+            "Masha",
+            "Carmilla",
+            "Hirara",
+            "Sora",
+            "Eudora"
+          ]
+        },
+        {
+          "team": "RRQ Tora",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Aulus",
+            "Zetian",
+            "Freya",
+            "Minotaur"
+          ],
+          "bans": [
+            "Atlas",
+            "Fanny",
+            "Zhuxin",
+            "Esmeralda",
+            "Uranus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-9-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Invictus Gaming 1–2 AC Esports",
+      "game_number": 1,
+      "duration": "15:23",
+      "winner": "AC Esports",
+      "teams": [
+        {
+          "team": "Invictus Gaming",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Fanny",
+            "Zhuxin",
+            "Cici",
+            "Hylos"
+          ],
+          "bans": [
+            "Valentina",
+            "Eudora",
+            "Nolan",
+            "Kimmy",
+            "Dyrroth"
+          ]
+        },
+        {
+          "team": "AC Esports",
+          "side": "red side",
+          "picks": [
+            "Freya",
+            "Aulus",
+            "Zetian",
+            "X.Borg",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Alice",
+            "Hirara",
+            "Atlas",
+            "Carmilla"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-9-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Invictus Gaming 1–2 AC Esports",
+      "game_number": 2,
+      "duration": "17:08",
+      "winner": "Invictus Gaming",
+      "teams": [
+        {
+          "team": "Invictus Gaming",
+          "side": "red side",
+          "picks": [
+            "Dyrroth",
+            "Nolan",
+            "Valentina",
+            "Paquito",
+            "Belerick"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Freya",
+            "Gloo",
+            "Fanny"
+          ]
+        },
+        {
+          "team": "AC Esports",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Aulus",
+            "Selena",
+            "Cici",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Alice",
+            "Zhuxin",
+            "Carmilla",
+            "Sora",
+            "Uranus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-9-3",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Invictus Gaming 1–2 AC Esports",
+      "game_number": 3,
+      "duration": "15:33",
+      "winner": "AC Esports",
+      "teams": [
+        {
+          "team": "Invictus Gaming",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Nolan",
+            "Selena",
+            "Paquito",
+            "Carmilla"
+          ],
+          "bans": [
+            "Atlas",
+            "Esmeralda",
+            "Fanny",
+            "Obsidia",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "AC Esports",
+          "side": "red side",
+          "picks": [
+            "Lukas",
+            "Hirara",
+            "Zhuxin",
+            "Brody",
+            "Belerick"
+          ],
+          "bans": [
+            "Masha",
+            "Alice",
+            "Aulus",
+            "Cecilion",
+            "Valentina"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-10-1",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Team Flash 0–2 Team Vamos",
+      "game_number": 1,
+      "duration": "20:49",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Zhuxin",
+            "Cici",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Masha",
+            "Eudora",
+            "Valentina"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Hirara",
+            "Zetian",
+            "Aulus",
+            "Atlas"
+          ],
+          "bans": [
+            "Carmilla",
+            "Rafaela",
+            "Obsidia",
+            "Uranus",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-my-season-18-10-2",
+      "tournament": "MPL Malaysia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Team Flash 0–2 Team Vamos",
+      "game_number": 2,
+      "duration": "15:07",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "Team Flash",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Nolan",
+            "Zhuxin",
+            "Cici",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Freya",
+            "Masha",
+            "Eudora",
+            "Zetian"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": "blue side",
+          "picks": [
+            "Aulus",
+            "Hirara",
+            "Valentina",
+            "Ruby",
+            "Atlas"
+          ],
+          "bans": [
+            "Carmilla",
+            "Rafaela",
+            "Marcel",
+            "Phoveus",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-my-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-my-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Malaysia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    }
+  ]
+}

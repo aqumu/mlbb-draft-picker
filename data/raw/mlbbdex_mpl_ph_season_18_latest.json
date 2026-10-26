@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:17:51.662Z",
+  "source": "mlbbdex",
+  "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+  "source_note": "Public tournament page; MLBBDex attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "mpl-ph-season-18-1-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-10-21",
+      "stage": "Playoffs",
+      "series": "Aurora Gaming PH 1–0 Omega Esports",
+      "game_number": 1,
+      "duration": "24:23",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Hirara",
+            "Zhuxin",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Esmeralda",
+            "Atlas",
+            "Marcel",
+            "Cici",
+            "Uranus"
+          ]
+        },
+        {
+          "team": "Omega Esports",
+          "side": "red side",
+          "picks": [
+            "Carmilla",
+            "Harley",
+            "Yve",
+            "Paquito",
+            "Kalea"
+          ],
+          "bans": [
+            "Rafaela",
+            "Masha",
+            "Nolan",
+            "Alice",
+            "Dyrroth"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-2-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-10-21",
+      "stage": "Playoffs",
+      "series": "ONIC Philippines 3–2 TNC Pro Team",
+      "game_number": 1,
+      "duration": "16:48",
+      "winner": "TNC Pro Team",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "blue side",
+          "picks": [
+            "Kalea",
+            "Nolan",
+            "Pharsa",
+            "Cici",
+            "Masha"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Esmeralda",
+            "Atlas",
+            "Marcel",
+            "Badang"
+          ]
+        },
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Freya",
+            "Aulus",
+            "Kimmy",
+            "Obsidia",
+            "Hylos"
+          ],
+          "bans": [
+            "Carmilla",
+            "Lukas",
+            "Valentina",
+            "Selena",
+            "Lylia"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-2-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-10-21",
+      "stage": "Playoffs",
+      "series": "ONIC Philippines 3–2 TNC Pro Team",
+      "game_number": 2,
+      "duration": "16:05",
+      "winner": "ONIC Philippines",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Aulus",
+            "Zhuxin",
+            "Claude",
+            "Marcel"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Valentina",
+            "Nolan",
+            "Harley"
+          ]
+        },
+        {
+          "team": "TNC Pro Team",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Suyou",
+            "Kimmy",
+            "Obsidia",
+            "Kalea"
+          ],
+          "bans": [
+            "Carmilla",
+            "Esmeralda",
+            "Freya",
+            "Barats",
+            "Lukas"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-2-3",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-10-21",
+      "stage": "Playoffs",
+      "series": "ONIC Philippines 3–2 TNC Pro Team",
+      "game_number": 3,
+      "duration": "14:08",
+      "winner": "ONIC Philippines",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Nolan",
+            "Lylia",
+            "Claude",
+            "Atlas"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Aulus",
+            "Esmeralda",
+            "Fanny",
+            "Harley"
+          ]
+        },
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Suyou",
+            "Valentina",
+            "Obsidia",
+            "Kalea"
+          ],
+          "bans": [
+            "Carmilla",
+            "Masha",
+            "Marcel",
+            "Alice",
+            "Barats"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-2-4",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-10-21",
+      "stage": "Playoffs",
+      "series": "ONIC Philippines 3–2 TNC Pro Team",
+      "game_number": 4,
+      "duration": "17:00",
+      "winner": "TNC Pro Team",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "red side",
+          "picks": [
+            "Lukas",
+            "Nolan",
+            "Zhuxin",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Aulus",
+            "Marcel",
+            "Obsidia",
+            "Hirara"
+          ]
+        },
+        {
+          "team": "TNC Pro Team",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Paquito",
+            "Lylia",
+            "Miya",
+            "Atlas"
+          ],
+          "bans": [
+            "Carmilla",
+            "Esmeralda",
+            "Valentina",
+            "Cici",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-2-5",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-10-21",
+      "stage": "Playoffs",
+      "series": "ONIC Philippines 3–2 TNC Pro Team",
+      "game_number": 5,
+      "duration": "20:52",
+      "winner": "ONIC Philippines",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "blue side",
+          "picks": [
+            "Belerick",
+            "Hirara",
+            "Lylia",
+            "Cici",
+            "Masha"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Atlas",
+            "Valentina",
+            "Obsidia",
+            "Uranus"
+          ]
+        },
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Aulus",
+            "Kimmy",
+            "Ruby",
+            "Kalea"
+          ],
+          "bans": [
+            "Carmilla",
+            "Freya",
+            "Marcel",
+            "Alice",
+            "Dyrroth"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-3-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-06",
+      "stage": "Regular season",
+      "series": "Team Liquid PH 2–0 Twisted Minds PH",
+      "game_number": 1,
+      "duration": "18:04",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Atlas",
+            "Suyou",
+            "Eudora",
+            "Claude",
+            "Minotaur"
+          ],
+          "bans": [
+            "Uranus",
+            "Selena",
+            "Melissa",
+            "Mathilda",
+            "Alice"
+          ]
+        },
+        {
+          "team": "Twisted Minds PH",
+          "side": "red side",
+          "picks": [
+            "Belerick",
+            "Hirara",
+            "Valentina",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Marcel",
+            "Paquito",
+            "Clint",
+            "Brody"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-3-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-06",
+      "stage": "Regular season",
+      "series": "Team Liquid PH 2–0 Twisted Minds PH",
+      "game_number": 2,
+      "duration": "12:41",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Nolan",
+            "Selena",
+            "Claude",
+            "Minotaur"
+          ],
+          "bans": [
+            "Uranus",
+            "Freya",
+            "Melissa",
+            "Rafaela",
+            "Angela"
+          ]
+        },
+        {
+          "team": "Twisted Minds PH",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Mathilda",
+            "Miya",
+            "Gloo"
+          ],
+          "bans": [
+            "Atlas",
+            "Marcel",
+            "Paquito",
+            "Clint",
+            "Brody"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-4-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-05",
+      "stage": "Regular season",
+      "series": "ONIC Philippines 1–2 Team Falcons PH",
+      "game_number": 1,
+      "duration": "16:37",
+      "winner": "ONIC Philippines",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "blue side",
+          "picks": [
+            "Barats",
+            "Nolan",
+            "Valentina",
+            "Beatrix",
+            "Kaja"
+          ],
+          "bans": [
+            "Rafaela",
+            "Atlas",
+            "Melissa",
+            "Hanabi",
+            "Zhuxin"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Paquito",
+            "Mathilda",
+            "Obsidia",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Hirara",
+            "Freya",
+            "Chou",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-4-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-05",
+      "stage": "Regular season",
+      "series": "ONIC Philippines 1–2 Team Falcons PH",
+      "game_number": 2,
+      "duration": "13:43",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Fanny",
+            "Lylia",
+            "Melissa",
+            "Chou"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Marcel",
+            "Moskov",
+            "Brody"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "blue side",
+          "picks": [
+            "Carmilla",
+            "Hirara",
+            "Selena",
+            "Miya",
+            "Khufra"
+          ],
+          "bans": [
+            "Novaria",
+            "Valentina",
+            "Belerick",
+            "Mathilda",
+            "Kaja"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-4-3",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-05",
+      "stage": "Regular season",
+      "series": "ONIC Philippines 1–2 Team Falcons PH",
+      "game_number": 3,
+      "duration": "13:22",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "ONIC Philippines",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Suyou",
+            "Novaria",
+            "Melissa",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Selena",
+            "Lylia",
+            "Belerick"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "blue side",
+          "picks": [
+            "Carmilla",
+            "Hirara",
+            "Rafaela",
+            "Miya",
+            "Gloo"
+          ],
+          "bans": [
+            "Mathilda",
+            "Valentina",
+            "Fanny",
+            "Nolan",
+            "Harley"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-5-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-05",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 0–2 Team Liquid PH",
+      "game_number": 1,
+      "duration": "16:07",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "blue side",
+          "picks": [
+            "Belerick",
+            "Hirara",
+            "Novaria",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Marcel",
+            "Selena",
+            "Paquito",
+            "Mathilda",
+            "Minotaur"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "red side",
+          "picks": [
+            "Carmilla",
+            "Suyou",
+            "Eudora",
+            "Clint",
+            "Atlas"
+          ],
+          "bans": [
+            "Freya",
+            "Uranus",
+            "Melissa",
+            "Valentina",
+            "Lylia"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-5-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-05",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 0–2 Team Liquid PH",
+      "game_number": 2,
+      "duration": "22:11",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Atlas",
+            "Hirara",
+            "Eudora",
+            "Claude",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Marcel",
+            "Paquito",
+            "Harley",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Belerick",
+            "Nolan",
+            "Valentina",
+            "Melissa",
+            "Minotaur"
+          ],
+          "bans": [
+            "Uranus",
+            "Fanny",
+            "Selena",
+            "Kaja",
+            "Mathilda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-6-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-04",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 1–2 ONIC Philippines",
+      "game_number": 1,
+      "duration": "17:37",
+      "winner": "TNC Pro Team",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Suyou",
+            "Valentina",
+            "Claude",
+            "Badang"
+          ],
+          "bans": [
+            "Freya",
+            "Melissa",
+            "Marcel",
+            "Moskov",
+            "Obsidia"
+          ]
+        },
+        {
+          "team": "ONIC Philippines",
+          "side": "blue side",
+          "picks": [
+            "Hylos",
+            "Hirara",
+            "Selena",
+            "Clint",
+            "Chou"
+          ],
+          "bans": [
+            "Atlas",
+            "Paquito",
+            "Uranus",
+            "Fanny",
+            "Gloo"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-6-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-04",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 1–2 ONIC Philippines",
+      "game_number": 2,
+      "duration": "13:20",
+      "winner": "ONIC Philippines",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Yi Sun-shin",
+            "Zhuxin",
+            "Claude",
+            "Lolita"
+          ],
+          "bans": [
+            "Freya",
+            "Melissa",
+            "Marcel",
+            "Moskov",
+            "Obsidia"
+          ]
+        },
+        {
+          "team": "ONIC Philippines",
+          "side": "blue side",
+          "picks": [
+            "Hylos",
+            "Hirara",
+            "Selena",
+            "Hanabi",
+            "Mathilda"
+          ],
+          "bans": [
+            "Atlas",
+            "Paquito",
+            "Uranus",
+            "Fanny",
+            "Gloo"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-6-3",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-04",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 1–2 ONIC Philippines",
+      "game_number": 3,
+      "duration": "11:11",
+      "winner": "ONIC Philippines",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "blue side",
+          "picks": [
+            "Uranus",
+            "Paquito",
+            "Xavier",
+            "Brody",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Selena",
+            "Mathilda",
+            "Gloo",
+            "Hylos"
+          ]
+        },
+        {
+          "team": "ONIC Philippines",
+          "side": "red side",
+          "picks": [
+            "Sora",
+            "Hirara",
+            "Novaria",
+            "Melissa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Belerick",
+            "Lylia",
+            "Valentina"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-7-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-04",
+      "stage": "Regular season",
+      "series": "Twisted Minds PH 0–2 Aurora Gaming PH",
+      "game_number": 1,
+      "duration": "16:49",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Twisted Minds PH",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Hirara",
+            "Novaria",
+            "Yi Sun-shin",
+            "Belerick"
+          ],
+          "bans": [
+            "Fanny",
+            "Rafaela",
+            "Atlas",
+            "Mathilda",
+            "Kaja"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Paquito",
+            "Eudora",
+            "Clint",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Melissa",
+            "Selena",
+            "Hanabi",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-7-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-09-04",
+      "stage": "Regular season",
+      "series": "Twisted Minds PH 0–2 Aurora Gaming PH",
+      "game_number": 2,
+      "duration": "09:39",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "Twisted Minds PH",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Hirara",
+            "Eudora",
+            "Moskov",
+            "Mathilda"
+          ],
+          "bans": [
+            "Freya",
+            "Fanny",
+            "Melissa",
+            "Barats",
+            "Brody"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Belerick",
+            "Paquito",
+            "Pharsa",
+            "Clint",
+            "Rafaela"
+          ],
+          "bans": [
+            "Selena",
+            "Uranus",
+            "Atlas",
+            "Hanabi",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-8-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-29",
+      "stage": "Regular season",
+      "series": "Team Liquid PH 2–0 Aurora Gaming PH",
+      "game_number": 1,
+      "duration": "22:38",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Ruby",
+            "Paquito",
+            "Eudora",
+            "Clint",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Rafaela",
+            "Melissa",
+            "Lylia",
+            "Novaria"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Zhuxin",
+            "Brody",
+            "Minotaur"
+          ],
+          "bans": [
+            "Freya",
+            "Selena",
+            "Atlas",
+            "Belerick",
+            "Kaja"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-8-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-29",
+      "stage": "Regular season",
+      "series": "Team Liquid PH 2–0 Aurora Gaming PH",
+      "game_number": 2,
+      "duration": "21:06",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": "blue side",
+          "picks": [
+            "Atlas",
+            "Suyou",
+            "Eudora",
+            "Clint",
+            "Marcel"
+          ],
+          "bans": [
+            "Rafaela",
+            "Melissa",
+            "Uranus",
+            "Valentina",
+            "Lylia"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Hirara",
+            "Kimmy",
+            "Moskov",
+            "Mathilda"
+          ],
+          "bans": [
+            "Freya",
+            "Selena",
+            "Paquito",
+            "Nolan",
+            "Hayabusa"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-9-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-29",
+      "stage": "Regular season",
+      "series": "Omega Esports 2–1 Team Falcons PH",
+      "game_number": 1,
+      "duration": "22:07",
+      "winner": "Omega Esports",
+      "teams": [
+        {
+          "team": "Omega Esports",
+          "side": "blue side",
+          "picks": [
+            "Ruby",
+            "Fanny",
+            "Selena",
+            "Melissa",
+            "Gloo"
+          ],
+          "bans": [
+            "Belerick",
+            "Barats",
+            "Rafaela",
+            "Badang",
+            "Kalea"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Novaria",
+            "Brody",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Paquito",
+            "Gatotkaca",
+            "Mathilda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-9-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-29",
+      "stage": "Regular season",
+      "series": "Omega Esports 2–1 Team Falcons PH",
+      "game_number": 2,
+      "duration": "10:56",
+      "winner": "Team Falcons PH",
+      "teams": [
+        {
+          "team": "Omega Esports",
+          "side": "red side",
+          "picks": [
+            "Paquito",
+            "Fredrinn",
+            "Selena",
+            "Claude",
+            "Minotaur"
+          ],
+          "bans": [
+            "Freya",
+            "Rafaela",
+            "Melissa",
+            "Barats",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "blue side",
+          "picks": [
+            "Carmilla",
+            "Hirara",
+            "Mathilda",
+            "Brody",
+            "Belerick"
+          ],
+          "bans": [
+            "Atlas",
+            "Fanny",
+            "Novaria",
+            "Ruby",
+            "Arlott"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-9-3",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-29",
+      "stage": "Regular season",
+      "series": "Omega Esports 2–1 Team Falcons PH",
+      "game_number": 3,
+      "duration": "14:14",
+      "winner": "Omega Esports",
+      "teams": [
+        {
+          "team": "Omega Esports",
+          "side": "blue side",
+          "picks": [
+            "Phoveus",
+            "Hirara",
+            "Vexana",
+            "Paquito",
+            "Angela"
+          ],
+          "bans": [
+            "Belerick",
+            "Rafaela",
+            "Barats",
+            "Novaria",
+            "Gatotkaca"
+          ]
+        },
+        {
+          "team": "Team Falcons PH",
+          "side": "red side",
+          "picks": [
+            "Carmilla",
+            "Fanny",
+            "Mathilda",
+            "Brody",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Melissa",
+            "Ruby",
+            "Badang"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-10-1",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-23",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 2–1 Aurora Gaming PH",
+      "game_number": 1,
+      "duration": "21:58",
+      "winner": "TNC Pro Team",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "blue side",
+          "picks": [
+            "Edith",
+            "Paquito",
+            "Rafaela",
+            "Claude",
+            "Belerick"
+          ],
+          "bans": [
+            "Atlas",
+            "Marcel",
+            "Melissa",
+            "Vexana",
+            "Aurora"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Hirara",
+            "Cecilion",
+            "Brody",
+            "Kaja"
+          ],
+          "bans": [
+            "Freya",
+            "Selena",
+            "Fanny",
+            "Barats",
+            "Esmeralda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-10-2",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-23",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 2–1 Aurora Gaming PH",
+      "game_number": 2,
+      "duration": "12:05",
+      "winner": "Aurora Gaming PH",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Hirara",
+            "Lylia",
+            "Brody",
+            "Marcel"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Fanny",
+            "Harley",
+            "Nolan"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Suyou",
+            "Zhuxin",
+            "Melissa",
+            "Mathilda"
+          ],
+          "bans": [
+            "Selena",
+            "Barats",
+            "Paquito",
+            "Uranus",
+            "Ruby"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-ph-season-18-10-3",
+      "tournament": "MPL Philippines Season 18",
+      "date": "2026-08-23",
+      "stage": "Regular season",
+      "series": "TNC Pro Team 2–1 Aurora Gaming PH",
+      "game_number": 3,
+      "duration": "18:42",
+      "winner": "TNC Pro Team",
+      "teams": [
+        {
+          "team": "TNC Pro Team",
+          "side": "blue side",
+          "picks": [
+            "Belerick",
+            "Hirara",
+            "Angela",
+            "Melissa",
+            "Gloo"
+          ],
+          "bans": [
+            "Atlas",
+            "Uranus",
+            "Fanny",
+            "Claude",
+            "Moskov"
+          ]
+        },
+        {
+          "team": "Aurora Gaming PH",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Harley",
+            "Vexana",
+            "Granger",
+            "Rafaela"
+          ],
+          "bans": [
+            "Freya",
+            "Paquito",
+            "Selena",
+            "Mathilda",
+            "Lylia"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-ph-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-ph-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Philippines/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    }
+  ]
+}

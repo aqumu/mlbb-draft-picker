@@ -1,0 +1,1568 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:18:18.869Z",
+  "source": "mlbbdex",
+  "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+  "source_note": "Public tournament page; MLBBDex attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "mpl-id-season-18-1-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "ONIC 0–2 Team Liquid ID",
+      "game_number": 1,
+      "duration": "14:46",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Terizla",
+            "Nolan",
+            "Zetian",
+            "Paquito",
+            "Marcel"
+          ],
+          "bans": [
+            "Masha",
+            "Hirara",
+            "Freya",
+            "Obsidia",
+            "Barats"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": "blue side",
+          "picks": [
+            "Atlas",
+            "Aulus",
+            "Zhuxin",
+            "Cici",
+            "Gloo"
+          ],
+          "bans": [
+            "Fanny",
+            "Esmeralda",
+            "Carmilla",
+            "Alice",
+            "Kimmy"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-1-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "ONIC 0–2 Team Liquid ID",
+      "game_number": 2,
+      "duration": "12:24",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Hirara",
+            "Kimmy",
+            "Paquito",
+            "Carmilla"
+          ],
+          "bans": [
+            "Masha",
+            "Atlas",
+            "Valentina",
+            "Selena",
+            "Eudora"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Aulus",
+            "Zetian",
+            "Bruno",
+            "Marcel"
+          ],
+          "bans": [
+            "Fanny",
+            "Esmeralda",
+            "Nolan",
+            "Cecilion",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-2-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "Natus Vincere 0–2 Bigetron by Vitality",
+      "game_number": 1,
+      "duration": "11:26",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Natus Vincere",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Hirara",
+            "Eudora",
+            "Cici",
+            "Khufra"
+          ],
+          "bans": [
+            "Carmilla",
+            "Fanny",
+            "Esmeralda",
+            "Phoveus",
+            "Lukas"
+          ]
+        },
+        {
+          "team": "Bigetron by Vitality",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Nolan",
+            "Selena",
+            "Kimmy",
+            "Marcel"
+          ],
+          "bans": [
+            "Masha",
+            "Zhuxin",
+            "Paquito",
+            "Gloo",
+            "Kalea"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-2-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "Natus Vincere 0–2 Bigetron by Vitality",
+      "game_number": 2,
+      "duration": "23:01",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Natus Vincere",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Aulus",
+            "Kimmy",
+            "Cici",
+            "Carmilla"
+          ],
+          "bans": [
+            "Masha",
+            "Selena",
+            "Fanny",
+            "Hirara",
+            "Lukas"
+          ]
+        },
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Sora",
+            "Alpha",
+            "Valir",
+            "Freya",
+            "Marcel"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Paquito",
+            "Nolan",
+            "Gloo",
+            "Kalea"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-3-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "EVOS 2–1 Alter Ego",
+      "game_number": 1,
+      "duration": "14:34",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "EVOS",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Alpha",
+            "Zhuxin",
+            "Argus",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Masha",
+            "Paquito",
+            "Freya",
+            "Kimmy",
+            "Eudora"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Aulus",
+            "Nolan",
+            "Yve",
+            "Obsidia",
+            "Kalea"
+          ],
+          "bans": [
+            "Valentina",
+            "Atlas",
+            "Zetian",
+            "Alice",
+            "Saber"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-3-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "EVOS 2–1 Alter Ego",
+      "game_number": 2,
+      "duration": "15:46",
+      "winner": "EVOS",
+      "teams": [
+        {
+          "team": "EVOS",
+          "side": "blue side",
+          "picks": [
+            "Dyrroth",
+            "Nolan",
+            "Lylia",
+            "Paquito",
+            "Badang"
+          ],
+          "bans": [
+            "Atlas",
+            "Kalea",
+            "Freya",
+            "Obsidia",
+            "Fanny"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Aulus",
+            "Zhuxin",
+            "Esmeralda",
+            "Gloo"
+          ],
+          "bans": [
+            "Masha",
+            "Saber",
+            "Carmilla",
+            "Eudora",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-3-3",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-18",
+      "stage": "Regular season",
+      "series": "EVOS 2–1 Alter Ego",
+      "game_number": 3,
+      "duration": "13:17",
+      "winner": "EVOS",
+      "teams": [
+        {
+          "team": "EVOS",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Alpha",
+            "Zetian",
+            "Obsidia",
+            "Carmilla"
+          ],
+          "bans": [
+            "Masha",
+            "Paquito",
+            "Freya",
+            "Cici",
+            "Uranus"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "blue side",
+          "picks": [
+            "Aulus",
+            "Leomord",
+            "Valentina",
+            "Claude",
+            "Kalea"
+          ],
+          "bans": [
+            "Atlas",
+            "Fanny",
+            "Nolan",
+            "Cecilion"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-4-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "RRQ Hoshi 2–1 Geek Fam ID",
+      "game_number": 1,
+      "duration": "12:03",
+      "winner": "Geek Fam ID",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": "blue side",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Cecilion",
+            "Paquito",
+            "Carmilla"
+          ],
+          "bans": [
+            "Fanny",
+            "Hirara",
+            "Marcel",
+            "Obsidia",
+            "Kalea"
+          ]
+        },
+        {
+          "team": "Geek Fam ID",
+          "side": "red side",
+          "picks": [
+            "Alice",
+            "Aulus",
+            "Valentina",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Cici",
+            "Masha",
+            "Atlas",
+            "Esmeralda",
+            "Barats"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-4-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "RRQ Hoshi 2–1 Geek Fam ID",
+      "game_number": 2,
+      "duration": "19:08",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Alpha",
+            "Kimmy",
+            "Paquito",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Hirara",
+            "Esmeralda",
+            "Obsidia",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "Geek Fam ID",
+          "side": "red side",
+          "picks": [
+            "Barats",
+            "Aulus",
+            "Zhuxin",
+            "Wanwan",
+            "Atlas"
+          ],
+          "bans": [
+            "Cici",
+            "Masha",
+            "Nolan",
+            "Rafaela",
+            "Mathilda"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-4-3",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "RRQ Hoshi 2–1 Geek Fam ID",
+      "game_number": 3,
+      "duration": "15:57",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": "blue side",
+          "picks": [
+            "Atlas",
+            "Nolan",
+            "Zhuxin",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Hirara",
+            "Esmeralda",
+            "Wanwan",
+            "Alice"
+          ]
+        },
+        {
+          "team": "Geek Fam ID",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Aulus",
+            "Cecilion",
+            "Paquito",
+            "Carmilla"
+          ],
+          "bans": [
+            "Cici",
+            "Masha",
+            "Valentina",
+            "Lylia",
+            "Lukas"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-5-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Bigetron by Vitality 2–1 EVOS",
+      "game_number": 1,
+      "duration": "15:37",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Zhuxin",
+            "Cici",
+            "Marcel"
+          ],
+          "bans": [
+            "Masha",
+            "Carmilla",
+            "Hirara",
+            "Gloo",
+            "Kalea"
+          ]
+        },
+        {
+          "team": "EVOS",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Aulus",
+            "Eudora",
+            "Freya",
+            "Badang"
+          ],
+          "bans": [
+            "Atlas",
+            "Fanny",
+            "Esmeralda",
+            "Selena",
+            "Lylia"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-5-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Bigetron by Vitality 2–1 EVOS",
+      "game_number": 2,
+      "duration": "16:00",
+      "winner": "EVOS",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Nolan",
+            "Selena",
+            "Sora",
+            "Hylos"
+          ],
+          "bans": [
+            "Carmilla",
+            "Atlas",
+            "Zhuxin",
+            "Eudora",
+            "Fanny"
+          ]
+        },
+        {
+          "team": "EVOS",
+          "side": "red side",
+          "picks": [
+            "Esmeralda",
+            "Saber",
+            "Kimmy",
+            "Cici",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Marcel",
+            "Hirara",
+            "Gatotkaca",
+            "Dyrroth"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-5-3",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "Bigetron by Vitality 2–1 EVOS",
+      "game_number": 3,
+      "duration": "21:55",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Bigetron by Vitality",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Zhuxin",
+            "Freya",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Masha",
+            "Carmilla",
+            "Kalea",
+            "Kimmy",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "EVOS",
+          "side": "blue side",
+          "picks": [
+            "Cici",
+            "Saber",
+            "Selena",
+            "Aulus",
+            "Minotaur"
+          ],
+          "bans": [
+            "Atlas",
+            "Fanny",
+            "Marcel",
+            "Gloo",
+            "Uranus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-6-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "ONIC 2–1 Dewa United Esports",
+      "game_number": 1,
+      "duration": "20:04",
+      "winner": "Dewa United Esports",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Freya",
+            "Alpha",
+            "Zhuxin",
+            "Obsidia",
+            "Gloo"
+          ],
+          "bans": [
+            "Masha",
+            "Arlott",
+            "Selena",
+            "Kimmy",
+            "Esmeralda"
+          ]
+        },
+        {
+          "team": "Dewa United Esports",
+          "side": "blue side",
+          "picks": [
+            "Kalea",
+            "Hirara",
+            "Lunox",
+            "Paquito",
+            "Marcel"
+          ],
+          "bans": [
+            "Nolan",
+            "Carmilla",
+            "Atlas",
+            "Aulus",
+            "Cici"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-6-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "ONIC 2–1 Dewa United Esports",
+      "game_number": 2,
+      "duration": "22:28",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Nolan",
+            "Kimmy",
+            "Freya",
+            "Belerick"
+          ],
+          "bans": [
+            "Atlas",
+            "Esmeralda",
+            "Zhuxin",
+            "Lunox",
+            "Arlott"
+          ]
+        },
+        {
+          "team": "Dewa United Esports",
+          "side": "red side",
+          "picks": [
+            "Kalea",
+            "Aulus",
+            "Eudora",
+            "Paquito",
+            "Gloo"
+          ],
+          "bans": [
+            "Masha",
+            "Hirara",
+            "Carmilla",
+            "Cici",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-6-3",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-17",
+      "stage": "Regular season",
+      "series": "ONIC 2–1 Dewa United Esports",
+      "game_number": 3,
+      "duration": "17:42",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Fanny",
+            "Kimmy",
+            "Cici",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Hirara",
+            "Freya",
+            "Arlott",
+            "Zetian"
+          ]
+        },
+        {
+          "team": "Dewa United Esports",
+          "side": "blue side",
+          "picks": [
+            "Lukas",
+            "Alice",
+            "Valentina",
+            "Paquito",
+            "Gloo"
+          ],
+          "bans": [
+            "Atlas",
+            "Nolan",
+            "Carmilla",
+            "Lylia",
+            "Eudora"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-7-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Geek Fam ID 0–2 Alter Ego",
+      "game_number": 1,
+      "duration": "11:23",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Geek Fam ID",
+          "side": "blue side",
+          "picks": [
+            "Arlott",
+            "Aulus",
+            "Kimmy",
+            "Esmeralda",
+            "Marcel"
+          ],
+          "bans": [
+            "Valentina",
+            "Freya",
+            "Atlas",
+            "Gloo",
+            "Hylos"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Nolan",
+            "Eudora",
+            "Paquito",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Fanny",
+            "Carmilla",
+            "Uranus",
+            "Hirara"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-7-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Geek Fam ID 0–2 Alter Ego",
+      "game_number": 2,
+      "duration": "14:16",
+      "winner": "Alter Ego",
+      "teams": [
+        {
+          "team": "Geek Fam ID",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Nolan",
+            "Kimmy",
+            "Paquito",
+            "Hylos"
+          ],
+          "bans": [
+            "Freya",
+            "Atlas",
+            "Carmilla",
+            "Cici",
+            "Lukas"
+          ]
+        },
+        {
+          "team": "Alter Ego",
+          "side": "red side",
+          "picks": [
+            "Aulus",
+            "Leomord",
+            "Zhuxin",
+            "Obsidia",
+            "Kalea"
+          ],
+          "bans": [
+            "Masha",
+            "Fanny",
+            "Hirara",
+            "Zetian",
+            "Uranus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-8-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Natus Vincere 2–1 RRQ Hoshi",
+      "game_number": 1,
+      "duration": "13:48",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "Natus Vincere",
+          "side": "red side",
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Esmeralda",
+            "Atlas"
+          ],
+          "bans": [
+            "Carmilla",
+            "Masha",
+            "Freya",
+            "Marcel",
+            "Fanny"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": "blue side",
+          "picks": [
+            "Dyrroth",
+            "Aulus",
+            "Kimmy",
+            "Cici",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hirara",
+            "Nolan",
+            "Zhuxin",
+            "Obsidia",
+            "Lukas"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-8-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Natus Vincere 2–1 RRQ Hoshi",
+      "game_number": 2,
+      "duration": "11:53",
+      "winner": "Natus Vincere",
+      "teams": [
+        {
+          "team": "Natus Vincere",
+          "side": "red side",
+          "picks": [
+            "Lukas",
+            "Paquito",
+            "Lylia",
+            "Cici",
+            "Marcel"
+          ],
+          "bans": [
+            "Carmilla",
+            "Masha",
+            "Freya",
+            "Gatotkaca",
+            "Atlas"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": "blue side",
+          "picks": [
+            "Esmeralda",
+            "Aulus",
+            "Yve",
+            "Joy",
+            "Badang"
+          ],
+          "bans": [
+            "Hirara",
+            "Nolan",
+            "Zhuxin",
+            "Dyrroth",
+            "Alice"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-8-3",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-16",
+      "stage": "Regular season",
+      "series": "Natus Vincere 2–1 RRQ Hoshi",
+      "game_number": 3,
+      "duration": "19:20",
+      "winner": "Natus Vincere",
+      "teams": [
+        {
+          "team": "Natus Vincere",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Saber",
+            "Zhuxin",
+            "Obsidia",
+            "Marcel"
+          ],
+          "bans": [
+            "Carmilla",
+            "Fanny",
+            "Esmeralda",
+            "Gatotkaca",
+            "Phoveus"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": "red side",
+          "picks": [
+            "Paquito",
+            "Nolan",
+            "Rafaela",
+            "Cici",
+            "Atlas"
+          ],
+          "bans": [
+            "Hirara",
+            "Masha",
+            "Aulus",
+            "Leomord",
+            "Hayabusa"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-9-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Dewa United Esports 0–2 Bigetron by Vitality",
+      "game_number": 1,
+      "duration": "18:55",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Dewa United Esports",
+          "side": "red side",
+          "picks": [
+            "Arlott",
+            "Aulus",
+            "Eudora",
+            "Esmeralda",
+            "Hylos"
+          ],
+          "bans": [
+            "Masha",
+            "Hirara",
+            "Carmilla",
+            "Nolan",
+            "Chou"
+          ]
+        },
+        {
+          "team": "Bigetron by Vitality",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Alpha",
+            "Valentina",
+            "Cici",
+            "Gloo"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Lukas",
+            "Atlas",
+            "Minotaur",
+            "Moskov"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-9-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "Dewa United Esports 0–2 Bigetron by Vitality",
+      "game_number": 2,
+      "duration": "13:08",
+      "winner": "Bigetron by Vitality",
+      "teams": [
+        {
+          "team": "Dewa United Esports",
+          "side": "blue side",
+          "picks": [
+            "Joy",
+            "Alpha",
+            "Selena",
+            "Cici",
+            "Carmilla"
+          ],
+          "bans": [
+            "Hirara",
+            "Nolan",
+            "Atlas",
+            "Valentina",
+            "Chou"
+          ]
+        },
+        {
+          "team": "Bigetron by Vitality",
+          "side": "red side",
+          "picks": [
+            "Freya",
+            "Aulus",
+            "Kimmy",
+            "Ruby",
+            "Marcel"
+          ],
+          "bans": [
+            "Masha",
+            "Lukas",
+            "Zhuxin",
+            "Eudora",
+            "Zetian"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-10-1",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "RRQ Hoshi 1–2 ONIC",
+      "game_number": 1,
+      "duration": "17:40",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": "blue side",
+          "picks": [
+            "Freya",
+            "Saber",
+            "Kimmy",
+            "Aulus",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hirara",
+            "Lukas",
+            "Obsidia",
+            "Esmeralda",
+            "Fanny"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "red side",
+          "picks": [
+            "Phoveus",
+            "Nolan",
+            "Zhuxin",
+            "Cici",
+            "Atlas"
+          ],
+          "bans": [
+            "Masha",
+            "Rafaela",
+            "Carmilla",
+            "Marcel",
+            "Minotaur"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-10-2",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "RRQ Hoshi 1–2 ONIC",
+      "game_number": 2,
+      "duration": "16:01",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": "red side",
+          "picks": [
+            "Cici",
+            "Alpha",
+            "Zetian",
+            "Paquito",
+            "Atlas"
+          ],
+          "bans": [
+            "Hirara",
+            "Masha",
+            "Carmilla",
+            "Obsidia",
+            "Nolan"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Terizla",
+            "Aulus",
+            "Lylia",
+            "Kimmy",
+            "Marcel"
+          ],
+          "bans": [
+            "Rafaela",
+            "Lukas",
+            "Fanny",
+            "Arlott",
+            "Freya"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    },
+    {
+      "id": "mpl-id-season-18-10-3",
+      "tournament": "MPL Indonesia Season 18",
+      "date": "2026-10-11",
+      "stage": "Regular season",
+      "series": "RRQ Hoshi 1–2 ONIC",
+      "game_number": 3,
+      "duration": "16:52",
+      "winner": "ONIC",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": "red side",
+          "picks": [
+            "Uranus",
+            "Aulus",
+            "Cecilion",
+            "Paquito",
+            "Rafaela"
+          ],
+          "bans": [
+            "Hirara",
+            "Masha",
+            "Atlas",
+            "Zhuxin",
+            "Obsidia"
+          ]
+        },
+        {
+          "team": "ONIC",
+          "side": "blue side",
+          "picks": [
+            "Alice",
+            "Nolan",
+            "Yve",
+            "Freya",
+            "Carmilla"
+          ],
+          "bans": [
+            "Fanny",
+            "Lukas",
+            "Cici",
+            "Esmeralda",
+            "Phoveus"
+          ]
+        }
+      ],
+      "source_url": "https://mlbbdex.com/en/esports/mpl-id-season-18",
+      "source_refs": [
+        {
+          "source": "mlbbdex",
+          "url": "https://mlbbdex.com/en/esports/mpl-id-season-18"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/MPL/Indonesia/Season_18"
+        }
+      ],
+      "patch": "2.1.95 – 2.2.16a"
+    }
+  ]
+}

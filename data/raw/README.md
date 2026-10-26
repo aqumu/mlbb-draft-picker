@@ -1,16 +1,26 @@
 # Browser-captured source snapshots
 
 These files are snapshots captured from the public pages with the Playwriter
-browser workflow. The MLBBDex snapshot has now been normalized and is the
-initial seed for the running API. The MLBB Analytics snapshot remains
-quarantined until its event discrepancy is resolved.
+browser workflow. MLBBDex batches are normalized and loaded as the seed for
+the running API. The MLBB Analytics snapshot remains quarantined until its
+event discrepancy is resolved.
 
 ## MLBBDex
 
-`mlbbdex_msc_2026_latest.json` contains the 36 games currently exposed in the
-MSC 2026 page's “latest drafts” section. It includes both teams' picks and bans,
-side, date, duration, winner, and source references. The page says the detailed
-section covers the last ten matches/series, not the complete 92-game event.
+The following MLBBDex files contain the games currently exposed in each
+tournament page's "latest drafts" section:
+
+* `mlbbdex_msc_2026_latest.json` — 36 games
+* `mlbbdex_mpl_ph_season_18_latest.json` — 26 games
+* `mlbbdex_mpl_id_season_18_latest.json` — 26 games
+* `mlbbdex_mpl_my_season_18_latest.json` — 24 games
+* `mlbbdex_m7_world_championship_latest.json` — 42 games
+
+Each record includes both teams' picks and bans, side, date, stage, series,
+duration, winner, patch range, and source references. MLBBDex describes this section as the
+last ten matches/series, so these are recent, curated batches rather than the
+complete tournament histories. One MPL ID game exposes four bans for one team;
+it is retained with `bans_known=false` instead of inventing a fifth ban.
 
 ## MLBB Analytics
 
