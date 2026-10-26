@@ -1,7 +1,7 @@
 const API_BASE = window.MLBB_API_BASE || "https://mlbb-draft-finder-api.onrender.com";
 const ICON_BASE = "https://mlbbdex.com/visuels/heros";
 
-const state = { heroes: [], board: { our_picks: [], enemy_picks: [], bans: [] } };
+const state = { heroes: [], entryMode: "our_picks", board: { our_picks: [], enemy_picks: [], bans: [] } };
 const $ = (selector) => document.querySelector(selector);
 const slug = (value) => value.toLowerCase().trim().replace(/['’]/g, "").replace(/\s+/g, "-");
 const iconUrl = (hero) => `${ICON_BASE}/${hero.slug}/icone.webp`;
@@ -35,7 +35,7 @@ function renderHeroes() {
   const heroes = state.heroes.filter((hero) => hero.name.toLowerCase().includes(search) || hero.slug.includes(search));
   $("#hero-grid").innerHTML = heroes.map((hero) => `<button class="hero-button" data-hero="${hero.slug}" ${selected.has(hero.slug) ? "disabled" : ""}><img src="${iconUrl(hero)}" alt=""><span>${hero.name}</span></button>`).join("");
   document.querySelectorAll("[data-hero]").forEach((button) => button.addEventListener("click", () => {
-    const bucket = $("#entry-mode").value;
+    const bucket = state.entryMode;
     const value = button.dataset.hero;
     if (!state.board[bucket].includes(value)) state.board[bucket].push(value);
     renderBoard(); renderHeroes();
@@ -49,6 +49,14 @@ function renderPools() {
     <input data-pool="can_play" data-index="${index}" placeholder="Can play: fredrinn, atlas">
     <input data-pool="cannot_play" data-index="${index}" placeholder="Cannot play: fanny">
   </div>`).join("");
+}
+
+function renderMode() {
+  document.querySelectorAll("[data-mode]").forEach((button) => {
+    const active = button.dataset.mode === state.entryMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", active ? "true" : "false");
+  });
 }
 
 function poolsPayload() {
@@ -71,16 +79,25 @@ function draftBox(title, items) {
   return `<div class="detail-box"><strong>${title}</strong><div class="mini-lineup">${items?.length ? lineupHtml(items) : "None captured"}</div></div>`;
 }
 
+function scoreLabel(candidate) {
+  if (candidate.score == null) return { label: "No matchup fit", detail: "Add an enemy pick to compare fit." };
+  const summary = candidate.score_summary || {};
+  const known = summary.known_pairs || 0;
+  const possible = summary.possible_pairs || 0;
+  const games = summary.sample_games || 0;
+  const coverage = possible ? Math.round((summary.coverage || 0) * 100) : 0;
+  return { label: "Fit " + (candidate.score * 100).toFixed(1) + "%", detail: coverage + "% matchup coverage · " + known + "/" + possible + " rows · " + games + " games" };
+}
+
 function renderResults(candidates) {
   $("#result-summary").textContent = `${candidates.length} eligible historical draft${candidates.length === 1 ? "" : "s"}.`;
   $("#results").innerHTML = candidates.length ? candidates.map((candidate) => {
     const meta = candidate.metadata;
-    const score = candidate.score == null ? "No matchup score" : `Score ${(candidate.score * 100).toFixed(1)}%`;
+    const score = scoreLabel(candidate);
     return `<article class="result-card">
-      <div class="result-top"><div><div class="result-title">${meta.tournament} · Game ${meta.game_number ?? "?"}</div><div class="result-meta">${meta.team_a} vs ${meta.team_b} · ${meta.date || "Date unknown"} · ${meta.patch || "Patch unknown"}</div></div><span class="score">${score}</span></div>
-      <div class="lineup-heading">${meta.matched_team || "Matched side"}</div><div class="lineup">${lineupHtml(candidate.our_picks || candidate.composition)}</div>
-      <div class="lineup-heading">Opposing picks - ${meta.opponent_team || "opponent"}</div><div class="lineup opponent-lineup">${lineupHtml(candidate.opponent_picks || candidate.opponent_composition)}</div>
-      <div class="result-details">${draftBox("Our bans", candidate.our_bans)}${draftBox("Opposing bans", candidate.opponent_bans)}<div class="detail-box"><strong>Remaining picks</strong><span>${candidate.remaining_picks.join(", ") || "None"}</span></div><div class="detail-box"><strong>Historical context</strong><span>${meta.order_available ? "Order captured" : "Order unavailable"} | ${meta.bans_known ? "Bans captured" : "Bans incomplete"}</span></div></div>
+      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${meta.date || "Date unknown"} | ${meta.patch || "Patch unknown"} | ${meta.stage || "Stage unknown"}</div></div><div class="score-wrap"><span class="score">${score.label}</span><span class="score-detail">${score.detail}</span></div></div>
+      <div class="duel-lineups"><div class="team-lineup matched"><div class="lineup-heading">${meta.matched_team || "Matched side"}</div><div class="lineup">${lineupHtml(candidate.our_picks || candidate.composition)}</div></div><div class="versus" aria-hidden="true">vs</div><div class="team-lineup opponent"><div class="lineup-heading">${meta.opponent_team || "Opponent"}</div><div class="lineup">${lineupHtml(candidate.opponent_picks || candidate.opponent_composition)}</div></div></div>
+      <div class="result-details">${draftBox("Our bans", candidate.our_bans)}${draftBox("Opposing bans", candidate.opponent_bans)}<div class="detail-box remaining-box"><strong>Finish this side</strong><span>${candidate.remaining_picks.join(", ") || "Complete"}</span></div><div class="detail-box"><strong>Draft record</strong><span>${meta.order_available ? "Order captured" : "Order unavailable"} | ${meta.bans_known ? "Bans complete" : "Bans incomplete"}</span></div></div>
       <div class="result-links"><a href="${meta.source_url}" target="_blank" rel="noreferrer">Source page</a>${meta.source_refs?.filter((ref) => ref.url !== meta.source_url).map((ref) => `<a href="${ref.url}" target="_blank" rel="noreferrer">${ref.source}</a>`).join("") || ""}</div>
     </article>`;
   }).join("") : `<div class="empty-state">No historical composition fits this draft state.</div>`;
@@ -106,7 +123,12 @@ async function search() {
 }
 
 $("#hero-search").addEventListener("input", renderHeroes);
+document.querySelectorAll("[data-mode]").forEach((button) => button.addEventListener("click", () => {
+  state.entryMode = button.dataset.mode;
+  renderMode();
+}));
 $("#clear-board").addEventListener("click", () => { state.board = { our_picks: [], enemy_picks: [], bans: [] }; renderBoard(); renderHeroes(); });
 $("#find-button").addEventListener("click", search);
 renderPools();
+renderMode();
 loadHeroes().then(() => setStatus("API connected", "ok")).catch((error) => { setStatus("API unavailable", "bad"); $("#error").textContent = error.message; });

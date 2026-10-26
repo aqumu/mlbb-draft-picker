@@ -22,13 +22,13 @@
             <h2>Current draft</h2>
             <p>Choose a bucket, then click heroes. Picks and bans are hard filters.</p>
           </div>
-          <label class="mode-label">Add to
-            <select id="entry-mode">
-              <option value="our_picks">Our picks</option>
-              <option value="enemy_picks">Enemy picks</option>
-              <option value="bans">Bans</option>
-            </select>
-          </label>
+          <div class="mode-label">Add heroes to
+            <div id="mode-switch" class="mode-switch" role="group" aria-label="Add heroes to">
+              <button class="mode-button active" type="button" data-mode="our_picks">Our picks</button>
+              <button class="mode-button" type="button" data-mode="enemy_picks">Enemy picks</button>
+              <button class="mode-button" type="button" data-mode="bans">Bans</button>
+            </div>
+          </div>
         </div>
 
         <div class="bucket-grid">
@@ -44,12 +44,13 @@
         <div id="hero-grid" class="hero-grid" aria-live="polite"></div>
       </section>
 
-      <section class="panel pools-panel">
-        <div class="panel-heading">
+      <details class="panel pools-panel">
+        <summary class="panel-heading">
           <div><h2>Player pools <span class="optional">optional</span></h2><p>Use canonical hero slugs separated by commas. Leave rows blank to ignore pools.</p></div>
-        </div>
+          <span class="summary-caret" aria-hidden="true">+</span>
+        </summary>
         <div id="pool-rows" class="pool-rows"></div>
-      </section>
+      </details>
 
       <section class="actions-row">
         <button id="find-button" class="button primary">Find historical drafts</button>
@@ -57,7 +58,7 @@
       </section>
 
       <section class="panel results-panel">
-        <div class="panel-heading"><div><h2>Results</h2><p id="result-summary">No search yet.</p></div></div>
+        <div class="panel-heading"><div><h2>Historical drafts</h2><p id="result-summary">Add the visible draft state, then search.</p></div><p id="score-note" class="score-note">Fit is reduced when matchup evidence is sparse.</p></div>
         <div id="results" class="results"><div class="empty-state">Add picks, enemy picks, or bans, then search.</div></div>
       </section>
     </main>
