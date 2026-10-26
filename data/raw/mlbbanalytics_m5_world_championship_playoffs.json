@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:37:42.316Z",
+  "source": "mlbbanalytics",
+  "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+  "source_note": "Public playoff breakdown; page attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-1",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 1,
+      "duration": "14:17",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Faramis",
+            "Natan",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-2",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 2,
+      "duration": "17:39",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Faramis",
+            "Clint",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-3",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 3,
+      "duration": "14:34",
+      "winner": "Fnatic ONIC ID",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Faramis",
+            "Beatrix",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-4",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 4,
+      "duration": "15:39",
+      "winner": "Fnatic ONIC ID",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Faramis",
+            "Moskov",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-5",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 5,
+      "duration": "18:42",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Faramis",
+            "Brody",
+            "Mathilda"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Ruby",
+            "Fredrinn",
+            "Valentina",
+            "Popol and Kupa",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-6",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 6,
+      "duration": "18:10",
+      "winner": "Fnatic ONIC ID",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Ruby",
+            "Alpha",
+            "Faramis",
+            "Wanwan",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Barats",
+            "Valentina",
+            "Moskov",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m5-world-championship-40-7",
+      "tournament": "M5 World Championship",
+      "date": "2023-12-17",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Falcons AP.Bren vs Fnatic ONIC ID",
+      "game_number": 7,
+      "duration": "17:52",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Yu Zhong",
+            "Julian",
+            "Faramis",
+            "Popol and Kupa",
+            "Mathilda"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fnatic ONIC ID",
+          "side": null,
+          "picks": [
+            "Edith",
+            "Fanny",
+            "Valentina",
+            "Natan",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m5-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M5_World_Championship"
+        }
+      ]
+    }
+  ]
+}

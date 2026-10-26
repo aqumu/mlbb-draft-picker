@@ -1,0 +1,1869 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:37:45.589Z",
+  "source": "mlbbanalytics",
+  "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+  "source_note": "Public playoff breakdown; page attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "mlbbanalytics-msc-2024-37-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 1,
+      "duration": "19:54",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Novaria",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-37-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 2,
+      "duration": "17:17",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Novaria",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Faramis",
+            "Popol and Kupa",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-37-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 3,
+      "duration": "17:24",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Novaria",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Faramis",
+            "Claude",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-37-4",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 4,
+      "duration": "13:19",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Novaria",
+            "Moskov",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Faramis",
+            "Irithel",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-37-5",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 5,
+      "duration": "13:46",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Novaria",
+            "Brody",
+            "Tigreal"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Ruby",
+            "Fredrinn",
+            "Faramis",
+            "Popol and Kupa",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-37-6",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 6,
+      "duration": "14:28",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Ruby",
+            "Alpha",
+            "Novaria",
+            "Wanwan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Barats",
+            "Faramis",
+            "Moskov",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-37-7",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-14",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Selangor Red Giants vs Falcons AP.Bren",
+      "game_number": 7,
+      "duration": "18:45",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Yu Zhong",
+            "Julian",
+            "Novaria",
+            "Popol and Kupa",
+            "Tigreal"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Edith",
+            "Fanny",
+            "Faramis",
+            "Natan",
+            "Mathilda"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-36-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-13",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Selangor Red Giants vs NIP Flash",
+      "game_number": 1,
+      "duration": "18:29",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Novaria",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-36-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-13",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Selangor Red Giants vs NIP Flash",
+      "game_number": 2,
+      "duration": "14:45",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Novaria",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-36-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-13",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Selangor Red Giants vs NIP Flash",
+      "game_number": 3,
+      "duration": "19:52",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Novaria",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-35-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-12",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Falcons AP.Bren vs Team Liquid PH",
+      "game_number": 1,
+      "duration": "18:36",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Faramis",
+            "Natan",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Yve",
+            "Brody",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-35-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-12",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Falcons AP.Bren vs Team Liquid PH",
+      "game_number": 2,
+      "duration": "17:48",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Faramis",
+            "Clint",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Yve",
+            "Popol and Kupa",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-35-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-12",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Falcons AP.Bren vs Team Liquid PH",
+      "game_number": 3,
+      "duration": "14:46",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Faramis",
+            "Beatrix",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Yve",
+            "Claude",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-35-4",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-12",
+      "patch": null,
+      "stage": "Semifinals",
+      "series": "Falcons AP.Bren vs Team Liquid PH",
+      "game_number": 4,
+      "duration": "18:38",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Faramis",
+            "Moskov",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Yve",
+            "Irithel",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-34-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "NIP Flash vs HomeBois",
+      "game_number": 1,
+      "duration": "15:53",
+      "winner": "NIP Flash",
+      "teams": [
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "HomeBois",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Hayabusa",
+            "Faramis",
+            "Claude",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-34-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "NIP Flash vs HomeBois",
+      "game_number": 2,
+      "duration": "15:50",
+      "winner": "HomeBois",
+      "teams": [
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "HomeBois",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Alpha",
+            "Vexana",
+            "Claude",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-34-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "NIP Flash vs HomeBois",
+      "game_number": 3,
+      "duration": "14:40",
+      "winner": "NIP Flash",
+      "teams": [
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "HomeBois",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-34-4",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "NIP Flash vs HomeBois",
+      "game_number": 4,
+      "duration": "19:43",
+      "winner": "HomeBois",
+      "teams": [
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "HomeBois",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Ling",
+            "Pharsa",
+            "Claude",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-34-5",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "NIP Flash vs HomeBois",
+      "game_number": 5,
+      "duration": "17:23",
+      "winner": "NIP Flash",
+      "teams": [
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Pharsa",
+            "Brody",
+            "Carmilla"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "HomeBois",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Fredrinn",
+            "Xavier",
+            "Claude",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-33-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Falcons AP.Bren vs See You Soon",
+      "game_number": 1,
+      "duration": "13:24",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Faramis",
+            "Natan",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "See You Soon",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Pharsa",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-33-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Falcons AP.Bren vs See You Soon",
+      "game_number": 2,
+      "duration": "17:39",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Faramis",
+            "Clint",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Chip",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "See You Soon",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Suyou",
+            "Vexana",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-33-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-11",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Falcons AP.Bren vs See You Soon",
+      "game_number": 3,
+      "duration": "17:14",
+      "winner": "Falcons AP.Bren",
+      "teams": [
+        {
+          "team": "Falcons AP.Bren",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Faramis",
+            "Beatrix",
+            "Mathilda"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "See You Soon",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Suyou",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-32-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Selangor Red Giants vs Fire Flux Esports",
+      "game_number": 1,
+      "duration": "18:55",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Novaria",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Fire Flux Esports",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-32-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Selangor Red Giants vs Fire Flux Esports",
+      "game_number": 2,
+      "duration": "13:47",
+      "winner": "Fire Flux Esports",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Novaria",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fire Flux Esports",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-32-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Selangor Red Giants vs Fire Flux Esports",
+      "game_number": 3,
+      "duration": "16:49",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Novaria",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Fire Flux Esports",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-32-4",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Selangor Red Giants vs Fire Flux Esports",
+      "game_number": 4,
+      "duration": "13:17",
+      "winner": "Fire Flux Esports",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Novaria",
+            "Moskov",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fire Flux Esports",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-32-5",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Selangor Red Giants vs Fire Flux Esports",
+      "game_number": 5,
+      "duration": "13:09",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Novaria",
+            "Brody",
+            "Tigreal"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Fire Flux Esports",
+          "side": null,
+          "picks": [
+            "Ruby",
+            "Fredrinn",
+            "Valentina",
+            "Popol and Kupa",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-31-1",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Team Liquid PH vs Falcon Esports",
+      "game_number": 1,
+      "duration": "15:06",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Yve",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-31-2",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Team Liquid PH vs Falcon Esports",
+      "game_number": 2,
+      "duration": "15:15",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Yve",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-31-3",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Team Liquid PH vs Falcon Esports",
+      "game_number": 3,
+      "duration": "13:09",
+      "winner": "Falcon Esports",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Yve",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-msc-2024-31-4",
+      "tournament": "MSC 2024 (Esports World Cup Riyadh)",
+      "date": "2024-07-10",
+      "patch": null,
+      "stage": "Quarterfinals",
+      "series": "Team Liquid PH vs Falcon Esports",
+      "game_number": 4,
+      "duration": "18:16",
+      "winner": "Team Liquid PH",
+      "teams": [
+        {
+          "team": "Team Liquid PH",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Harith"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=msc-2024"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/Esports_World_Cup_2024"
+        }
+      ]
+    }
+  ]
+}

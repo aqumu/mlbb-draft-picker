@@ -1,0 +1,2889 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-10-26T18:37:39.306Z",
+  "source": "mlbbanalytics",
+  "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+  "source_note": "Public playoff breakdown; page attributes tournament data to Liquipedia under CC-BY-SA 3.0.",
+  "matches": [
+    {
+      "id": "mlbbanalytics-m6-world-championship-14-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-15",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 1,
+      "duration": "14:03",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Edith",
+            "Suyou",
+            "Luo Yi",
+            "Bruno",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Alpha",
+            "Yve",
+            "Novaria",
+            "Gloo"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Hylos",
+            "Hayabusa",
+            "Lylia",
+            "Granger",
+            "Chou"
+          ],
+          "bans": [
+            "Fanny",
+            "Joy",
+            "Zhuxin",
+            "Tigreal",
+            "Phoveus"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-14-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-15",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 2,
+      "duration": "11:49",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Cici",
+            "Fredrinn",
+            "Luo Yi",
+            "Bruno",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Yve",
+            "Hylos",
+            "Gloo"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Phoveus",
+            "Joy",
+            "Vexana",
+            "Granger",
+            "Khaleed"
+          ],
+          "bans": [
+            "Chou",
+            "Suyou",
+            "Hilda",
+            "Tigreal",
+            "Edith"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-14-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-15",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 3,
+      "duration": "13:24",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Cici",
+            "Suyou",
+            "Cecilion",
+            "Harith",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Yve",
+            "Chip",
+            "Hylos"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Hilda",
+            "Joy",
+            "Pharsa",
+            "Granger",
+            "Carmilla"
+          ],
+          "bans": [
+            "Chou",
+            "Luo Yi",
+            "Bruno",
+            "Tigreal",
+            "Khaleed"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-14-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-15",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 4,
+      "duration": "10:34",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Edith",
+            "Joy",
+            "Valentina",
+            "Beatrix",
+            "Khaleed"
+          ],
+          "bans": [
+            "Hilda",
+            "Chou",
+            "Yve",
+            "Harith",
+            "Moskov"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Fredrinn",
+            "Suyou",
+            "Luo Yi",
+            "Claude",
+            "Chip"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Bruno",
+            "Wanwan",
+            "Irithel"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-14-5",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-15",
+      "patch": null,
+      "stage": "Grand Finals",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 5,
+      "duration": "14:52",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Edith",
+            "Alpha",
+            "Yve",
+            "Irithel",
+            "Khaleed"
+          ],
+          "bans": [
+            "Fanny",
+            "Suyou",
+            "Joy",
+            "Harith",
+            "Jawhead"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Hilda",
+            "Hayabusa",
+            "Zhuxin",
+            "Granger",
+            "Carmilla"
+          ],
+          "bans": [
+            "Chou",
+            "Luo Yi",
+            "Bruno",
+            "Tigreal",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-13-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-14",
+      "patch": null,
+      "stage": "Lower Bracket Final",
+      "series": "Team Liquid ID vs Selangor Red Giants",
+      "game_number": 1,
+      "duration": "15:14",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Valentina",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Novaria",
+            "Brody",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-13-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-14",
+      "patch": null,
+      "stage": "Lower Bracket Final",
+      "series": "Team Liquid ID vs Selangor Red Giants",
+      "game_number": 2,
+      "duration": "13:35",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Valentina",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Novaria",
+            "Popol and Kupa",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-13-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-14",
+      "patch": null,
+      "stage": "Lower Bracket Final",
+      "series": "Team Liquid ID vs Selangor Red Giants",
+      "game_number": 3,
+      "duration": "19:34",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Valentina",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Novaria",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-12-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Lower Bracket Semifinal",
+      "series": "Selangor Red Giants vs Team Spirit",
+      "game_number": 1,
+      "duration": "19:17",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Novaria",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-12-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Lower Bracket Semifinal",
+      "series": "Selangor Red Giants vs Team Spirit",
+      "game_number": 2,
+      "duration": "17:12",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Novaria",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-12-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Lower Bracket Semifinal",
+      "series": "Selangor Red Giants vs Team Spirit",
+      "game_number": 3,
+      "duration": "18:10",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Novaria",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-11-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Upper Bracket Final",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 1,
+      "duration": "15:50",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-11-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Upper Bracket Final",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 2,
+      "duration": "19:09",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-11-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Upper Bracket Final",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 3,
+      "duration": "13:41",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-11-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-13",
+      "patch": null,
+      "stage": "Upper Bracket Final",
+      "series": "Fnatic ONIC PH vs Team Liquid ID",
+      "game_number": 4,
+      "duration": "17:25",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-10-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Selangor Red Giants vs RRQ Hoshi",
+      "game_number": 1,
+      "duration": "19:49",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Novaria",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-10-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Selangor Red Giants vs RRQ Hoshi",
+      "game_number": 2,
+      "duration": "13:50",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Novaria",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-10-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Selangor Red Giants vs RRQ Hoshi",
+      "game_number": 3,
+      "duration": "19:33",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Novaria",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-10-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Selangor Red Giants vs RRQ Hoshi",
+      "game_number": 4,
+      "duration": "14:43",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Novaria",
+            "Moskov",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-9-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Team Spirit vs Falcon Esports",
+      "game_number": 1,
+      "duration": "14:29",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-9-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Team Spirit vs Falcon Esports",
+      "game_number": 2,
+      "duration": "17:35",
+      "winner": "Falcon Esports",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-9-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Team Spirit vs Falcon Esports",
+      "game_number": 3,
+      "duration": "15:11",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-9-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-12",
+      "patch": null,
+      "stage": "Lower Bracket Quarterfinals",
+      "series": "Team Spirit vs Falcon Esports",
+      "game_number": 4,
+      "duration": "15:05",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-8-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Team Liquid ID vs RRQ Hoshi",
+      "game_number": 1,
+      "duration": "18:08",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Valentina",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-8-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Team Liquid ID vs RRQ Hoshi",
+      "game_number": 2,
+      "duration": "18:46",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Valentina",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Faramis",
+            "Popol and Kupa",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-8-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Team Liquid ID vs RRQ Hoshi",
+      "game_number": 3,
+      "duration": "18:45",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Valentina",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Faramis",
+            "Claude",
+            "Minotaur"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-8-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Team Liquid ID vs RRQ Hoshi",
+      "game_number": 4,
+      "duration": "19:26",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Valentina",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Faramis",
+            "Irithel",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-8-5",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Team Liquid ID vs RRQ Hoshi",
+      "game_number": 5,
+      "duration": "13:33",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Terizla",
+            "Fanny",
+            "Valentina",
+            "Brody",
+            "Carmilla"
+          ],
+          "bans": [
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Ruby",
+            "Fredrinn",
+            "Faramis",
+            "Popol and Kupa",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-7-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Fnatic ONIC PH vs Falcon Esports",
+      "game_number": 1,
+      "duration": "19:40",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-7-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Fnatic ONIC PH vs Falcon Esports",
+      "game_number": 2,
+      "duration": "13:47",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-7-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Fnatic ONIC PH vs Falcon Esports",
+      "game_number": 3,
+      "duration": "17:25",
+      "winner": "Falcon Esports",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-7-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-11",
+      "patch": null,
+      "stage": "Upper Bracket Semifinals",
+      "series": "Fnatic ONIC PH vs Falcon Esports",
+      "game_number": 4,
+      "duration": "17:52",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Tigreal"
+          ]
+        },
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-6-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Selangor Red Giants vs NIP Flash",
+      "game_number": 1,
+      "duration": "13:26",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Novaria",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-6-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Selangor Red Giants vs NIP Flash",
+      "game_number": 2,
+      "duration": "17:24",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Novaria",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Angela"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-6-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Selangor Red Giants vs NIP Flash",
+      "game_number": 3,
+      "duration": "16:24",
+      "winner": "Selangor Red Giants",
+      "teams": [
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Novaria",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Luo Yi",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-5-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Team Spirit vs Team Vamos",
+      "game_number": 1,
+      "duration": "15:29",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Valentina",
+            "Brody",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-5-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Team Spirit vs Team Vamos",
+      "game_number": 2,
+      "duration": "15:19",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Valentina",
+            "Popol and Kupa",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-5-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Team Spirit vs Team Vamos",
+      "game_number": 3,
+      "duration": "15:33",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Nana",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Valentina",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-5-4",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-09",
+      "patch": null,
+      "stage": "Lower Bracket Round 1",
+      "series": "Team Spirit vs Team Vamos",
+      "game_number": 4,
+      "duration": "15:33",
+      "winner": "Team Spirit",
+      "teams": [
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Suyou",
+            "Yve",
+            "Moskov",
+            "Minotaur"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Uranus",
+            "Ling",
+            "Valentina",
+            "Irithel",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Wanwan",
+            "Gatotkaca",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-4-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-08",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "Team Liquid ID vs Team Spirit",
+      "game_number": 1,
+      "duration": "14:40",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Valentina",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-4-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-08",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "Team Liquid ID vs Team Spirit",
+      "game_number": 2,
+      "duration": "13:49",
+      "winner": "Team Liquid ID",
+      "teams": [
+        {
+          "team": "Team Liquid ID",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Valentina",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Spirit",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-3-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-08",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "RRQ Hoshi vs Team Vamos",
+      "game_number": 1,
+      "duration": "15:24",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Valentina",
+            "Natan",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Zhuxin",
+            "Brody",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-3-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-08",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "RRQ Hoshi vs Team Vamos",
+      "game_number": 2,
+      "duration": "14:54",
+      "winner": "Team Vamos",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Valentina",
+            "Clint",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Hylos",
+            "Suyou",
+            "Chip",
+            "Harith"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Zhuxin",
+            "Popol and Kupa",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-3-3",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-08",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "RRQ Hoshi vs Team Vamos",
+      "game_number": 3,
+      "duration": "14:21",
+      "winner": "RRQ Hoshi",
+      "teams": [
+        {
+          "team": "RRQ Hoshi",
+          "side": null,
+          "picks": [
+            "Khaleed",
+            "Helcurt",
+            "Valentina",
+            "Beatrix",
+            "Tigreal"
+          ],
+          "bans": [
+            "Fanny",
+            "Joy",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Team Vamos",
+          "side": null,
+          "picks": [
+            "Benedetta",
+            "Barats",
+            "Zhuxin",
+            "Claude",
+            "Chou"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-2-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-07",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "Falcon Esports vs NIP Flash",
+      "game_number": 1,
+      "duration": "16:12",
+      "winner": "Falcon Esports",
+      "teams": [
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Valentina",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Faramis",
+            "Brody",
+            "Chip"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-2-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-07",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "Falcon Esports vs NIP Flash",
+      "game_number": 2,
+      "duration": "17:36",
+      "winner": "Falcon Esports",
+      "teams": [
+        {
+          "team": "Falcon Esports",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Valentina",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "NIP Flash",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Vexana",
+            "Popol and Kupa",
+            "Gatotkaca"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Akai"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-1-1",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-07",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "Fnatic ONIC PH vs Selangor Red Giants",
+      "game_number": 1,
+      "duration": "18:43",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Baxia",
+            "Cecilion",
+            "Natan",
+            "Franco"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Joy",
+            "Hylos",
+            "Suyou"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Paquito",
+            "Hayabusa",
+            "Novaria",
+            "Brody",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    },
+    {
+      "id": "mlbbanalytics-m6-world-championship-1-2",
+      "tournament": "M6 World Championship",
+      "date": "2024-12-07",
+      "patch": null,
+      "stage": "Upper Bracket Quarterfinals",
+      "series": "Fnatic ONIC PH vs Selangor Red Giants",
+      "game_number": 2,
+      "duration": "18:41",
+      "winner": "Fnatic ONIC PH",
+      "teams": [
+        {
+          "team": "Fnatic ONIC PH",
+          "side": null,
+          "picks": [
+            "Lapu-Lapu",
+            "Joy",
+            "Xavier",
+            "Clint",
+            "Angela"
+          ],
+          "bans": [
+            "Fanny",
+            "Zhuxin",
+            "Hylos",
+            "Suyou",
+            "Chip"
+          ]
+        },
+        {
+          "team": "Selangor Red Giants",
+          "side": null,
+          "picks": [
+            "Arlott",
+            "Alpha",
+            "Novaria",
+            "Popol and Kupa",
+            "Tigreal"
+          ],
+          "bans": [
+            "Hilda",
+            "Carmilla",
+            "Irithel",
+            "Wanwan",
+            "Gatotkaca"
+          ]
+        }
+      ],
+      "source_url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship",
+      "source_refs": [
+        {
+          "source": "mlbbanalytics",
+          "url": "https://www.mlbbanalytics.com/esports?tournament=m6-world-championship"
+        },
+        {
+          "source": "liquipedia",
+          "url": "https://liquipedia.net/mobilelegends/M6_World_Championship"
+        }
+      ]
+    }
+  ]
+}

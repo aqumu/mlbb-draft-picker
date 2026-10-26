@@ -50,9 +50,9 @@ The sample catalog is a shape/behavior fixture, not a claim that it is a complet
 
 `mlbb_draft_finder.ingest` accepts a normalized JSON export with `heroes`, `matches`, and optional `matchup_stats`. `LiquipediaAdapter` and `MLBBDexAdapter` provide cached JSON client boundaries for approved endpoints or exports. The Liquipedia adapter does not scrape generated HTML. MLBBDex's documented public API currently covers hero/item/patch/ranking data; it does not document a pro-match draft endpoint, so its adapter requires an explicitly supplied draft export path. Configure an identifying User-Agent, respect the source's rate limits, cache responses, and keep attribution in `source_refs`.
 
-The checked-in MLBBDex snapshots currently seed 154 deduplicated games across
-MSC 2026, M7, MPL PH S18, MPL ID S18, and MPL MY S18. Relationship aggregates
-are kept in separate per-tournament source buckets.
+The checked-in snapshots currently seed 240 deduplicated games across MSC 2026,
+M7, MPL PH S18, MPL ID S18, MPL MY S18, M6, M5, and MSC 2024. Relationship
+aggregates are kept in separate per-source, per-tournament buckets.
 
 ### Manual catalog workflow
 
@@ -60,7 +60,7 @@ When a source does not offer usable API access, add human-reviewed records to [`
 
 ### Browser-captured source data
 
-The Playwriter capture scripts in `scripts/extract_mlb*.js` save public MLBBDex and MLBB Analytics snapshots under [`data/raw`](data/raw). `scripts/extract_mlbbdex_tournament.js` is the reusable MLBBDex page capture; set its tournament URL and Liquipedia attribution link before running it. MLBBDex snapshots are loaded by the Render startup script; MLBB Analytics remains quarantined because its MSC page shows a different event/team set. See [`data/raw/README.md`](data/raw/README.md).
+The Playwriter capture scripts in `scripts/extract_mlb*.js` save public MLBBDex and MLBB Analytics snapshots under [`data/raw`](data/raw). `scripts/extract_mlbbdex_tournament.js` and `scripts/extract_mlbbanalytics_tournament.js` are reusable page captures; set their tournament URL and Liquipedia attribution link before running them. The Render startup script loads all MLBBDex snapshots and only the reviewed MLBB Analytics batches; mismatched Analytics exports remain quarantined. See [`data/raw/README.md`](data/raw/README.md).
 
 Liquipedia's API terms require attribution and prohibit automated access to generated HTML. The MediaWiki API limit is one request per two seconds with a project-specific User-Agent; the separate LiquipediaDB API requires approved access and is limited to 60 requests per hour. These constraints are why ingestion is an offline, cached job rather than a request-time dependency.
 

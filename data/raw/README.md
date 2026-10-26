@@ -24,12 +24,18 @@ it is retained with `bans_known=false` instead of inventing a fifth ban.
 
 ## MLBB Analytics
 
-`mlbbanalytics_msc_2026_playoffs.json` contains 18 game logs exposed after
-opening the site's playoff breakdown and expanding all games. It is quarantined
-for cross-checking: its four displayed series use Legion Esports, Niightmare
-Esports, Brute Force, and IHC Esports, while the MLBBDex snapshot for the same
-MSC 2026 event uses a different set of teams. Do not merge these records until
-the discrepancy is resolved against the linked Liquipedia pages.
+The approved MLBB Analytics snapshots contain internally consistent playoff
+draft objects:
+
+* `mlbbanalytics_m6_world_championship_playoffs.json` — 48 games
+* `mlbbanalytics_m5_world_championship_playoffs.json` — 7 games
+* `mlbbanalytics_msc_2024_playoffs.json` — 31 games
+
+`mlbbanalytics_msc_2026_playoffs.json` remains quarantined. Its four displayed
+series use Legion Esports, Niightmare Esports, Brute Force, and IHC Esports,
+while the MLBBDex snapshot for the same MSC 2026 event uses a different set of
+teams. The same unrelated four-team payload also appears when selecting other
+MLBB Analytics championships, so those selectors are not imported.
 
 Both snapshots retain the page URL and Liquipedia attribution link. The raw
 files intentionally preserve what each page displayed rather than silently

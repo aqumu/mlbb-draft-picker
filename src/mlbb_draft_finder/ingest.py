@@ -148,12 +148,13 @@ def _slug_for_hero(name: str, heroes_by_name: dict[str, Hero]) -> str:
     return hero.slug if hero else normalize_slug(name)
 
 
-def normalize_mlbbdex_snapshot(path: str | Path, heroes_path: str | Path) -> tuple[list[Hero], list[MatchDraft]]:
-    """Convert a browser-captured MLBBDex snapshot into our source-neutral model."""
+def normalize_captured_snapshot(path: str | Path, heroes_path: str | Path, default_source: str = "mlbbdex") -> tuple[list[Hero], list[MatchDraft]]:
+    """Convert a browser-captured tournament snapshot into our source-neutral model."""
     heroes = _mlbbdex_hero_payload(heroes_path)
     heroes_by_name = {h.name.lower(): h for h in heroes}
     with open(path, "r", encoding="utf-8") as handle:
         payload = json.load(handle)
+    source = str(payload.get("source") or default_source)
     matches: list[MatchDraft] = []
     for value in payload.get("matches", []):
         teams = value.get("teams", [])
@@ -166,7 +167,7 @@ def normalize_mlbbdex_snapshot(path: str | Path, heroes_path: str | Path) -> tup
             for hero in team.get("bans", []):
                 actions.append(DraftAction("ban", team_key, _slug_for_hero(hero, heroes_by_name), None))
         matches.append(MatchDraft(
-            id=str(value["id"]), source="mlbbdex", source_url=value.get("source_url", payload.get("source_url")),
+            id=str(value["id"]), source=source, source_url=value.get("source_url", payload.get("source_url")),
             tournament=str(value["tournament"]), date=value.get("date"), patch=value.get("patch"),
             team_a=str(teams[0]["team"]), team_b=str(teams[1]["team"]), game_number=value.get("game_number"), actions=actions,
             order_available=False, source_refs=list(value.get("source_refs", [])), stage=value.get("stage"), series=value.get("series"),
@@ -174,6 +175,11 @@ def normalize_mlbbdex_snapshot(path: str | Path, heroes_path: str | Path) -> tup
             bans_known=all(len(team.get("bans", [])) == 5 for team in teams),
         ))
     return heroes, matches
+
+
+def normalize_mlbbdex_snapshot(path: str | Path, heroes_path: str | Path) -> tuple[list[Hero], list[MatchDraft]]:
+    """Backward-compatible MLBBDex-specific name for captured snapshots."""
+    return normalize_captured_snapshot(path, heroes_path, "mlbbdex")
 
 
 def _derived_relationships(matches: list[MatchDraft], source: str) -> tuple[list[MatchupStat], list[SynergyStat]]:
@@ -200,27 +206,37 @@ def _derived_relationships(matches: list[MatchDraft], source: str) -> tuple[list
             [SynergyStat(hero, partner, values[0], values[1], source) for (hero, partner), values in synergy.items()])
 
 
-def import_mlbbdex_snapshot(catalog: Catalog, snapshot_path: str | Path, heroes_path: str | Path) -> dict[str, int]:
-    heroes, matches = normalize_mlbbdex_snapshot(snapshot_path, heroes_path)
+def import_captured_snapshot(catalog: Catalog, snapshot_path: str | Path, heroes_path: str | Path) -> dict[str, int]:
+    heroes, matches = normalize_captured_snapshot(snapshot_path, heroes_path)
     catalog.add_heroes(heroes)
     added_matches: list[MatchDraft] = []
     for match in matches:
         if catalog.add_match(match):
             added_matches.append(match)
-    # Keep relationship aggregates separated by tournament snapshot.  The
-    # original importer was MSC-specific, which would silently label every
-    # later batch as MSC and overwrite the wrong aggregate bucket.
+    # Keep relationship aggregates separated by source and tournament
+    # snapshot. This avoids overwriting one tournament's derived bucket with
+    # another source's data.
+    source_prefix = matches[0].source if matches else "import"
     snapshot_name = Path(snapshot_path).stem
-    if snapshot_name.startswith("mlbbdex_"):
-        snapshot_name = snapshot_name[len("mlbbdex_"):]
-    if snapshot_name.endswith("_latest"):
-        snapshot_name = snapshot_name[:-len("_latest")]
-    source = "derived:mlbbdex:" + snapshot_name.replace("_", "-")
+    for prefix in ("mlbbdex_", "mlbbanalytics_"):
+        if snapshot_name.startswith(prefix):
+            snapshot_name = snapshot_name[len(prefix):]
+            break
+    for suffix in ("_latest", "_playoffs"):
+        if snapshot_name.endswith(suffix):
+            snapshot_name = snapshot_name[:-len(suffix)]
+            break
+    source = f"derived:{source_prefix}:{snapshot_name.replace('_', '-')}"
     counters, synergy = _derived_relationships(added_matches, source)
     catalog.add_matchup_stats(counters)
     catalog.add_synergy_stats(synergy)
     return {"heroes": len(heroes), "matches_added": len(added_matches), "matches_seen": len(matches),
             "matchup_stats": len(counters), "synergy_stats": len(synergy)}
+
+
+def import_mlbbdex_snapshot(catalog: Catalog, snapshot_path: str | Path, heroes_path: str | Path) -> dict[str, int]:
+    """Backward-compatible MLBBDex-specific importer entry point."""
+    return import_captured_snapshot(catalog, snapshot_path, heroes_path)
 
 
 class JsonApiClient:
