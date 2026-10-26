@@ -31,7 +31,7 @@ Example request:
 }
 ```
 
-`POST /v1/candidates` returns complete historical compositions, the remaining picks, original opponent composition, bans, tournament/team/game/patch metadata, source links, and transparent `score_details`. A null score means there is no matchup data for the remaining heroes against the visible enemy picks; it is not an invented estimate.
+`POST /v1/candidates` returns complete historical compositions, the remaining picks, the full opposing draft (`opponent_draft` with picks and bans), both sides' bans, the captured action list, tournament/team/game/patch metadata, source links, and transparent `score_details`. A null score means there is no matchup data for the remaining heroes against the visible enemy picks; it is not an invented estimate. `GET /v1/matches` exposes the same two-sided draft under `teams.team_a` and `teams.team_b`, including picks, bans, and action order when the source provides it.
 
 ## Run locally
 

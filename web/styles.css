@@ -67,6 +67,11 @@ select, input { border: 1px solid var(--border); border-radius: 7px; background:
 .score { color: #166534; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 999px; font-size: 12px; padding: 4px 8px; white-space: nowrap; }
 .lineup { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .lineup .chip { background: #fafafa; border-color: var(--border); }
+.lineup-heading { color: var(--muted); font-size: 11px; font-weight: 600; margin-top: 10px; }
+.opponent-lineup { margin-top: 6px; }
+.mini-lineup { display: flex; flex-wrap: wrap; gap: 4px; }
+.mini-lineup .chip { font-size: 11px; padding: 3px 6px 3px 4px; }
+.mini-lineup .chip img { width: 18px; height: 18px; }
 .result-details { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
 .detail-box { background: #fafafa; border-radius: 6px; padding: 8px; }
 .detail-box strong { display: block; font-size: 11px; color: var(--muted); margin-bottom: 4px; }

@@ -67,6 +67,10 @@ function lineupHtml(items) {
   return items.map((value) => { const hero = heroBySlug(value) || { slug: value, name: value }; return `<span class="chip"><img src="${iconUrl(hero)}" alt=""><span>${hero.name}</span></span>`; }).join("");
 }
 
+function draftBox(title, items) {
+  return `<div class="detail-box"><strong>${title}</strong><div class="mini-lineup">${items?.length ? lineupHtml(items) : "None captured"}</div></div>`;
+}
+
 function renderResults(candidates) {
   $("#result-summary").textContent = `${candidates.length} eligible historical draft${candidates.length === 1 ? "" : "s"}.`;
   $("#results").innerHTML = candidates.length ? candidates.map((candidate) => {
@@ -74,8 +78,9 @@ function renderResults(candidates) {
     const score = candidate.score == null ? "No matchup score" : `Score ${(candidate.score * 100).toFixed(1)}%`;
     return `<article class="result-card">
       <div class="result-top"><div><div class="result-title">${meta.tournament} · Game ${meta.game_number ?? "?"}</div><div class="result-meta">${meta.team_a} vs ${meta.team_b} · ${meta.date || "Date unknown"} · ${meta.patch || "Patch unknown"}</div></div><span class="score">${score}</span></div>
-      <div class="lineup">${lineupHtml(candidate.composition)}</div>
-      <div class="result-details"><div class="detail-box"><strong>Remaining picks</strong><span>${candidate.remaining_picks.join(", ") || "None"}</span></div><div class="detail-box"><strong>Historical context</strong><span>${meta.order_available ? "Order captured" : "Order unavailable"} · ${meta.bans_known ? "Bans captured" : "Bans incomplete"}</span></div></div>
+      <div class="lineup-heading">${meta.matched_team || "Matched side"}</div><div class="lineup">${lineupHtml(candidate.our_picks || candidate.composition)}</div>
+      <div class="lineup-heading">Opposing picks - ${meta.opponent_team || "opponent"}</div><div class="lineup opponent-lineup">${lineupHtml(candidate.opponent_picks || candidate.opponent_composition)}</div>
+      <div class="result-details">${draftBox("Our bans", candidate.our_bans)}${draftBox("Opposing bans", candidate.opponent_bans)}<div class="detail-box"><strong>Remaining picks</strong><span>${candidate.remaining_picks.join(", ") || "None"}</span></div><div class="detail-box"><strong>Historical context</strong><span>${meta.order_available ? "Order captured" : "Order unavailable"} | ${meta.bans_known ? "Bans captured" : "Bans incomplete"}</span></div></div>
       <div class="result-links"><a href="${meta.source_url}" target="_blank" rel="noreferrer">Source page</a>${meta.source_refs?.filter((ref) => ref.url !== meta.source_url).map((ref) => `<a href="${ref.url}" target="_blank" rel="noreferrer">${ref.source}</a>`).join("") || ""}</div>
     </article>`;
   }).join("") : `<div class="empty-state">No historical composition fits this draft state.</div>`;

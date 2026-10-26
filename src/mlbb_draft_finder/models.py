@@ -46,7 +46,12 @@ class MatchDraft:
         return [a.hero for a in sorted(self.actions, key=lambda a: (a.order is None, a.order or 0))
                 if a.phase == "pick" and a.team == team]
 
+    def bans_for(self, team: str) -> list[str]:
+        return [a.hero for a in sorted(self.actions, key=lambda a: (a.order is None, a.order or 0))
+                if a.phase == "ban" and a.team == team]
+
     def bans(self) -> list[str]:
+        """Return both teams' bans, preserving the historical API behavior."""
         return [a.hero for a in sorted(self.actions, key=lambda a: (a.order is None, a.order or 0)) if a.phase == "ban"]
 
 

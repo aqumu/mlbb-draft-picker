@@ -56,8 +56,7 @@ def create_handler(catalog: Catalog):
             elif parsed.path == "/v1/heroes":
                 self._send(200, [{"slug": h.slug, "name": h.name, "roles": list(h.roles), "aliases": list(h.aliases)} for h in catalog.heroes().values()])
             elif parsed.path == "/v1/matches":
-                self._send(200, [{"id": m.id, "tournament": m.tournament, "source": m.source, "source_url": m.source_url,
-                                  "date": m.date, "patch": m.patch, "team_a": m.team_a, "team_b": m.team_b, "game_number": m.game_number} for m in catalog.matches()])
+                self._send(200, [_match_as_dict(m) for m in catalog.matches()])
             elif parsed.path == "/v1/relationships":
                 hero = parse_qs(parsed.query).get("hero", [""])[0].strip().lower()
                 if not hero or hero not in catalog.heroes():
@@ -83,6 +82,37 @@ def create_handler(catalog: Catalog):
         def log_message(self, format: str, *args: Any) -> None:
             return
     return Handler
+
+
+def _match_as_dict(match) -> dict[str, Any]:
+    """Serialize a match with both sides' complete draft information."""
+    actions = [{"phase": action.phase, "team": action.team, "hero": action.hero, "order": action.order}
+               for action in match.actions]
+    return {
+        "id": match.id,
+        "source": match.source,
+        "source_url": match.source_url,
+        "source_refs": match.source_refs,
+        "tournament": match.tournament,
+        "date": match.date,
+        "patch": match.patch,
+        "stage": match.stage,
+        "series": match.series,
+        "duration": match.duration,
+        "winner": match.winner,
+        "game_number": match.game_number,
+        "order_available": match.order_available,
+        "bans_known": match.bans_known,
+        "team_a": match.team_a,
+        "team_b": match.team_b,
+        "teams": {
+            "team_a": {"name": match.team_a, "side": match.team_a_side, "picks": match.picks("team_a"),
+                       "bans": match.bans_for("team_a")},
+            "team_b": {"name": match.team_b, "side": match.team_b_side, "picks": match.picks("team_b"),
+                       "bans": match.bans_for("team_b")},
+        },
+        "actions": actions,
+    }
 
 
 def serve(catalog: Catalog, host: str = "0.0.0.0", port: int = 8080) -> None:

@@ -19,11 +19,21 @@ class Candidate:
     score: float | None
     score_details: tuple[dict, ...]
     rejection_reasons: tuple[str, ...] = ()
+    our_bans: tuple[str, ...] = ()
+    opponent_bans: tuple[str, ...] = ()
+    draft_actions: tuple[dict, ...] = ()
 
     def as_dict(self) -> dict:
         return {"match_id": self.match_id, "side": self.side, "composition": list(self.composition),
                 "locked_picks": list(self.locked_picks), "remaining_picks": list(self.remaining_picks),
                 "opponent_composition": list(self.opponent_composition), "bans": list(self.bans),
+                "our_picks": list(self.composition), "opponent_picks": list(self.opponent_composition),
+                "our_bans": list(self.our_bans), "opponent_bans": list(self.opponent_bans),
+                "our_draft": {"team": self.metadata.get("matched_team"), "side": self.metadata.get("matched_team_side"),
+                              "picks": list(self.composition), "bans": list(self.our_bans)},
+                "opponent_draft": {"team": self.metadata.get("opponent_team"), "side": self.metadata.get("opponent_team_side"),
+                                   "picks": list(self.opponent_composition), "bans": list(self.opponent_bans)},
+                "draft_actions": list(self.draft_actions),
                 "metadata": self.metadata, "score": self.score,
                 "score_details": list(self.score_details), "rejection_reasons": list(self.rejection_reasons)}
 
@@ -101,6 +111,8 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
         for side, opponent_side in (("team_a", "team_b"), ("team_b", "team_a")):
             composition = tuple(match.picks(side))
             opponent = tuple(match.picks(opponent_side))
+            our_bans = tuple(match.bans_for(side))
+            opponent_bans = tuple(match.bans_for(opponent_side))
             if len(composition) != 5 or len(set(composition)) != 5:
                 continue
             if not ours.issubset(composition) or enemies.intersection(composition):
@@ -111,11 +123,18 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
                 continue
             remaining = tuple(h for h in composition if h not in ours)
             score, details = _score(catalog, remaining, tuple(state.enemy_picks))
+            draft_actions = tuple({"phase": action.phase, "team": action.team, "hero": action.hero,
+                                   "order": action.order} for action in match.actions)
             output.append(Candidate(match.id, side, composition, tuple(state.our_picks), remaining, opponent, match_bans,
                                     {"source": match.source, "source_url": match.source_url, "tournament": match.tournament,
                                      "date": match.date, "patch": match.patch, "stage": match.stage, "series": match.series,
                                      "duration": match.duration, "winner": match.winner, "team_a": match.team_a, "team_b": match.team_b,
                                      "team_a_side": match.team_a_side, "team_b_side": match.team_b_side, "game_number": match.game_number,
-                                     "order_available": match.order_available, "bans_known": match.bans_known, "source_refs": match.source_refs}, score, details))
+                                     "order_available": match.order_available, "bans_known": match.bans_known, "source_refs": match.source_refs,
+                                     "matched_team": match.team_a if side == "team_a" else match.team_b,
+                                     "opponent_team": match.team_b if side == "team_a" else match.team_a,
+                                     "matched_team_side": match.team_a_side if side == "team_a" else match.team_b_side,
+                                     "opponent_team_side": match.team_b_side if side == "team_a" else match.team_a_side},
+                                    score, details, (), our_bans, opponent_bans, draft_actions))
     output.sort(key=lambda c: (c.score is not None, c.score or 0.0), reverse=True)
     return output[:limit]
