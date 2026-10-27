@@ -72,6 +72,7 @@ class DraftState:
     locked_players: dict[str, str] = field(default_factory=dict)  # hero -> player
     available_heroes: frozenset[str] | None = None
     excluded_heroes: tuple[str, ...] = ()
+    our_side: str | None = None
 
 
 @dataclass(frozen=True)

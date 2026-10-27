@@ -30,17 +30,24 @@
                 <option value="regular">Regular lobby</option>
               </select>
             </label>
+            <label>Your side
+              <select id="team-side">
+                <option value="blue side">Blue side</option>
+                <option value="red side">Red side</option>
+              </select>
+            </label>
             <button id="start-simulation" class="button primary" type="button">Start simulation</button>
             <button id="reset-simulation" class="button subtle" type="button">Reset</button>
           </div>
         </div>
+        <div id="phase-callout" class="phase-callout"><span id="phase-kind" class="phase-kind">SETUP</span><strong id="phase-owner" class="phase-owner">Choose your side</strong><span id="phase-instruction">Hide heroes before starting.</span></div>
         <div class="phase-progress"><span id="phase-count">Setup</span><div class="progress-track"><span id="progress-bar"></span></div><span id="phase-next">Click a hero to continue</span></div>
 
         <div class="draft-board">
-          <div class="ban-strip"><div class="strip-title"><span>Bans</span><span id="ban-count">0 / 10</span></div><div id="bans" class="icon-row empty">No bans yet</div></div>
+          <div class="ban-strip"><div class="strip-title"><span>Bans</span><span id="ban-count">0 / 10</span></div><div id="ban-legend" class="action-legend"></div><div id="bans" class="icon-row empty">No bans yet</div></div>
           <div class="pick-columns">
-            <div class="pick-lane our-lane"><div class="lane-title"><span>Our side</span><span id="our-count">0 / 5</span></div><div id="our_picks" class="icon-row empty">No picks yet</div></div>
-            <div class="pick-lane enemy-lane"><div class="lane-title"><span>Opponent</span><span id="enemy-count">0 / 5</span></div><div id="enemy_picks" class="icon-row empty">No picks yet</div></div>
+            <div class="pick-lane our-lane"><div class="lane-title"><span id="our-label">Your Blue side</span><span id="our-count">0 / 5</span></div><div id="our_picks" class="icon-row empty">No picks yet</div></div>
+            <div class="pick-lane enemy-lane"><div class="lane-title"><span id="enemy-label">Opponent Red side</span><span id="enemy-count">0 / 5</span></div><div id="enemy_picks" class="icon-row empty">No picks yet</div></div>
           </div>
         </div>
 

@@ -29,7 +29,8 @@ def _state(payload: dict[str, Any], catalog: Catalog) -> DraftState:
     return DraftState(resolve(payload.get("our_picks")), resolve(payload.get("enemy_picks")), resolve(payload.get("bans")), tuple(pools),
                        {aliases.get(str(k).strip().lower(), str(k).strip().lower()): str(v) for k, v in payload.get("locked_players", {}).items()},
                        frozenset(resolve(available)) if available is not None else None,
-                       resolve(payload.get("excluded_heroes")))
+                       resolve(payload.get("excluded_heroes")),
+                       str(payload.get("our_side")).strip().lower() if payload.get("our_side") else None)
 
 
 def create_handler(catalog: Catalog):

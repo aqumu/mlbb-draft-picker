@@ -31,7 +31,7 @@ Example request:
 }
 ```
 
-`POST /v1/candidates` returns complete historical compositions, the remaining picks, the full opposing draft (`opponent_draft` with picks and bans), both sides' bans, the captured action list, tournament/team/game/patch metadata, source links, and transparent `score_details`. `score` is an advisory matchup fit: missing hero-versus-enemy rows shrink the result toward 50%, and `score_summary` reports known rows, coverage, and sample games. A null score means there is no matchup data for the remaining heroes against the visible enemy picks. The request may include `excluded_heroes` to remove heroes from the matched side while simulating a team pool. `GET /v1/matches` exposes the same two-sided draft under `teams.team_a` and `teams.team_b`, including picks, bans, and action order when the source provides it.
+`POST /v1/candidates` returns complete historical compositions, the remaining picks, the full opposing draft (`opponent_draft` with picks and bans), both sides' bans, the captured action list, tournament/team/game/patch metadata, source links, and transparent `score_details`. `score` is an advisory matchup fit: missing hero-versus-enemy rows shrink the result toward 50%, and `score_summary` reports known rows, coverage, and sample games. A null score means there is no matchup data for the remaining heroes against the visible enemy picks. The request may include `excluded_heroes` to remove heroes from the matched side while simulating a team pool, and `our_side` (`blue side` or `red side`) to restrict matches to that side. `GET /v1/matches` exposes the same two-sided draft under `teams.team_a` and `teams.team_b`, including picks, bans, and action order when the source provides it.
 
 ## Run locally
 

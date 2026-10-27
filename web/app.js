@@ -6,7 +6,7 @@ const state = {
   hidden: [],
   history: [],
   board: { our_picks: [], enemy_picks: [], bans: [] },
-  simulation: { active: false, complete: false, format: "tournament", stepIndex: 0, steps: [] },
+  simulation: { active: false, complete: false, format: "tournament", side: "blue side", stepIndex: 0, steps: [] },
 };
 const $ = (selector) => document.querySelector(selector);
 const slug = (value) => value.toLowerCase().trim().replace(/[\u2019']/g, "").replace(/\s+/g, "-");
@@ -17,21 +17,28 @@ let searchRequestId = 0;
 
 const setupText = "Before starting, click heroes to hide the ones your team will not play.";
 
-function formatSteps(format) {
+const sideLabel = (side) => side === "red side" ? "Red side" : "Blue side";
+const oppositeSide = (side) => side === "red side" ? "blue side" : "red side";
+const teamLabel = (team) => team === "our" ? `Your ${sideLabel(state.simulation.side)}` : `Opponent ${sideLabel(oppositeSide(state.simulation.side))}`;
+const sideClass = (side) => side === "red side" ? "side-red" : "side-blue";
+
+function formatSteps(format, ourSide) {
   const steps = [];
-  const add = (kind, team, count, label) => { for (let index = 0; index < count; index += 1) steps.push({ kind, team, label }); };
+  const add = (kind, actualSide, count, label) => {
+    for (let index = 0; index < count; index += 1) steps.push({ kind, side: actualSide, team: actualSide === ourSide ? "our" : "enemy", label });
+  };
   if (format === "regular") {
-    add("ban", "our", 1, "Ban"); add("ban", "enemy", 1, "Ban");
-    add("ban", "our", 1, "Ban"); add("ban", "enemy", 1, "Ban");
-    add("ban", "our", 1, "Ban"); add("ban", "enemy", 1, "Ban");
-    ["our", "enemy", "enemy", "our", "our", "enemy", "enemy", "our", "our", "enemy"].forEach((team) => steps.push({ kind: "pick", team, label: team === "our" ? "Our pick" : "Opponent pick" }));
+    add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
+    add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
+    add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
+    ["blue side", "red side", "red side", "blue side", "blue side", "red side", "red side", "blue side", "blue side", "red side"].forEach((side) => add("pick", side, 1, "Pick phase"));
   } else {
-    add("ban", "our", 1, "Ban"); add("ban", "enemy", 1, "Ban");
-    add("ban", "our", 1, "Ban"); add("ban", "enemy", 1, "Ban");
-    add("ban", "our", 1, "Ban"); add("ban", "enemy", 1, "Ban");
-    ["our", "enemy", "enemy", "our", "our", "enemy"].forEach((team) => steps.push({ kind: "pick", team, label: team === "our" ? "Our pick" : "Opponent pick" }));
-    ["enemy", "our", "enemy", "our"].forEach((team) => steps.push({ kind: "ban", team, label: "Second ban" }));
-    ["enemy", "our", "enemy", "our"].forEach((team) => steps.push({ kind: "pick", team, label: team === "our" ? "Our pick" : "Opponent pick" }));
+    add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
+    add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
+    add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
+    ["blue side", "red side", "red side", "blue side", "blue side", "red side"].forEach((side) => add("pick", side, 1, "Pick phase"));
+    ["red side", "blue side", "red side", "blue side"].forEach((side) => add("ban", side, 1, "Second ban phase"));
+    ["red side", "blue side", "red side", "blue side"].forEach((side) => add("pick", side, 1, "Pick phase"));
   }
   return steps;
 }
@@ -50,18 +57,26 @@ function chipHtml(value, extra = "") {
 }
 
 function renderBoard() {
-  const bans = state.history.filter((action) => action.kind === "ban").map((action) => action.hero);
-  const renderRow = (selector, values, emptyText) => {
+  const bans = state.history.filter((action) => action.kind === "ban");
+  const renderRow = (selector, values, emptyText, team = null) => {
     const target = $(selector);
     target.classList.toggle("empty", values.length === 0);
-    target.innerHTML = values.length ? values.map((value) => chipHtml(value)).join("") : emptyText;
+    target.innerHTML = values.length ? values.map((value) => {
+      const hero = typeof value === "string" ? value : value.hero;
+      const actionTeam = typeof value === "string" ? team : value.team;
+      const actionSide = actionTeam === "our" ? state.simulation.side : oppositeSide(state.simulation.side);
+      return chipHtml(hero, sideClass(actionSide));
+    }).join("") : emptyText;
   };
   renderRow("#bans", bans, "No bans yet");
-  renderRow("#our_picks", state.board.our_picks, "No picks yet");
-  renderRow("#enemy_picks", state.board.enemy_picks, "No picks yet");
+  renderRow("#our_picks", state.board.our_picks, "No picks yet", "our");
+  renderRow("#enemy_picks", state.board.enemy_picks, "No picks yet", "enemy");
   $("#ban-count").textContent = `${bans.length} / ${state.simulation.format === "regular" ? 6 : 10}`;
   $("#our-count").textContent = `${state.board.our_picks.length} / 5`;
   $("#enemy-count").textContent = `${state.board.enemy_picks.length} / 5`;
+  $("#our-label").textContent = `Your ${sideLabel(state.simulation.side)}`;
+  $("#enemy-label").textContent = `Opponent ${sideLabel(oppositeSide(state.simulation.side))}`;
+  $("#ban-legend").innerHTML = `<span class="legend-dot side-blue"></span> Blue side <span class="legend-dot side-red"></span> Red side`;
 
   const excluded = $("#excluded-wrap");
   excluded.hidden = state.hidden.length === 0;
@@ -109,22 +124,33 @@ function renderPhase() {
   const label = $("#phase-label");
   const detail = $("#phase-detail");
   const start = $("#start-simulation");
+  const phaseKind = $("#phase-kind");
+  const phaseOwner = $("#phase-owner");
+  const phaseInstruction = $("#phase-instruction");
   if (!active && !complete) {
     label.textContent = "Setup"; detail.textContent = setupText; start.textContent = "Start simulation";
+    phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
+    phaseKind.textContent = "SETUP"; phaseOwner.textContent = `Your team / ${sideLabel(state.simulation.side)}`; phaseInstruction.textContent = "Hide heroes before starting.";
     $("#phase-count").textContent = "Setup"; $("#phase-next").textContent = "Click a hero to hide it"; $("#progress-bar").style.width = "0%";
   } else if (complete) {
     label.textContent = "Draft complete"; detail.textContent = "Review the matching professional drafts below."; start.textContent = "Start again";
+    phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
+    phaseKind.textContent = "COMPLETE"; phaseOwner.textContent = `Your team / ${sideLabel(state.simulation.side)}`; phaseInstruction.textContent = "All bans and picks are recorded.";
     $("#phase-count").textContent = `${steps.length} / ${steps.length}`; $("#phase-next").textContent = "All actions recorded"; $("#progress-bar").style.width = "100%";
   } else {
     const step = steps[stepIndex];
+    const actor = teamLabel(step.team);
     label.textContent = step.label;
-    detail.textContent = step.kind === "ban" ? "Click a hero to ban it." : `Click a hero for the ${step.team === "our" ? "our side" : "opponent"}.`;
+    detail.textContent = `${actor} ${step.kind === "ban" ? "bans" : "picks"} next. Click one hero to continue.`;
+    phaseOwner.className = `phase-owner ${sideClass(step.side)}`;
+    phaseKind.textContent = step.kind === "ban" ? "BAN PHASE" : "PICK PHASE"; phaseOwner.textContent = actor; phaseInstruction.textContent = `${sideLabel(step.side)} acts now.`;
     start.textContent = "Simulation running";
-    $("#phase-count").textContent = `${stepIndex + 1} / ${steps.length}`; $("#phase-next").textContent = step.kind === "ban" ? "Ban phase" : "Pick phase";
+    $("#phase-count").textContent = `Step ${stepIndex + 1} / ${steps.length}`; $("#phase-next").textContent = `${actor} action`;
     $("#progress-bar").style.width = `${(stepIndex / steps.length) * 100}%`;
   }
   start.disabled = active;
   $("#simulation-format").disabled = active;
+  $("#team-side").disabled = active;
 }
 
 function resetBoard(clearHidden = true) {
@@ -154,14 +180,15 @@ function handleHero(hero) {
 function startSimulation() {
   resetBoard(false);
   state.simulation.format = $("#simulation-format").value;
-  state.simulation.steps = formatSteps(state.simulation.format);
+  state.simulation.side = $("#team-side").value;
+  state.simulation.steps = formatSteps(state.simulation.format, state.simulation.side);
   state.simulation.stepIndex = 0; state.simulation.active = true; state.simulation.complete = false;
   renderBoard(); renderHeroes(); renderPhase(); scheduleSearch();
 }
 
 function resetSimulation() {
   resetBoard(true);
-  state.simulation = { active: false, complete: false, format: $("#simulation-format").value, stepIndex: 0, steps: [] };
+  state.simulation = { active: false, complete: false, format: $("#simulation-format").value, side: $("#team-side").value, stepIndex: 0, steps: [] };
   $("#results").innerHTML = `<div class="empty-state">Your candidate drafts will appear here as the board changes.</div>`;
   $("#result-summary").textContent = "Start the simulation to see eligible drafts.";
   renderBoard(); renderHeroes(); renderPhase();
@@ -201,7 +228,7 @@ async function search() {
   if (!state.simulation.active && !state.simulation.complete) return;
   const requestId = ++searchRequestId;
   try {
-    const response = await fetch(`${API_BASE}/v1/candidates`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state.board, excluded_heroes: state.hidden, player_pools: poolsPayload(), limit: 50 }) });
+    const response = await fetch(`${API_BASE}/v1/candidates`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state.board, our_side: state.simulation.side, excluded_heroes: state.hidden, player_pools: poolsPayload(), limit: 50 }) });
     const body = await response.json();
     if (!response.ok) throw new Error(body.message || body.error || `Search failed (${response.status})`);
     if (requestId === searchRequestId) renderResults(body.candidates);
@@ -225,5 +252,6 @@ $("#start-simulation").addEventListener("click", startSimulation);
 $("#reset-simulation").addEventListener("click", resetSimulation);
 $("#restore-hidden").addEventListener("click", () => { state.hidden = []; renderBoard(); renderHeroes(); });
 $("#simulation-format").addEventListener("change", () => { state.simulation.format = $("#simulation-format").value; renderBoard(); });
+$("#team-side").addEventListener("change", () => { state.simulation.side = $("#team-side").value; renderBoard(); renderPhase(); });
 renderPools(); renderPhase();
 loadHeroes().then(() => setStatus("API connected", "ok")).catch((error) => { setStatus("API unavailable", "bad"); $("#results").innerHTML = `<div class="empty-state error">${error.message}</div>`; });

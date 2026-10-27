@@ -6,6 +6,12 @@ from .models import DraftState, MatchDraft, PlayerPool
 from .repository import Catalog
 
 
+def _normalise_side(value: str | None) -> str | None:
+    if not value:
+        return None
+    return value.strip().lower().replace(" side", "")
+
+
 @dataclass(frozen=True)
 class Candidate:
     match_id: str
@@ -127,6 +133,9 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
     for match in catalog.matches():
         match_bans = tuple(match.bans())
         for side, opponent_side in (("team_a", "team_b"), ("team_b", "team_a")):
+            matched_side = match.team_a_side if side == "team_a" else match.team_b_side
+            if state.our_side and _normalise_side(matched_side) != _normalise_side(state.our_side):
+                continue
             composition = tuple(match.picks(side))
             opponent = tuple(match.picks(opponent_side))
             our_bans = tuple(match.bans_for(side))
