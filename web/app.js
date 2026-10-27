@@ -115,15 +115,10 @@ function renderBoard() {
   };
   const ourBans = bans.filter((action) => action.team === "our");
   const enemyBans = bans.filter((action) => action.team === "enemy");
-  renderRow("#our_bans", ourBans, "No bans yet");
-  renderRow("#enemy_bans", enemyBans, "No bans yet");
-  renderRow("#our_picks", state.board.our_picks, "No picks yet", "our");
-  renderRow("#enemy_picks", state.board.enemy_picks, "No picks yet", "enemy");
-  const banLimit = state.simulation.format === "regular" ? 3 : 5;
-  $("#our-ban-count").textContent = `${ourBans.length} / ${banLimit}`;
-  $("#enemy-ban-count").textContent = `${enemyBans.length} / ${banLimit}`;
-  $("#our-count").textContent = `${state.board.our_picks.length} / 5`;
-  $("#enemy-count").textContent = `${state.board.enemy_picks.length} / 5`;
+  renderRow("#our_bans", ourBans, "");
+  renderRow("#enemy_bans", enemyBans, "");
+  renderRow("#our_picks", state.board.our_picks, "", "our");
+  renderRow("#enemy_picks", state.board.enemy_picks, "", "enemy");
   const enemySide = oppositeSide(state.simulation.side);
   $("#our-label").textContent = "Your team";
   $("#enemy-label").textContent = "Opponent";
@@ -133,7 +128,6 @@ function renderBoard() {
     const panel = $(selector);
     const stateClass = state.simulation.complete ? "done" : step ? (step.team === team ? "active" : "waiting") : (team === firstPickTeam ? "ready" : "waiting");
     panel.className = `side-panel ${sideClass(side)} ${stateClass}`;
-    $(`${selector} .action-state`).textContent = state.simulation.complete ? "DONE" : step ? (step.team === team ? "ACTIVE" : "WAITING") : (team === firstPickTeam ? "READY" : "WAITING");
   };
   setPanelState("#our-panel", "our", state.simulation.side);
   setPanelState("#enemy-panel", "enemy", enemySide);
@@ -237,17 +231,12 @@ function startSimulation() {
 function resetSimulation() {
   resetBoard(true);
   state.simulation = { active: false, complete: false, format: $("#simulation-format").value, side: $("#team-side").value, stepIndex: 0, steps: [] };
-  $("#results").innerHTML = `<div class="empty-state">No drafts yet.</div>`;
-  $("#result-summary").textContent = "";
+  $("#results").innerHTML = "";
   renderBoard(); renderHeroes(); renderPhase();
 }
 
 function scoreLabel(candidate) {
-  if (candidate.score == null) return { label: "No matchup fit", detail: "Add an enemy pick to compare fit." };
-  const summary = candidate.score_summary || {};
-  const known = summary.known_pairs || 0; const possible = summary.possible_pairs || 0; const games = summary.sample_games || 0;
-  const coverage = possible ? Math.round((summary.coverage || 0) * 100) : 0;
-  return { label: `Fit ${(candidate.score * 100).toFixed(1)}%`, detail: `${coverage}% coverage | ${known}/${possible} rows | ${games} games` };
+  return { label: candidate.score == null ? "No matchup fit" : `Fit ${(candidate.score * 100).toFixed(1)}%` };
 }
 
 function lineupHtml(items) {
@@ -259,14 +248,13 @@ function draftStrip(title, items) {
 }
 
 function renderResults(candidates) {
-  $("#result-summary").textContent = `${candidates.length} eligible historical draft${candidates.length === 1 ? "" : "s"}.`;
   $("#results").innerHTML = candidates.length ? candidates.map((candidate) => {
     const meta = candidate.metadata; const score = scoreLabel(candidate);
     return `<article class="result-card">
-      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${meta.date || "Date unknown"} | ${meta.patch || "Patch unknown"} | ${meta.stage || "Stage unknown"}</div></div><div class="score-wrap"><span class="score">${score.label}</span><span class="score-detail">${score.detail}</span></div></div>
+      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${[meta.date, meta.patch, meta.stage].filter(Boolean).join(" | ")}</div></div><div class="score-wrap"><span class="score">${score.label}</span></div></div>
       ${draftStrip("Bans | our side", candidate.our_bans)}${draftStrip("Bans | opponent", candidate.opponent_bans)}
       <div class="found-picks"><div class="found-team matched"><span>${meta.matched_team || "Our side"}</span><div class="found-icons">${lineupHtml(candidate.our_picks || candidate.composition)}</div></div><span class="versus">vs</span><div class="found-team opponent"><span>${meta.opponent_team || "Opponent"}</span><div class="found-icons">${lineupHtml(candidate.opponent_picks || candidate.opponent_composition)}</div></div></div>
-      <div class="result-footer"><div><strong>Finish our side</strong><div class="found-icons">${lineupHtml(candidate.remaining_picks)}</div></div><span>${meta.order_available ? "Order captured" : "Order unavailable"} | ${meta.bans_known ? "Bans complete" : "Bans incomplete"}</span></div>
+      <div class="result-footer"><div><strong>Finish our side</strong><div class="found-icons">${lineupHtml(candidate.remaining_picks)}</div></div></div>
       <div class="result-links"><a href="${meta.source_url}" target="_blank" rel="noreferrer">Source page</a>${meta.source_refs?.filter((ref) => ref.url !== meta.source_url).map((ref) => `<a href="${ref.url}" target="_blank" rel="noreferrer">${ref.source}</a>`).join("") || ""}</div>
     </article>`;
   }).join("") : `<div class="empty-state">No historical composition fits this board yet.</div>`;
