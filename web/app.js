@@ -38,7 +38,7 @@ function formatSteps(format, ourSide) {
     add("ban", "blue side", 1, "Ban phase"); add("ban", "red side", 1, "Ban phase");
     ["blue side", "red side", "red side", "blue side", "blue side", "red side"].forEach((side) => add("pick", side, 1, "Pick phase"));
     ["red side", "blue side", "red side", "blue side"].forEach((side) => add("ban", side, 1, "Second ban phase"));
-    ["red side", "blue side", "red side", "blue side"].forEach((side) => add("pick", side, 1, "Pick phase"));
+    ["red side", "blue side", "blue side", "red side"].forEach((side) => add("pick", side, 1, "Pick phase"));
   }
   return steps;
 }
@@ -103,6 +103,16 @@ function chipHtml(value, extra = "") {
   return `<button class="icon-chip ${extra}" type="button" title="${hero.name}" aria-label="${hero.name}"><img src="${iconUrl(hero)}" alt="${hero.name}"></button>`;
 }
 
+function renderOrderPreview() {
+  const preview = $("#draft-order-preview");
+  if (!preview) return;
+  preview.hidden = state.simulation.active || state.simulation.complete;
+  $("#order-first").textContent = "Blue side gets first pick";
+  $("#order-double").textContent = "Red side gets the first double pick";
+  $("#order-bans").textContent = state.simulation.format === "tournament" ? "Second ban phase starts with Red side" : "Blue side bans first";
+  $("#order-you").textContent = `You are ${sideLabel(state.simulation.side)}`;
+}
+
 function renderBoard() {
   const bans = state.history.filter((action) => action.kind === "ban");
   const renderRow = (selector, values, emptyText, team = null) => {
@@ -115,22 +125,34 @@ function renderBoard() {
       return chipHtml(hero, sideClass(actionSide));
     }).join("") : emptyText;
   };
-  renderRow("#bans", bans, "No bans yet");
+  const ourBans = bans.filter((action) => action.team === "our");
+  const enemyBans = bans.filter((action) => action.team === "enemy");
+  renderRow("#our_bans", ourBans, "No bans yet");
+  renderRow("#enemy_bans", enemyBans, "No bans yet");
   renderRow("#our_picks", state.board.our_picks, "No picks yet", "our");
   renderRow("#enemy_picks", state.board.enemy_picks, "No picks yet", "enemy");
-  $("#ban-count").textContent = `${bans.length} / ${state.simulation.format === "regular" ? 6 : 10}`;
+  const banLimit = state.simulation.format === "regular" ? 3 : 5;
+  $("#our-ban-count").textContent = `${ourBans.length} / ${banLimit}`;
+  $("#enemy-ban-count").textContent = `${enemyBans.length} / ${banLimit}`;
   $("#our-count").textContent = `${state.board.our_picks.length} / 5`;
   $("#enemy-count").textContent = `${state.board.enemy_picks.length} / 5`;
   const enemySide = oppositeSide(state.simulation.side);
-  $("#our-label").textContent = "Your picks";
-  $("#enemy-label").textContent = "Opponent picks";
+  $("#our-label").textContent = "Your team";
+  $("#enemy-label").textContent = "Opponent";
   $("#our-side-badge").textContent = sideLabel(state.simulation.side);
   $("#our-side-badge").className = `side-badge ${sideClass(state.simulation.side)}`;
   $("#enemy-side-badge").textContent = sideLabel(enemySide);
   $("#enemy-side-badge").className = `side-badge ${sideClass(enemySide)}`;
-  $("#our-lane").className = `pick-lane ${sideClass(state.simulation.side)}-lane`;
-  $("#enemy-lane").className = `pick-lane ${sideClass(enemySide)}-lane`;
-  $("#ban-legend").innerHTML = `<span class="legend-dot side-blue"></span> Blue side <span class="legend-dot side-red"></span> Red side`;
+  const step = state.simulation.active ? state.simulation.steps[state.simulation.stepIndex] : null;
+  const setPanelState = (selector, team, side) => {
+    const panel = $(selector);
+    const stateClass = state.simulation.complete ? "done" : step ? (step.team === team ? "active" : "waiting") : "ready";
+    panel.className = `side-panel ${sideClass(side)} ${stateClass}`;
+    $(`${selector} .action-state`).textContent = state.simulation.complete ? "DONE" : step ? (step.team === team ? "ACTIVE" : "WAITING") : "READY";
+  };
+  setPanelState("#our-panel", "our", state.simulation.side);
+  setPanelState("#enemy-panel", "enemy", enemySide);
+  renderOrderPreview();
 
   const excluded = $("#excluded-wrap");
   excluded.hidden = state.hidden.length === 0;

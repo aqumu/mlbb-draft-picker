@@ -45,19 +45,30 @@ select { padding: 8px 9px; }
 .side-badge.side-red { background: var(--red-soft); color: var(--red); }
 .progress-track { background: #edf0f4; border-radius: 99px; flex: 1; height: 5px; overflow: hidden; }
 .progress-track span { background: var(--gold); display: block; height: 100%; transition: width .2s ease; }
+.draft-order-preview { align-items: center; background: #fbfcfe; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); display: flex; flex-wrap: wrap; font-size: 11px; gap: 8px 14px; margin: 12px 0; padding: 9px 11px; }
+.draft-order-preview[hidden] { display: none; }
+.order-label { color: var(--ink); font-weight: 800; text-transform: uppercase; }
+.draft-order-preview span:not(.order-label)::before { color: #a1acb8; content: "•"; margin-right: 7px; }
 .draft-board { border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
-.ban-strip { background: #fafbfc; border-bottom: 1px solid var(--line); padding: 11px 13px; }
-.action-legend { align-items: center; color: var(--muted); display: flex; font-size: 10px; gap: 5px; margin-top: 6px; }
-.legend-dot { background: var(--side-color); border-radius: 50%; display: inline-block; height: 7px; width: 7px; }
 .side-blue { --side-color: var(--blue); }
 .side-red { --side-color: var(--red); }
 .icon-chip.side-blue img, .icon-chip.side-red img { border-color: var(--side-color); }
 .strip-title, .lane-title { align-items: center; color: var(--muted); display: flex; font-size: 11px; font-weight: 800; justify-content: space-between; letter-spacing: .04em; text-transform: uppercase; }
-.pick-columns { display: grid; grid-template-columns: 1fr 1fr; }
-.pick-lane { min-height: 105px; padding: 13px; }
-.pick-lane + .pick-lane { border-left: 1px solid var(--line); }
-.side-blue-lane { background: var(--blue-soft); }
-.side-red-lane { background: var(--red-soft); }
+.side-columns { display: grid; grid-template-columns: 1fr 1fr; }
+.side-panel { min-height: 210px; padding: 13px; transition: opacity .18s ease, filter .18s ease, box-shadow .18s ease; }
+.side-panel + .side-panel { border-left: 1px solid var(--line); }
+.side-panel.side-blue { --side-color: var(--blue); background: var(--blue-soft); }
+.side-panel.side-red { --side-color: var(--red); background: var(--red-soft); }
+.side-panel.waiting { filter: saturate(.45); opacity: .42; }
+.side-panel.active { box-shadow: inset 0 0 0 2px var(--side-color); }
+.side-panel.done { opacity: .82; }
+.side-panel-header, .row-title { align-items: center; display: flex; justify-content: space-between; gap: 10px; }
+.side-panel-header strong { font-size: 11px; letter-spacing: .04em; text-transform: uppercase; }
+.action-state { border: 1px solid currentColor; border-radius: 99px; color: var(--side-color); font-size: 9px; font-weight: 800; letter-spacing: .08em; padding: 3px 6px; }
+.side-panel.waiting .action-state { color: var(--muted); }
+.side-row { border-top: 1px solid rgb(104 119 137 / 18%); margin-top: 14px; padding-top: 10px; }
+.row-title { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.row-title span:last-child { color: var(--ink); }
 .icon-row { align-items: center; display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; min-height: 38px; }
 .icon-row.empty { color: #a1acb8; font-size: 12px; }
 .icon-chip { background: transparent; border: 0; border-radius: 50%; display: inline-flex; padding: 0; position: relative; }
@@ -109,8 +120,8 @@ a { color: var(--blue); }
   .shell { width: min(100% - 20px, 1240px); padding-top: 16px; }
   .panel-heading { flex-direction: column; }
   .simulation-controls { justify-content: flex-start; }
-  .pick-columns, .found-picks { grid-template-columns: 1fr; }
-  .pick-lane + .pick-lane { border-left: 0; border-top: 1px solid var(--line); }
+  .side-columns, .found-picks { grid-template-columns: 1fr; }
+  .side-panel + .side-panel { border-left: 0; border-top: 1px solid var(--line); }
   .versus { display: none; }
   .score-wrap { align-items: flex-start; }
   .score-detail { text-align: left; }

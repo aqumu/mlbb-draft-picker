@@ -31,12 +31,26 @@
         </div>
         <div id="phase-callout" class="phase-callout"><span id="phase-kind" class="phase-kind">SETUP</span><strong id="phase-owner" class="phase-owner">Ready</strong><span id="phase-side" class="side-badge">Blue side</span></div>
         <div class="phase-progress"><span id="phase-count">Setup</span><div class="progress-track"><span id="progress-bar"></span></div></div>
+        <div id="draft-order-preview" class="draft-order-preview">
+          <span class="order-label">Draft order</span>
+          <span id="order-first">Blue side gets first pick</span>
+          <span id="order-double">Red side gets the double pick</span>
+          <span id="order-bans">Blue side bans first</span>
+          <span id="order-you">You are Blue side</span>
+        </div>
 
         <div class="draft-board">
-          <div class="ban-strip"><div class="strip-title"><span>Bans</span><span id="ban-count">0 / 10</span></div><div id="ban-legend" class="action-legend"></div><div id="bans" class="icon-row empty">No bans yet</div></div>
-          <div class="pick-columns">
-            <div id="our-lane" class="pick-lane side-blue-lane"><div class="lane-title"><span><span id="our-label">Your picks</span> <span id="our-side-badge" class="side-badge side-blue">Blue side</span></span><span id="our-count">0 / 5</span></div><div id="our_picks" class="icon-row empty">No picks yet</div></div>
-            <div id="enemy-lane" class="pick-lane side-red-lane"><div class="lane-title"><span><span id="enemy-label">Opponent picks</span> <span id="enemy-side-badge" class="side-badge side-red">Red side</span></span><span id="enemy-count">0 / 5</span></div><div id="enemy_picks" class="icon-row empty">No picks yet</div></div>
+          <div class="side-columns">
+            <section id="our-panel" class="side-panel side-blue">
+              <div class="side-panel-header"><div><strong id="our-label">Your team</strong> <span id="our-side-badge" class="side-badge side-blue">Blue side</span></div><span id="our-action-state" class="action-state">READY</span></div>
+              <div class="side-row"><div class="row-title"><span>Bans</span><span id="our-ban-count">0 / 5</span></div><div id="our_bans" class="icon-row empty">No bans yet</div></div>
+              <div class="side-row"><div class="row-title"><span>Picks</span><span id="our-count">0 / 5</span></div><div id="our_picks" class="icon-row empty">No picks yet</div></div>
+            </section>
+            <section id="enemy-panel" class="side-panel side-red">
+              <div class="side-panel-header"><div><strong id="enemy-label">Opponent</strong> <span id="enemy-side-badge" class="side-badge side-red">Red side</span></div><span id="enemy-action-state" class="action-state">READY</span></div>
+              <div class="side-row"><div class="row-title"><span>Bans</span><span id="enemy-ban-count">0 / 5</span></div><div id="enemy_bans" class="icon-row empty">No bans yet</div></div>
+              <div class="side-row"><div class="row-title"><span>Picks</span><span id="enemy-count">0 / 5</span></div><div id="enemy_picks" class="icon-row empty">No picks yet</div></div>
+            </section>
           </div>
         </div>
 
