@@ -19,7 +19,7 @@ const setupText = "Before starting, click heroes to hide the ones your team will
 
 const sideLabel = (side) => side === "red side" ? "Red side" : "Blue side";
 const oppositeSide = (side) => side === "red side" ? "blue side" : "red side";
-const teamLabel = (team) => team === "our" ? `Your ${sideLabel(state.simulation.side)}` : `Opponent ${sideLabel(oppositeSide(state.simulation.side))}`;
+const teamLabel = (team) => team === "our" ? "Your team" : "Opponent";
 const sideClass = (side) => side === "red side" ? "side-red" : "side-blue";
 
 function formatSteps(format, ourSide) {
@@ -74,8 +74,15 @@ function renderBoard() {
   $("#ban-count").textContent = `${bans.length} / ${state.simulation.format === "regular" ? 6 : 10}`;
   $("#our-count").textContent = `${state.board.our_picks.length} / 5`;
   $("#enemy-count").textContent = `${state.board.enemy_picks.length} / 5`;
-  $("#our-label").textContent = `Your ${sideLabel(state.simulation.side)}`;
-  $("#enemy-label").textContent = `Opponent ${sideLabel(oppositeSide(state.simulation.side))}`;
+  const enemySide = oppositeSide(state.simulation.side);
+  $("#our-label").textContent = "Your picks";
+  $("#enemy-label").textContent = "Opponent picks";
+  $("#our-side-badge").textContent = sideLabel(state.simulation.side);
+  $("#our-side-badge").className = `side-badge ${sideClass(state.simulation.side)}`;
+  $("#enemy-side-badge").textContent = sideLabel(enemySide);
+  $("#enemy-side-badge").className = `side-badge ${sideClass(enemySide)}`;
+  $("#our-lane").className = `pick-lane ${sideClass(state.simulation.side)}-lane`;
+  $("#enemy-lane").className = `pick-lane ${sideClass(enemySide)}-lane`;
   $("#ban-legend").innerHTML = `<span class="legend-dot side-blue"></span> Blue side <span class="legend-dot side-red"></span> Red side`;
 
   const excluded = $("#excluded-wrap");
@@ -126,16 +133,17 @@ function renderPhase() {
   const start = $("#start-simulation");
   const phaseKind = $("#phase-kind");
   const phaseOwner = $("#phase-owner");
+  const phaseSide = $("#phase-side");
   const phaseInstruction = $("#phase-instruction");
   if (!active && !complete) {
     label.textContent = "Setup"; detail.textContent = setupText; start.textContent = "Start simulation";
     phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
-    phaseKind.textContent = "SETUP"; phaseOwner.textContent = `Your team / ${sideLabel(state.simulation.side)}`; phaseInstruction.textContent = "Hide heroes before starting.";
+    phaseKind.textContent = "SETUP"; phaseOwner.textContent = "Choose your side"; phaseSide.textContent = sideLabel(state.simulation.side); phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`; phaseInstruction.textContent = "Hide heroes before starting.";
     $("#phase-count").textContent = "Setup"; $("#phase-next").textContent = "Click a hero to hide it"; $("#progress-bar").style.width = "0%";
   } else if (complete) {
     label.textContent = "Draft complete"; detail.textContent = "Review the matching professional drafts below."; start.textContent = "Start again";
     phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
-    phaseKind.textContent = "COMPLETE"; phaseOwner.textContent = `Your team / ${sideLabel(state.simulation.side)}`; phaseInstruction.textContent = "All bans and picks are recorded.";
+    phaseKind.textContent = "COMPLETE"; phaseOwner.textContent = "Draft complete"; phaseSide.textContent = `Your ${sideLabel(state.simulation.side)}`; phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`; phaseInstruction.textContent = "All bans and picks are recorded.";
     $("#phase-count").textContent = `${steps.length} / ${steps.length}`; $("#phase-next").textContent = "All actions recorded"; $("#progress-bar").style.width = "100%";
   } else {
     const step = steps[stepIndex];
@@ -143,7 +151,7 @@ function renderPhase() {
     label.textContent = step.label;
     detail.textContent = `${actor} ${step.kind === "ban" ? "bans" : "picks"} next. Click one hero to continue.`;
     phaseOwner.className = `phase-owner ${sideClass(step.side)}`;
-    phaseKind.textContent = step.kind === "ban" ? "BAN PHASE" : "PICK PHASE"; phaseOwner.textContent = actor; phaseInstruction.textContent = `${sideLabel(step.side)} acts now.`;
+    phaseKind.textContent = step.kind === "ban" ? "BAN PHASE" : "PICK PHASE"; phaseOwner.textContent = `${actor} turn`; phaseSide.textContent = sideLabel(step.side); phaseSide.className = `side-badge ${sideClass(step.side)}`; phaseInstruction.textContent = "Click one hero to continue.";
     start.textContent = "Simulation running";
     $("#phase-count").textContent = `Step ${stepIndex + 1} / ${steps.length}`; $("#phase-next").textContent = `${actor} action`;
     $("#progress-bar").style.width = `${(stepIndex / steps.length) * 100}%`;
