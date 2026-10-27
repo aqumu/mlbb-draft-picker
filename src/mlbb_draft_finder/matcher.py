@@ -122,7 +122,7 @@ def _score(catalog: Catalog, remaining: tuple[str, ...], enemy: tuple[str, ...])
 
 def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> list[Candidate]:
     heroes = catalog.heroes()
-    ours, enemies, bans = set(state.our_picks), set(state.enemy_picks), set(state.bans)
+    ours, enemies, bans, excluded = set(state.our_picks), set(state.enemy_picks), set(state.bans), set(state.excluded_heroes)
     output: list[Candidate] = []
     for match in catalog.matches():
         match_bans = tuple(match.bans())
@@ -133,7 +133,7 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
             opponent_bans = tuple(match.bans_for(opponent_side))
             if len(composition) != 5 or len(set(composition)) != 5:
                 continue
-            if not ours.issubset(composition) or enemies.intersection(composition):
+            if not ours.issubset(composition) or enemies.intersection(composition) or excluded.intersection(composition):
                 continue
             if bans.intersection(composition) or state.available_heroes is not None and not set(composition).issubset(state.available_heroes):
                 continue

@@ -28,7 +28,8 @@ def _state(payload: dict[str, Any], catalog: Catalog) -> DraftState:
     available = payload.get("available_heroes")
     return DraftState(resolve(payload.get("our_picks")), resolve(payload.get("enemy_picks")), resolve(payload.get("bans")), tuple(pools),
                        {aliases.get(str(k).strip().lower(), str(k).strip().lower()): str(v) for k, v in payload.get("locked_players", {}).items()},
-                       frozenset(resolve(available)) if available is not None else None)
+                       frozenset(resolve(available)) if available is not None else None,
+                       resolve(payload.get("excluded_heroes")))
 
 
 def create_handler(catalog: Catalog):
@@ -54,7 +55,10 @@ def create_handler(catalog: Catalog):
             if parsed.path == "/v1/health":
                 self._send(200, {"status": "ok", "matches": len(catalog.matches()), "heroes": len(catalog.heroes())})
             elif parsed.path == "/v1/heroes":
-                self._send(200, [{"slug": h.slug, "name": h.name, "roles": list(h.roles), "aliases": list(h.aliases)} for h in catalog.heroes().values()])
+                usage = catalog.hero_usage()
+                self._send(200, [{"slug": h.slug, "name": h.name, "roles": list(h.roles), "aliases": list(h.aliases),
+                                  **usage.get(h.slug, {"recent_picks": 0, "recent_bans": 0, "recent_games": 0, "usage_score": 0}),
+                                  "recent_window_days": 180} for h in catalog.heroes().values()])
             elif parsed.path == "/v1/matches":
                 self._send(200, [_match_as_dict(m) for m in catalog.matches()])
             elif parsed.path == "/v1/relationships":

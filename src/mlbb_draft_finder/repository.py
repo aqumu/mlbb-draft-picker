@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Iterable
 
@@ -130,6 +131,53 @@ class Catalog:
     def heroes(self) -> dict[str, Hero]:
         rows = self.db.execute("SELECT * FROM heroes").fetchall()
         return {r["slug"]: Hero(r["slug"], r["name"], tuple(json.loads(r["roles_json"])), tuple(json.loads(r["aliases_json"]))) for r in rows}
+
+    def hero_usage(self, recent_days: int = 180) -> dict[str, dict[str, int]]:
+        """Return pick/ban frequency for the recent tournament window."""
+        matches = self.matches()
+        parsed_dates = []
+        for match in matches:
+            if not match.date:
+                continue
+            try:
+                parsed_dates.append(datetime.fromisoformat(match.date).date())
+            except ValueError:
+                for fmt in ("%b %d, %Y", "%B %d, %Y"):
+                    try:
+                        parsed_dates.append(datetime.strptime(match.date, fmt).date())
+                        break
+                    except ValueError:
+                        continue
+        anchor = max(parsed_dates, default=date.today())
+        cutoff = anchor - timedelta(days=recent_days)
+        counts = {slug: {"recent_picks": 0, "recent_bans": 0, "recent_games": 0} for slug in self.heroes()}
+        seen_games: dict[str, set[str]] = {slug: set() for slug in counts}
+        for match in matches:
+            if not match.date:
+                continue
+            try:
+                match_date = datetime.fromisoformat(match.date).date()
+            except ValueError:
+                match_date = None
+                for fmt in ("%b %d, %Y", "%B %d, %Y"):
+                    try:
+                        match_date = datetime.strptime(match.date, fmt).date()
+                        break
+                    except ValueError:
+                        continue
+            if match_date is None or match_date < cutoff:
+                continue
+            for action in match.actions:
+                row = counts.setdefault(action.hero, {"recent_picks": 0, "recent_bans": 0, "recent_games": 0})
+                if action.phase == "pick":
+                    row["recent_picks"] += 1
+                elif action.phase == "ban":
+                    row["recent_bans"] += 1
+                seen_games.setdefault(action.hero, set()).add(match.id)
+        for slug, row in counts.items():
+            row["recent_games"] = len(seen_games.get(slug, set()))
+            row["usage_score"] = row["recent_picks"] + row["recent_bans"]
+        return counts
 
     def matches(self) -> list[MatchDraft]:
         rows = self.db.execute("SELECT * FROM matches ORDER BY match_date DESC, id").fetchall()

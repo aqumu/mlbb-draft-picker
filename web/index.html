@@ -10,56 +10,63 @@
     <main class="shell">
       <header class="topbar">
         <div>
-          <h1>MLBB Pro Draft Finder</h1>
-          <p>Find historical five-hero drafts that still fit the current board.</p>
+          <p class="eyebrow">MLBB draft room</p>
+          <h1>Build a real pro draft, one action at a time.</h1>
+          <p>Choose a lobby format, then click a hero to apply the current ban or pick.</p>
         </div>
-        <span id="api-status" class="status">Connecting…</span>
+        <span id="api-status" class="status">Connecting...</span>
       </header>
 
-      <section class="panel draft-panel">
+      <section class="panel simulation-panel">
         <div class="panel-heading">
           <div>
-            <h2>Current draft</h2>
-            <p>Choose a bucket, then click heroes. Picks and bans are hard filters.</p>
+            <h2 id="phase-label">Setup</h2>
+            <p id="phase-detail">Before starting, click heroes to hide the ones your team will not play.</p>
           </div>
-          <div class="mode-label">Add heroes to
-            <div id="mode-switch" class="mode-switch" role="group" aria-label="Add heroes to">
-              <button class="mode-button active" type="button" data-mode="our_picks">Our picks</button>
-              <button class="mode-button" type="button" data-mode="enemy_picks">Enemy picks</button>
-              <button class="mode-button" type="button" data-mode="bans">Bans</button>
-            </div>
+          <div class="simulation-controls">
+            <label>Lobby
+              <select id="simulation-format">
+                <option value="tournament">Tournament lobby</option>
+                <option value="regular">Regular lobby</option>
+              </select>
+            </label>
+            <button id="start-simulation" class="button primary" type="button">Start simulation</button>
+            <button id="reset-simulation" class="button subtle" type="button">Reset</button>
+          </div>
+        </div>
+        <div class="phase-progress"><span id="phase-count">Setup</span><div class="progress-track"><span id="progress-bar"></span></div><span id="phase-next">Click a hero to continue</span></div>
+
+        <div class="draft-board">
+          <div class="ban-strip"><div class="strip-title"><span>Bans</span><span id="ban-count">0 / 10</span></div><div id="bans" class="icon-row empty">No bans yet</div></div>
+          <div class="pick-columns">
+            <div class="pick-lane our-lane"><div class="lane-title"><span>Our side</span><span id="our-count">0 / 5</span></div><div id="our_picks" class="icon-row empty">No picks yet</div></div>
+            <div class="pick-lane enemy-lane"><div class="lane-title"><span>Opponent</span><span id="enemy-count">0 / 5</span></div><div id="enemy_picks" class="icon-row empty">No picks yet</div></div>
           </div>
         </div>
 
-        <div class="bucket-grid">
-          <div class="bucket"><h3>Our picks <span id="our-count">0</span></h3><div id="our_picks" class="chips empty">None</div></div>
-          <div class="bucket"><h3>Enemy picks <span id="enemy-count">0</span></h3><div id="enemy_picks" class="chips empty">None</div></div>
-          <div class="bucket"><h3>Bans <span id="ban-count">0</span></h3><div id="bans" class="chips empty">None</div></div>
+        <div id="excluded-wrap" class="excluded-wrap" hidden>
+          <div class="strip-title"><span>Hidden from our team</span><button id="restore-hidden" class="text-button" type="button">Restore all</button></div>
+          <div id="excluded" class="icon-row"></div>
         </div>
 
         <div class="hero-toolbar">
-          <input id="hero-search" type="search" placeholder="Filter heroes…" autocomplete="off" />
-          <button id="clear-board" class="button subtle">Clear board</button>
+          <label class="search-wrap"><span class="sr-only">Search heroes</span><input id="hero-search" type="search" placeholder="Search heroes..." autocomplete="off" /></label>
+          <span id="hero-sort-note" class="sort-note">Sorted by recent pick + ban frequency</span>
         </div>
         <div id="hero-grid" class="hero-grid" aria-live="polite"></div>
       </section>
 
       <details class="panel pools-panel">
         <summary class="panel-heading">
-          <div><h2>Player pools <span class="optional">optional</span></h2><p>Use canonical hero slugs separated by commas. Leave rows blank to ignore pools.</p></div>
+          <div><h2>Player pools <span class="optional">optional</span></h2><p>Use these only when you want the historical side to fit specific players.</p></div>
           <span class="summary-caret" aria-hidden="true">+</span>
         </summary>
         <div id="pool-rows" class="pool-rows"></div>
       </details>
 
-      <section class="actions-row">
-        <button id="find-button" class="button primary">Find historical drafts</button>
-        <span id="error" class="error" role="alert"></span>
-      </section>
-
       <section class="panel results-panel">
-        <div class="panel-heading"><div><h2>Historical drafts</h2><p id="result-summary">Add the visible draft state, then search.</p></div><p id="score-note" class="score-note">Fit is reduced when matchup evidence is sparse.</p></div>
-        <div id="results" class="results"><div class="empty-state">Add picks, enemy picks, or bans, then search.</div></div>
+        <div class="panel-heading"><div><p class="eyebrow">Live matches</p><h2>Historical drafts</h2><p id="result-summary">Start the simulation to see eligible drafts.</p></div><p id="score-note" class="score-note">Results refresh after every action.</p></div>
+        <div id="results" class="results"><div class="empty-state">Your candidate drafts will appear here as the board changes.</div></div>
       </section>
     </main>
     <script src="./app.js" type="module"></script>
