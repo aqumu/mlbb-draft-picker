@@ -7,22 +7,11 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div id="api-toast" class="api-toast" role="status" aria-live="polite" hidden></div>
     <main class="shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">MLBB draft room</p>
-          <h1>Build a real pro draft, one action at a time.</h1>
-          <p>Choose a lobby format, then click a hero to apply the current ban or pick.</p>
-        </div>
-        <span id="api-status" class="status">Connecting...</span>
-      </header>
-
       <section class="panel simulation-panel">
         <div class="panel-heading">
-          <div>
-            <h2 id="phase-label">Setup</h2>
-            <p id="phase-detail">Before starting, click heroes to hide the ones your team will not play.</p>
-          </div>
+          <h2 id="phase-label">Setup</h2>
           <div class="simulation-controls">
             <label>Lobby
               <select id="simulation-format">
@@ -40,8 +29,8 @@
             <button id="reset-simulation" class="button subtle" type="button">Reset</button>
           </div>
         </div>
-        <div id="phase-callout" class="phase-callout"><span id="phase-kind" class="phase-kind">SETUP</span><strong id="phase-owner" class="phase-owner">Choose your side</strong><span id="phase-side" class="side-badge">Blue side</span><span id="phase-instruction">Hide heroes before starting.</span></div>
-        <div class="phase-progress"><span id="phase-count">Setup</span><div class="progress-track"><span id="progress-bar"></span></div><span id="phase-next">Click a hero to continue</span></div>
+        <div id="phase-callout" class="phase-callout"><span id="phase-kind" class="phase-kind">SETUP</span><strong id="phase-owner" class="phase-owner">Ready</strong><span id="phase-side" class="side-badge">Blue side</span></div>
+        <div class="phase-progress"><span id="phase-count">Setup</span><div class="progress-track"><span id="progress-bar"></span></div></div>
 
         <div class="draft-board">
           <div class="ban-strip"><div class="strip-title"><span>Bans</span><span id="ban-count">0 / 10</span></div><div id="ban-legend" class="action-legend"></div><div id="bans" class="icon-row empty">No bans yet</div></div>
@@ -58,22 +47,21 @@
 
         <div class="hero-toolbar">
           <label class="search-wrap"><span class="sr-only">Search heroes</span><input id="hero-search" type="search" placeholder="Search heroes..." autocomplete="off" /></label>
-          <span id="hero-sort-note" class="sort-note">Sorted by recent pick + ban frequency</span>
         </div>
         <div id="hero-grid" class="hero-grid" aria-live="polite"></div>
       </section>
 
       <details class="panel pools-panel">
         <summary class="panel-heading">
-          <div><h2>Player pools <span class="optional">optional</span></h2><p>Use these only when you want the historical side to fit specific players.</p></div>
+          <h2>Player pools</h2>
           <span class="summary-caret" aria-hidden="true">+</span>
         </summary>
         <div id="pool-rows" class="pool-rows"></div>
       </details>
 
       <section class="panel results-panel">
-        <div class="panel-heading"><div><p class="eyebrow">Live matches</p><h2>Historical drafts</h2><p id="result-summary">Start the simulation to see eligible drafts.</p></div><p id="score-note" class="score-note">Results refresh after every action.</p></div>
-        <div id="results" class="results"><div class="empty-state">Your candidate drafts will appear here as the board changes.</div></div>
+        <div class="panel-heading"><div><h2>Historical drafts</h2><p id="result-summary"></p></div></div>
+        <div id="results" class="results"><div class="empty-state">No drafts yet.</div></div>
       </section>
     </main>
     <script src="./app.js" type="module"></script>

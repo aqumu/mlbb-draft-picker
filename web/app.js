@@ -14,8 +14,8 @@ const iconUrl = (hero) => `${ICON_BASE}/${hero.slug}/icone.webp`;
 const heroBySlug = (value) => state.heroes.find((hero) => hero.slug === value) || { slug: value, name: value, recent_picks: 0, recent_bans: 0 };
 let searchTimer = null;
 let searchRequestId = 0;
-
-const setupText = "Before starting, click heroes to hide the ones your team will not play.";
+let apiState = "unknown";
+let reconnectTimer = null;
 
 const sideLabel = (side) => side === "red side" ? "Red side" : "Blue side";
 const oppositeSide = (side) => side === "red side" ? "blue side" : "red side";
@@ -44,7 +44,54 @@ function formatSteps(format, ourSide) {
 }
 
 function setStatus(text, kind = "") {
-  const el = $("#api-status"); el.textContent = text; el.className = `status ${kind}`;
+  const el = $("#api-toast");
+  if (!el) return;
+  if (kind === "ok" || !text) { el.hidden = true; return; }
+  el.textContent = text;
+  el.className = `api-toast ${kind}`;
+  el.hidden = false;
+}
+
+function markConnecting() {
+  apiState = "connecting";
+  setStatus("Connecting…", "pending");
+}
+
+function markReconnecting() {
+  apiState = "reconnecting";
+  setStatus("Reconnecting…", "pending");
+}
+
+function markConnected() {
+  apiState = "connected";
+  clearTimeout(reconnectTimer);
+  setStatus("", "ok");
+}
+
+function markDisconnected() {
+  apiState = "disconnected";
+  setStatus("Not connected", "bad");
+}
+
+const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+async function request(url, options = {}) {
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      const response = await fetch(url, options);
+      markConnected();
+      return response;
+    } catch (error) {
+      lastError = error;
+      if (attempt === 0) {
+        if (apiState === "connected") markReconnecting(); else markConnecting();
+        await wait(650);
+      }
+    }
+  }
+  markDisconnected();
+  throw lastError;
 }
 
 function usedHeroes() {
@@ -108,9 +155,9 @@ function renderHeroes() {
 function renderPools() {
   $("#pool-rows").innerHTML = Array.from({ length: 5 }, (_, index) => `<div class="pool-row">
     <input data-pool="player" data-index="${index}" placeholder="Player ${index + 1}">
-    <input data-pool="roles" data-index="${index}" placeholder="Role">
-    <input data-pool="can_play" data-index="${index}" placeholder="Can play: fredrinn, atlas">
-    <input data-pool="cannot_play" data-index="${index}" placeholder="Cannot play: fanny">
+    <input data-pool="roles" data-index="${index}" placeholder="Roles">
+    <input data-pool="can_play" data-index="${index}" placeholder="Can play">
+    <input data-pool="cannot_play" data-index="${index}" placeholder="Cannot play">
   </div>`).join("");
   document.querySelectorAll("[data-pool]").forEach((input) => input.addEventListener("input", scheduleSearch));
 }
@@ -129,31 +176,28 @@ function poolsPayload() {
 function renderPhase() {
   const { active, complete, stepIndex, steps } = state.simulation;
   const label = $("#phase-label");
-  const detail = $("#phase-detail");
   const start = $("#start-simulation");
   const phaseKind = $("#phase-kind");
   const phaseOwner = $("#phase-owner");
   const phaseSide = $("#phase-side");
-  const phaseInstruction = $("#phase-instruction");
   if (!active && !complete) {
-    label.textContent = "Setup"; detail.textContent = setupText; start.textContent = "Start simulation";
+    label.textContent = "Setup"; start.textContent = "Start simulation";
     phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
-    phaseKind.textContent = "SETUP"; phaseOwner.textContent = "Choose your side"; phaseSide.textContent = sideLabel(state.simulation.side); phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`; phaseInstruction.textContent = "Hide heroes before starting.";
-    $("#phase-count").textContent = "Setup"; $("#phase-next").textContent = "Click a hero to hide it"; $("#progress-bar").style.width = "0%";
+    phaseKind.textContent = "SETUP"; phaseOwner.textContent = "Ready"; phaseSide.textContent = sideLabel(state.simulation.side); phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`;
+    $("#phase-count").textContent = "Setup"; $("#progress-bar").style.width = "0%";
   } else if (complete) {
-    label.textContent = "Draft complete"; detail.textContent = "Review the matching professional drafts below."; start.textContent = "Start again";
+    label.textContent = "Draft complete"; start.textContent = "Start again";
     phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
-    phaseKind.textContent = "COMPLETE"; phaseOwner.textContent = "Draft complete"; phaseSide.textContent = `Your ${sideLabel(state.simulation.side)}`; phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`; phaseInstruction.textContent = "All bans and picks are recorded.";
-    $("#phase-count").textContent = `${steps.length} / ${steps.length}`; $("#phase-next").textContent = "All actions recorded"; $("#progress-bar").style.width = "100%";
+    phaseKind.textContent = "COMPLETE"; phaseOwner.textContent = "Draft complete"; phaseSide.textContent = `Your ${sideLabel(state.simulation.side)}`; phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`;
+    $("#phase-count").textContent = `${steps.length} / ${steps.length}`; $("#progress-bar").style.width = "100%";
   } else {
     const step = steps[stepIndex];
     const actor = teamLabel(step.team);
     label.textContent = step.label;
-    detail.textContent = `${actor} ${step.kind === "ban" ? "bans" : "picks"} next. Click one hero to continue.`;
     phaseOwner.className = `phase-owner ${sideClass(step.side)}`;
-    phaseKind.textContent = step.kind === "ban" ? "BAN PHASE" : "PICK PHASE"; phaseOwner.textContent = `${actor} turn`; phaseSide.textContent = sideLabel(step.side); phaseSide.className = `side-badge ${sideClass(step.side)}`; phaseInstruction.textContent = "Click one hero to continue.";
+    phaseKind.textContent = step.kind === "ban" ? "BAN PHASE" : "PICK PHASE"; phaseOwner.textContent = `${actor} turn`; phaseSide.textContent = sideLabel(step.side); phaseSide.className = `side-badge ${sideClass(step.side)}`;
     start.textContent = "Simulation running";
-    $("#phase-count").textContent = `Step ${stepIndex + 1} / ${steps.length}`; $("#phase-next").textContent = `${actor} action`;
+    $("#phase-count").textContent = `Step ${stepIndex + 1} / ${steps.length}`;
     $("#progress-bar").style.width = `${(stepIndex / steps.length) * 100}%`;
   }
   start.disabled = active;
@@ -197,8 +241,8 @@ function startSimulation() {
 function resetSimulation() {
   resetBoard(true);
   state.simulation = { active: false, complete: false, format: $("#simulation-format").value, side: $("#team-side").value, stepIndex: 0, steps: [] };
-  $("#results").innerHTML = `<div class="empty-state">Your candidate drafts will appear here as the board changes.</div>`;
-  $("#result-summary").textContent = "Start the simulation to see eligible drafts.";
+  $("#results").innerHTML = `<div class="empty-state">No drafts yet.</div>`;
+  $("#result-summary").textContent = "";
   renderBoard(); renderHeroes(); renderPhase();
 }
 
@@ -236,7 +280,7 @@ async function search() {
   if (!state.simulation.active && !state.simulation.complete) return;
   const requestId = ++searchRequestId;
   try {
-    const response = await fetch(`${API_BASE}/v1/candidates`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state.board, our_side: state.simulation.side, excluded_heroes: state.hidden, player_pools: poolsPayload(), limit: 50 }) });
+    const response = await request(`${API_BASE}/v1/candidates`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state.board, our_side: state.simulation.side, excluded_heroes: state.hidden, player_pools: poolsPayload(), limit: 50 }) });
     const body = await response.json();
     if (!response.ok) throw new Error(body.message || body.error || `Search failed (${response.status})`);
     if (requestId === searchRequestId) renderResults(body.candidates);
@@ -249,7 +293,8 @@ function scheduleSearch() {
 }
 
 async function loadHeroes() {
-  const response = await fetch(`${API_BASE}/v1/heroes`);
+  markConnecting();
+  const response = await request(`${API_BASE}/v1/heroes`);
   if (!response.ok) throw new Error(`Hero request failed (${response.status})`);
   state.heroes = await response.json();
   renderBoard(); renderHeroes(); renderPhase();
@@ -262,4 +307,4 @@ $("#restore-hidden").addEventListener("click", () => { state.hidden = []; render
 $("#simulation-format").addEventListener("change", () => { state.simulation.format = $("#simulation-format").value; renderBoard(); });
 $("#team-side").addEventListener("change", () => { state.simulation.side = $("#team-side").value; renderBoard(); renderPhase(); });
 renderPools(); renderPhase();
-loadHeroes().then(() => setStatus("API connected", "ok")).catch((error) => { setStatus("API unavailable", "bad"); $("#results").innerHTML = `<div class="empty-state error">${error.message}</div>`; });
+loadHeroes().catch((error) => { markDisconnected(); $("#results").innerHTML = `<div class="empty-state error">${error.message}</div>`; });
