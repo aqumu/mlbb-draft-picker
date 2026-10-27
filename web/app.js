@@ -17,9 +17,7 @@ let searchRequestId = 0;
 let apiState = "unknown";
 let reconnectTimer = null;
 
-const sideLabel = (side) => side === "red side" ? "Red side" : "Blue side";
 const oppositeSide = (side) => side === "red side" ? "blue side" : "red side";
-const teamLabel = (team) => team === "our" ? "Your team" : "Opponent";
 const sideClass = (side) => side === "red side" ? "side-red" : "side-blue";
 
 function formatSteps(format, ourSide) {
@@ -103,16 +101,6 @@ function chipHtml(value, extra = "") {
   return `<button class="icon-chip ${extra}" type="button" title="${hero.name}" aria-label="${hero.name}"><img src="${iconUrl(hero)}" alt="${hero.name}"></button>`;
 }
 
-function renderOrderPreview() {
-  const preview = $("#draft-order-preview");
-  if (!preview) return;
-  preview.hidden = state.simulation.active || state.simulation.complete;
-  $("#order-first").textContent = "Blue side gets first pick";
-  $("#order-double").textContent = "Red side gets the first double pick";
-  $("#order-bans").textContent = state.simulation.format === "tournament" ? "Second ban phase starts with Red side" : "Blue side bans first";
-  $("#order-you").textContent = `You are ${sideLabel(state.simulation.side)}`;
-}
-
 function renderBoard() {
   const bans = state.history.filter((action) => action.kind === "ban");
   const renderRow = (selector, values, emptyText, team = null) => {
@@ -139,20 +127,16 @@ function renderBoard() {
   const enemySide = oppositeSide(state.simulation.side);
   $("#our-label").textContent = "Your team";
   $("#enemy-label").textContent = "Opponent";
-  $("#our-side-badge").textContent = sideLabel(state.simulation.side);
-  $("#our-side-badge").className = `side-badge ${sideClass(state.simulation.side)}`;
-  $("#enemy-side-badge").textContent = sideLabel(enemySide);
-  $("#enemy-side-badge").className = `side-badge ${sideClass(enemySide)}`;
   const step = state.simulation.active ? state.simulation.steps[state.simulation.stepIndex] : null;
+  const firstPickTeam = state.simulation.side === "blue side" ? "our" : "enemy";
   const setPanelState = (selector, team, side) => {
     const panel = $(selector);
-    const stateClass = state.simulation.complete ? "done" : step ? (step.team === team ? "active" : "waiting") : "ready";
+    const stateClass = state.simulation.complete ? "done" : step ? (step.team === team ? "active" : "waiting") : (team === firstPickTeam ? "ready" : "waiting");
     panel.className = `side-panel ${sideClass(side)} ${stateClass}`;
-    $(`${selector} .action-state`).textContent = state.simulation.complete ? "DONE" : step ? (step.team === team ? "ACTIVE" : "WAITING") : "READY";
+    $(`${selector} .action-state`).textContent = state.simulation.complete ? "DONE" : step ? (step.team === team ? "ACTIVE" : "WAITING") : (team === firstPickTeam ? "READY" : "WAITING");
   };
   setPanelState("#our-panel", "our", state.simulation.side);
   setPanelState("#enemy-panel", "enemy", enemySide);
-  renderOrderPreview();
 
   const excluded = $("#excluded-wrap");
   excluded.hidden = state.hidden.length === 0;
@@ -197,29 +181,19 @@ function poolsPayload() {
 
 function renderPhase() {
   const { active, complete, stepIndex, steps } = state.simulation;
-  const label = $("#phase-label");
   const start = $("#start-simulation");
-  const phaseKind = $("#phase-kind");
-  const phaseOwner = $("#phase-owner");
-  const phaseSide = $("#phase-side");
   if (!active && !complete) {
-    label.textContent = "Setup"; start.textContent = "Start simulation";
-    phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
-    phaseKind.textContent = "SETUP"; phaseOwner.textContent = "Ready"; phaseSide.textContent = sideLabel(state.simulation.side); phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`;
+    start.textContent = "Start simulation";
     $("#phase-count").textContent = "Setup"; $("#progress-bar").style.width = "0%";
   } else if (complete) {
-    label.textContent = "Draft complete"; start.textContent = "Start again";
-    phaseOwner.className = `phase-owner ${sideClass(state.simulation.side)}`;
-    phaseKind.textContent = "COMPLETE"; phaseOwner.textContent = "Draft complete"; phaseSide.textContent = `Your ${sideLabel(state.simulation.side)}`; phaseSide.className = `side-badge ${sideClass(state.simulation.side)}`;
-    $("#phase-count").textContent = `${steps.length} / ${steps.length}`; $("#progress-bar").style.width = "100%";
+    start.textContent = "Start again";
+    $("#phase-count").textContent = "Complete"; $("#progress-bar").style.width = "100%";
   } else {
-    const step = steps[stepIndex];
-    const actor = teamLabel(step.team);
-    label.textContent = step.label;
-    phaseOwner.className = `phase-owner ${sideClass(step.side)}`;
-    phaseKind.textContent = step.kind === "ban" ? "BAN PHASE" : "PICK PHASE"; phaseOwner.textContent = `${actor} turn`; phaseSide.textContent = sideLabel(step.side); phaseSide.className = `side-badge ${sideClass(step.side)}`;
     start.textContent = "Simulation running";
-    $("#phase-count").textContent = `Step ${stepIndex + 1} / ${steps.length}`;
+    const phaseLabel = state.simulation.format === "regular"
+      ? (stepIndex < 6 ? "Triple ban phase" : "Triple pick phase")
+      : stepIndex < 6 ? "Triple ban phase" : stepIndex < 12 ? "Triple pick phase" : stepIndex < 16 ? "Double ban phase" : "Double pick phase";
+    $("#phase-count").textContent = phaseLabel;
     $("#progress-bar").style.width = `${(stepIndex / steps.length) * 100}%`;
   }
   start.disabled = active;
