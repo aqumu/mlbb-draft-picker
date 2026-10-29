@@ -64,10 +64,20 @@ class PlayerPool:
     # hero -> mastery level (1 learning, 2 average, 3 master). A player with
     # neither mastery nor can_play entries is a wildcard that may play any hero.
     mastery: dict[str, int] = field(default_factory=dict)
+    # lane -> {hero: mastery level}. A listed lane with an empty hero map means
+    # "plays this lane, any hero". Without lanes the player is lane-agnostic.
+    lanes: dict[str, dict[str, int]] = field(default_factory=dict)
+
+    def slots(self) -> list[tuple[str, dict[str, int] | None]]:
+        """(lane, hero -> level) options this player can fill; None means any hero."""
+        if self.lanes:
+            return [(lane, heroes or None) for lane, heroes in self.lanes.items()]
+        pool = {**{hero: 2 for hero in self.can_play}, **self.mastery}
+        return [("any", pool or None)]
 
     @property
     def restricted(self) -> bool:
-        return bool(self.can_play or self.mastery)
+        return any(heroes is not None for _, heroes in self.slots())
 
 
 @dataclass(frozen=True)

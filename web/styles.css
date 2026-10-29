@@ -80,10 +80,18 @@ select { padding: 8px 9px; }
 .pools-panel[open] .summary-caret { transform: rotate(45deg); }
 .pool-summary { color: var(--muted); font-size: 11px; margin-left: auto; margin-right: 12px; }
 .pool-help { align-items: center; color: var(--muted); display: flex; font-size: 12px; gap: 12px; justify-content: space-between; margin-top: 12px; }
-.pool-rows { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 12px; }
-.pool-card { background: #fbfcfe; border: 1px solid var(--line); border-radius: 10px; display: grid; gap: 10px; padding: 11px; }
+.pool-rows { display: grid; gap: 10px; margin-top: 12px; }
+.pool-row { background: #fbfcfe; border: 1px solid var(--line); border-radius: 10px; display: grid; gap: 14px; grid-template-columns: 230px 1fr; padding: 11px; }
+.pool-who { align-content: start; display: grid; gap: 8px; }
 .pool-name { font-weight: 700; }
-.pool-heroes { align-content: flex-start; display: flex; flex-wrap: wrap; gap: 6px; min-height: 66px; }
+.lane-toggles { display: flex; flex-wrap: wrap; gap: 5px; }
+.lane-toggle { background: #fff; border: 1px solid var(--line); border-radius: 99px; color: var(--muted); cursor: pointer; font-size: 11px; font-weight: 700; padding: 4px 9px; }
+.lane-toggle.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.pool-lanes { display: grid; gap: 8px; align-content: start; }
+.lane-pool { align-items: center; border: 1px dashed rgb(104 119 137 / 35%); border-radius: 9px; display: grid; gap: 10px; grid-template-columns: 52px 1fr; min-height: 58px; padding: 6px 10px; }
+.lane-pool.drop-over { background: #fff; border-color: var(--blue); }
+.lane-label { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.lane-heroes { align-items: center; display: flex; flex-wrap: wrap; gap: 6px; }
 .pool-any { align-self: center; color: #a1acb8; font-size: 12px; }
 .pool-hero { --level: #a1acb8; position: relative; }
 .pool-hero.level-2 { --level: var(--blue); }
@@ -93,7 +101,6 @@ select { padding: 8px 9px; }
 .pool-hero-pick span { color: var(--level); font-size: 9px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
 .pool-hero-x { background: var(--ink); border: 0; border-radius: 50%; color: #fff; cursor: pointer; font-size: 12px; height: 17px; line-height: 1; opacity: 0; padding: 0; position: absolute; right: -5px; top: -5px; width: 17px; }
 .pool-hero:hover .pool-hero-x, .pool-hero-x:focus-visible { opacity: 1; }
-.pool-add { font-size: 12px; }
 .results { display: grid; gap: 11px; margin-top: 14px; }
 .empty-state { color: var(--muted); font-size: 13px; padding: 22px 0; }
 .error { color: #a62d2d; }
@@ -132,3 +139,5 @@ a { color: var(--blue); }
 .pick-player { color: var(--muted); font-size: 10px; font-weight: 700; max-width: 56px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pick-player.level-3 { color: #c78a00; }
 .pick-player.level-2 { color: var(--blue); }
+.pick-lane { color: #a1acb8; font-size: 9px; font-weight: 800; letter-spacing: .05em; margin-top: -2px; text-transform: uppercase; }
+@media (max-width: 720px) { .pool-row { grid-template-columns: 1fr; } }

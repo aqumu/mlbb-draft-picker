@@ -50,61 +50,61 @@ class Candidate:
                 "rejection_reasons": list(self.rejection_reasons)}
 
 
-# Weight of a hero in a player's pool: mastery level 1/2/3 and, for players
-# without mastery data, plain can_play entries and wildcard players.
+# Weight of a hero in a player's pool: mastery level 1/2/3, or a neutral weight
+# when the player (or lane) has no hero list.
 MASTERY_WEIGHT = {1: 0.45, 2: 0.75, 3: 1.0}
-CAN_PLAY_WEIGHT = MASTERY_WEIGHT[2]
 WILDCARD_WEIGHT = 0.6
 
 
-def _weight(pool: PlayerPool, hero: str) -> float | None:
-    """How well this player fits the hero, or None if they cannot play it."""
-    if hero in pool.cannot_play:
-        return None
-    if hero in pool.mastery:
-        return MASTERY_WEIGHT.get(pool.mastery[hero], CAN_PLAY_WEIGHT)
-    if hero in pool.can_play:
-        return CAN_PLAY_WEIGHT
-    return None if pool.restricted else WILDCARD_WEIGHT
+def _weight(heroes: dict[str, int] | None, hero: str) -> float | None:
+    if heroes is None:
+        return WILDCARD_WEIGHT
+    return MASTERY_WEIGHT.get(heroes[hero], MASTERY_WEIGHT[2]) if hero in heroes else None
 
 
-def _assign(composition: tuple[str, ...], heroes: dict, state: DraftState) -> tuple[float, dict[str, str]] | None:
-    """Best one-hero-per-player assignment as (mean weight, hero -> player)."""
+def _assign(composition: tuple[str, ...], heroes: dict, state: DraftState) -> tuple[float, list[dict]] | None:
+    """Best assignment of heroes to distinct players and distinct lanes.
+
+    Returns (mean weight, [{hero, player, lane, mastery}]) or None when no
+    player/lane arrangement can field the composition.
+    """
     pools = state.player_pools
     if len(pools) < len(composition):
         return None
-    options: list[list[tuple[str, float]]] = []
+    options: list[list[tuple[str, str, float, int | None]]] = []
     for hero in composition:
         locked = state.locked_players.get(hero)
         choices = []
         for pool in pools:
-            if locked and locked != pool.player:
-                continue
-            weight = _weight(pool, hero)
-            if weight is None:
+            if locked and locked != pool.player or hero in pool.cannot_play:
                 continue
             if pool.roles and not set(pool.roles).intersection(heroes.get(hero).roles):
                 continue
-            choices.append((pool.player, weight))
+            for lane, slot in pool.slots():
+                weight = _weight(slot, hero)
+                if weight is not None:
+                    choices.append((pool.player, lane, weight, slot.get(hero) if slot else None))
         if not choices:
             return None
         options.append(choices)
-    best: tuple[float, list[str]] | None = None
-    def search(index: int, used: set[str], total: float, chosen: list[str]) -> None:
+    best: tuple[float, list[tuple[str, str, int | None]]] | None = None
+    def search(index: int, players: set[str], lanes: set[str], total: float, chosen: list) -> None:
         nonlocal best
         if index == len(composition):
             if best is None or total > best[0]:
                 best = (total, list(chosen))
             return
-        for player, weight in options[index]:
-            if player not in used:
-                used.add(player); chosen.append(player)
-                search(index + 1, used, total + weight, chosen)
-                used.discard(player); chosen.pop()
-    search(0, set(), 0.0, [])
+        for player, lane, weight, level in options[index]:
+            if player in players or (lane != "any" and lane in lanes):
+                continue
+            players.add(player); lanes.add(lane); chosen.append((player, lane, level))
+            search(index + 1, players, lanes, total + weight, chosen)
+            players.discard(player); lanes.discard(lane); chosen.pop()
+    search(0, set(), set(), 0.0, [])
     if best is None:
         return None
-    return best[0] / len(composition), dict(zip(composition, best[1]))
+    return best[0] / len(composition), [{"hero": hero, "player": player, "lane": None if lane == "any" else lane, "mastery": level}
+                                       for hero, (player, lane, level) in zip(composition, best[1])]
 
 
 def _score(catalog: Catalog, remaining: tuple[str, ...], enemy: tuple[str, ...]) -> tuple[float | None, tuple[dict, ...], dict]:
@@ -179,9 +179,7 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
                     continue
                 if any(pool.restricted for pool in state.player_pools):
                     roster_fit = round(assigned[0], 4)
-                    pools = {pool.player: pool for pool in state.player_pools}
-                    assignment = tuple({"hero": hero, "player": player, "mastery": pools[player].mastery.get(hero)}
-                                       for hero, player in assigned[1].items())
+                    assignment = tuple(assigned[1])
             remaining = tuple(h for h in composition if h not in ours)
             score, details, score_summary = _score(catalog, remaining, tuple(state.enemy_picks))
             if roster_fit is not None:

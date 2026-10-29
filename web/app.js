@@ -8,15 +8,18 @@ const state = {
   board: { our_picks: [], enemy_picks: [], bans: [] },
   simulation: { active: false, complete: false, format: "tournament", side: "blue side", stepIndex: 0, steps: [] },
 };
-const POOLS_KEY = "mlbb-draft-finder.pools.v1";
+const POOLS_KEY = "mlbb-draft-finder.pools.v2";
 const MASTERY = { 1: "Learning", 2: "Average", 3: "Master" };
+const LANES = { exp: "EXP", mid: "Mid", jungle: "Jungle", gold: "Gold", roam: "Roam" };
 const loadPools = () => {
-  const blank = () => Array.from({ length: 5 }, () => ({ name: "", heroes: {} }));
+  const blank = Array.from({ length: 5 }, () => ({ name: "", lanes: {} }));
   try {
     const saved = JSON.parse(localStorage.getItem(POOLS_KEY));
-    if (Array.isArray(saved)) return blank().map((player, index) => ({ name: String(saved[index]?.name || ""), heroes: { ...(saved[index]?.heroes || {}) } }));
+    if (Array.isArray(saved)) return blank.map((player, index) => ({ name: String(saved[index]?.name || ""), lanes: { ...(saved[index]?.lanes || {}) } }));
+    const legacy = JSON.parse(localStorage.getItem("mlbb-draft-finder.pools.v1")); // names only: v1 heroes had no lane
+    if (Array.isArray(legacy)) return blank.map((player, index) => ({ ...player, name: String(legacy[index]?.name || "") }));
   } catch { /* unreadable or unavailable storage: start empty */ }
-  return blank();
+  return blank;
 };
 state.pools = loadPools();
 const savePools = () => { try { localStorage.setItem(POOLS_KEY, JSON.stringify(state.pools)); } catch { /* storage unavailable */ } };
@@ -166,29 +169,37 @@ function renderHeroes() {
   document.querySelectorAll("[data-hero]").forEach((button) => button.addEventListener("click", () => handleHero(button.dataset.hero)));
 }
 
-const poolHeroes = (player) => Object.keys(player.heroes);
-const poolsActive = () => state.pools.some((player) => poolHeroes(player).length);
+const laneHeroes = (player) => Object.values(player.lanes).flatMap((heroes) => Object.keys(heroes));
+const poolsActive = () => state.pools.some((player) => laneHeroes(player).length);
 const playerName = (index) => state.pools[index].name.trim() || `Player ${index + 1}`;
 
-// A hero is out when every player has a hero list and none of them plays it. Players with a blank list can play anything.
+// A hero is out when no player can play it in any lane. Players without lanes, and lanes without heroes, are open to anything.
 function teamCanPlay(hero) {
-  return !poolsActive() || state.pools.some((player) => !poolHeroes(player).length || hero in player.heroes);
+  return !poolsActive() || state.pools.some((player) => {
+    const lanes = Object.values(player.lanes);
+    return !lanes.length || lanes.some((heroes) => !Object.keys(heroes).length || hero in heroes);
+  });
 }
 
 function renderPools() {
-  const names = state.heroes.map((hero) => `<option value="${hero.name}"></option>`).join("");
-  $("#pool-rows").innerHTML = `<datalist id="hero-names">${names}</datalist>` + state.pools.map((player, index) => {
-    const chips = poolHeroes(player).map((hero) => {
-      const level = player.heroes[hero]; const info = heroBySlug(hero);
-      return `<div class="pool-hero level-${level}"><button type="button" class="pool-hero-pick" data-cycle="${hero}" title="${info.name}: ${MASTERY[level]}. Click to change."><img src="${iconUrl(info)}" alt="${info.name}" draggable="false"><span>${MASTERY[level]}</span></button><button type="button" class="pool-hero-x" data-remove="${hero}" aria-label="Remove ${info.name}" title="Remove">×</button></div>`;
+  $("#pool-rows").innerHTML = state.pools.map((player, index) => {
+    const toggles = Object.entries(LANES).map(([lane, label]) => `<button type="button" class="lane-toggle${lane in player.lanes ? " on" : ""}" data-lane-toggle="${lane}" aria-pressed="${lane in player.lanes}">${label}</button>`).join("");
+    const lanes = Object.keys(LANES).filter((lane) => lane in player.lanes).map((lane) => {
+      const chips = Object.entries(player.lanes[lane]).map(([hero, level]) => {
+        const info = heroBySlug(hero);
+        return `<div class="pool-hero level-${level}"><button type="button" class="pool-hero-pick" data-cycle="${hero}" title="${info.name}: ${MASTERY[level]}. Click to change."><img src="${iconUrl(info)}" alt="${info.name}" draggable="false"><span>${MASTERY[level]}</span></button><button type="button" class="pool-hero-x" data-remove="${hero}" aria-label="Remove ${info.name}" title="Remove">×</button></div>`;
+      }).join("");
+      return `<div class="lane-pool" data-lane="${lane}"><span class="lane-label">${LANES[lane]}</span><div class="lane-heroes">${chips || `<span class="pool-any">Any hero. Drag heroes here to limit.</span>`}</div></div>`;
     }).join("");
-    return `<div class="pool-card" data-player="${index}">
-      <input class="pool-name" data-name placeholder="Player ${index + 1}" value="${player.name.replace(/"/g, "&quot;")}" aria-label="Player ${index + 1} name">
-      <div class="pool-heroes">${chips || `<span class="pool-any">Any hero</span>`}</div>
-      <input class="pool-add" data-add list="hero-names" placeholder="Add hero..." autocomplete="off" aria-label="Add hero for player ${index + 1}">
+    return `<div class="pool-row" data-player="${index}">
+      <div class="pool-who">
+        <input class="pool-name" data-name placeholder="Player ${index + 1}" value="${player.name.replace(/"/g, "&quot;")}" aria-label="Player ${index + 1} name">
+        <div class="lane-toggles">${toggles}</div>
+      </div>
+      <div class="pool-lanes">${lanes || `<span class="pool-any">Choose the lanes this player plays. No lane means anything goes.</span>`}</div>
     </div>`;
   }).join("");
-  const set = state.pools.filter((player) => poolHeroes(player).length).length;
+  const set = state.pools.filter((player) => laneHeroes(player).length).length;
   $("#pool-summary").textContent = set ? `${set} / 5 set` : "";
 }
 
@@ -197,53 +208,48 @@ function poolsChanged() {
   scheduleSearch();
 }
 
-function addPoolHero(index, hero, level = 2) {
-  if (!hero || hero in state.pools[index].heroes) return;
-  state.pools[index].heroes[hero] = level;
-  poolsChanged();
-  $(`[data-player="${index}"] [data-add]`)?.focus();
-}
+const pool = (target) => state.pools[Number(target.closest("[data-player]").dataset.player)];
 
 $("#pool-rows").addEventListener("input", (event) => {
   if (!event.target.matches("[data-name]")) return;
-  state.pools[Number(event.target.closest("[data-player]").dataset.player)].name = event.target.value;
+  pool(event.target).name = event.target.value;
   savePools(); scheduleSearch();
 });
-$("#pool-rows").addEventListener("change", (event) => {
-  if (!event.target.matches("[data-add]")) return;
-  const query = event.target.value.trim().toLowerCase();
-  const hero = state.heroes.find((entry) => entry.name.toLowerCase() === query || entry.slug === query);
-  if (hero) addPoolHero(Number(event.target.closest("[data-player]").dataset.player), hero.slug);
-  else event.target.value = "";
-});
 $("#pool-rows").addEventListener("click", (event) => {
-  const card = event.target.closest("[data-player]");
-  if (!card) return;
-  const player = state.pools[Number(card.dataset.player)];
+  if (!event.target.closest("[data-player]")) return;
+  const player = pool(event.target);
+  const toggle = event.target.closest("[data-lane-toggle]");
+  const lane = event.target.closest("[data-lane]")?.dataset.lane;
   const cycle = event.target.closest("[data-cycle]"); const remove = event.target.closest("[data-remove]");
-  if (cycle) player.heroes[cycle.dataset.cycle] = player.heroes[cycle.dataset.cycle] % 3 + 1;
-  else if (remove) delete player.heroes[remove.dataset.remove];
+  if (toggle) {
+    const key = toggle.dataset.laneToggle;
+    if (key in player.lanes) delete player.lanes[key]; else player.lanes[key] = {};
+  } else if (cycle && lane) player.lanes[lane][cycle.dataset.cycle] = player.lanes[lane][cycle.dataset.cycle] % 3 + 1;
+  else if (remove && lane) delete player.lanes[lane][remove.dataset.remove];
   else return;
   poolsChanged();
 });
-$("#pool-rows").addEventListener("dragover", (event) => { if (dragged && event.target.closest("[data-player]")) event.preventDefault(); });
+$("#pool-rows").addEventListener("dragover", (event) => { if (dragged && event.target.closest(".lane-pool")) { event.preventDefault(); event.target.closest(".lane-pool").classList.add("drop-over"); } });
+$("#pool-rows").addEventListener("dragleave", (event) => event.target.closest(".lane-pool")?.classList.remove("drop-over"));
 $("#pool-rows").addEventListener("drop", (event) => {
-  const card = event.target.closest("[data-player]");
-  if (!card || !dragged) return;
+  const target = event.target.closest(".lane-pool");
+  if (!target || !dragged) return;
   event.preventDefault();
-  const hero = dragged; dragged = null;
-  addPoolHero(Number(card.dataset.player), hero);
+  const heroes = pool(target).lanes[target.dataset.lane];
+  if (!(dragged in heroes)) heroes[dragged] = 2;
+  dragged = null;
+  poolsChanged();
 });
 $("#clear-pools").addEventListener("click", () => {
-  if (!state.pools.some((player) => player.name || poolHeroes(player).length) || !confirm("Clear all player pools?")) return;
-  state.pools = state.pools.map(() => ({ name: "", heroes: {} }));
+  if (!state.pools.some((player) => player.name || Object.keys(player.lanes).length) || !confirm("Clear all player pools?")) return;
+  state.pools = state.pools.map(() => ({ name: "", lanes: {} }));
   poolsChanged();
 });
 
 // Players are sent by index so duplicate or blank names never collide; heroes carry mastery levels.
 function poolsPayload() {
   if (!poolsActive()) return [];
-  return state.pools.map((player, index) => ({ player: `p${index}`, heroes: player.heroes }));
+  return state.pools.map((player, index) => ({ player: `p${index}`, lanes: player.lanes }));
 }
 
 function renderPhase() {
@@ -372,7 +378,8 @@ function pickCell(hero, byHero) {
   const entry = byHero[hero];
   if (!entry) return chipHtml(hero);
   const name = playerName(Number(entry.player.slice(1)));
-  return `<span class="pick-cell">${chipHtml(hero, "", "", `${heroBySlug(hero).name}: ${name}${entry.mastery ? ` (${MASTERY[entry.mastery]})` : ""}`)}<span class="pick-player level-${entry.mastery || 0}">${name}</span></span>`;
+  const lane = entry.lane ? LANES[entry.lane] : "";
+  return `<span class="pick-cell">${chipHtml(hero, "", "", `${heroBySlug(hero).name}: ${name}${lane ? `, ${lane}` : ""}${entry.mastery ? ` (${MASTERY[entry.mastery]})` : ""}`)}<span class="pick-player level-${entry.mastery || 0}">${name}</span>${lane ? `<span class="pick-lane">${lane}</span>` : ""}</span>`;
 }
 
 function teamColumn(name, sideCls, bans, picks, remaining = [], assignment = []) {

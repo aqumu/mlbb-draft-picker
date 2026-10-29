@@ -53,6 +53,23 @@ class FinderTests(unittest.TestCase):
         for candidate in result:
             self.assertAlmostEqual(candidate.roster_fit, (1.0 + 4 * 0.6) / 5)
 
+    def test_lane_pools_assign_one_player_per_lane(self):
+        lanes = {"a": {"exp": {"fredrinn": 3}}, "b": {"jungle": {"joy": 2}}, "c": {"mid": {"pharsa": 3}},
+                 "d": {"gold": {"brody": 1}}, "e": {"roam": {"floryn": 3}}}
+        pools = tuple(PlayerPool(name, lanes=pool) for name, pool in lanes.items())
+        candidate = next(c for c in find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools))
+                         if c.match_id == "mpl-id-s10-g1")
+        self.assertEqual({a["hero"]: a["lane"] for a in candidate.assignment},
+                         {"fredrinn": "exp", "joy": "jungle", "pharsa": "mid", "brody": "gold", "floryn": "roam"})
+        self.assertAlmostEqual(candidate.roster_fit, (1.0 + 0.75 + 1.0 + 0.45 + 1.0) / 5)
+
+    def test_two_players_cannot_share_a_lane(self):
+        lanes = {"a": {"exp": {"fredrinn": 3, "joy": 3}}, "b": {"exp": {"pharsa": 3}}, "c": {"mid": {"brody": 3}},
+                 "d": {"gold": {"floryn": 3}}, "e": {"roam": {}}}
+        pools = tuple(PlayerPool(name, lanes=pool) for name, pool in lanes.items())
+        result = find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools))
+        self.assertNotIn("mpl-id-s10-g1", [c.match_id for c in result])
+
     def test_ban_makes_candidate_ineligible(self):
         result = find_candidates(self.catalog, DraftState(bans=("joy",)))
         self.assertFalse(any(c.match_id == "mpl-id-s10-g1" and c.side == "team_a" for c in result))

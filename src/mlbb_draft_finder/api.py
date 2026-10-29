@@ -31,10 +31,18 @@ def _state(payload: dict[str, Any], catalog: Catalog) -> DraftState:
                 raise ValueError(f"Unknown mastery level for {hero}: {level}")
             result[key] = levels[str(level).strip().lower()]
         return result
+    lane_names = {"exp", "mid", "jungle", "gold", "roam"}
+    def lanes(raw_lanes: Any) -> dict[str, dict[str, int]]:
+        result = {}
+        for lane, raw_heroes in (raw_lanes or {}).items():
+            if str(lane).lower() not in lane_names:
+                raise ValueError(f"Unknown lane: {lane}")
+            result[str(lane).lower()] = mastery(raw_heroes)
+        return result
     pools = []
     for raw in payload.get("player_pools", []):
         pools.append(PlayerPool(str(raw["player"]), tuple(raw.get("roles", [])), frozenset(resolve(raw.get("can_play"))), frozenset(resolve(raw.get("cannot_play"))),
-                                mastery(raw.get("heroes"))))
+                                mastery(raw.get("heroes")), lanes(raw.get("lanes"))))
     available = payload.get("available_heroes")
     return DraftState(resolve(payload.get("our_picks")), resolve(payload.get("enemy_picks")), resolve(payload.get("bans")), tuple(pools),
                        {aliases.get(str(k).strip().lower(), str(k).strip().lower()): str(v) for k, v in payload.get("locked_players", {}).items()},
