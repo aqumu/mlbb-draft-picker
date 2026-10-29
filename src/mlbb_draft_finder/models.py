@@ -61,6 +61,13 @@ class PlayerPool:
     roles: tuple[str, ...] = ()
     can_play: frozenset[str] = frozenset()
     cannot_play: frozenset[str] = frozenset()
+    # hero -> mastery level (1 learning, 2 average, 3 master). A player with
+    # neither mastery nor can_play entries is a wildcard that may play any hero.
+    mastery: dict[str, int] = field(default_factory=dict)
+
+    @property
+    def restricted(self) -> bool:
+        return bool(self.can_play or self.mastery)
 
 
 @dataclass(frozen=True)

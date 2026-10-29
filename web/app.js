@@ -8,6 +8,18 @@ const state = {
   board: { our_picks: [], enemy_picks: [], bans: [] },
   simulation: { active: false, complete: false, format: "tournament", side: "blue side", stepIndex: 0, steps: [] },
 };
+const POOLS_KEY = "mlbb-draft-finder.pools.v1";
+const MASTERY = { 1: "Learning", 2: "Average", 3: "Master" };
+const loadPools = () => {
+  const blank = () => Array.from({ length: 5 }, () => ({ name: "", heroes: {} }));
+  try {
+    const saved = JSON.parse(localStorage.getItem(POOLS_KEY));
+    if (Array.isArray(saved)) return blank().map((player, index) => ({ name: String(saved[index]?.name || ""), heroes: { ...(saved[index]?.heroes || {}) } }));
+  } catch { /* unreadable or unavailable storage: start empty */ }
+  return blank();
+};
+state.pools = loadPools();
+const savePools = () => { try { localStorage.setItem(POOLS_KEY, JSON.stringify(state.pools)); } catch { /* storage unavailable */ } };
 const $ = (selector) => document.querySelector(selector);
 const slug = (value) => value.toLowerCase().trim().replace(/[\u2019']/g, "").replace(/\s+/g, "-");
 const iconUrl = (hero) => `${ICON_BASE}/${hero.slug}/icone.webp`;
@@ -96,10 +108,9 @@ function usedHeroes() {
   return new Set([...state.board.our_picks, ...state.board.enemy_picks, ...state.board.bans, ...state.hidden]);
 }
 
-function chipHtml(value, extra = "", draggable = false) {
+function chipHtml(value, extra = "", attrs = "", title = "") {
   const hero = heroBySlug(value);
-  const drag = draggable ? ` draggable="true" data-placed="${hero.slug}"` : "";
-  return `<button class="icon-chip ${extra}" type="button" title="${hero.name}" aria-label="${hero.name}"${drag}><img src="${iconUrl(hero)}" alt="${hero.name}" draggable="false"></button>`;
+  return `<button class="icon-chip ${extra}" type="button" title="${title || hero.name}" aria-label="${hero.name}" ${attrs}><img src="${iconUrl(hero)}" alt="${hero.name}" draggable="false"></button>`;
 }
 
 function renderBoard() {
@@ -111,7 +122,7 @@ function renderBoard() {
       const hero = typeof value === "string" ? value : value.hero;
       const actionTeam = typeof value === "string" ? team : value.team;
       const actionSide = actionTeam === "our" ? state.simulation.side : oppositeSide(state.simulation.side);
-      return chipHtml(hero, sideClass(actionSide), !state.simulation.active);
+      return chipHtml(hero, sideClass(actionSide), state.simulation.active ? "" : `draggable="true" data-placed="${hero}"`);
     }).join("") : emptyText;
   };
   const ourBans = bans.filter((action) => action.team === "our");
@@ -135,7 +146,7 @@ function renderBoard() {
 
   const excluded = $("#excluded-wrap");
   excluded.hidden = state.hidden.length === 0;
-  $("#excluded").innerHTML = state.hidden.map((value) => chipHtml(value, "excluded-chip")).join("");
+  $("#excluded").innerHTML = state.hidden.map((value) => chipHtml(value, "excluded-chip", `data-restore="${value}"`, `Restore ${heroBySlug(value).name}`)).join("");
 }
 
 function usageScore(hero) {
@@ -145,33 +156,94 @@ function usageScore(hero) {
 function renderHeroes() {
   const query = $("#hero-search").value.toLowerCase().trim();
   const used = usedHeroes();
+  const step = state.simulation.active ? state.simulation.steps[state.simulation.stepIndex] : null;
+  const ourTurn = step?.kind === "pick" && step.team === "our";
   const heroes = state.heroes
     .filter((hero) => !used.has(hero.slug))
     .filter((hero) => !query || hero.name.toLowerCase().includes(query) || hero.slug.includes(query))
     .sort((a, b) => usageScore(b) - usageScore(a) || b.recent_bans - a.recent_bans || a.name.localeCompare(b.name));
-  $("#hero-grid").innerHTML = heroes.map((hero) => `<button class="hero-button" type="button" draggable="true" data-hero="${hero.slug}" title="${hero.name} | ${hero.recent_picks || 0} picks | ${hero.recent_bans || 0} bans" aria-label="${hero.name}, ${hero.recent_picks || 0} recent picks, ${hero.recent_bans || 0} recent bans"><img src="${iconUrl(hero)}" alt="" draggable="false"><span class="hero-usage">P${hero.recent_picks || 0} | B${hero.recent_bans || 0}</span></button>`).join("") || `<div class="empty-state">No heroes match this filter.</div>`;
+  $("#hero-grid").innerHTML = heroes.map((hero) => `<button class="hero-button${ourTurn && !teamCanPlay(hero.slug) ? " unplayable" : ""}" type="button" draggable="true" data-hero="${hero.slug}" title="${hero.name} | ${hero.recent_picks || 0} picks | ${hero.recent_bans || 0} bans${ourTurn && !teamCanPlay(hero.slug) ? " | nobody on your team plays this" : ""}" aria-label="${hero.name}, ${hero.recent_picks || 0} recent picks, ${hero.recent_bans || 0} recent bans"><img src="${iconUrl(hero)}" alt="" draggable="false"><span class="hero-usage">P${hero.recent_picks || 0} | B${hero.recent_bans || 0}</span></button>`).join("") || `<div class="empty-state">No heroes match this filter.</div>`;
   document.querySelectorAll("[data-hero]").forEach((button) => button.addEventListener("click", () => handleHero(button.dataset.hero)));
 }
 
-function renderPools() {
-  $("#pool-rows").innerHTML = Array.from({ length: 5 }, (_, index) => `<div class="pool-row">
-    <input data-pool="player" data-index="${index}" placeholder="Player ${index + 1}">
-    <input data-pool="roles" data-index="${index}" placeholder="Roles">
-    <input data-pool="can_play" data-index="${index}" placeholder="Can play">
-    <input data-pool="cannot_play" data-index="${index}" placeholder="Cannot play">
-  </div>`).join("");
-  document.querySelectorAll("[data-pool]").forEach((input) => input.addEventListener("input", scheduleSearch));
+const poolHeroes = (player) => Object.keys(player.heroes);
+const poolsActive = () => state.pools.some((player) => poolHeroes(player).length);
+const playerName = (index) => state.pools[index].name.trim() || `Player ${index + 1}`;
+
+// A hero is out when every player has a hero list and none of them plays it. Players with a blank list can play anything.
+function teamCanPlay(hero) {
+  return !poolsActive() || state.pools.some((player) => !poolHeroes(player).length || hero in player.heroes);
 }
 
+function renderPools() {
+  const names = state.heroes.map((hero) => `<option value="${hero.name}"></option>`).join("");
+  $("#pool-rows").innerHTML = `<datalist id="hero-names">${names}</datalist>` + state.pools.map((player, index) => {
+    const chips = poolHeroes(player).map((hero) => {
+      const level = player.heroes[hero]; const info = heroBySlug(hero);
+      return `<div class="pool-hero level-${level}"><button type="button" class="pool-hero-pick" data-cycle="${hero}" title="${info.name}: ${MASTERY[level]}. Click to change."><img src="${iconUrl(info)}" alt="${info.name}" draggable="false"><span>${MASTERY[level]}</span></button><button type="button" class="pool-hero-x" data-remove="${hero}" aria-label="Remove ${info.name}" title="Remove">×</button></div>`;
+    }).join("");
+    return `<div class="pool-card" data-player="${index}">
+      <input class="pool-name" data-name placeholder="Player ${index + 1}" value="${player.name.replace(/"/g, "&quot;")}" aria-label="Player ${index + 1} name">
+      <div class="pool-heroes">${chips || `<span class="pool-any">Any hero</span>`}</div>
+      <input class="pool-add" data-add list="hero-names" placeholder="Add hero..." autocomplete="off" aria-label="Add hero for player ${index + 1}">
+    </div>`;
+  }).join("");
+  const set = state.pools.filter((player) => poolHeroes(player).length).length;
+  $("#pool-summary").textContent = set ? `${set} / 5 set` : "";
+}
+
+function poolsChanged() {
+  savePools(); renderPools(); renderHeroes();
+  scheduleSearch();
+}
+
+function addPoolHero(index, hero, level = 2) {
+  if (!hero || hero in state.pools[index].heroes) return;
+  state.pools[index].heroes[hero] = level;
+  poolsChanged();
+  $(`[data-player="${index}"] [data-add]`)?.focus();
+}
+
+$("#pool-rows").addEventListener("input", (event) => {
+  if (!event.target.matches("[data-name]")) return;
+  state.pools[Number(event.target.closest("[data-player]").dataset.player)].name = event.target.value;
+  savePools(); scheduleSearch();
+});
+$("#pool-rows").addEventListener("change", (event) => {
+  if (!event.target.matches("[data-add]")) return;
+  const query = event.target.value.trim().toLowerCase();
+  const hero = state.heroes.find((entry) => entry.name.toLowerCase() === query || entry.slug === query);
+  if (hero) addPoolHero(Number(event.target.closest("[data-player]").dataset.player), hero.slug);
+  else event.target.value = "";
+});
+$("#pool-rows").addEventListener("click", (event) => {
+  const card = event.target.closest("[data-player]");
+  if (!card) return;
+  const player = state.pools[Number(card.dataset.player)];
+  const cycle = event.target.closest("[data-cycle]"); const remove = event.target.closest("[data-remove]");
+  if (cycle) player.heroes[cycle.dataset.cycle] = player.heroes[cycle.dataset.cycle] % 3 + 1;
+  else if (remove) delete player.heroes[remove.dataset.remove];
+  else return;
+  poolsChanged();
+});
+$("#pool-rows").addEventListener("dragover", (event) => { if (dragged && event.target.closest("[data-player]")) event.preventDefault(); });
+$("#pool-rows").addEventListener("drop", (event) => {
+  const card = event.target.closest("[data-player]");
+  if (!card || !dragged) return;
+  event.preventDefault();
+  const hero = dragged; dragged = null;
+  addPoolHero(Number(card.dataset.player), hero);
+});
+$("#clear-pools").addEventListener("click", () => {
+  if (!state.pools.some((player) => player.name || poolHeroes(player).length) || !confirm("Clear all player pools?")) return;
+  state.pools = state.pools.map(() => ({ name: "", heroes: {} }));
+  poolsChanged();
+});
+
+// Players are sent by index so duplicate or blank names never collide; heroes carry mastery levels.
 function poolsPayload() {
-  return Array.from({ length: 5 }, (_, index) => {
-    const get = (kind) => $(`[data-pool="${kind}"][data-index="${index}"]`).value.trim();
-    const player = get("player");
-    if (!player) return null;
-    return { player, roles: get("roles") ? get("roles").split(",").map((value) => value.trim().toLowerCase()) : [],
-      can_play: get("can_play") ? get("can_play").split(",").map(slug) : [],
-      cannot_play: get("cannot_play") ? get("cannot_play").split(",").map(slug) : [] };
-  }).filter(Boolean);
+  if (!poolsActive()) return [];
+  return state.pools.map((player, index) => ({ player: `p${index}`, heroes: player.heroes }));
 }
 
 function renderPhase() {
@@ -223,7 +295,7 @@ function boardChanged() {
 let dragged = null;
 document.addEventListener("dragstart", (event) => {
   const source = event.target.closest?.("[data-hero], [data-placed]");
-  if (!source || state.simulation.active) return event.preventDefault();
+  if (!source || (state.simulation.active && source.dataset.placed)) return event.preventDefault();
   dragged = source.dataset.hero || source.dataset.placed;
   event.dataTransfer.setData("text/plain", dragged);
   event.dataTransfer.effectAllowed = "move";
@@ -261,7 +333,7 @@ function resetBoard(clearHidden = true) {
 function handleHero(hero) {
   if (!state.simulation.active) {
     if (!state.hidden.includes(hero)) state.hidden.push(hero);
-    renderBoard(); renderHeroes();
+    boardChanged();
     return;
   }
   const step = state.simulation.steps[state.simulation.stepIndex];
@@ -292,28 +364,33 @@ function resetSimulation() {
   renderBoard(); renderHeroes(); renderPhase();
 }
 
-function scoreLabel(candidate) {
-  return { label: candidate.score == null ? "" : `Fit ${(candidate.score * 100).toFixed(1)}%` };
-}
-
 function lineupHtml(items) {
   return (items || []).map((value) => chipHtml(value)).join("");
 }
 
-function teamColumn(name, sideCls, bans, picks, remaining = []) {
+function pickCell(hero, byHero) {
+  const entry = byHero[hero];
+  if (!entry) return chipHtml(hero);
+  const name = playerName(Number(entry.player.slice(1)));
+  return `<span class="pick-cell">${chipHtml(hero, "", "", `${heroBySlug(hero).name}: ${name}${entry.mastery ? ` (${MASTERY[entry.mastery]})` : ""}`)}<span class="pick-player level-${entry.mastery || 0}">${name}</span></span>`;
+}
+
+function teamColumn(name, sideCls, bans, picks, remaining = [], assignment = []) {
+  const byHero = Object.fromEntries(assignment.map((entry) => [entry.hero, entry]));
+  const cells = (items) => items.map((hero) => pickCell(hero, byHero)).join("");
   const done = picks.filter((hero) => !remaining.includes(hero));
-  const next = remaining.length ? `<div class="pick-next"><span>Still to pick</span><div class="found-icons">${lineupHtml(remaining)}</div></div>` : "";
+  const next = remaining.length ? `<div class="pick-next"><span>Still to pick</span><div class="found-icons">${cells(remaining)}</div></div>` : "";
   return `<div class="found-team ${sideCls}"><strong>${name}</strong>
     <div class="found-row"><span>Bans</span><div class="found-icons">${lineupHtml(bans)}</div></div>
-    <div class="found-row"><span>Picks</span><div class="found-icons">${lineupHtml(done)}</div>${next}</div></div>`;
+    <div class="found-row"><span>Picks</span><div class="found-icons">${cells(done)}</div>${next}</div></div>`;
 }
 
 function renderResults(candidates) {
   $("#results").innerHTML = candidates.length ? candidates.map((candidate) => {
-    const meta = candidate.metadata; const score = scoreLabel(candidate);
+    const meta = candidate.metadata;
     return `<article class="result-card">
-      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${[meta.date, meta.patch, meta.stage].filter(Boolean).join(" | ")}</div></div>${score.label ? `<span class="score">${score.label}</span>` : ""}</div>
-      <div class="found-picks">${teamColumn(meta.matched_team || "Your team", sideClass(state.simulation.side), candidate.our_bans || [], candidate.our_picks || candidate.composition || [], candidate.remaining_picks || [])}${teamColumn(meta.opponent_team || "Opponent", sideClass(oppositeSide(state.simulation.side)), candidate.opponent_bans || [], candidate.opponent_picks || candidate.opponent_composition || [])}</div>
+      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${[meta.date, meta.patch, meta.stage].filter(Boolean).join(" | ")}</div></div><div class="scores">${candidate.roster_fit != null ? `<span class="score roster">Roster ${Math.round(candidate.roster_fit * 100)}%</span>` : ""}${candidate.score != null ? `<span class="score">Matchup ${(candidate.score * 100).toFixed(1)}%</span>` : ""}</div></div>
+      <div class="found-picks">${teamColumn(meta.matched_team || "Your team", sideClass(state.simulation.side), candidate.our_bans || [], candidate.our_picks || candidate.composition || [], candidate.remaining_picks || [], candidate.assignment || [])}${teamColumn(meta.opponent_team || "Opponent", sideClass(oppositeSide(state.simulation.side)), candidate.opponent_bans || [], candidate.opponent_picks || candidate.opponent_composition || [])}</div>
       <div class="result-links"><a href="${meta.source_url}" target="_blank" rel="noreferrer">Source page</a>${meta.source_refs?.filter((ref) => ref.url !== meta.source_url).map((ref) => `<a href="${ref.url}" target="_blank" rel="noreferrer">${ref.source}</a>`).join("") || ""}</div>
     </article>`;
   }).join("") : `<div class="empty-state">No historical composition fits this board yet.</div>`;
@@ -340,13 +417,19 @@ async function loadHeroes() {
   const response = await request(`${API_BASE}/v1/heroes`);
   if (!response.ok) throw new Error(`Hero request failed (${response.status})`);
   state.heroes = await response.json();
-  renderBoard(); renderHeroes(); renderPhase();
+  renderBoard(); renderHeroes(); renderPhase(); renderPools();
 }
 
 $("#hero-search").addEventListener("input", renderHeroes);
 $("#start-simulation").addEventListener("click", startSimulation);
 $("#reset-simulation").addEventListener("click", resetSimulation);
-$("#restore-hidden").addEventListener("click", () => { state.hidden = []; renderBoard(); renderHeroes(); });
+$("#restore-hidden").addEventListener("click", () => { state.hidden = []; boardChanged(); });
+$("#excluded").addEventListener("click", (event) => {
+  const chip = event.target.closest("[data-restore]");
+  if (!chip) return;
+  state.hidden = state.hidden.filter((hero) => hero !== chip.dataset.restore);
+  boardChanged();
+});
 $("#simulation-format").addEventListener("change", () => { state.simulation.format = $("#simulation-format").value; renderBoard(); });
 $("#team-side").addEventListener("change", () => { state.simulation.side = $("#team-side").value; renderBoard(); renderPhase(); });
 renderPools(); renderPhase();

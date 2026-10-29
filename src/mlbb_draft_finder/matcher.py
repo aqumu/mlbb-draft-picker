@@ -29,6 +29,9 @@ class Candidate:
     our_bans: tuple[str, ...] = ()
     opponent_bans: tuple[str, ...] = ()
     draft_actions: tuple[dict, ...] = ()
+    roster_fit: float | None = None
+    assignment: tuple[dict, ...] = ()
+    rank_score: float | None = None
 
     def as_dict(self) -> dict:
         return {"match_id": self.match_id, "side": self.side, "composition": list(self.composition),
@@ -41,44 +44,67 @@ class Candidate:
                 "opponent_draft": {"team": self.metadata.get("opponent_team"), "side": self.metadata.get("opponent_team_side"),
                                    "picks": list(self.opponent_composition), "bans": list(self.opponent_bans)},
                 "draft_actions": list(self.draft_actions),
+                "roster_fit": self.roster_fit, "assignment": list(self.assignment), "rank_score": self.rank_score,
                 "metadata": self.metadata, "score": self.score,
                 "score_summary": self.score_summary, "score_details": list(self.score_details),
                 "rejection_reasons": list(self.rejection_reasons)}
 
 
-def _assignable(composition: tuple[str, ...], heroes: dict, state: DraftState) -> bool:
+# Weight of a hero in a player's pool: mastery level 1/2/3 and, for players
+# without mastery data, plain can_play entries and wildcard players.
+MASTERY_WEIGHT = {1: 0.45, 2: 0.75, 3: 1.0}
+CAN_PLAY_WEIGHT = MASTERY_WEIGHT[2]
+WILDCARD_WEIGHT = 0.6
+
+
+def _weight(pool: PlayerPool, hero: str) -> float | None:
+    """How well this player fits the hero, or None if they cannot play it."""
+    if hero in pool.cannot_play:
+        return None
+    if hero in pool.mastery:
+        return MASTERY_WEIGHT.get(pool.mastery[hero], CAN_PLAY_WEIGHT)
+    if hero in pool.can_play:
+        return CAN_PLAY_WEIGHT
+    return None if pool.restricted else WILDCARD_WEIGHT
+
+
+def _assign(composition: tuple[str, ...], heroes: dict, state: DraftState) -> tuple[float, dict[str, str]] | None:
+    """Best one-hero-per-player assignment as (mean weight, hero -> player)."""
     pools = state.player_pools
-    if not pools:
-        return True
     if len(pools) < len(composition):
-        return False
-    edges: dict[str, list[str]] = {}
+        return None
+    options: list[list[tuple[str, float]]] = []
     for hero in composition:
         locked = state.locked_players.get(hero)
-        edges[hero] = []
+        choices = []
         for pool in pools:
             if locked and locked != pool.player:
                 continue
-            if hero in pool.cannot_play:
-                continue
-            if pool.can_play and hero not in pool.can_play:
+            weight = _weight(pool, hero)
+            if weight is None:
                 continue
             if pool.roles and not set(pool.roles).intersection(heroes.get(hero).roles):
                 continue
-            edges[hero].append(pool.player)
-        if not edges[hero]:
-            return False
-    assigned: dict[str, str] = {}
-    def visit(hero: str, seen: set[str]) -> bool:
-        for player in edges[hero]:
-            if player in seen:
-                continue
-            seen.add(player)
-            if player not in assigned or visit(assigned[player], seen):
-                assigned[player] = hero
-                return True
-        return False
-    return all(visit(hero, set()) for hero in composition)
+            choices.append((pool.player, weight))
+        if not choices:
+            return None
+        options.append(choices)
+    best: tuple[float, list[str]] | None = None
+    def search(index: int, used: set[str], total: float, chosen: list[str]) -> None:
+        nonlocal best
+        if index == len(composition):
+            if best is None or total > best[0]:
+                best = (total, list(chosen))
+            return
+        for player, weight in options[index]:
+            if player not in used:
+                used.add(player); chosen.append(player)
+                search(index + 1, used, total + weight, chosen)
+                used.discard(player); chosen.pop()
+    search(0, set(), 0.0, [])
+    if best is None:
+        return None
+    return best[0] / len(composition), dict(zip(composition, best[1]))
 
 
 def _score(catalog: Catalog, remaining: tuple[str, ...], enemy: tuple[str, ...]) -> tuple[float | None, tuple[dict, ...], dict]:
@@ -146,10 +172,21 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
                 continue
             if bans.intersection(composition) or state.available_heroes is not None and not set(composition).issubset(state.available_heroes):
                 continue
-            if not _assignable(composition, heroes, state):
-                continue
+            roster_fit, assignment, rank_score = None, (), None
+            if state.player_pools:
+                assigned = _assign(composition, heroes, state)
+                if assigned is None:
+                    continue
+                if any(pool.restricted for pool in state.player_pools):
+                    roster_fit = round(assigned[0], 4)
+                    pools = {pool.player: pool for pool in state.player_pools}
+                    assignment = tuple({"hero": hero, "player": player, "mastery": pools[player].mastery.get(hero)}
+                                       for hero, player in assigned[1].items())
             remaining = tuple(h for h in composition if h not in ours)
             score, details, score_summary = _score(catalog, remaining, tuple(state.enemy_picks))
+            if roster_fit is not None:
+                # Roster fit leads; the matchup estimate (centred on 50%) nudges close calls.
+                rank_score = round(roster_fit + 2 * ((score if score is not None else 0.5) - 0.5), 4)
             draft_actions = tuple({"phase": action.phase, "team": action.team, "hero": action.hero,
                                    "order": action.order} for action in match.actions)
             output.append(Candidate(match.id, side, composition, tuple(state.our_picks), remaining, opponent, match_bans,
@@ -163,7 +200,8 @@ def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> lis
                                      "matched_team_side": match.team_a_side if side == "team_a" else match.team_b_side,
                                      "opponent_team_side": match.team_b_side if side == "team_a" else match.team_a_side,
                                      "score_coverage": score_summary["coverage"], "score_sample_games": score_summary["sample_games"]},
-                                    score, details, score_summary, (), our_bans, opponent_bans, draft_actions))
-    output.sort(key=lambda c: (c.score is not None, c.score or 0.0,
+                                    score, details, score_summary, (), our_bans, opponent_bans, draft_actions,
+                                    roster_fit, assignment, rank_score))
+    output.sort(key=lambda c: (c.rank_score is not None, c.rank_score or 0.0, c.score is not None, c.score or 0.0,
                                c.score_summary.get("coverage", 0.0) if c.score_summary else 0.0), reverse=True)
     return output[:limit]

@@ -22,9 +22,19 @@ def _state(payload: dict[str, Any], catalog: Catalog) -> DraftState:
                 raise ValueError(f"Unknown hero: {value}")
             result.append(key)
         return tuple(result)
+    levels = {"learning": 1, "average": 2, "master": 3, "1": 1, "2": 2, "3": 3}
+    def mastery(raw_heroes: Any) -> dict[str, int]:
+        result = {}
+        for hero, level in (raw_heroes or {}).items():
+            key = resolve([hero])[0]
+            if str(level).strip().lower() not in levels:
+                raise ValueError(f"Unknown mastery level for {hero}: {level}")
+            result[key] = levels[str(level).strip().lower()]
+        return result
     pools = []
     for raw in payload.get("player_pools", []):
-        pools.append(PlayerPool(str(raw["player"]), tuple(raw.get("roles", [])), frozenset(resolve(raw.get("can_play"))), frozenset(resolve(raw.get("cannot_play")))))
+        pools.append(PlayerPool(str(raw["player"]), tuple(raw.get("roles", [])), frozenset(resolve(raw.get("can_play"))), frozenset(resolve(raw.get("cannot_play"))),
+                                mastery(raw.get("heroes"))))
     available = payload.get("available_heroes")
     return DraftState(resolve(payload.get("our_picks")), resolve(payload.get("enemy_picks")), resolve(payload.get("bans")), tuple(pools),
                        {aliases.get(str(k).strip().lower(), str(k).strip().lower()): str(v) for k, v in payload.get("locked_players", {}).items()},

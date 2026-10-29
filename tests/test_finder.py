@@ -30,6 +30,29 @@ class FinderTests(unittest.TestCase):
         result = find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools))
         self.assertEqual([c.match_id for c in result], ["mpl-id-s10-g1"])
 
+    def _roster(self, heroes_by_player):
+        return tuple(PlayerPool(name, mastery=heroes) for name, heroes in heroes_by_player.items())
+
+    def test_hero_nobody_plays_removes_the_draft(self):
+        pools = self._roster({"a": {"fredrinn": 3}, "b": {"joy": 3}, "c": {"brody": 3}, "d": {"floryn": 3}, "e": {"atlas": 3}})
+        self.assertEqual(find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools)), [])
+
+    def test_mastery_scores_best_assignment(self):
+        pools = self._roster({"a": {"fredrinn": 3, "joy": 1}, "b": {"joy": 3, "pharsa": 2}, "c": {"pharsa": 3},
+                              "d": {"brody": 2}, "e": {"floryn": 3}})
+        result = find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools))
+        candidate = next(c for c in result if c.match_id == "mpl-id-s10-g1")
+        self.assertEqual({a["hero"]: a["player"] for a in candidate.assignment},
+                         {"fredrinn": "a", "joy": "b", "pharsa": "c", "brody": "d", "floryn": "e"})
+        self.assertAlmostEqual(candidate.roster_fit, (1.0 + 1.0 + 1.0 + 0.75 + 1.0) / 5)
+
+    def test_blank_players_are_flexible(self):
+        pools = self._roster({"a": {"fredrinn": 3}, "b": {}, "c": {}, "d": {}, "e": {}})
+        result = find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools))
+        self.assertIn("mpl-id-s10-g1", [c.match_id for c in result])
+        for candidate in result:
+            self.assertAlmostEqual(candidate.roster_fit, (1.0 + 4 * 0.6) / 5)
+
     def test_ban_makes_candidate_ineligible(self):
         result = find_candidates(self.catalog, DraftState(bans=("joy",)))
         self.assertFalse(any(c.match_id == "mpl-id-s10-g1" and c.side == "team_a" for c in result))

@@ -78,9 +78,22 @@ select { padding: 8px 9px; }
 .pools-panel summary::-webkit-details-marker { display: none; }
 .summary-caret { color: var(--muted); font-size: 18px; line-height: 1; }
 .pools-panel[open] .summary-caret { transform: rotate(45deg); }
-.pool-rows { display: grid; gap: 8px; margin-top: 14px; }
-.pool-row { display: grid; grid-template-columns: 110px 120px 1fr 1fr; gap: 8px; }
-.pool-row input { min-width: 0; font-size: 12px; }
+.pool-summary { color: var(--muted); font-size: 11px; margin-left: auto; margin-right: 12px; }
+.pool-help { align-items: center; color: var(--muted); display: flex; font-size: 12px; gap: 12px; justify-content: space-between; margin-top: 12px; }
+.pool-rows { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); margin-top: 12px; }
+.pool-card { background: #fbfcfe; border: 1px solid var(--line); border-radius: 10px; display: grid; gap: 10px; padding: 11px; }
+.pool-name { font-weight: 700; }
+.pool-heroes { align-content: flex-start; display: flex; flex-wrap: wrap; gap: 6px; min-height: 66px; }
+.pool-any { align-self: center; color: #a1acb8; font-size: 12px; }
+.pool-hero { --level: #a1acb8; position: relative; }
+.pool-hero.level-2 { --level: var(--blue); }
+.pool-hero.level-3 { --level: #c78a00; }
+.pool-hero-pick { align-items: center; background: #fff; border: 1px solid var(--level); border-radius: 9px; cursor: pointer; display: flex; flex-direction: column; gap: 2px; padding: 4px 5px 3px; }
+.pool-hero-pick img { border: 2px solid var(--level); border-radius: 50%; height: 36px; width: 36px; }
+.pool-hero-pick span { color: var(--level); font-size: 9px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.pool-hero-x { background: var(--ink); border: 0; border-radius: 50%; color: #fff; cursor: pointer; font-size: 12px; height: 17px; line-height: 1; opacity: 0; padding: 0; position: absolute; right: -5px; top: -5px; width: 17px; }
+.pool-hero:hover .pool-hero-x, .pool-hero-x:focus-visible { opacity: 1; }
+.pool-add { font-size: 12px; }
 .results { display: grid; gap: 11px; margin-top: 14px; }
 .empty-state { color: var(--muted); font-size: 13px; padding: 22px 0; }
 .error { color: #a62d2d; }
@@ -108,6 +121,14 @@ a { color: var(--blue); }
   .simulation-controls { justify-content: flex-start; }
   .side-columns, .found-picks { grid-template-columns: 1fr; }
   .side-panel + .side-panel { border-left: 0; border-top: 1px solid var(--line); }
-  .pool-row { grid-template-columns: 1fr 1fr; }
-  .pool-row input:nth-child(n+3) { grid-column: span 2; }
 }
+
+.hero-button.unplayable { filter: grayscale(1); opacity: .38; }
+.excluded-chip { cursor: pointer; }
+.excluded-chip:hover img { outline: 3px solid rgb(166 45 45 / 30%); outline-offset: 2px; }
+.scores { align-items: flex-end; display: flex; flex-direction: column; gap: 4px; }
+.score.roster { background: #fff8e5; border-color: #e8cf8c; color: #8a641c; }
+.pick-cell { align-items: center; display: inline-flex; flex-direction: column; gap: 3px; }
+.pick-player { color: var(--muted); font-size: 10px; font-weight: 700; max-width: 56px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pick-player.level-3 { color: #c78a00; }
+.pick-player.level-2 { color: var(--blue); }
