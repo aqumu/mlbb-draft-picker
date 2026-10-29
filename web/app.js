@@ -293,25 +293,27 @@ function resetSimulation() {
 }
 
 function scoreLabel(candidate) {
-  return { label: candidate.score == null ? "No matchup fit" : `Fit ${(candidate.score * 100).toFixed(1)}%` };
+  return { label: candidate.score == null ? "" : `Fit ${(candidate.score * 100).toFixed(1)}%` };
 }
 
 function lineupHtml(items) {
   return (items || []).map((value) => chipHtml(value)).join("");
 }
 
-function draftStrip(title, items) {
-  return `<div class="found-strip"><span>${title}</span><div class="found-icons">${items?.length ? lineupHtml(items) : "None captured"}</div></div>`;
+function teamColumn(name, sideCls, bans, picks, remaining = []) {
+  const done = picks.filter((hero) => !remaining.includes(hero));
+  const next = remaining.length ? `<div class="pick-next"><span>Still to pick</span><div class="found-icons">${lineupHtml(remaining)}</div></div>` : "";
+  return `<div class="found-team ${sideCls}"><strong>${name}</strong>
+    <div class="found-row"><span>Bans</span><div class="found-icons">${lineupHtml(bans)}</div></div>
+    <div class="found-row"><span>Picks</span><div class="found-icons">${lineupHtml(done)}</div>${next}</div></div>`;
 }
 
 function renderResults(candidates) {
   $("#results").innerHTML = candidates.length ? candidates.map((candidate) => {
     const meta = candidate.metadata; const score = scoreLabel(candidate);
     return `<article class="result-card">
-      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${[meta.date, meta.patch, meta.stage].filter(Boolean).join(" | ")}</div></div><div class="score-wrap"><span class="score">${score.label}</span></div></div>
-      ${draftStrip("Bans | our side", candidate.our_bans)}${draftStrip("Bans | opponent", candidate.opponent_bans)}
-      <div class="found-picks"><div class="found-team matched"><span>${meta.matched_team || "Our side"}</span><div class="found-icons">${lineupHtml(candidate.our_picks || candidate.composition)}</div></div><span class="versus">vs</span><div class="found-team opponent"><span>${meta.opponent_team || "Opponent"}</span><div class="found-icons">${lineupHtml(candidate.opponent_picks || candidate.opponent_composition)}</div></div></div>
-      <div class="result-footer"><div><strong>Finish our side</strong><div class="found-icons">${lineupHtml(candidate.remaining_picks)}</div></div></div>
+      <div class="result-top"><div><div class="result-title">${meta.tournament} | Game ${meta.game_number ?? "?"}</div><div class="result-meta">${[meta.date, meta.patch, meta.stage].filter(Boolean).join(" | ")}</div></div>${score.label ? `<span class="score">${score.label}</span>` : ""}</div>
+      <div class="found-picks">${teamColumn(meta.matched_team || "Your team", sideClass(state.simulation.side), candidate.our_bans || [], candidate.our_picks || candidate.composition || [], candidate.remaining_picks || [])}${teamColumn(meta.opponent_team || "Opponent", sideClass(oppositeSide(state.simulation.side)), candidate.opponent_bans || [], candidate.opponent_picks || candidate.opponent_composition || [])}</div>
       <div class="result-links"><a href="${meta.source_url}" target="_blank" rel="noreferrer">Source page</a>${meta.source_refs?.filter((ref) => ref.url !== meta.source_url).map((ref) => `<a href="${ref.url}" target="_blank" rel="noreferrer">${ref.source}</a>`).join("") || ""}</div>
     </article>`;
   }).join("") : `<div class="empty-state">No historical composition fits this board yet.</div>`;
