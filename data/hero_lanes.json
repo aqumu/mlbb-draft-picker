@@ -5,7 +5,7 @@
    "jungle"
   ],
   "akai": [
-   "roam"
+   "roam", "jungle"
   ],
   "aldous": [
    "exp"
@@ -19,25 +19,26 @@
    "exp"
   ],
   "alucard": [
-   "exp",
    "jungle"
   ],
   "angela": [
-   "roam"
+   "roam",
+   "mid"
   ],
   "argus": [
    "exp"
   ],
   "arlott": [
-   "exp",
-   "jungle"
+   "exp"
   ],
   "atlas": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "aulus": [
    "jungle",
-   "exp"
+   "exp",
+   "gold"
   ],
   "aurora": [
    "mid"
@@ -47,29 +48,28 @@
    "exp"
   ],
   "balmond": [
-   "jungle",
-   "exp"
+   "jungle"
   ],
   "bane": [
-   "jungle",
-   "exp"
+   "jungle"
   ],
   "barats": [
    "exp",
    "jungle"
   ],
   "baxia": [
-   "roam"
+   "roam",
+   "jungle"
   ],
   "beatrix": [
    "gold"
   ],
   "belerick": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "benedetta": [
-   "exp",
-   "jungle"
+   "exp"
   ],
   "brody": [
    "gold"
@@ -78,7 +78,8 @@
    "gold"
   ],
   "carmilla": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "cecilion": [
    "mid"
@@ -94,7 +95,8 @@
    "roam"
   ],
   "cici": [
-   "exp"
+   "exp",
+   "gold"
   ],
   "claude": [
    "gold"
@@ -103,7 +105,8 @@
    "gold"
   ],
   "cyclops": [
-   "mid"
+   "mid",
+   "gold"
   ],
   "diggie": [
    "roam"
@@ -141,18 +144,19 @@
    "roam"
   ],
   "fredrinn": [
-   "exp",
    "jungle"
   ],
   "freya": [
-   "exp"
+   "exp",
+   "gold"
   ],
   "gatotkaca": [
    "roam",
    "exp"
   ],
   "gloo": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "gord": [
    "mid"
@@ -179,12 +183,10 @@
    "jungle"
   ],
   "harith": [
-   "gold",
-   "exp"
+   "gold"
   ],
   "harley": [
-   "jungle",
-   "mid"
+   "jungle"
   ],
   "hayabusa": [
    "jungle"
@@ -201,7 +203,8 @@
    "jungle"
   ],
   "hylos": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "irithel": [
    "gold"
@@ -218,7 +221,7 @@
   ],
   "joy": [
    "jungle",
-   "roam"
+   "mid"
   ],
   "julian": [
    "jungle",
@@ -234,7 +237,8 @@
    "roam"
   ],
   "kalea": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "karina": [
    "jungle"
@@ -263,8 +267,7 @@
    "gold"
   ],
   "leomord": [
-   "jungle",
-   "exp"
+   "jungle"
   ],
   "lesley": [
    "gold"
@@ -296,7 +299,8 @@
    "exp"
   ],
   "masha": [
-   "exp"
+   "exp",
+   "roam"
   ],
   "mathilda": [
    "roam"
@@ -305,7 +309,8 @@
    "gold"
   ],
   "minotaur": [
-   "roam"
+   "roam",
+   "exp"
   ],
   "minsitthar": [
    "exp"
@@ -339,7 +344,9 @@
    "mid"
   ],
   "paquito": [
-   "exp"
+   "exp",
+   "jungle",
+   "gold"
   ],
   "pharsa": [
    "mid"
@@ -351,13 +358,16 @@
    "gold"
   ],
   "rafaela": [
-   "roam"
+   "roam",
+   "mid"
   ],
   "roger": [
-   "jungle"
+   "jungle",
+   "gold"
   ],
   "ruby": [
-   "exp"
+   "exp",
+   "gold"
   ],
   "saber": [
    "jungle",
@@ -371,7 +381,8 @@
    "exp"
   ],
   "sora": [
-   "exp"
+   "exp",
+   "gold"
   ],
   "sun": [
    "exp",
@@ -397,7 +408,8 @@
    "mid"
   ],
   "valentina": [
-   "mid"
+   "mid",
+   "exp"
   ],
   "valir": [
    "mid"
@@ -409,13 +421,15 @@
    "gold"
   ],
   "x-borg": [
-   "exp"
+   "exp",
+   "jungle"
   ],
   "xavier": [
    "mid"
   ],
   "yi-sun-shin": [
-   "jungle"
+   "jungle",
+   "gold"
   ],
   "yin": [
    "jungle",
@@ -434,7 +448,8 @@
    "mid"
   ],
   "zhuxin": [
-   "mid"
+   "mid",
+   "roam"
   ],
   "zilong": [
    "exp"
