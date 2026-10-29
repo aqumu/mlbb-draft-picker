@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 
-from .api import serve
+from .api import load_hero_lanes, serve
 from .ingest import import_csv_files, import_json_file, import_mlbbdex_snapshot
 from .repository import Catalog
 
@@ -34,7 +34,7 @@ def main() -> None:
         elif args.command == "import-mlbbdex":
             print(json.dumps(import_mlbbdex_snapshot(catalog, args.snapshot, args.heroes), indent=2))
         else:
-            serve(catalog, args.host, args.port)
+            serve(catalog, args.host, args.port, load_hero_lanes("data/hero_lanes.json"))
     finally:
         catalog.close()
 

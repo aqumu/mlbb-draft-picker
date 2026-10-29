@@ -4,7 +4,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from mlbb_draft_finder.api import serve  # noqa: E402
+from mlbb_draft_finder.api import load_hero_lanes, serve  # noqa: E402
 from mlbb_draft_finder.ingest import import_captured_snapshot, import_csv_files, import_json_file  # noqa: E402
 from mlbb_draft_finder.repository import Catalog  # noqa: E402
 
@@ -39,4 +39,4 @@ if not catalog.matches():
             import_json_file(catalog, ROOT / "data/sample_catalog.json", "sample")
     else:
         import_json_file(catalog, ROOT / "data/sample_catalog.json", "sample")
-serve(catalog, host="0.0.0.0", port=int(__import__("os").environ.get("PORT", "8080")))
+serve(catalog, host="0.0.0.0", port=int(__import__("os").environ.get("PORT", "8080")), hero_lanes=load_hero_lanes(ROOT / "data/hero_lanes.json"))

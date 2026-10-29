@@ -33,6 +33,8 @@ Example request:
 }
 ```
 
+`GET /v1/heroes` includes each hero's `lanes` (primary first), read from [`data/hero_lanes.json`](data/hero_lanes.json): the MLBBDex lane list with manual corrections for the current meta. Edit that file to change a hero's lanes; the API reads it at startup.
+
 Lanes: a player may instead give `lanes`, a map from lane (`exp`, `mid`, `jungle`, `gold`, `roam`) to that lane's hero pool in the same format, e.g. `{"player": "p0", "lanes": {"jungle": {"fanny": "master"}, "gold": {"beatrix": 2}}}`. Each player fills one lane per draft and no two players share a lane. A lane with an empty pool means "plays this lane, any hero"; assignments report the lane used.
 
 Player pools: `heroes` maps each hero a player can play to a mastery level (`learning`/`1`, `average`/`2`, `master`/`3`). A draft is only returned if its five heroes can be given to five different players who play them, so a hero nobody plays rules the draft out. A player with an empty `heroes` object is a flexible placeholder who can play anything at a neutral weight. `can_play`, `cannot_play` and `roles` still work. When any player lists heroes, each candidate carries `roster_fit` (0-1, the best assignment's mean mastery weight: learning 0.45, average 0.75, master 1.0, flexible 0.6), the winning `assignment` (hero, player, mastery) and `rank_score`. Results are ranked by `rank_score`, which is `roster_fit` adjusted by the matchup `score`.

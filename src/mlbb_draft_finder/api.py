@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, urlsplit
 
@@ -51,7 +52,17 @@ def _state(payload: dict[str, Any], catalog: Catalog) -> DraftState:
                        str(payload.get("our_side")).strip().lower() if payload.get("our_side") else None)
 
 
-def create_handler(catalog: Catalog):
+def load_hero_lanes(path: str | Path) -> dict[str, list[str]]:
+    """Hero slug -> lanes (primary first) from a curated JSON file; empty if missing."""
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            return {slug: list(lanes) for slug, lanes in json.load(handle).get("lanes", {}).items()}
+    except FileNotFoundError:
+        return {}
+
+
+def create_handler(catalog: Catalog, hero_lanes: dict[str, list[str]] | None = None):
+    hero_lanes = hero_lanes or {}
     class Handler(BaseHTTPRequestHandler):
         def _send(self, status: int, body: Any) -> None:
             data = json.dumps(body, ensure_ascii=False).encode("utf-8")
@@ -75,7 +86,7 @@ def create_handler(catalog: Catalog):
                 self._send(200, {"status": "ok", "matches": len(catalog.matches()), "heroes": len(catalog.heroes())})
             elif parsed.path == "/v1/heroes":
                 usage = catalog.hero_usage()
-                self._send(200, [{"slug": h.slug, "name": h.name, "roles": list(h.roles), "aliases": list(h.aliases),
+                self._send(200, [{"slug": h.slug, "name": h.name, "roles": list(h.roles), "aliases": list(h.aliases), "lanes": hero_lanes.get(h.slug, []),
                                   **usage.get(h.slug, {"recent_picks": 0, "recent_bans": 0, "recent_games": 0, "usage_score": 0}),
                                   "recent_window_days": 180} for h in catalog.heroes().values()])
             elif parsed.path == "/v1/matches":
@@ -138,7 +149,7 @@ def _match_as_dict(match) -> dict[str, Any]:
     }
 
 
-def serve(catalog: Catalog, host: str = "0.0.0.0", port: int = 8080) -> None:
-    server = ThreadingHTTPServer((host, port), create_handler(catalog))
+def serve(catalog: Catalog, host: str = "0.0.0.0", port: int = 8080, hero_lanes: dict[str, list[str]] | None = None) -> None:
+    server = ThreadingHTTPServer((host, port), create_handler(catalog, hero_lanes))
     print(f"MLBB Draft Finder API listening on http://{host}:{port}")
     server.serve_forever()

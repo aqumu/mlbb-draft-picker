@@ -156,6 +156,8 @@ function usageScore(hero) {
   return (hero.recent_picks || 0) + (hero.recent_bans || 0);
 }
 
+let laneFilter = "";
+
 function renderHeroes() {
   const query = $("#hero-search").value.toLowerCase().trim();
   const used = usedHeroes();
@@ -163,6 +165,7 @@ function renderHeroes() {
   const ourTurn = step?.kind === "pick" && step.team === "our";
   const heroes = state.heroes
     .filter((hero) => !used.has(hero.slug))
+    .filter((hero) => !laneFilter || (hero.lanes || []).includes(laneFilter))
     .filter((hero) => !query || hero.name.toLowerCase().includes(query) || hero.slug.includes(query))
     .sort((a, b) => usageScore(b) - usageScore(a) || b.recent_bans - a.recent_bans || a.name.localeCompare(b.name));
   $("#hero-grid").innerHTML = heroes.map((hero) => `<button class="hero-button${ourTurn && !teamCanPlay(hero.slug) ? " unplayable" : ""}" type="button" draggable="true" data-hero="${hero.slug}" title="${hero.name} | ${hero.recent_picks || 0} picks | ${hero.recent_bans || 0} bans${ourTurn && !teamCanPlay(hero.slug) ? " | nobody on your team plays this" : ""}" aria-label="${hero.name}, ${hero.recent_picks || 0} recent picks, ${hero.recent_bans || 0} recent bans"><img src="${iconUrl(hero)}" alt="" draggable="false"><span class="hero-usage">P${hero.recent_picks || 0} | B${hero.recent_bans || 0}</span></button>`).join("") || `<div class="empty-state">No heroes match this filter.</div>`;
@@ -428,6 +431,13 @@ async function loadHeroes() {
 }
 
 $("#hero-search").addEventListener("input", renderHeroes);
+$("#lane-filter").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-filter]");
+  if (!button) return;
+  laneFilter = button.dataset.filter;
+  document.querySelectorAll("#lane-filter [data-filter]").forEach((el) => el.classList.toggle("on", el === button));
+  renderHeroes();
+});
 $("#start-simulation").addEventListener("click", startSimulation);
 $("#reset-simulation").addEventListener("click", resetSimulation);
 $("#restore-hidden").addEventListener("click", () => { state.hidden = []; boardChanged(); });

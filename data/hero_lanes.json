@@ -1,0 +1,443 @@
+{
+ "note": "Lanes per hero, primary first. Based on the MLBBDex lane list with manual corrections for the current pro meta; edit freely.",
+ "lanes": {
+  "aamon": [
+   "jungle"
+  ],
+  "akai": [
+   "roam"
+  ],
+  "aldous": [
+   "exp"
+  ],
+  "alice": [
+   "exp",
+   "jungle"
+  ],
+  "alpha": [
+   "jungle",
+   "exp"
+  ],
+  "alucard": [
+   "exp",
+   "jungle"
+  ],
+  "angela": [
+   "roam"
+  ],
+  "argus": [
+   "exp"
+  ],
+  "arlott": [
+   "exp",
+   "jungle"
+  ],
+  "atlas": [
+   "roam"
+  ],
+  "aulus": [
+   "jungle",
+   "exp"
+  ],
+  "aurora": [
+   "mid"
+  ],
+  "badang": [
+   "roam",
+   "exp"
+  ],
+  "balmond": [
+   "jungle",
+   "exp"
+  ],
+  "bane": [
+   "jungle",
+   "exp"
+  ],
+  "barats": [
+   "exp",
+   "jungle"
+  ],
+  "baxia": [
+   "roam"
+  ],
+  "beatrix": [
+   "gold"
+  ],
+  "belerick": [
+   "roam"
+  ],
+  "benedetta": [
+   "exp",
+   "jungle"
+  ],
+  "brody": [
+   "gold"
+  ],
+  "bruno": [
+   "gold"
+  ],
+  "carmilla": [
+   "roam"
+  ],
+  "cecilion": [
+   "mid"
+  ],
+  "chang-e": [
+   "mid"
+  ],
+  "chip": [
+   "roam"
+  ],
+  "chou": [
+   "exp",
+   "roam"
+  ],
+  "cici": [
+   "exp"
+  ],
+  "claude": [
+   "gold"
+  ],
+  "clint": [
+   "gold"
+  ],
+  "cyclops": [
+   "mid"
+  ],
+  "diggie": [
+   "roam"
+  ],
+  "dori": [
+   "roam",
+   "mid"
+  ],
+  "dyrroth": [
+   "exp"
+  ],
+  "edith": [
+   "exp",
+   "roam"
+  ],
+  "esmeralda": [
+   "exp"
+  ],
+  "estes": [
+   "roam"
+  ],
+  "eudora": [
+   "mid"
+  ],
+  "fanny": [
+   "jungle"
+  ],
+  "faramis": [
+   "roam"
+  ],
+  "floryn": [
+   "roam"
+  ],
+  "franco": [
+   "roam"
+  ],
+  "fredrinn": [
+   "exp",
+   "jungle"
+  ],
+  "freya": [
+   "exp"
+  ],
+  "gatotkaca": [
+   "roam",
+   "exp"
+  ],
+  "gloo": [
+   "roam"
+  ],
+  "gord": [
+   "mid"
+  ],
+  "granger": [
+   "gold"
+  ],
+  "grock": [
+   "roam",
+   "exp"
+  ],
+  "guinevere": [
+   "exp",
+   "jungle"
+  ],
+  "gusion": [
+   "jungle",
+   "mid"
+  ],
+  "hanabi": [
+   "gold"
+  ],
+  "hanzo": [
+   "jungle"
+  ],
+  "harith": [
+   "gold",
+   "exp"
+  ],
+  "harley": [
+   "jungle",
+   "mid"
+  ],
+  "hayabusa": [
+   "jungle"
+  ],
+  "helcurt": [
+   "jungle",
+   "roam"
+  ],
+  "hilda": [
+   "roam",
+   "exp"
+  ],
+  "hirara": [
+   "jungle"
+  ],
+  "hylos": [
+   "roam"
+  ],
+  "irithel": [
+   "gold"
+  ],
+  "ixia": [
+   "gold"
+  ],
+  "jawhead": [
+   "roam",
+   "exp"
+  ],
+  "johnson": [
+   "roam"
+  ],
+  "joy": [
+   "jungle",
+   "roam"
+  ],
+  "julian": [
+   "jungle",
+   "exp"
+  ],
+  "kadita": [
+   "mid"
+  ],
+  "kagura": [
+   "mid"
+  ],
+  "kaja": [
+   "roam"
+  ],
+  "kalea": [
+   "roam"
+  ],
+  "karina": [
+   "jungle"
+  ],
+  "karrie": [
+   "gold"
+  ],
+  "khaleed": [
+   "roam",
+   "exp"
+  ],
+  "khufra": [
+   "roam"
+  ],
+  "kimmy": [
+   "mid",
+   "gold"
+  ],
+  "lancelot": [
+   "jungle"
+  ],
+  "lapu-lapu": [
+   "exp"
+  ],
+  "layla": [
+   "gold"
+  ],
+  "leomord": [
+   "jungle",
+   "exp"
+  ],
+  "lesley": [
+   "gold"
+  ],
+  "ling": [
+   "jungle"
+  ],
+  "lolita": [
+   "roam"
+  ],
+  "lukas": [
+   "exp",
+   "jungle"
+  ],
+  "lunox": [
+   "mid"
+  ],
+  "luo-yi": [
+   "mid"
+  ],
+  "lylia": [
+   "mid"
+  ],
+  "marcel": [
+   "roam"
+  ],
+  "martis": [
+   "jungle",
+   "exp"
+  ],
+  "masha": [
+   "exp"
+  ],
+  "mathilda": [
+   "roam"
+  ],
+  "melissa": [
+   "gold"
+  ],
+  "minotaur": [
+   "roam"
+  ],
+  "minsitthar": [
+   "exp"
+  ],
+  "miya": [
+   "gold"
+  ],
+  "moskov": [
+   "gold"
+  ],
+  "nana": [
+   "mid"
+  ],
+  "natalia": [
+   "jungle",
+   "roam"
+  ],
+  "natan": [
+   "gold"
+  ],
+  "nolan": [
+   "jungle"
+  ],
+  "novaria": [
+   "mid"
+  ],
+  "obsidia": [
+   "gold"
+  ],
+  "odette": [
+   "mid"
+  ],
+  "paquito": [
+   "exp"
+  ],
+  "pharsa": [
+   "mid"
+  ],
+  "phoveus": [
+   "exp"
+  ],
+  "popol-and-kupa": [
+   "gold"
+  ],
+  "rafaela": [
+   "roam"
+  ],
+  "roger": [
+   "jungle"
+  ],
+  "ruby": [
+   "exp"
+  ],
+  "saber": [
+   "jungle",
+   "roam"
+  ],
+  "selena": [
+   "mid",
+   "roam"
+  ],
+  "silvanna": [
+   "exp"
+  ],
+  "sora": [
+   "exp"
+  ],
+  "sun": [
+   "exp",
+   "jungle"
+  ],
+  "suyou": [
+   "jungle",
+   "exp"
+  ],
+  "terizla": [
+   "exp"
+  ],
+  "thamuz": [
+   "exp"
+  ],
+  "tigreal": [
+   "roam"
+  ],
+  "uranus": [
+   "exp"
+  ],
+  "vale": [
+   "mid"
+  ],
+  "valentina": [
+   "mid"
+  ],
+  "valir": [
+   "mid"
+  ],
+  "vexana": [
+   "mid"
+  ],
+  "wanwan": [
+   "gold"
+  ],
+  "x-borg": [
+   "exp"
+  ],
+  "xavier": [
+   "mid"
+  ],
+  "yi-sun-shin": [
+   "jungle"
+  ],
+  "yin": [
+   "jungle",
+   "exp"
+  ],
+  "yu-zhong": [
+   "exp"
+  ],
+  "yve": [
+   "mid"
+  ],
+  "zetian": [
+   "mid"
+  ],
+  "zhask": [
+   "mid"
+  ],
+  "zhuxin": [
+   "mid"
+  ],
+  "zilong": [
+   "exp"
+  ]
+ }
+}

@@ -14,7 +14,7 @@ class ApiTests(unittest.TestCase):
     def setUp(self):
         self.catalog = Catalog()
         import_json_file(self.catalog, Path(__file__).parents[1] / "data/sample_catalog.json", "sample")
-        self.server = ThreadingHTTPServer(("127.0.0.1", 0), create_handler(self.catalog))
+        self.server = ThreadingHTTPServer(("127.0.0.1", 0), create_handler(self.catalog, {"fredrinn": ["exp", "jungle"]}))
         self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
         self.thread.start()
         self.base = f"http://127.0.0.1:{self.server.server_port}"
@@ -35,6 +35,11 @@ class ApiTests(unittest.TestCase):
             body = json.loads(response.read())
         self.assertGreater(body["count"], 0)
         self.assertIn("metadata", body["candidates"][0])
+
+    def test_heroes_expose_lanes(self):
+        heroes = {hero["slug"]: hero for hero in self.get("/v1/heroes")}
+        self.assertEqual(heroes["fredrinn"]["lanes"], ["exp", "jungle"])
+        self.assertEqual(heroes["joy"]["lanes"], [])
 
     def test_player_mastery_ranks_and_reports_assignment(self):
         pools = [{"player": "p0", "heroes": {"fredrinn": 3}}, {"player": "p1", "heroes": {"joy": "average"}},

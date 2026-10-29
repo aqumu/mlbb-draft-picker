@@ -51,6 +51,14 @@
         </div>
 
         <div class="hero-toolbar">
+          <div id="lane-filter" class="lane-filter" role="group" aria-label="Filter heroes by lane">
+            <button type="button" class="lane-toggle on" data-filter="">All</button>
+            <button type="button" class="lane-toggle" data-filter="exp">EXP</button>
+            <button type="button" class="lane-toggle" data-filter="mid">Mid</button>
+            <button type="button" class="lane-toggle" data-filter="jungle">Jungle</button>
+            <button type="button" class="lane-toggle" data-filter="gold">Gold</button>
+            <button type="button" class="lane-toggle" data-filter="roam">Roam</button>
+          </div>
           <label class="search-wrap"><span class="sr-only">Search heroes</span><input id="hero-search" type="search" placeholder="Search heroes..." autocomplete="off" /></label>
         </div>
         <div id="hero-grid" class="hero-grid" aria-live="polite"></div>
