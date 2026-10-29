@@ -56,6 +56,9 @@ select { padding: 8px 9px; }
 .row-title { color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .row-title span:last-child { color: var(--ink); }
 .icon-row { align-items: center; display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; min-height: 38px; }
+.side-row .icon-row { border: 1px dashed rgb(104 119 137 / 35%); border-radius: 9px; min-height: 58px; padding: 7px; }
+.icon-row.drop-over { background: rgb(255 255 255 / 60%); border-color: var(--side-color); }
+.hero-button[draggable="true"], .icon-chip[draggable="true"] { cursor: grab; }
 .icon-row.empty { color: #a1acb8; font-size: 12px; }
 .icon-chip { background: transparent; border: 0; border-radius: 50%; display: inline-flex; padding: 0; position: relative; }
 .icon-chip img { border: 2px solid #fff; border-radius: 50%; box-shadow: 0 1px 3px rgb(22 35 52 / 20%); display: block; height: 42px; object-fit: cover; width: 42px; }

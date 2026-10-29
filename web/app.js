@@ -96,9 +96,10 @@ function usedHeroes() {
   return new Set([...state.board.our_picks, ...state.board.enemy_picks, ...state.board.bans, ...state.hidden]);
 }
 
-function chipHtml(value, extra = "") {
+function chipHtml(value, extra = "", draggable = false) {
   const hero = heroBySlug(value);
-  return `<button class="icon-chip ${extra}" type="button" title="${hero.name}" aria-label="${hero.name}"><img src="${iconUrl(hero)}" alt="${hero.name}"></button>`;
+  const drag = draggable ? ` draggable="true" data-placed="${hero.slug}"` : "";
+  return `<button class="icon-chip ${extra}" type="button" title="${hero.name}" aria-label="${hero.name}"${drag}><img src="${iconUrl(hero)}" alt="${hero.name}" draggable="false"></button>`;
 }
 
 function renderBoard() {
@@ -110,7 +111,7 @@ function renderBoard() {
       const hero = typeof value === "string" ? value : value.hero;
       const actionTeam = typeof value === "string" ? team : value.team;
       const actionSide = actionTeam === "our" ? state.simulation.side : oppositeSide(state.simulation.side);
-      return chipHtml(hero, sideClass(actionSide));
+      return chipHtml(hero, sideClass(actionSide), !state.simulation.active);
     }).join("") : emptyText;
   };
   const ourBans = bans.filter((action) => action.team === "our");
@@ -148,7 +149,7 @@ function renderHeroes() {
     .filter((hero) => !used.has(hero.slug))
     .filter((hero) => !query || hero.name.toLowerCase().includes(query) || hero.slug.includes(query))
     .sort((a, b) => usageScore(b) - usageScore(a) || b.recent_bans - a.recent_bans || a.name.localeCompare(b.name));
-  $("#hero-grid").innerHTML = heroes.map((hero) => `<button class="hero-button" type="button" data-hero="${hero.slug}" title="${hero.name} | ${hero.recent_picks || 0} picks | ${hero.recent_bans || 0} bans" aria-label="${hero.name}, ${hero.recent_picks || 0} recent picks, ${hero.recent_bans || 0} recent bans"><img src="${iconUrl(hero)}" alt=""><span class="hero-usage">P${hero.recent_picks || 0} | B${hero.recent_bans || 0}</span></button>`).join("") || `<div class="empty-state">No heroes match this filter.</div>`;
+  $("#hero-grid").innerHTML = heroes.map((hero) => `<button class="hero-button" type="button" draggable="true" data-hero="${hero.slug}" title="${hero.name} | ${hero.recent_picks || 0} picks | ${hero.recent_bans || 0} bans" aria-label="${hero.name}, ${hero.recent_picks || 0} recent picks, ${hero.recent_bans || 0} recent bans"><img src="${iconUrl(hero)}" alt="" draggable="false"><span class="hero-usage">P${hero.recent_picks || 0} | B${hero.recent_bans || 0}</span></button>`).join("") || `<div class="empty-state">No heroes match this filter.</div>`;
   document.querySelectorAll("[data-hero]").forEach((button) => button.addEventListener("click", () => handleHero(button.dataset.hero)));
 }
 
@@ -194,6 +195,62 @@ function renderPhase() {
   $("#simulation-format").disabled = active;
   $("#team-side").disabled = active;
 }
+
+const banLimit = () => state.simulation.format === "regular" ? 3 : 5;
+
+function removeHero(hero) {
+  state.board.our_picks = state.board.our_picks.filter((value) => value !== hero);
+  state.board.enemy_picks = state.board.enemy_picks.filter((value) => value !== hero);
+  state.board.bans = state.board.bans.filter((value) => value !== hero);
+  state.history = state.history.filter((action) => action.hero !== hero);
+}
+
+function placeHero(hero, team, kind) {
+  const inBans = state.history.filter((action) => action.kind === "ban" && action.team === team);
+  const current = kind === "pick" ? state.board[`${team}_picks`] : inBans.map((action) => action.hero);
+  if (current.includes(hero) || current.length >= (kind === "pick" ? 5 : banLimit())) return;
+  removeHero(hero);
+  if (kind === "pick") state.board[`${team}_picks`].push(hero);
+  else { state.board.bans.push(hero); state.history.push({ kind: "ban", team, hero }); }
+}
+
+function boardChanged() {
+  renderBoard(); renderHeroes(); renderPhase();
+  if (state.board.our_picks.length || state.board.enemy_picks.length || state.board.bans.length) scheduleSearch();
+  else { searchRequestId += 1; $("#results").innerHTML = ""; }
+}
+
+let dragged = null;
+document.addEventListener("dragstart", (event) => {
+  const source = event.target.closest?.("[data-hero], [data-placed]");
+  if (!source || state.simulation.active) return event.preventDefault();
+  dragged = source.dataset.hero || source.dataset.placed;
+  event.dataTransfer.setData("text/plain", dragged);
+  event.dataTransfer.effectAllowed = "move";
+});
+document.addEventListener("dragend", () => { dragged = null; document.querySelectorAll(".drop-over").forEach((el) => el.classList.remove("drop-over")); });
+document.querySelectorAll(".icon-row[id]").forEach((row) => {
+  row.addEventListener("dragover", (event) => { if (dragged) { event.preventDefault(); row.classList.add("drop-over"); } });
+  row.addEventListener("dragleave", () => row.classList.remove("drop-over"));
+  row.addEventListener("drop", (event) => {
+    event.preventDefault(); row.classList.remove("drop-over");
+    if (!dragged || state.simulation.active) return;
+    placeHero(dragged, row.id.startsWith("our") ? "our" : "enemy", row.id.endsWith("bans") ? "ban" : "pick");
+    dragged = null; boardChanged();
+  });
+  row.addEventListener("click", (event) => {
+    const chip = event.target.closest("[data-placed]");
+    if (!chip || state.simulation.active) return;
+    removeHero(chip.dataset.placed); boardChanged();
+  });
+});
+const grid = $("#hero-grid");
+grid.addEventListener("dragover", (event) => { if (dragged) event.preventDefault(); });
+grid.addEventListener("drop", (event) => {
+  event.preventDefault();
+  if (!dragged || state.simulation.active) return;
+  removeHero(dragged); dragged = null; boardChanged();
+});
 
 function resetBoard(clearHidden = true) {
   state.board = { our_picks: [], enemy_picks: [], bans: [] };
@@ -261,7 +318,7 @@ function renderResults(candidates) {
 }
 
 async function search() {
-  if (!state.simulation.active && !state.simulation.complete) return;
+  if (!state.simulation.active && !state.board.our_picks.length && !state.board.enemy_picks.length && !state.board.bans.length) return;
   const requestId = ++searchRequestId;
   try {
     const response = await request(`${API_BASE}/v1/candidates`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state.board, our_side: state.simulation.side, excluded_heroes: state.hidden, player_pools: poolsPayload(), limit: 50 }) });
