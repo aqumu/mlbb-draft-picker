@@ -297,8 +297,7 @@ function placeHero(hero, team, kind) {
 
 function boardChanged() {
   renderBoard(); renderHeroes(); renderPhase();
-  if (state.board.our_picks.length || state.board.enemy_picks.length || state.board.bans.length) scheduleSearch();
-  else { searchRequestId += 1; $("#results").innerHTML = ""; }
+  scheduleSearch();
 }
 
 let dragged = null;
@@ -369,8 +368,7 @@ function startSimulation() {
 function resetSimulation() {
   resetBoard(true);
   state.simulation = { active: false, complete: false, format: $("#simulation-format").value, side: $("#team-side").value, stepIndex: 0, steps: [] };
-  $("#results").innerHTML = "";
-  renderBoard(); renderHeroes(); renderPhase();
+  boardChanged();
 }
 
 function lineupHtml(items) {
@@ -406,8 +404,11 @@ function renderResults(candidates) {
   }).join("") : `<div class="empty-state">No historical composition fits this board yet.</div>`;
 }
 
+// A single ban is enough to find compositions; no pick is required.
+const hasDraftActions = () => state.board.bans.length || state.board.our_picks.length || state.board.enemy_picks.length;
+
 async function search() {
-  if (!state.simulation.active && !state.board.our_picks.length && !state.board.enemy_picks.length && !state.board.bans.length) return;
+  if (!hasDraftActions()) return;
   const requestId = ++searchRequestId;
   try {
     const response = await request(`${API_BASE}/v1/candidates`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...state.board, our_side: state.simulation.side, excluded_heroes: state.hidden, player_pools: poolsPayload(), limit: 50 }) });
@@ -419,6 +420,11 @@ async function search() {
 
 function scheduleSearch() {
   clearTimeout(searchTimer);
+  searchRequestId += 1;
+  if (!hasDraftActions()) {
+    $("#results").innerHTML = "";
+    return;
+  }
   searchTimer = setTimeout(search, 140);
 }
 
