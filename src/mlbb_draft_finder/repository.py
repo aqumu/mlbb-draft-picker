@@ -42,6 +42,21 @@ CREATE INDEX IF NOT EXISTS idx_matches_tournament ON matches(tournament);
 """
 
 
+def parse_match_date(value: str | None) -> date | None:
+    """Parse the date formats found in captured snapshots; None when unreadable."""
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value).date()
+    except ValueError:
+        for fmt in ("%b %d, %Y", "%B %d, %Y"):
+            try:
+                return datetime.strptime(value, fmt).date()
+            except ValueError:
+                continue
+    return None
+
+
 class Catalog:
     def __init__(self, path: str | Path = ":memory:") -> None:
         self.path = str(path)
@@ -132,41 +147,19 @@ class Catalog:
         rows = self.db.execute("SELECT * FROM heroes").fetchall()
         return {r["slug"]: Hero(r["slug"], r["name"], tuple(json.loads(r["roles_json"])), tuple(json.loads(r["aliases_json"]))) for r in rows}
 
-    def hero_usage(self, recent_days: int = 180) -> dict[str, dict[str, int]]:
-        """Return pick/ban frequency for the recent tournament window."""
+    def usage_window(self, recent_days: int = 180) -> tuple[dict[str, dict[str, int]], int]:
+        """Pick/ban frequency per hero over the recent window, plus the number of games in it."""
         matches = self.matches()
-        parsed_dates = []
-        for match in matches:
-            if not match.date:
-                continue
-            try:
-                parsed_dates.append(datetime.fromisoformat(match.date).date())
-            except ValueError:
-                for fmt in ("%b %d, %Y", "%B %d, %Y"):
-                    try:
-                        parsed_dates.append(datetime.strptime(match.date, fmt).date())
-                        break
-                    except ValueError:
-                        continue
-        anchor = max(parsed_dates, default=date.today())
+        dated = [(m, parse_match_date(m.date)) for m in matches]
+        anchor = max((d for _, d in dated if d), default=date.today())
         cutoff = anchor - timedelta(days=recent_days)
         counts = {slug: {"recent_picks": 0, "recent_bans": 0, "recent_games": 0} for slug in self.heroes()}
         seen_games: dict[str, set[str]] = {slug: set() for slug in counts}
-        for match in matches:
-            if not match.date:
-                continue
-            try:
-                match_date = datetime.fromisoformat(match.date).date()
-            except ValueError:
-                match_date = None
-                for fmt in ("%b %d, %Y", "%B %d, %Y"):
-                    try:
-                        match_date = datetime.strptime(match.date, fmt).date()
-                        break
-                    except ValueError:
-                        continue
+        games = 0
+        for match, match_date in dated:
             if match_date is None or match_date < cutoff:
                 continue
+            games += 1
             for action in match.actions:
                 row = counts.setdefault(action.hero, {"recent_picks": 0, "recent_bans": 0, "recent_games": 0})
                 if action.phase == "pick":
@@ -177,7 +170,11 @@ class Catalog:
         for slug, row in counts.items():
             row["recent_games"] = len(seen_games.get(slug, set()))
             row["usage_score"] = row["recent_picks"] + row["recent_bans"]
-        return counts
+        return counts, games
+
+    def hero_usage(self, recent_days: int = 180) -> dict[str, dict[str, int]]:
+        """Return pick/ban frequency for the recent tournament window."""
+        return self.usage_window(recent_days)[0]
 
     def matches(self) -> list[MatchDraft]:
         rows = self.db.execute("SELECT * FROM matches ORDER BY match_date DESC, id").fetchall()

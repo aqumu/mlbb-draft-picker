@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 from .models import DraftState, MatchDraft, PlayerPool
-from .repository import Catalog
+from .repository import Catalog, parse_match_date
 
 
 def _normalise_side(value: str | None) -> str | None:
@@ -32,6 +32,8 @@ class Candidate:
     roster_fit: float | None = None
     assignment: tuple[dict, ...] = ()
     rank_score: float | None = None
+    record: dict | None = None
+    similar_games: tuple[dict, ...] = ()
 
     def as_dict(self) -> dict:
         return {"match_id": self.match_id, "side": self.side, "composition": list(self.composition),
@@ -45,15 +47,17 @@ class Candidate:
                                    "picks": list(self.opponent_composition), "bans": list(self.opponent_bans)},
                 "draft_actions": list(self.draft_actions),
                 "roster_fit": self.roster_fit, "assignment": list(self.assignment), "rank_score": self.rank_score,
+                "record": self.record, "similar_games": list(self.similar_games),
                 "metadata": self.metadata, "score": self.score,
                 "score_summary": self.score_summary, "score_details": list(self.score_details),
                 "rejection_reasons": list(self.rejection_reasons)}
 
 
 # Weight of a hero in a player's pool: mastery level 1/2/3, or a neutral weight
-# when the player (or lane) has no hero list.
+# when the player (or lane) has no hero list. A wildcard never outranks a hero
+# the player has listed, so filling in a pool can only improve a draft's fit.
 MASTERY_WEIGHT = {1: 0.45, 2: 0.75, 3: 1.0}
-WILDCARD_WEIGHT = 0.6
+WILDCARD_WEIGHT = 0.45
 
 
 def _weight(heroes: dict[str, int] | None, hero: str) -> float | None:
@@ -152,54 +156,107 @@ def _score(catalog: Catalog, remaining: tuple[str, ...], enemy: tuple[str, ...])
                                    "raw_fit": round(raw_fit, 4)}
 
 
+# Ranking: roster fit leads (when pools are given); the rest are small, explainable nudges.
+RECENCY_HALF_LIFE_DAYS = 365
+W_RECENCY, W_ENEMY_OVERLAP, W_SIDE, W_WON, W_RECORD, W_REPEAT = 0.15, 0.10, 0.05, 0.05, 0.10, 0.03
+
+
 def find_candidates(catalog: Catalog, state: DraftState, limit: int = 50) -> list[Candidate]:
+    """Real pro compositions still feasible for the board, one entry per distinct composition.
+
+    Identical five-hero sets are grouped: the most relevant game represents them and the
+    group's win/loss record plus the other games ride along. Relevance favours recent games,
+    games whose opponent drafted like the current enemy, the chosen side, and wins. Side is a
+    nudge, not a filter: many sources do not record it.
+    """
     heroes = catalog.heroes()
     ours, enemies, bans, excluded = set(state.our_picks), set(state.enemy_picks), set(state.bans), set(state.excluded_heroes)
-    output: list[Candidate] = []
-    for match in catalog.matches():
-        match_bans = tuple(match.bans())
+    matches = catalog.matches()
+    dates = [parse_match_date(m.date) for m in matches]
+    newest = max((d for d in dates if d), default=None)
+    wanted_side = _normalise_side(state.our_side)
+    roster_cache: dict[frozenset[str], tuple[float, list[dict]] | None] = {}
+    groups: dict[frozenset[str], list[dict]] = {}
+    for match, match_date in zip(matches, dates):
         for side, opponent_side in (("team_a", "team_b"), ("team_b", "team_a")):
-            matched_side = match.team_a_side if side == "team_a" else match.team_b_side
-            if state.our_side and _normalise_side(matched_side) != _normalise_side(state.our_side):
-                continue
             composition = tuple(match.picks(side))
-            opponent = tuple(match.picks(opponent_side))
-            our_bans = tuple(match.bans_for(side))
-            opponent_bans = tuple(match.bans_for(opponent_side))
             if len(composition) != 5 or len(set(composition)) != 5:
                 continue
             if not ours.issubset(composition) or enemies.intersection(composition) or excluded.intersection(composition):
                 continue
             if bans.intersection(composition) or state.available_heroes is not None and not set(composition).issubset(state.available_heroes):
                 continue
-            roster_fit, assignment, rank_score = None, (), None
+            key = frozenset(composition)
             if state.player_pools:
-                assigned = _assign(composition, heroes, state)
-                if assigned is None:
+                if key not in roster_cache:
+                    roster_cache[key] = _assign(composition, heroes, state)
+                if roster_cache[key] is None:
                     continue
-                if any(pool.restricted for pool in state.player_pools):
-                    roster_fit = round(assigned[0], 4)
-                    assignment = tuple(assigned[1])
-            remaining = tuple(h for h in composition if h not in ours)
-            score, details, score_summary = _score(catalog, remaining, tuple(state.enemy_picks))
-            if roster_fit is not None:
-                # Roster fit leads; the matchup estimate (centred on 50%) nudges close calls.
-                rank_score = round(roster_fit + 2 * ((score if score is not None else 0.5) - 0.5), 4)
-            draft_actions = tuple({"phase": action.phase, "team": action.team, "hero": action.hero,
-                                   "order": action.order} for action in match.actions)
-            output.append(Candidate(match.id, side, composition, tuple(state.our_picks), remaining, opponent, match_bans,
-                                    {"source": match.source, "source_url": match.source_url, "tournament": match.tournament,
-                                     "date": match.date, "patch": match.patch, "stage": match.stage, "series": match.series,
-                                     "duration": match.duration, "winner": match.winner, "team_a": match.team_a, "team_b": match.team_b,
-                                     "team_a_side": match.team_a_side, "team_b_side": match.team_b_side, "game_number": match.game_number,
-                                     "order_available": match.order_available, "bans_known": match.bans_known, "source_refs": match.source_refs,
-                                     "matched_team": match.team_a if side == "team_a" else match.team_b,
-                                     "opponent_team": match.team_b if side == "team_a" else match.team_a,
-                                     "matched_team_side": match.team_a_side if side == "team_a" else match.team_b_side,
-                                     "opponent_team_side": match.team_b_side if side == "team_a" else match.team_a_side,
-                                     "score_coverage": score_summary["coverage"], "score_sample_games": score_summary["sample_games"]},
-                                    score, details, score_summary, (), our_bans, opponent_bans, draft_actions,
-                                    roster_fit, assignment, rank_score))
-    output.sort(key=lambda c: (c.rank_score is not None, c.rank_score or 0.0, c.score is not None, c.score or 0.0,
-                               c.score_summary.get("coverage", 0.0) if c.score_summary else 0.0), reverse=True)
+            opponent = tuple(match.picks(opponent_side))
+            age_days = (newest - match_date).days if newest and match_date else None
+            recency = 0.5 ** (age_days / RECENCY_HALF_LIFE_DAYS) if age_days is not None else 0.25
+            overlap = len(enemies.intersection(opponent)) / len(enemies) if enemies else 0.0
+            matched_side = match.team_a_side if side == "team_a" else match.team_b_side
+            side_match = 1.0 if wanted_side and _normalise_side(matched_side) == wanted_side else 0.0
+            team = match.team_a if side == "team_a" else match.team_b
+            won = None if not match.winner else match.winner == team
+            relevance = W_RECENCY * recency + W_ENEMY_OVERLAP * overlap + W_SIDE * side_match + W_WON * bool(won)
+            groups.setdefault(key, []).append({"match": match, "side": side, "opponent_side": opponent_side, "composition": composition,
+                                               "opponent": opponent, "age_days": age_days, "won": won, "team": team,
+                                               "relevance": relevance})
+    output: list[Candidate] = []
+    for key, games in groups.items():
+        games.sort(key=lambda g: g["relevance"], reverse=True)
+        best = games[0]
+        match, side, composition = best["match"], best["side"], best["composition"]
+        roster_fit, assignment = None, ()
+        if state.player_pools and any(pool.restricted for pool in state.player_pools):
+            roster_fit = round(roster_cache[key][0], 4)
+            assignment = tuple(roster_cache[key][1])
+        wins = sum(1 for g in games if g["won"] is True)
+        losses = sum(1 for g in games if g["won"] is False)
+        record = {"games": len(games), "wins": wins, "losses": losses, "teams": sorted({g["team"] for g in games})}
+        shrunk_win_rate = (wins + 1) / (wins + losses + 2)
+        rank_score = round((roster_fit if roster_fit is not None else 0.5) + best["relevance"]
+                           + W_RECORD * 2 * (shrunk_win_rate - 0.5) + W_REPEAT * min(len(games) - 1, 3), 4)
+        remaining = tuple(h for h in composition if h not in ours)
+        score, details, score_summary = _score(catalog, remaining, tuple(state.enemy_picks))
+        draft_actions = tuple({"phase": a.phase, "team": a.team, "hero": a.hero, "order": a.order} for a in match.actions)
+        similar = tuple({"match_id": g["match"].id, "tournament": g["match"].tournament, "date": g["match"].date,
+                         "team": g["team"], "opponent": g["match"].team_b if g["side"] == "team_a" else g["match"].team_a,
+                         "won": g["won"], "source_url": g["match"].source_url} for g in games[1:])
+        output.append(Candidate(match.id, side, composition, tuple(state.our_picks), remaining, best["opponent"], tuple(match.bans()),
+                                {"source": match.source, "source_url": match.source_url, "tournament": match.tournament,
+                                 "date": match.date, "patch": match.patch, "stage": match.stage, "series": match.series,
+                                 "duration": match.duration, "winner": match.winner, "team_a": match.team_a, "team_b": match.team_b,
+                                 "team_a_side": match.team_a_side, "team_b_side": match.team_b_side, "game_number": match.game_number,
+                                 "order_available": match.order_available, "bans_known": match.bans_known, "source_refs": match.source_refs,
+                                 "matched_team": best["team"], "opponent_team": match.team_b if side == "team_a" else match.team_a,
+                                 "matched_team_side": match.team_a_side if side == "team_a" else match.team_b_side,
+                                 "opponent_team_side": match.team_b_side if side == "team_a" else match.team_a_side,
+                                 "won": best["won"], "age_days": best["age_days"],
+                                 "score_coverage": score_summary["coverage"], "score_sample_games": score_summary["sample_games"]},
+                                score, details, score_summary, (), tuple(match.bans_for(side)), tuple(match.bans_for(best["opponent_side"])),
+                                draft_actions, roster_fit, assignment, rank_score, record, similar))
+    output.sort(key=lambda c: (c.rank_score, c.record["games"], c.score if c.score is not None else 0.5), reverse=True)
     return output[:limit]
+
+
+def diagnose(catalog: Catalog, state: DraftState, max_items: int = 5) -> list[dict]:
+    """Why is nothing left? Count the compositions that fit if each single constraint were lifted."""
+    def count(candidate_state: DraftState) -> int:
+        return len(find_candidates(catalog, candidate_state, 10**6))
+    variants: list[tuple[str, str | None, DraftState]] = []
+    for hero in state.bans:
+        variants.append(("ban", hero, replace(state, bans=tuple(h for h in state.bans if h != hero))))
+    for hero in state.enemy_picks:
+        variants.append(("enemy_pick", hero, replace(state, enemy_picks=tuple(h for h in state.enemy_picks if h != hero))))
+    for hero in state.our_picks:
+        variants.append(("our_pick", hero, replace(state, our_picks=tuple(h for h in state.our_picks if h != hero))))
+    for hero in state.excluded_heroes:
+        variants.append(("hidden", hero, replace(state, excluded_heroes=tuple(h for h in state.excluded_heroes if h != hero))))
+    if state.player_pools:
+        variants.append(("roster", None, replace(state, player_pools=())))
+    found = [{"constraint": kind, "hero": hero, "compositions_if_lifted": n} for kind, hero, variant in variants if (n := count(variant))]
+    found.sort(key=lambda item: item["compositions_if_lifted"], reverse=True)
+    return found[:max_items]

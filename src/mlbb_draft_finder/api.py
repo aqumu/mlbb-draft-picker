@@ -7,9 +7,10 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import parse_qs, urlsplit
 
-from .matcher import find_candidates
+from .matcher import diagnose, find_candidates
 from .models import DraftState, PlayerPool
 from .repository import Catalog
+from .suggest import suggest
 
 
 def _state(payload: dict[str, Any], catalog: Catalog) -> DraftState:
@@ -101,15 +102,22 @@ def create_handler(catalog: Catalog, hero_lanes: dict[str, list[str]] | None = N
                 self._send(404, {"error": "not_found"})
 
         def do_POST(self) -> None:
-            if self.path != "/v1/candidates":
+            if self.path not in ("/v1/candidates", "/v1/suggestions"):
                 self._send(404, {"error": "not_found"})
                 return
             try:
                 length = int(self.headers.get("Content-Length", "0"))
                 payload = json.loads(self.rfile.read(length) or b"{}")
+                state = _state(payload, catalog)
+                if self.path == "/v1/suggestions":
+                    self._send(200, suggest(catalog, state, hero_lanes))
+                    return
                 limit = max(1, min(int(payload.get("limit", 50)), 200))
-                candidates = find_candidates(catalog, _state(payload, catalog), limit)
-                self._send(200, {"candidates": [candidate.as_dict() for candidate in candidates], "count": len(candidates)})
+                candidates = find_candidates(catalog, state, limit)
+                body = {"candidates": [candidate.as_dict() for candidate in candidates], "count": len(candidates)}
+                if not candidates:
+                    body["diagnostics"] = diagnose(catalog, state)
+                self._send(200, body)
             except (ValueError, KeyError, json.JSONDecodeError) as exc:
                 self._send(400, {"error": "invalid_request", "message": str(exc)})
 

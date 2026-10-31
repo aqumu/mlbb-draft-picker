@@ -25,20 +25,21 @@
               </select>
             </label>
             <button id="start-simulation" class="button primary" type="button">Start simulation</button>
+            <button id="undo-step" class="button subtle" type="button" disabled>Undo</button>
             <button id="reset-simulation" class="button subtle" type="button">Reset</button>
           </div>
         </div>
-        <div class="phase-progress"><span id="phase-count">Setup</span><div class="progress-track"><span id="progress-bar"></span></div></div>
+        <div class="phase-progress"><span id="phase-count">Setup</span><strong id="turn-context" class="turn-context"></strong><div class="progress-track"><span id="progress-bar"></span></div></div>
 
         <div class="draft-board">
           <div class="side-columns">
             <section id="our-panel" class="side-panel side-blue">
-              <div class="side-panel-header"><strong id="our-label">Your team</strong></div>
+              <div class="side-panel-header"><strong id="our-label">Your team</strong><span id="our_lanes" class="lane-status"></span></div>
               <div class="side-row"><div class="row-title"><span>Bans</span></div><div id="our_bans" class="icon-row empty"></div></div>
               <div class="side-row"><div class="row-title"><span>Picks</span></div><div id="our_picks" class="icon-row empty"></div></div>
             </section>
             <section id="enemy-panel" class="side-panel side-red">
-              <div class="side-panel-header"><strong id="enemy-label">Opponent</strong></div>
+              <div class="side-panel-header"><strong id="enemy-label">Opponent</strong><span id="enemy_lanes" class="lane-status"></span></div>
               <div class="side-row"><div class="row-title"><span>Bans</span></div><div id="enemy_bans" class="icon-row empty"></div></div>
               <div class="side-row"><div class="row-title"><span>Picks</span></div><div id="enemy_picks" class="icon-row empty"></div></div>
             </section>
@@ -50,6 +51,8 @@
           <div id="excluded" class="icon-row"></div>
         </div>
 
+        <div id="suggestions" class="suggestions" hidden></div>
+
         <div class="hero-toolbar">
           <div id="lane-filter" class="lane-filter" role="group" aria-label="Filter heroes by lane">
             <button type="button" class="lane-toggle on" data-filter="">All</button>
@@ -59,8 +62,9 @@
             <button type="button" class="lane-toggle" data-filter="gold">Gold</button>
             <button type="button" class="lane-toggle" data-filter="roam">Roam</button>
           </div>
-          <label class="search-wrap"><span class="sr-only">Search heroes</span><input id="hero-search" type="search" placeholder="Search heroes..." autocomplete="off" /></label>
+          <label class="search-wrap"><span class="sr-only">Search heroes</span><input id="hero-search" type="search" placeholder="Search heroes, Enter picks the first" autocomplete="off" autofocus /></label>
         </div>
+        <div id="hero-actions" class="hero-actions" hidden></div>
         <div id="hero-grid" class="hero-grid" aria-live="polite"></div>
       </section>
 

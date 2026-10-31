@@ -51,7 +51,7 @@ class FinderTests(unittest.TestCase):
         result = find_candidates(self.catalog, DraftState(our_picks=("fredrinn",), player_pools=pools))
         self.assertIn("mpl-id-s10-g1", [c.match_id for c in result])
         for candidate in result:
-            self.assertAlmostEqual(candidate.roster_fit, (1.0 + 4 * 0.6) / 5)
+            self.assertAlmostEqual(candidate.roster_fit, (1.0 + 4 * 0.45) / 5)
 
     def test_lane_pools_assign_one_player_per_lane(self):
         lanes = {"a": {"exp": {"fredrinn": 3}}, "b": {"jungle": {"joy": 2}}, "c": {"mid": {"pharsa": 3}},

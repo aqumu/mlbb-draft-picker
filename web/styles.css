@@ -142,3 +142,28 @@ a { color: var(--blue); }
 .pick-player.level-2 { color: var(--blue); }
 .pick-lane { color: #a1acb8; font-size: 9px; font-weight: 800; letter-spacing: .05em; margin-top: -2px; text-transform: uppercase; }
 @media (max-width: 720px) { .pool-row { grid-template-columns: 1fr; } }
+
+.turn-context { color: var(--ink); font-size: 12px; white-space: nowrap; }
+.lane-status { color: var(--muted); font-size: 10px; font-weight: 700; text-align: right; }
+.lane-clash { color: #a62d2d; }
+.button:disabled { cursor: default; opacity: .45; }
+.hero-button.selected { border-color: var(--blue); box-shadow: 0 0 0 3px rgb(40 103 214 / 22%); }
+.hero-actions { align-items: center; background: var(--blue-soft); border: 1px solid #b9cff3; border-radius: 9px; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 11px; padding: 8px 10px; }
+.hero-actions .button { padding: 6px 10px; }
+.suggestions { display: grid; gap: 12px; margin-top: 14px; }
+.suggest-block { border: 1px solid var(--line); border-radius: 9px; padding: 10px 12px; }
+.suggest-hint { font-weight: 500; letter-spacing: 0; text-transform: none; }
+.suggest-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.suggest-chip { align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 8px; display: flex; flex-direction: column; gap: 2px; min-width: 72px; padding: 6px 6px 5px; }
+.suggest-chip:hover, .suggest-chip:focus-visible { border-color: #9fbce9; outline: 0; }
+.suggest-chip img { border-radius: 50%; height: 40px; width: 40px; }
+.suggest-chip span { font-size: 11px; font-weight: 700; }
+.suggest-chip small { color: var(--muted); font-size: 9px; }
+.suggest-chip.free { border-color: #b8e1c3; background: #f6fcf8; }
+.score.record { background: #eef3fb; border-color: #c4d4ee; color: #234a8f; }
+.score.record.lost { background: #fff1f1; border-color: #efb4b4; color: #a62d2d; }
+.stale { background: #fff8e5; border-radius: 99px; color: #8a641c; font-size: 10px; font-weight: 700; margin-left: 6px; padding: 2px 6px; }
+.similar { font-size: 11px; margin-top: 11px; }
+.similar summary { color: var(--muted); cursor: pointer; }
+.similar ul, .blockers { color: var(--muted); line-height: 1.6; margin: 6px 0 0; padding-left: 18px; }
+.blockers { color: var(--ink); font-size: 13px; }
